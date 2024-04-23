@@ -1,0 +1,2304 @@
+{
+  "electricity-generation": {
+    "title": "Electricity Generation",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.a.i  Electricity Generation",
+              "     + "
+            ],
+            [
+              "1.A.1.a.ii Combined Heat and Power Generation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.1.a Main Activity Electricity and Heat Production",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.a.iii Heat Plants",
+              "     - "
+            ],
+            [
+              "1.A.1.a.iv  Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Electricity/Heat",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.a.iii Heat Plants",
+              "     - "
+            ],
+            [
+              "1.A.1.a.iv Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "pik-tp-subtract-out": {
+        "pik-tp": {
+          "desc": "PIK",
+          "comps": [
+            [
+              1,
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B  Fugitive Emissions from Fuels",
+              "     - "
+            ],
+            [
+              "1.C  CO\u2082 Transport and Storage",
+              "     - "
+            ],
+            [
+              "1.A.1.a.iii  Heat Plants",
+              "     - "
+            ],
+            [
+              "1.A.1.b  Petroleum Refining",
+              "     - "
+            ],
+            [
+              "1.A.1.c  Manufacture of Solid Fuels and Other Energy Industries",
+              "     - "
+            ],
+            [
+              "1.A.2  Manufacturing Industries and Construction",
+              "     - "
+            ],
+            [
+              "1.A.3  Transport",
+              "     - "
+            ],
+            [
+              "1.A.4  Other Sectors",
+              "     - "
+            ],
+            [
+              "1.A.5  Other (Not specified elsewhere)",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-energy-use": {
+    "title": "Other Energy Use",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.a.iii Heat Plants",
+              "     + "
+            ],
+            [
+              "1.A.1.a.iv  Other",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "domestic-aviation": {
+    "title": "Domestic Aviation",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.3.a  Domestic Aviation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Transportation",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.3.b Road Transportation",
+              "     - "
+            ],
+            [
+              "1.A.3.c Railways",
+              "     - "
+            ],
+            [
+              "1.A.3.d Domestic Navigation",
+              "     - "
+            ],
+            [
+              "1.A.3.e Other Transportation",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "international-aviation": {
+    "title": "International Aviation",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "International Aviation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "road-transportation": {
+    "title": "Road Transportation",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.3.b  Road Transportation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "international-shipping": {
+    "title": "International Shipping",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "International Navigation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "domestic-shipping": {
+    "title": "Domestic Shipping",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.3.d  Domestic Navigation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Transportation",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.3.a Domestic Aviation",
+              "     - "
+            ],
+            [
+              "1.A.3.b Road Transportation",
+              "     - "
+            ],
+            [
+              "1.A.3.c Railways",
+              "     - "
+            ],
+            [
+              "1.A.3.e Other Transportation",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-transport": {
+    "title": "Other Transport",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.3.e  Other Transportation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "residential-and-commercial-onsite-fuel-usage": {
+    "title": "Residential And Commercial Onsite Fuel Usage",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.4  Other Sectors ",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-onsite-fuel-usage": {
+    "title": "Other Onsite Fuel Usage",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.5 Other (Not specified elsewhere)",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "coal-mining": {
+    "title": "Coal Mining",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1.a  Coal Mining and Handling",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.B.1 Solid Fuels",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1.b  Solid Fuel Transformation",
+              "     - "
+            ],
+            [
+              "1.B.1.c  Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Fugitive Emissions",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1.b  Solid Fuel Transformation",
+              "     - "
+            ],
+            [
+              "1.B.1.c  Other",
+              "     - "
+            ],
+            [
+              "1.B.2  Oil and Natural Gas and Other Emissions from Energy Production",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "pik-tp-subtract-out": {
+        "pik-tp": {
+          "desc": "PIK",
+          "comps": [
+            [
+              "1.B.1",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1.b  Solid Fuel Transformation",
+              "     - "
+            ],
+            [
+              "1.B.1.c  Other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "solid-fuel-transformation": {
+    "title": "Solid Fuel Transformation",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1.b  Solid Fuel Transformation",
+              "     + "
+            ],
+            [
+              "1.B.1.c  Other",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "oil-and-gas-production-and-transport": {
+    "title": "Oil And Gas Production And Transport",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.2.a.i  Exploration",
+              "     + "
+            ],
+            [
+              "1.B.2.a.ii  Production",
+              "     + "
+            ],
+            [
+              "1.B.2.a.iii  Transport",
+              "     + "
+            ],
+            [
+              "1.B.2.c  Venting and Flaring",
+              "     + "
+            ],
+            [
+              "1.B.2.b.i  Exploration",
+              "     + "
+            ],
+            [
+              "1.B.2.b.ii  Production",
+              "     + "
+            ],
+            [
+              "1.B.2.b.iii  Processing",
+              "     + "
+            ],
+            [
+              "1.B.2.b.iv  Transmission and Storage",
+              "     + "
+            ],
+            [
+              "1.A.1.c.ii  Oil and Gas Extraction",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.B.2 Oil and Natural Gas",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.2.a.v Distribution of Oil Products ",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Fugitive Emissions",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1 Solid Fuels",
+              "     - "
+            ],
+            [
+              "1.B.2.c  Venting and Flaring",
+              "     - "
+            ],
+            [
+              "1.B.2.a.v Distribution of Oil Products",
+              "     - "
+            ],
+            [
+              "1.B.2.a.vi Other",
+              "     - "
+            ],
+            [
+              "1.B.2.b.v Distribution",
+              "     - "
+            ],
+            [
+              "1.B.2.b.vi Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "pik-tp-subtract-out": {
+        "pik-tp": {
+          "desc": "PIK",
+          "comps": [
+            [
+              "1.B",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1  Solid Fuels",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "oil-and-gas-refining": {
+    "title": "Oil And Gas Refining",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.b  Petroleum Refining",
+              "     + "
+            ],
+            [
+              "1.B.2.a.iv  Refining / Storage",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.1.bc Petroleum Refining - Manufacture of Solid Fuels and Other Energy Industries",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.c. Manufacture of Solid Fuels and Other Energy Industries",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "pik-tp-subtract-out": {
+        "pik-tp": {
+          "desc": "PIK",
+          "comps": [
+            [
+              "1.A",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.a  Public Electricity and Heat Production",
+              "     - "
+            ],
+            [
+              "1.A.1.c  Manufacture of Solid Fuels and Other Energy Industries",
+              "     - "
+            ],
+            [
+              "1.A.2  Manufacturing Industries and Construction",
+              "     - "
+            ],
+            [
+              "1.A.3  Transport",
+              "     - "
+            ],
+            [
+              "1.A.4  Other Sectors",
+              "     - "
+            ],
+            [
+              "1.A.5  Other (Not specified elsewhere)",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "petrochemicals": {
+    "title": "Petrochemicals",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "2.B.8.b  Ethylene",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-fossil-fuel-operations": {
+    "title": "Other Fossil Fuel Operations",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.2.b.vi Other",
+              "     + "
+            ],
+            [
+              "1.B.2.a.vi Other",
+              "     + "
+            ],
+            [
+              "1.B.2.d Other",
+              "     + "
+            ],
+            [
+              "1.B.2.b.v  Distribution",
+              "     + "
+            ],
+            [
+              "1.B.2.a.v  Distribution of Oil Products",
+              "     + "
+            ],
+            [
+              "1.A.1.c.i  Manufacture of Solid Fuels",
+              "     + "
+            ],
+            [
+              "1.A.1.c.iii  Other Energy Industries",
+              "     + "
+            ],
+            [
+              "1.A.1.c.iv  Other",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "cement": {
+    "title": "Cement",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.f  Non-metallic Minerals",
+              "     + "
+            ],
+            [
+              "2.A.1  Cement Production",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "2.A.1 Cement production",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "pik-tp-subtract-out": {
+        "pik-tp": {
+          "desc": "PIK",
+          "comps": [
+            [
+              "2.A",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "2.A.2  Lime Production",
+              "     - "
+            ],
+            [
+              "2.A.3  Glass production",
+              "     - "
+            ],
+            [
+              "2.A.4  Other Process Uses of Carbonates",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "chemicals": {
+    "title": "Chemicals",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "2.B.1  Ammonia Production",
+              "     + "
+            ],
+            [
+              "2.B.8.a Methanol",
+              "     + "
+            ],
+            [
+              "2.B.7 Soda Ash Production",
+              "     + "
+            ],
+            [
+              "1.A.2.c Chemicals",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "2.B Chemical Industry",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "steel": {
+    "title": "Steel",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.a  Iron and Steel",
+              "     + "
+            ],
+            [
+              "2.C.1  Iron and Steel Production",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "2.C Metal Industry",
+              "     + "
+            ],
+            [
+              "1.A.2 Manufacturing Industries and Construction",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "2.C.3  Aluminium Production",
+              "     - "
+            ],
+            [
+              "2.C.2  Ferroalloys Production",
+              "     - "
+            ],
+            [
+              "2.C.4  Magnesium Production",
+              "     - "
+            ],
+            [
+              "2.C.5  Lead Production",
+              "     - "
+            ],
+            [
+              "2.C.6  Zinc Production",
+              "     - "
+            ],
+            [
+              "2.C.7  Other",
+              "     - "
+            ],
+            [
+              "1.A.2.b Non-Ferrous Metals",
+              "     - "
+            ],
+            [
+              "1.A.2.d Pulp, Paper and Print",
+              "     - "
+            ],
+            [
+              "1.A.2.c  Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.e  Food Processing, Beverages and Tobacco",
+              "     - "
+            ],
+            [
+              "1.A.2.f  Non-metallic Minerals",
+              "     - "
+            ],
+            [
+              "1.A.2.g  Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Manufacturing/Construction",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.b Non-Ferrous Metals",
+              "     - "
+            ],
+            [
+              "1.A.2.c Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.d Pulp, Paper and Print",
+              "     - "
+            ],
+            [
+              "1.A.2.e Food Processing, Beverages and Tobacco",
+              "     - "
+            ],
+            [
+              "1.A.2.f Non-metallic Minerals",
+              "     - "
+            ],
+            [
+              "1.A.2.g Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "pik-tp-subtract-out": {
+        "pik-tp": {
+          "desc": "PIK",
+          "comps": [
+            [
+              "2.C",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "2.C.3  Aluminium Production",
+              "     - "
+            ],
+            [
+              "2.C.2  Ferroalloys Production",
+              "     - "
+            ],
+            [
+              "2.C.4  Magnesium Production",
+              "     - "
+            ],
+            [
+              "2.C.5  Lead Production",
+              "     - "
+            ],
+            [
+              "2.C.6  Zinc Production",
+              "     - "
+            ],
+            [
+              "2.C.7  Other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "aluminum": {
+    "title": "Aluminum",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.b  Non-Ferrous Metals",
+              "     + "
+            ],
+            [
+              "2.C.3  Aluminum Production",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "2.C Metal Industry",
+              "     + "
+            ],
+            [
+              "1.A.2 Manufacturing Industries and Construction",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.a  Iron and Steel",
+              "     - "
+            ],
+            [
+              "1.A.2.d Pulp, Paper and Print",
+              "     - "
+            ],
+            [
+              "1.A.2.c  Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.e  Food Processing, Beverages and Tobacco",
+              "     - "
+            ],
+            [
+              "1.A.2.f  Non-metallic Minerals",
+              "     - "
+            ],
+            [
+              "1.A.2.g  Other",
+              "     - "
+            ],
+            [
+              "2.C.1  Iron and Steel Production",
+              "     - "
+            ],
+            [
+              "2.C.2  Ferroalloys Production",
+              "     - "
+            ],
+            [
+              "2.C.4  Magnesium Production",
+              "     - "
+            ],
+            [
+              "2.C.5  Lead Production",
+              "     - "
+            ],
+            [
+              "2.C.6  Zinc Production",
+              "     - "
+            ],
+            [
+              "2.C.7  Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "pik-tp-subtract-out": {
+        "pik-tp": {
+          "desc": "PIK",
+          "comps": [
+            [
+              "2.C",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "2.C.1  Iron and Steel Production",
+              "     - "
+            ],
+            [
+              "2.C.2  Ferroalloys Production",
+              "     - "
+            ],
+            [
+              "2.C.4  Magnesium Production",
+              "     - "
+            ],
+            [
+              "2.C.5  Lead Production",
+              "     - "
+            ],
+            [
+              "2.C.6  Zinc Production",
+              "     - "
+            ],
+            [
+              "2.C.7  Other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "pulp-and-paper": {
+    "title": "Pulp And Paper",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.d  Pulp, Paper and Print",
+              "     + "
+            ],
+            [
+              "2.H.1  Pulp and Paper",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.2 Manufacturing Industries and Construction",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.a  Iron and Steel",
+              "     - "
+            ],
+            [
+              "1.A.2.b  Non-Ferrous Metals",
+              "     - "
+            ],
+            [
+              "1.A.2.c  Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.e  Food Processing, Beverages and Tobacco",
+              "     - "
+            ],
+            [
+              "1.A.2.f  Non-metallic Minerals",
+              "     - "
+            ],
+            [
+              "1.A.2.g  Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Manufacturing/Construction",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.a  Iron and Steel",
+              "     - "
+            ],
+            [
+              "1.A.2.b  Non-Ferrous Metals",
+              "     - "
+            ],
+            [
+              "1.A.2.c  Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.e  Food Processing, Beverages and Tobacco",
+              "     - "
+            ],
+            [
+              "1.A.2.f  Non-metallic Minerals",
+              "     - "
+            ],
+            [
+              "1.A.2.g  Other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-manufacturing": {
+    "title": "Other Manufacturing",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2  Manufacturing Industries and Construction",
+              "     + "
+            ],
+            [
+              "1.A.2.f  Non-metallic Minerals",
+              "     - "
+            ],
+            [
+              "1.A.2.c Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.a  Iron and Steel",
+              "     - "
+            ],
+            [
+              "1.A.2.b  Non-Ferrous Metals",
+              "     - "
+            ],
+            [
+              "1.A.2.d  Pulp, Paper and Print",
+              "     - "
+            ],
+            [
+              "2.  Industrial Processes and Product Use",
+              "     + "
+            ],
+            [
+              "2.A.1  Cement Production",
+              "     - "
+            ],
+            [
+              "2.B.1  Ammonia Production",
+              "     - "
+            ],
+            [
+              "2.B.8.a Methanol",
+              "     - "
+            ],
+            [
+              "2.B.7 Soda Ash Production",
+              "     - "
+            ],
+            [
+              "2.C.1  Iron and Steel Production",
+              "     - "
+            ],
+            [
+              "2.C.3  Aluminum Production",
+              "     - "
+            ],
+            [
+              "2.H.1  Pulp and Paper",
+              "     - "
+            ],
+            [
+              "2.B.8.b. Ethylene",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "mining-and-quarrying": {
+    "title": "Mining And Quarrying",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.g.iii  Mining (Excluding Fuels) and Quarrying",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Manufacturing/Construction",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.c  Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.b  Non-Ferrous Metals",
+              "     - "
+            ],
+            [
+              "1.A.2.g.ii  Manufacturing of Transport Equipment",
+              "     - "
+            ],
+            [
+              "1.A.2.g.i  Manufacturing of Machinery",
+              "     - "
+            ],
+            [
+              "1.A.2.e  Food Processing, Beverages and Tobacco",
+              "     - "
+            ],
+            [
+              "1.A.2.d  Pulp, Paper and Print",
+              "     - "
+            ],
+            [
+              "1.A.2.g.iv  Wood and Wood Products",
+              "     - "
+            ],
+            [
+              "1.A.2.g.v  Construction",
+              "     - "
+            ],
+            [
+              "1.A.2.g.vi  Textile and Leather",
+              "     - "
+            ],
+            [
+              "1.A.2.g.viii  Other",
+              "     - "
+            ],
+            [
+              "1.A.2.a  Iron and Steel",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation-cattle": {
+    "title": "Enteric Fermentation Cattle",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.A.1  Cattle",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "faostat-subtract-out": {
+        "faostat": {
+          "desc": "FAOSTAT",
+          "comps": [
+            [
+              "Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation-other": {
+    "title": "Enteric Fermentation Other",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.A.2  Sheep",
+              "     + "
+            ],
+            [
+              "3.A.3  Swine ",
+              "     + "
+            ],
+            [
+              "3.A.4  Other",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ],
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-management-cattle": {
+    "title": "Manure Management Cattle",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.B.1  Cattle",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "faostat-subtract-out": {
+        "faostat": {
+          "desc": "FAOSTAT",
+          "comps": [
+            [
+              "Manure Management",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-management-other": {
+    "title": "Manure Management Other",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.B.2  Sheep",
+              "     + "
+            ],
+            [
+              "3.B.3  Swine ",
+              "     + "
+            ],
+            [
+              "3.B.4  Other",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.2 Manure Management",
+              "     + "
+            ],
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "rice-cultivation": {
+    "title": "Rice Cultivation",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.C  Rice Cultivation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.C.7 Rice cultivations",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Agriculture",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.A Enteric Fermentation",
+              "     - "
+            ],
+            [
+              "3.B Manure Management",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "faostat-subtract-out": {
+        "faostat": {
+          "desc": "FAOSTAT",
+          "comps": [
+            [
+              "Rice Cultivation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "synthetic-fertilizer-application": {
+    "title": "Synthetic Fertilizer Application",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.D.1.a  Inorganic N Fertilizers",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.C.4 Direct N2O Emissions from managed soils",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Agriculture",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.A  Enteric Fermentation",
+              "     - "
+            ],
+            [
+              "3.B  Manure Management",
+              "     - "
+            ],
+            [
+              "3.D.2  Indirect N\u2082O Emissions From Managed Soils",
+              "     - "
+            ],
+            [
+              "3.F  Field Burning of Agricultural Residues",
+              "     - "
+            ],
+            [
+              "3.G  Liming",
+              "     - "
+            ],
+            [
+              "3.H  Urea Application",
+              "     - "
+            ],
+            [
+              "3.I  Other Carbon-containing Fertilizers",
+              "     - "
+            ],
+            [
+              "3.J  Other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "faostat-subtract-out": {
+        "faostat": {
+          "desc": "FAOSTAT",
+          "comps": [
+            [
+              "Synthetic Fertilizers",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "cropland-fires": {
+    "title": "Cropland Fires",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.F Field Burning of Agricultural Residues",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "faostat-subtract-out": {
+        "faostat": {
+          "desc": "FAOSTAT",
+          "comps": [
+            [
+              "Burning - Crop residues",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-agricultural-soil-emissions": {
+    "title": "Other Agricultural Soil Emissions",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.D. Agricultural Soils",
+              "     + "
+            ],
+            [
+              "3.D.1.a  Inorganic N Fertilizers",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-agriculture": {
+    "title": "Other Agriculture",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.  Agriculture",
+              "     + "
+            ],
+            [
+              "3.A  Enteric Fermentation",
+              "     - "
+            ],
+            [
+              "3.B  Manure Management",
+              "     - "
+            ],
+            [
+              "3.C  Rice Cultivation",
+              "     - "
+            ],
+            [
+              "3.D. Agricultural Soils",
+              "     - "
+            ],
+            [
+              "3.F Field Burning of Agricultural Residues",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "solid-waste-disposal": {
+    "title": "Solid Waste Disposal",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "5.A  Solid Waste Disposal",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "biological-treatment-of-solid-waste-and-biogenic": {
+    "title": "Biological Treatment Of Solid Waste And Biogenic",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "5.B  Biological Treatment of Solid Waste",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "incineration-and-open-burning-of-waste": {
+    "title": "Incineration And Open Burning Of Waste",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "5.C  Incineration and Open Burning of Waste",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "wastewater-treatment-and-discharge": {
+    "title": "Wastewater Treatment And Discharge",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "5.D  Wastewater Treatment and Discharge",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "fluorinated-gases": {
+    "title": "Fluorinated Gases",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "2.F  Product Uses as Substitutes for ODS",
+              "     + "
+            ],
+            [
+              "2.B.9  Fluorochemical Production",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "net-forest-land": {
+    "title": "Net Forest Land",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "4.A  Forest Land",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "faostat-subtract-out": {
+        "faostat": {
+          "desc": "FAOSTAT",
+          "comps": [
+            [
+              "Forestland",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "net-shrubgrass": {
+    "title": "Net Shrubgrass",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "4.C  Grassland",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "net-wetland": {
+    "title": "Net Wetland",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "4.D.1.a  Peat Extraction Remaining Peat Extraction ",
+              "     + "
+            ],
+            [
+              "4.D.1.c  Other Wetlands Remaining Other Wetlands",
+              "     + "
+            ],
+            [
+              "4.D.2  Land Converted to Wetlands",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "water-reservoirs": {
+    "title": "Water Reservoirs",
+    "legend": {
+      "unfccc-subtract-out": {
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "4.D.1.b  Flooded Land Remaining Flooded Land",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "aviation": {
+    "title": "Aviation",
+    "legend": {
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.3.a Civil Aviation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "shipping": {
+    "title": "Shipping",
+    "legend": {
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.3.d Water-borne Navigation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation-cattle-feedlot": {
+    "title": "Enteric Fermentation Cattle Feedlot",
+    "legend": {
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ],
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-left-on-pasture-cattle": {
+    "title": "Manure Left On Pasture Cattle",
+    "legend": {
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.2 Manure Management",
+              "     + "
+            ],
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-management-cattle-feedlot": {
+    "title": "Manure Management Cattle Feedlot",
+    "legend": {
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.2 Manure Management",
+              "     + "
+            ],
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation-cattle-pasture": {
+    "title": "Enteric Fermentation Cattle Pasture",
+    "legend": {
+      "edgar-subtract-out": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ],
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation": {
+    "title": "Enteric Fermentation",
+    "legend": {
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Agriculture",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.B Manure Management",
+              "     - "
+            ],
+            [
+              "3.C Rice Cultivation",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-management": {
+    "title": "Manure Management",
+    "legend": {
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Agriculture",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.A Enteric Fermentation",
+              "     - "
+            ],
+            [
+              "3.C Rice Cultivation",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "net-forestry-and-land-use-change": {
+    "title": "Net Forestry And Land Use Change",
+    "legend": {
+      "cait-subtract-out": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Land-Use Change and Forestry",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "forest-land-fires": {
+    "title": "Forest Land Fires",
+    "legend": {
+      "faostat-subtract-out": {
+        "faostat": {
+          "desc": "FAOSTAT",
+          "comps": [
+            [
+              "Forest fires",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  }
+}

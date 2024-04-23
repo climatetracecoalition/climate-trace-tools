@@ -1,0 +1,312 @@
+{
+  "electricity-generation-and-other-energy-use": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "1.A.1  Energy Industries",
+          1
+        ]
+      ]
+    }
+  },
+  "road-transportation": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "1.A.3.b  Road Transportation",
+          1
+        ]
+      ]
+    }
+  },
+  "residential-and-commercial-onsite-fuel-usage": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "1.A.4  Other Sectors",
+          1
+        ]
+      ]
+    }
+  },
+  "coal-mining": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "1.B.1  Solid Fuels",
+          1
+        ]
+      ]
+    }
+  },
+  "oil-and-gas-production-and-transport": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "1.B.2  Oil and Natural Gas",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "1.B.2 Oil and Natural Gas",
+          1
+        ]
+      ]
+    },
+    "cait": {
+      "cait": [
+        [
+          "Fugitive Emissions",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.B.1  Solid Fuels",
+          -1
+        ]
+      ]
+    },
+    "pik-tp": {
+      "pik-tp": [
+        [
+          "1.B",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.B.1  Solid Fuels",
+          -1
+        ]
+      ]
+    }
+  },
+  "oil-and-gas-refining": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "1.B.2  Oil and Natural Gas",
+          1
+        ]
+      ]
+    }
+  },
+  "cement": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "2.A.1  Cement Production",
+          1
+        ]
+      ]
+    },
+    "pik-tp": {
+      "pik-tp": [
+        [
+          "2.A",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "2.A.2  Lime Production",
+          -1
+        ],
+        [
+          "2.A.3  Glass production",
+          -1
+        ],
+        [
+          "2.A.4  Other Process Uses of Carbonates",
+          -1
+        ]
+      ]
+    }
+  },
+  "chemicals": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "2.B  Chemical Industry",
+          1
+        ]
+      ]
+    }
+  },
+  "steel": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "2.C  Metal Production",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "2.C Metal Industry",
+          1
+        ]
+      ]
+    },
+    "pik-tp": {
+      "pik-tp": [
+        [
+          "2.C",
+          1
+        ]
+      ]
+    }
+  },
+  "aluminum": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "2.C  Metal Production",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "2.C Metal Industry",
+          1
+        ]
+      ]
+    }
+  },
+  "enteric-fermentation": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "4.A  Enteric Fermentation",
+          1
+        ]
+      ]
+    }
+  },
+  "manure-management": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "4.B  Manure Management",
+          1
+        ]
+      ]
+    }
+  },
+  "rice-cultivation": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "4.C  Rice Cultivation",
+          1
+        ]
+      ]
+    },
+    "faostat": {
+      "faostat": [
+        [
+          "Rice Cultivation",
+          1
+        ]
+      ]
+    }
+  },
+  "synthetic-fertilizer-application": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "4.D  Agricultural Soils",
+          1
+        ]
+      ]
+    },
+    "faostat": {
+      "faostat": [
+        [
+          "Synthetic Fertilizers",
+          1
+        ]
+      ]
+    }
+  },
+  "solid-waste-disposal": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "6.A  Solid Waste Disposal on Land",
+          1
+        ]
+      ]
+    }
+  },
+  "incineration-and-open-burning-of-waste": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "6.C. Waste Incineration",
+          1
+        ]
+      ]
+    }
+  },
+  "wastewater-treatment-and-discharge": {
+    "unfccc": {
+      "unfccc_non_annex_1": [
+        [
+          "6.B  Wastewater Handling",
+          1
+        ]
+      ]
+    }
+  },
+  "electricity-generation": {
+    "edgar": {
+      "edgar": [
+        [
+          "1.A.1.a Main Activity Electricity and Heat Production",
+          1
+        ]
+      ]
+    },
+    "pik-tp": {
+      "pik-tp": [
+        [
+          "1.A",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.A.2  Manufacturing Industries and Construction",
+          -1
+        ],
+        [
+          "1.A.3  Transport",
+          -1
+        ],
+        [
+          "1.A.4  Other Sectors",
+          -1
+        ]
+      ]
+    }
+  },
+  "forest-land-fires": {
+    "faostat": {
+      "faostat": [
+        [
+          "Forest fires",
+          1
+        ]
+      ]
+    }
+  }
+}
