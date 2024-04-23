@@ -1,0 +1,395 @@
+sector_id,original_inventory_sector,unfccc_annex_1_category_code,unfccc_annex_1_category_notes,unfccc_annex_1_category_is_subset,unfccc_annex_1_category_subset_fraction,unfccc_annex_1_category_subset_estimation_method,reporting_entity,climate_trace_sector
+991,petrochemicals,2.B.8.b.,,False,,,,
+26,Land-Use Change and Forestry,"4.A, 4.B.2.a, 4.C.2.a",,False,,,cait,
+27,Waste,"4.A, 4.D, 4.E",,True,,,cait,
+28,Bunker Fuels,"1.A.3.a.i, 1.A.3.d.i",,False,,,cait,
+24,Fugitive Emissions,"1.B.1, 1.B.2, 1.B.4",,False,,,cait,
+22,Industrial Processes,"2.B.2, 2.B.3, 2.A, 2.C",,False,,,cait,
+23,Other Fuel Combustion,"1.A.4.c, 1.A.5",,False,,,cait,
+25,Agriculture,"3.A, 3.B, 3.C,",,True,,,cait,
+17,Energy,1,,False,,,cait,
+18,Electricity/Heat,1.A.1.a,,False,,,cait,
+19,Transportation,1.A.3,,False,,,cait,
+20,Building,"1.A.4.a, 1.A.4.b",,False,,,cait,
+21,Manufacturing/Construction,1.A.2,,False,,,cait,
+4499,All Other Non-Metallic Mineral Product Manufacturing,1.A.2.f,,,,,canghgrp,other-manufacturing
+4498,Glass Manufacturing,1.A.2.f,,,,,canghgrp,other-manufacturing
+4497,Lime Manufacturing,1.A.2.f,,,,,canghgrp,other-manufacturing
+4485,Glass Product Manufacturing from Purchased Glass,1.A.2.f,,,,,can-ghgrp,other-manufacturing
+4484,Non-Ferrous Die-Casting Foundries,1.A.2.b,,,,,can-ghgrp,other-manufacturing
+4483,Clay Building Material and Refractory Manufacturing,1.A.2.f,,,,,can-ghgrp,other-manufacturing
+4481,Gypsum Product Manufacturing,1.A.2.f,,,,,can-ghgrp,other-manufacturing
+4480,All Other Non-Metallic Mineral Product Manufacturing,1.A.2.f,,,,,can-ghgrp,other-manufacturing
+4479,Glass Manufacturing,1.A.2.f,,,,,can-ghgrp,other-manufacturing
+4478,Lime Manufacturing,1.A.2.f,,,,,can-ghgrp,other-manufacturing
+4482,Non-Ferrous Foundries (except Die-Casting),1.A.2.b,,,,,can-ghgrp,other-manufacturing
+223,International Aviation,7.A,,False,,,carbon-monitor,
+221,Residential,1.A.4.b.i,,False,,,carbon-monitor,
+218,Power,1.A.1.a,,False,,,carbon-monitor,
+219,Industry,"1.A.2, 2, 7.B",The international shipping emissions are included in the ROW in the industry sector. Industries included different for China,False,,,carbon-monitor,
+220,Ground Transport,1.A.3.b,,False,,,carbon-monitor,
+222,Domestic Aviation,1.A.3.a,,False,,,carbon-monitor,
+70,other-onsite-fuel-usage,1.A.5,,False,,,climate-trace,
+69,residential-and-commercial-onsite-fuel-usage,"1.A.4.a, 1.A.4.b",,False,,,climate-trace,
+68,other-transport,1.A.3.e,,False,,,climate-trace,
+67,shipping,"1.A.3.d, 7.B",,False,,,climate-trace,
+66,railways,1.A.3.c,,False,,,climate-trace,
+65,road-transportation,1.A.3.b,,False,,,climate-trace,
+64,international-aviation,7.A,,False,,,climate-trace,
+63,domestic-aviation,1.A.3.a,,False,,,climate-trace,
+62,other-energy-use,"1.A.1.a.iii, 1.A.1.a.iv",,False,,,climate-trace,
+61,electricity-generation,"1.A.1.a.i, 1.A.1.a.ii",,False,,,climate-trace,
+1837,road-transportation-urban-area,1.A.3.b,,False,,,climate-trace,
+1840,domestic-shipping-ship,1.A.3.d,,False,,,climate-trace,
+1841,international-shipping-ship,7.B,,False,,,climate-trace,
+1842,domestic-shipping-port,1.A.3.d,,False,,,climate-trace,
+1843,international-shipping-port ,7.B,,False,,,climate-trace,
+1850,oil-and-gas-production-and-transport-field,"1.B.2.a.i, 1.B.2.a.ii, 1.B.2.a.iii, 1.B.2.b.i, 1.B.1.b.ii, 1.B.1.b.iii, 1.B.2.c",,False,,,climate-trace,
+1852,petrochemicals,2.B.8.b.,,False,,,climate-trace,
+1878,forest-land-clearing,,,False,,,climate-trace,
+1879,forest-land-degradation,,,False,,,climate-trace,
+1880,shrubgrass-fires,,,False,,,climate-trace,
+1836,road-transportation-road-segment,1.A.3.b,,False,,,climate-trace,
+1881,wetland-fires,,,False,,,climate-trace,
+1882,removals,,,False,,,climate-trace,
+1884,net-wetland,4.D,,False,,,climate-trace,
+1885,net-shrubgrass,4.C,,False,,,climate-trace,
+1886,forest-land-fires,4.A.1.a,,False,,,climate-trace,
+1887,water-reservoirs,4.D.1.b,,False,,,climate-trace,
+1888,pipelines-railways,"1.A.3.c, 1.A.3.e",,False,,,climate-trace,
+1883,net-forest-land,4.A,,False,,,climate-trace,
+108,forest-fires,4.A.1.a,,False,,,climate-trace,
+98,fluorinated-gases,"2.B.9, 2.F",,False,,,climate-trace,
+97,wastewater-treatment-and-discharge,5.D,,False,,,climate-trace,
+96,incineration-and-open-burning-of-waste,5.C,,False,,,climate-trace,
+95,biological-treatment-of-solid-waste-&-biogenic,5.B,,False,,,climate-trace,
+94,solid-waste-disposal,5.A,,False,,,climate-trace,
+93,other-agriculture,"1.A.4.c,",,False,,,climate-trace,
+92,other-agricultural-soil-emissions,"3.D.1.b, 3.D.1.c, 3.D.1.d, 3.D.1.e, 3.D.1.f, 3.D.1.g, 3.D.2, 3.G, 3.H, 3.I, 3.J",,False,,,climate-trace,
+91,cropland-fires,3.F,,False,,,climate-trace,
+90,synthetic-fertilizer-application,3.D.1.a,,False,,,climate-trace,
+89,rice-cultivation,3.C,,False,,,climate-trace,
+88,manure-management,3.B,,False,,,climate-trace,
+87,enteric-fermentation,3.A,,False,,,climate-trace,
+86,sand-quarrying,1.A.2.g.iii,,True,,,climate-trace,
+85,rock-quarrying,1.A.2.g.iii,,True,,,climate-trace,
+84,iron-mining,1.A.2.g.iii,,True,,,climate-trace,
+83,copper-mining,1.A.2.g.iii,,True,,,climate-trace,
+82,bauxite-mining,1.A.2.g.iii,,True,,,climate-trace,
+81,other-manufacturing,"1.A.2.b, 1.A.2.c, 1.A.2.e, 1.A.2.f, 1.A.2.g.i, 1.A.2.g.ii, 1.A.2.g.iii, 1.A.2.g.iv, 1.A.2.g.v, 1.A.2.g.vi, 1.A.2.g.vii, 1.A.2.g.viii, 2.A.2, 2.A.3, 2.A.4, 2.B.2, 2.B.3, 2.B.4, 2.B.5, 2.B.6, 2.B.8.b, 2.B.8.c, 2.B.8.d, 2.B.8.e, 2.B.8.f, 2.B.8.g, 2.C.2, 2.C.4, 2.C.5, 2.C.6, 2.C.7, 2.D, 2.E, 2.G, 2.H,2, 2.H.3 ",,True,,,climate-trace,
+80,pulp-and-paper,"1.A.2.d, 2.H.1",,False,,,climate-trace,
+79,aluminum,"1.A.2.b, 2.C.3",,True,,,climate-trace,
+78,steel,"1.A.2.a, 2.C.1",,False,,,climate-trace,
+77,chemicals,"1.A.2.c, 2.B.1, 2.B.7, 2.B.8.a","Methanol, ammonia and soda ash only",True,,,climate-trace,
+76,cement,"1.A.2.f, 2.A.1",,True,,,climate-trace,
+75,other-fossil-fuel-operations,"1.B.2.a.vi, 1.B.2.b.vi, 1.B.2.d",,False,,,climate-trace,
+74,oil-and-gas-refining,"1.A.1.b, 1.B.2.a.iv, 1.B.2.a.v, 1.B.2.b.v",,False,,,climate-trace,
+73,oil-and-gas-production-and-transport,"1.B.2.a.i, 1.B.2.a.ii, 1.B.2.a.iii, 1.B.2.b.i, 1.B.1.b.ii, 1.B.1.b.iii, 1.B.2.c",,False,,,climate-trace,
+72,solid-fuel-transformation,"1.B.1.b, 1.B.1.c",,False,,,climate-trace,
+71,coal-mining,1.B.1.a,,False,,,climate-trace,
+1561,Other,6,,False,,,edgar,
+262,Emissions from biomass burning,"3.E, 3.F, 4.A.1.c, 4.C.1.a, 4.D.1.b",,True,,,edgar,
+224,Main Activity Electricity and Heat Production,1.A.1.a,,False,,,edgar,
+225,Petroleum Refining - Manufacture of Solid Fuels and Other Energy Industries,"1.A.1.b, 1.A.1.c",,False,,,edgar,
+226,Manufacturing Industries and Construction,1.A.2,,False,,,edgar,
+227,Civil Aviation,1.A.3.a,,False,,,edgar,
+228,Road Transportation no resuspension,1.A.3.b,,False,,,edgar,
+229,Railways,1.A.3.c,,False,,,edgar,
+230,Water-borne Navigation,1.A.3.d,,False,,,edgar,
+231,Other Transportation,1.A.3.e,,False,,,edgar,
+232,Other Sectors,1.A.4,,False,,,edgar,
+233,Non-Specified,1.A.5,,False,,,edgar,
+234,Solid Fuels,1.B.1,,False,,,edgar,
+235,Oil and Natural Gas,1.B.2,,False,,,edgar,
+236,Cement production,2.A.1,,False,,,edgar,
+237,Lime production,2.A.2,,False,,,edgar,
+238,Glass Production,2.A.3,,False,,,edgar,
+239,Other Process Uses of Carbonates,2.A.4,,False,,,edgar,
+240,Chemical Industry,2.B,,False,,,edgar,
+241,Metal Industry,2.C,,False,,,edgar,
+242,Non-Energy Products from Fuels and Solvent Use,2.D,,False,,,edgar,
+243,Liming,3.G,,False,,,edgar,
+244,Urea application,3.H,,False,,,edgar,
+260,Enteric Fermentation,3.A,,False,,,edgar,
+261,Manure Management,3.B,,False,,,edgar,
+263,Rice cultivations,3.C,,False,,,edgar,
+264,Solid Waste Disposal,5.A,,False,,,edgar,
+265,Biological Treatment of Solid Waste,5.B,,False,,,edgar,
+266,Incineration and Open Burning of Waste,5.C,,False,,,edgar,
+267,Wastewater Treatment and Discharge,5.D,,False,,,edgar,
+281,Other Product Manufacture and Use,2.G,,False,,,edgar,
+284,Direct N2O Emissions from managed soils,3.D.1,,False,,,edgar,
+285,Indirect N2O Emissions from managed soils,3.D.2,,False,,,edgar,
+286,Indirect N2O Emissions from manure management,,,False,,,edgar,
+290,Indirect N2O emissions from the atmospheric deposition of nitrogen in NOx and NH3,3.D.2.a,,False,,,edgar,
+245,3.J Other,3.J,,False,,,edgar,
+268,5.E Other,5.E,,False,,,edgar,
+291,6. Other,6,,False,,,edgar,
+4510,manufacturing,,,,,,epa,other-manufacturing
+4509,adipic_acid_production,2.B.3,,,,,epa,other-manufacturing
+4508,phosphoric_acid,2.B.8.g.ii,,,,,epa,other-manufacturing
+4507,magnesium,2.C.4,,,,,epa,other-manufacturing
+4465,food_processing,2.H.2,,,,,epa-flight,other-manufacturing
+4466,glass_production,2.A.3,,,,,epa-flight,other-manufacturing
+4467,zinc_production,2.C.6,,,,,epa-flight,other-manufacturing
+4468,other_metals,2.C.7,,,,,epa-flight,other-manufacturing
+4469,nitric_acid_production,2.B.2,,,,,epa-flight,other-manufacturing
+4470,other_chemicals,2.B.8.g.ii,,,,,epa-flight,other-manufacturing
+4471,silicon_carbide_production,2.B.5.a,,,,,epa-flight,other-manufacturing
+4457,phosphoric_acid,2.B.8.g.ii,,,,,epa-flight,other-manufacturing
+4473,other_minerals,2.A.4.d,,,,,epa-flight,other-manufacturing
+4476,hydrogen_production,2.B.10,,,,,epa-flight,other-manufacturing
+4475,lead_production,2.C.5,,,,,epa-flight,other-manufacturing
+4474,soda_ash_production,2.B.7,,,,,epa-flight,other-manufacturing
+4456,magnesium,2.C.4,,,,,epa-flight,other-manufacturing
+4477,lime_production,2.A.2,,,,,epa-flight,other-manufacturing
+4472,titanium_dioxide,2.B.6,,,,,epa-flight,other-manufacturing
+4458,adipic_acid_production,2.B.3,,,,,epa-flight,other-manufacturing
+4459,manufacturing,,,,,,epa-flight,other-manufacturing
+4464,ferroalloys_production,2.C.2,,,,,epa-flight,other-manufacturing
+3312,Coal product and solid smokeless fuel manufacturing,1.A.1.c,,,,,eprtr,solid-fuel-transformation
+3285,Chemical industry,"1.A.2.c, 2.B",,,,,eprtr,chemicals
+3286,Paper and wood production and processing,"1.A.2.d, 2.H.1",,,,,eprtr,pulp-and-paper
+3287,Animal and vegetable products from the food and beverage sector,"1.A.2.e, 2.H.2",,,,,eprtr,other-manufacturing
+3288,Thermal power stations,1.A.1.a,,,,,eprtr,electricity-generation
+3289,Incineration of non-hazardous waste,5.C.1,,,,,eprtr,incineration-and-open-burning-of-waste
+3290,Glass manufacturing,2.A.3,,,,,eprtr,other-manufacturing
+3291,Mineral oil and gas refineries,"1.A.1.b, 1.B.2.a.iv",,,,,eprtr,oil-and-gas-refining
+3292,Pig iron or steel production,"1.A.2.a, 2.C.1",,,,,eprtr,steel
+3293,Urban waste-water treatment plants,5.D.1,,,,,eprtr,wastewater-treatment-and-discharge
+3294,Underground mining,1.B.1.a.i,,,,,eprtr,coal-mining
+3296,Opencast mining and quarrying,"1.B.1.a.ii, 1.A.2.g.iii",,,,,eprtr,all-mining
+3300,Cement clinker production in rotary kilns,2.A.1,,,,,eprtr,cement
+3301,Non-ferrous metal smelting and alloying,"1.A.2.b, 2.C.3, 2.C.4, 2.C.5, 2.C.6, 2.C.7",,,,,eprtr,other-manufacturing
+3302,Lime production in rotary kilns,2.A.2,,,,,eprtr,other-manufacturing
+3303,Non-ferrous crude metal production,"1.A.2.b, 2.C.3, 2.C.4, 2.C.5, 2.C.6, 2.C.7",,,,,eprtr,other-manufacturing
+3311,Coke ovens,1.B.1.b,,,,,eprtr,solid-fuel-transformation
+3855,Landfills,5.A.1,,,,,eprtr,solid-waste-disposal
+513,Animal and vegetable products from the food and beverage sector,"1.A.2.e, 2.H.2",,,,,european-pollutant-release-and-transfer-register,other-manufacturing
+514,Landfills,5.A.1,,,,,european-pollutant-release-and-transfer-register,solid-waste-disposal
+515,Thermal power stations,1.A.1.a,,,,,european-pollutant-release-and-transfer-register,electricity-generation
+516,Incineration of non-hazardous waste,5.C.1,,,,,european-pollutant-release-and-transfer-register,incineration-and-open-burning-of-waste
+517,Glass manufacturing,2.A.3,,,,,european-pollutant-release-and-transfer-register,other-manufacturing
+518,Mineral oil and gas refineries,"1.A.1.b, 1.B.2.a.iv",,,,,european-pollutant-release-and-transfer-register,oil-and-gas-refining
+519,Pig iron or steel production,"1.A.2.a, 2.C.1",,,,,european-pollutant-release-and-transfer-register,steel
+520,Urban waste-water treatment plants,5.D.1,,,,,european-pollutant-release-and-transfer-register,wastewater-treatment-and-discharge
+521,Underground mining,1.B.1.a.i,,,,,european-pollutant-release-and-transfer-register,coal-mining
+522,Opencast mining and quarrying,"1.B.1.a.ii, 1.A.2.g.iii",,,,,european-pollutant-release-and-transfer-register,all-mining
+523,Cement clinker production in rotary kilns,2.A.1,,,,,european-pollutant-release-and-transfer-register,cement
+524,Non-ferrous metal smelting and alloying,"1.A.2.b, 2.C.3, 2.C.4, 2.C.5, 2.C.6, 2.C.7",,,,,european-pollutant-release-and-transfer-register,other-manufacturing
+525,Lime production in rotary kilns,2.A.2,,,,,european-pollutant-release-and-transfer-register,other-manufacturing
+526,Non-ferrous crude metal production,"1.A.2.b, 2.C.3, 2.C.4, 2.C.5, 2.C.6, 2.C.7",,,,,european-pollutant-release-and-transfer-register,other-manufacturing
+527,Coke ovens,1.B.1.b,,,,,european-pollutant-release-and-transfer-register,solid-fuel-transformation
+528,Coal product and solid smokeless fuel manufacturing,1.A.1.c,,,,,european-pollutant-release-and-transfer-register,solid-fuel-transformation
+511,Chemical industry,"1.A.2.c, 2.B",,,,,european-pollutant-release-and-transfer-register,chemicals
+512,Paper and wood production and processing,"1.A.2.d, 2.H.1",,,,,european-pollutant-release-and-transfer-register,pulp-and-paper
+2,Manure Management,3.B,Manure Management consists of methane (CH4) and nitrous oxide (N2O) emissions from aerobic and anaerobic processes of manure decomposition.,False,,,faostat,
+1,Enteric Fermentation,3.A,Greenhouse gas (GHG) emissions from enteric fermentation consist of methane gas produced in digestive systems of ruminants and to a lesser extent of non-ruminants.,False,,,faostat,
+16,Forestland,4.A,Forests consists of CO2 emissions and removals corresponding to forest carbon stock changes (aboveground and belowground living biomass).,False,,,faostat,
+15,Net Forest conversion,,,False,,,faostat,
+14,Drained organic soils ,"3.D.1.e, 3.D.1.f",Organic soils consist of nitrous oxide (N2O) and carbon dioxide (CO2) emissions associated with the drainage of organic soils using histosols as proxy for agriculture.,False,,,faostat,
+13,Fires in organic soils,,"Fires consists of estimates of methane (CH4), nitrous oxide (N2O) and carbon dioxide (CO2) from biomass burning in a range of vegetation types and from fires in organic soils.",False,,,faostat,
+12,Forest fires,"4.B.2.a, 4.C.2.a, 4.E.2.a, 4.A.2","Fires consists of estimates of methane (CH4), nitrous oxide (N2O) and carbon dioxide (CO2) from biomass burning in a range of vegetation types and from fires in organic soils.",True,,,faostat,
+11,Fires in humid tropical forests,"4.B.2.a, 4.C.2.a, 4.E.2.a, 4.A.1","Fires consists of estimates of methane (CH4), nitrous oxide (N2O) and carbon dioxide (CO2) from biomass burning in a range of vegetation types and from fires in organic soils.",True,,,faostat,
+10,Savanna fires,"3.E, 4.C.1","Fires consists of estimates of methane (CH4), nitrous oxide (N2O) and carbon dioxide (CO2) from biomass burning in a range of vegetation types and from fires in organic soils.",False,,,faostat,
+9,On-farm energy use,1.A.4.c,"GHG emissions from direct on-farm agriculture energy use consist of carbon dioxide, methane and nitrous oxide gases associated with fuel burning and generation of electricity used in agriculture (including fisheries).",False,,,faostat,
+8,Crop Residues,3.D.1.d,Crop Residues contains estimates of nitrous oxide (N2O) emissions from the decomposition of nitrogen in crop residues left on managed soils.,False,,,faostat,
+7,Burning - Crop residues,3.F,"GHG emissions from burning crop residues consist of methane (CH4) and nitrous oxide (N2O) gases produced by the combustion of a percentage of crop residues burnt on-site. The mass of fuel available for burning should be estimated taking into account the fractions removed before burning due to animal consumption, decay in the field, and use in other sectors (e.g., biofuel, domestic livestock feed, building materials, etc.).",False,,,faostat,
+6,Rice Cultivation,3.C,GHG emissions from rice cultivation consist of methane gas from the anaerobic decomposition of organic matter in paddy fields.,False,,,faostat,
+5,Synthetic Fertilizers,3.D.1.a,"GHG emissions from synthetic fertilizers consist of nitrous oxide gas from synthetic nitrogen additions to managed soils. Specifically, N2O is produced by microbial processes of nitrification and de-nitrification taking place on the addition site (direct emissions), and after volatilization/re-deposition and leaching processes (indirect emissions).",False,,,faostat,
+4,Manure left on Pasture,3.D.1.b.ii,Manure left on pasture consists of nitrous oxide (N2O) emissions from nitrogen of manure left by grazing livestock on pasture.,False,,,faostat,
+3,Manure applied to Soils,3.D.1.b.i,"GHG emissions from manure applied to soils consist of direct and indirect nitrous oxide (N2O) emissions from nitrogen (N) of manure added to agricultural soils. Specifically, N2O is produced by microbial processes of nitrification and de-nitrification taking place on the application site (direct emissions), and after volatilization/re-deposition and leaching processes (indirect emissions).",False,,,faostat,
+497,Cement,2.A.1,,,,,global-emissions-infrastructure-database,cement
+465,Iron and Steel,"1.A.2.a, 2.C.1",,,,,global-emissions-infrastructure-database,steel
+496,Power,1.A.1.a,,,,,global-emissions-infrastructure-database,electricity-generation
+509,Steel Plants,"1.A.2.a, 2.C.1",,,,,global-energy-monitor,steel
+506,Coal Plants,1.A.1.a,,,,,global-energy-monitor,electricity-generation
+592,Oil and Gas Extraction,1.B.2,,,,,global-energy-monitor,oil-and-gas-production-and-transport
+507,Gas Plants,1.A.1.a,,,,,global-energy-monitor,electricity-generation
+508,Coal Mines,1.B.1.a,,,,,global-energy-monitor,coal-mining
+529,Power,1.A.1.a,,,,,global-power-plant-database,electricity-generation
+3080,Waste and sewage : Waste transfer station : 38213 Composting site or other treatment of organic waste,5.A,,,,,isreal-prtr,solid-waste-disposal
+2233,Waste and sewage : burial : 3821 Treatment of non-hazardous waste materials and their disposal,5.A,,,,,isreal-prtr,solid-waste-disposal
+2356,Waste and sewage : Waste transfer station : 381 Garbage and waste collection,5.A,,,,,isreal-prtr,solid-waste-disposal
+2357,Waste and sewage : hazardous waste : 1920 Production of refined petroleum products,5.A,,,,,isreal-prtr,solid-waste-disposal
+2358,Waste and sewage : Non-hazardous waste : 3811 Collection of non-hazardous waste materials,5.A,,,,,isreal-prtr,solid-waste-disposal
+2359,chemical industry : Production of organic materials on an industrial scale by chemical or biological processing : C industry and factory,nan,,,,,isreal-prtr,nan
+2360,metals : Processing of non-Brazilian metals : 2431 Iron and steel casting,1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2361,Waste and sewage : Non-hazardous waste : 371 wastewater treatment facilities,5.D,,,,,isreal-prtr,wastewater-treatmet-and-discharge
+2362,mineral industry : Quarrying and mining : 20 Production of chemicals and their products,nan,,,,,isreal-prtr,nan
+2363,chemical industry : Production of organic materials on an industrial scale by chemical or biological processing : 20 Production of chemicals and their products,nan,,,,,isreal-prtr,nan
+2364,metals : Surface treatment of metals and plastic materials : 2431 Iron and steel casting,1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2365,Waste and sewage : Disposal or treatment of waste in facilities for incineration or thermal treatment of waste : 3822 Treatment of hazardous waste materials and their disposal,5.A,,,,,isreal-prtr,solid-waste-disposal
+2366,food and beverage industry : Production of food and beverage products : 1040 Production of animal and vegetable fats and oils,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2312,Waste and sewage : Burning or recycling of animal carcasses and losses : 381 Garbage and waste collection,5.A,,,,,isreal-prtr,solid-waste-disposal
+2313,Waste and sewage : hazardous waste : 20 Production of chemicals and their products,2.B.11,,,,,isreal-prtr,other-manufacturing
+2314,food and beverage industry : Production of food and beverage products : 108 Production of prepared food for animals,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2315,Energy industries : Production and processing of fuels : 06 Crude oil and natural gas production,1.B.2,,,,,isreal-prtr,oil-and-gas-production-and-transport
+2316,"chemical industry : Production of organic materials on an industrial scale by chemical or biological processing : 207 Production of soap and washing powders, detergents and polishes, and detergents and perfumes",2.B.7 ,,,,,isreal-prtr,other-manufacturing
+2317,agriculture : Intensive poultry farming : 0406 Poultry farming,3.A.4.g,,,,,isreal-prtr,nan
+2318,"Other : Industrial production of paper and wood : 1701 Manufacture of wood pulp, paper and cardboard",1.A.2.g.iv ,,,,,isreal-prtr,other-manufacturing
+2319,Energy industries : Production and processing of fuels : 062 Natural gas production,1.B.2.b,,,,,isreal-prtr,oil-and-gas-production-and-transport
+2320,Waste and sewage : Waste transfer station : 3811 Collection of non-hazardous waste materials,5.A,,,,,isreal-prtr,solid-waste-disposal
+2321,Waste and sewage : Waste transfer station : 3821 Treatment of non-hazardous waste materials and their disposal,5.A,,,,,isreal-prtr,solid-waste-disposal
+2322,"mineral industry : Production of cement, lime and magnesium oxide : 2394 Cement, lime and plaster production","2.A.1,2.A.2,  1.A.2.f",,,,,isreal-prtr,cement
+2323,Other : Industrial production of paper and wood : 17 Paper production and its products,1.A.2.d,,,,,isreal-prtr,other-manufacturing
+2324,mineral industry : mineral industry : 2391 Manufacture of ceramic products (fireproof),2.A.4.a,,,,,isreal-prtr,other-manufacturing
+2325,metals : Processing of non-Brazilian metals : 3830 Recycling (recycling) materials,5.A,,,,,isreal-prtr,solid-waste-disposal
+2326,metals : Production and processing of metals : 241 Basic iron and steel production,"1.A.2.a, 2.C.1",,,,,isreal-prtr,steel
+2327,metals : Production and processing of metals : 2431 Iron and steel casting,1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2328,"Other : Use of solvents : 2594 Manufacture of tin packaging and containers, electronic equipment and tin products for the NMA",1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2329,chemical industry : Production of chemical substances on an industrial scale : 21 Production of conventional medicines and homeopathic medicines for humans and veterinary use,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2330,metals : Surface treatment of metals and plastic materials : 261 Production of electronic components and boards,1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2331,food and beverage industry : Production of food and beverage products : 1030 Fruit and vegetable processing and preservation,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2332,Other : Use of solvents : 22 Production of rubber and plastic products,2.D.3.a,,,,,isreal-prtr,other-manufacturing
+2333,chemical industry : Production of organic materials on an industrial scale by chemical or biological processing : 202 Production of pesticides and disinfectants for domestic and agricultural use,nan,,,,,isreal-prtr,nan
+2334,chemical industry : Production of organic materials on an industrial scale by chemical or biological processing : 22 Production of rubber and plastic products,nan,,,,,isreal-prtr,nan
+2335,Energy industries : Production and processing of fuels : 192 Manufacture of refined petroleum products,nan,,,,,isreal-prtr,nan
+2336,Waste and sewage : Waste transfer station : 382 Garbage and waste treatment and disposal,5.A,,,,,isreal-prtr,solid-waste-disposal
+2337,chemical industry : Production of inorganic materials on an industrial scale by chemical or biological processing : 20 Production of chemicals and their products,nan,,,,,isreal-prtr,nan
+2338,food and beverage industry : Production of food and beverage products : 105 Production of dairy products,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2339,metals : Processing of non-Brazilian metals : 272 Production of batteries and accumulators,nan,,,,,isreal-prtr,nan
+2340,"chemical industry : Production of organic materials on an industrial scale by chemical or biological processing : 206 Manufacture of paints, varnishes and similar coating materials, printing ink and resin",1.A.2.c,,,,,isreal-prtr,other-manufacturing
+2341,chemical industry : Production of chemical substances on an industrial scale : 201 basic chemical production,1.A.2.c,,,,,isreal-prtr,chemicals
+2342,food and beverage industry : Production of food and beverage products : 11 Production of beverages,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2343,chemical industry : Production of inorganic materials on an industrial scale by chemical or biological processing : 201 basic chemical production,1.A.2.c,,,,,isreal-prtr,chemicals
+2344,chemical industry : Production of chemical substances on an industrial scale : 20 Production of chemicals and their products,nan,,,,,isreal-prtr,nan
+2345,food and beverage industry : Production of food and beverage products : 10 Production of food products,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2346,Waste and sewage : Treatment or disposal of industrial wastewater : 371 wastewater treatment facilities,5.D,,,,,isreal-prtr,wastewater-treatmet-and-discharge
+2347,"Waste and sewage : Waste transfer station : 38222 Treatment, disposal and landfill of hazardous waste",5.A,,,,,isreal-prtr,solid-waste-disposal
+2348,Waste and sewage : Burning or recycling of animal carcasses and losses : 1080 Production of prepared food for animals,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2367,chemical industry : Production of organic materials on an industrial scale by chemical or biological processing : 205 Plastic and synthetic rubber production in their primary form (petrochemical industry),nan,,,,,isreal-prtr,nan
+2368,metals : Processing of non-Brazilian metals : 242 Manufacture of precious base metals and other non-ferrous metals,2.C,,,,,isreal-prtr,nan
+2369,agriculture : Intensive root growth : 0405 Pig farming,2.B.3,,,,,isreal-prtr,nan
+2370,Waste and sewage : Non-hazardous waste : 383 recycling (recycling) materials,5.A,,,,,isreal-prtr,solid-waste-disposal
+2371,Waste and sewage : Burning or recycling of animal carcasses and losses : 1011 slaughterhouses and slaughterhouses,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2372,Waste and sewage : Waste transfer station : 38221 Transfer station for hazardous waste,5.A,,,,,isreal-prtr,solid-waste-disposal
+2373,metals : Processing of non-Brazilian metals : 383 recycling (recycling) materials,5.A,,,,,isreal-prtr,solid-waste-disposal
+2375,Energy industries : Production and processing of fuels : 061 Crude oil production,1.B.2.a.ii,,,,,isreal-prtr,oil-and-gas-production-and-transport
+2376,metals : Surface treatment of metals and plastic materials : 259 Manufacture of other metal assembly products; Metalworking activities,1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2377,Waste and sewage : Waste transfer station : 383 recycling (recycling) materials,5.A,,,,,isreal-prtr,solid-waste-disposal
+2378,food and beverage industry : Production of food and beverage products : 383 recycling (recycling) materials,5.A,,,,,isreal-prtr,solid-waste-disposal
+2379,food and beverage industry : Production of food and beverage products : 1012 Production and processing of meat products,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2380,"mineral industry : Quarrying and mining : 0810 Quarrying stone, sand and material",1.A.2.g.iii,,,,,isreal-prtr,"rock-quarrying, sand-quarrying"
+2381,Waste and sewage : Non-hazardous waste : 38212 Transfer station for non-hazardous solid waste,5.A,,,,,isreal-prtr,solid-waste-disposal
+3076,Other : textile : 13 Textile production,1.A.2.g.vi,,,,,isreal-prtr,other-manufacturing
+3077,food and beverage industry : Production of food and beverage products : 1061 Grain grinding and crushing,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+3078,Waste and sewage : burial : 38212 Transfer station for non-hazardous solid waste,5.A,,,,,isreal-prtr,solid-waste-disposal
+3079,"Waste and sewage : hazardous waste : 4661 Wholesale trade in solid, liquid and gaseous fuels and related products",5.A,,,,,isreal-prtr,solid-waste-disposal
+3081,Waste and sewage : Burning or recycling of animal carcasses and losses : 108 Production of prepared food for animals,2.H.2,,,,,isreal-prtr,other-manufacturing
+3082,Waste and sewage : Non-hazardous waste : 382 Garbage and waste treatment and disposal,5.A,,,,,isreal-prtr,solid-waste-disposal
+3083,"mineral industry : Asphalt production : 2399 Manufacture of other products from non-metallic minerals, n.e.c","2.D.3.b, 2.D.3.c",,,,,isreal-prtr,other-manufacturing
+3084,Waste and sewage : Non-hazardous waste : 3821 Treatment of non-hazardous waste materials and their disposal,5.A,,,,,isreal-prtr,solid-waste-disposal
+2234,"Energy industries : burning fuels : 351 Production, transmission and distribution of electricity",1.A.1.a.i,,,,,isreal-prtr,electricity-generation
+2235,"Energy industries : Production and processing of fuels : 35 Supply of electricity, gas, steam and air conditioning (refrigeration)",nan,,,,,isreal-prtr,nan
+2236,Waste and sewage : Wastewater treatment or disposal : 371 wastewater treatment facilities,5.D,,,,,isreal-prtr,wastewater-treatmet-and-discharge
+2237,Waste and sewage : burial : 3900 maintenance activities and other services for the treatment of garbage and waste,5.A,,,,,isreal-prtr,solid-waste-disposal
+2238,"mineral industry : Quarrying and mining : 081 Quarrying stone, sand and material",1.A.2.g.iii,,,,,isreal-prtr,"rock-quarrying, sand-quarrying"
+2239,metals : Processing of non-Brazilian metals : 2432 Casting of non-ferrous metals,1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2374,Waste and sewage : Non-hazardous waste : 3830 Recycling (recycling) materials,5.A,,,,,isreal-prtr,solid-waste-disposal
+2240,Waste and sewage : Waste transfer station : 390 maintenance activities and other services for the treatment of garbage and waste,5.A,,,,,isreal-prtr,solid-waste-disposal
+2241,Waste and sewage : Waste transfer station : 38212 Transfer station for non-hazardous solid waste,5.A,,,,,isreal-prtr,solid-waste-disposal
+2242,food and beverage industry : Production of food and beverage products : 1050 Production of dairy products,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2243,mineral industry : Asphalt production : 23991 Asphalt creature,2.D.4,,,,,isreal-prtr,other-manufacturing
+2244,Waste and sewage : hazardous waste : 3822 Treatment of hazardous waste materials and their disposal,5.A,,,,,isreal-prtr,solid-waste-disposal
+2245,"metals : Brazilian metal processing : 2591 Metalworking and plating, forging, pressing, shaping, stamping and rolling of metals; Powder metallurgy",1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2246,Waste and sewage : Non-hazardous waste : 38213 Composting site or other treatment of organic waste,5.A,,,,,isreal-prtr,solid-waste-disposal
+2247,metals : Brazilian metal processing : 259 Manufacture of other metal assembly products; Metalworking activities,1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2248,metals : Brazilian metal processing : 2431 Iron and steel casting,1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2249,"metals : Processing of non-Brazilian metals : 2591 Metalworking and plating, forging, pressing, shaping, stamping and rolling of metals; Powder metallurgy",1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2250,food and beverage industry : Production of food and beverage products : 1072 Sugar production,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2251,"food and beverage industry : Production of food and beverage products : 101 Meat processing and preservation, slaughterhouses and slaughterhouses",1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2252,food and beverage industry : Production of food and beverage products : 1010 Meat processing and preservation,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2253,Other : water desalination : 362 Desalination,nan,,,,,isreal-prtr,nan
+2254,Other : Industrial production of paper and wood : 1702 Production of corrugated paper and cardboard and production of paper and cardboard containers,2.H.1,,,,,isreal-prtr,pulp-and-paper
+2255,metals : Processing of non-Brazilian metals : 241 Basic iron and steel production,"1.A.2.a, 2.C.1",,,,,isreal-prtr,steel
+2256,metals : Brazilian metal processing : 241 Basic iron and steel production,"1.A.2.a, 2.C.1",,,,,isreal-prtr,steel
+2257,"metals : Surface treatment of metals and plastic materials : 2591 Metalworking and plating, forging, pressing, shaping, stamping and rolling of metals; Powder metallurgy",1.A.2.g.viii,,,,,isreal-prtr,other-manufacturing
+2258,"chemical industry : Production of organic materials on an industrial scale by chemical or biological processing : 208 Other chemical products industry, for NMA",2.B.11,,,,,isreal-prtr,other-manufacturing
+2259,chemical industry : Production of inorganic materials on an industrial scale by chemical or biological processing : 07 Metal ore mining,nan,,,,,isreal-prtr,nan
+2260,chemical industry : Production of chemical substances on an industrial scale : 202 Production of pesticides and disinfectants for domestic and agricultural use,nan,,,,,isreal-prtr,nan
+2261,"chemical industry : Production of inorganic materials on an industrial scale by chemical or biological processing : 208 Other chemical products industry, for NMA",nan,,,,,isreal-prtr,nan
+2262,Waste and sewage : burial : 38211 Non-hazardous solid waste disposal site (landfill),5.A,,,,,isreal-prtr,solid-waste-disposal
+2263,metals : Surface treatment of metals and plastic materials : 241 Basic iron and steel production,"1.A.2.a, 2.C.1",,,,,isreal-prtr,steel
+2264,Waste and sewage : Waste transfer station : 3822 Treatment of hazardous waste materials and their disposal,5.A,,,,,isreal-prtr,solid-waste-disposal
+2265,chemical industry : Production of chemical substances on an industrial scale : 204 Production of fertilizers and nitrogen compounds,2.B.1,,,,,isreal-prtr,other-manufacturing
+2266,"Waste and sewage : Waste transfer station : 38 Collection, waste treatment, maintenance services and recycling of materials",5.A,,,,,isreal-prtr,solid-waste-disposal
+2267,food and beverage industry : Production of food and beverage products : 1011 slaughterhouses and slaughterhouses,1.A.2.e,,,,,isreal-prtr,other-manufacturing
+2268,mineral industry : mineral industry : 231 Production of glass and glass products,2.A.3,,,,,isreal-prtr,other-manufacturing
+2349,chemical industry : Production of chemical substances on an industrial scale : 4666 Wholesale trade in chemicals,nan,,,,,isreal-prtr,nan
+2350,Waste and sewage : Burning or recycling of animal carcasses and losses : 1014 Loss processing,5.A,,,,,isreal-prtr,solid-waste-disposal
+2351,Other : Use of solvents : 261 Production of electronic components and boards,2.D.3.a,,,,,isreal-prtr,other-manufacturing
+2352,"Waste and sewage : Non-hazardous waste : 38 Collection, waste treatment, maintenance services and recycling of materials",5.A,,,,,isreal-prtr,solid-waste-disposal
+2353,Other : Use of solvents : 1811 printing,2.D.3.a,,,,,isreal-prtr,other-manufacturing
+2354,"Waste and sewage : Wastewater treatment or disposal : 360 water storage, treatment and supply",5.D,,,,,isreal-prtr,wastewater-treatmet-and-discharge
+2355,Other : Industrial production of paper and wood : 1709 Manufacture of other paper and cardboard products,1.A.2.d,,,,,isreal-prtr,pulp-and-paper
+502,Coal Plant,1.A.1.a,,,,,meter,electricity-generation
+736,ML Refineries and Terminals,"1.A.1.b, 1.B.2.a.iv",,,,,meter,oil-and-gas-refining
+500,CAFO,3.A,,,,,meter,enteric-fermentation
+501,Coal Mines,1.B.1.a,,,,,meter,coal-mining
+737,ML Storage Tanks,1.B.2.a.iv,,,,,meter,oil-and-gas-refining
+739,O&G Well Pads,"1.B.2.a.ii, 1.B.2.b.ii",,,,,meter,oil-and-gas-production-and-transport
+726,ML O&G Well Pads,1.B.2.a.ii,,,,,meter,oil-and-gas-production-and-transport
+505,Landfills,5.A,,,,,meter,solid-waste-disposal
+733,Mines,"1.B.1.a, 1.A.2.g.iii",,,,,meter,all-mining
+504,LNG terminals,1.B.2.b.iv,,,,,meter,oil-and-gas-refining
+732,NG Storage,1.B.2.b.iv,,,,,meter,oil-and-gas-refining
+503,Compressor Stations,1.B.2.b.iv,,,,,meter,oil-and-gas-refining
+499,Mining Features,"1.B.1.a, 1.A.2.g.iii",,,,,pangea,all-mining
+302,5,6,,False,,,pik-cr,
+312,2.A,2.A,,False,,,pik-cr,
+299,2.C,2.C,,False,,,pik-cr,
+297,2,2,,False,,,pik-cr,
+301,4,5,,False,,,pik-cr,
+359,2.H,2.H,,False,,,pik-cr,
+358,2.G,2.G,,False,,,pik-cr,
+298,2.B,2,,False,,,pik-cr,
+296,1.B.2,1.B.1,,False,,,pik-cr,
+315,2.D,2.D,,False,,,pik-cr,
+300,3.A,"3.A, 3.B",,False,,,pik-cr,
+295,1.B.1,1.B.1,,False,,,pik-cr,
+294,1.B,1.B,,False,,,pik-cr,
+293,1.A,1.A,,False,,,pik-cr,
+292,1,1,,False,,,pik-cr,
+303,M.0.EL,X.3,,False,,,pik-cr,
+305,M.AG.ELV,"3.C, 3.D, 3.E, 3.F, 3.G, 3.H, 3.I, 3.J",,False,,,pik-cr,
+304,M.AG,3,,False,,,pik-cr,
+484,Petrochemicals,"1.A.2.c, 2.B.1, 2.B.8.a",,,,,spatial-finance-initiative,chemicals
+485,Pulp and Paper,"1.A.2.d, 2.H.1",,,,,spatial-finance-initiative,pulp-and-paper
+486,Municipal Wastewater Treatment,5.D,,,,,spatial-finance-initiative,wastewater-treatment-and-discharge
+483,Beef Abattoirs,"1.A.2.e, 2.H.2",,,,,spatial-finance-initiative,other-manufacturing
+487,Steel,"1.A.2.a, 2.C.1",,,,,spatial-finance-initiative,steel
+463,Cement,2.A.1,,,,,spatial-finance-initiative,cement
+488,Coke,1.B.1.b,,,,,spatial-finance-initiative,solid-fuel-transformation
+47,3. Solvent and Other Product Use,3,,False,,,unfccc_non_annex_1,
+46,2.G Other,2.G,,False,,,unfccc_non_annex_1,
+45,2.D Other Production,2.D,,False,,,unfccc_non_annex_1,
+44,2.C Metal Production,2.C,,False,,,unfccc_non_annex_1,
+43,2.B Chemical Industry,2.B,,False,,,unfccc_non_annex_1,
+42,2.A Mineral Products,2.A,,False,,,unfccc_non_annex_1,
+41,2. Industrial Processes,2,,False,,,unfccc_non_annex_1,
+40,1.B.2 Oil and Natural Gas,1.B.2,,False,,,unfccc_non_annex_1,
+39,1.B.1 Solid Fuels,1.B.1,,False,,,unfccc_non_annex_1,
+38,1.B Fugitive Emissions from Fuels,1.B,,False,,,unfccc_non_annex_1,
+37,1.A.5 Other (Not elsewhere specified),1.A.5,,False,,,unfccc_non_annex_1,
+36,1.A.4 Other Sectors,1.A.4,,False,,,unfccc_non_annex_1,
+35,1.A.3 Transport,1.A.3,,False,,,unfccc_non_annex_1,
+34,1.A.2 Manufacturing Industries and Construction,1.A.2,,False,,,unfccc_non_annex_1,
+33,1.A.1 Energy Industries,1.A.1,,False,,,unfccc_non_annex_1,
+32,1.A Fuel Combustion - Sectoral Approach,1.A,,False,,,unfccc_non_annex_1,
+31,1. Energy,1,,False,,,unfccc_non_annex_1,
+30,Total GHG emissions including LULUCF/LUCF,X.1,,False,,,unfccc_non_annex_1,
+29,Total GHG emissions excluding LULUCF/LUCF,X.3,,False,,,unfccc_non_annex_1,
+60,Marine,7.B,,False,,,unfccc_non_annex_1,
+59,Aviation,7.A,,False,,,unfccc_non_annex_1,
+58,International Bunkers,7,,False,,,unfccc_non_annex_1,
+57,7. Other,6,,False,,,unfccc_non_annex_1,
+56,6.D Other,5.E,,False,,,unfccc_non_annex_1,
+55,6.C Waste Incineration,5.C,,False,,,unfccc_non_annex_1,
+54,6. Waste,5,,False,,,unfccc_non_annex_1,
+53,5.E Other,,,False,,,unfccc_non_annex_1,
+52,5.D CO₂ Emissions and Removals from Soil,,,False,,,unfccc_non_annex_1,
+51,5.C Abandonment of Managed Lands,,,False,,,unfccc_non_annex_1,
+50,5.B Forest and Grassland Conversion,,,False,,,unfccc_non_annex_1,
+49,5.A Changes in Forest and Other Woody Biomass Stocks,,,False,,,unfccc_non_annex_1,
+48,5. Land-Use Change and Forestry,4,,False,,,unfccc_non_annex_1,
