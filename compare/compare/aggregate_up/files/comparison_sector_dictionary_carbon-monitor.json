@@ -1,0 +1,62 @@
+{
+  "Electricity Generation": {
+    "climate-trace": [
+      "electricity-generation"
+    ],
+    "carbon-monitor": [
+      "Power"
+    ]
+  },
+  "Domestic Aviation": {
+    "climate-trace": [
+      "domestic-aviation"
+    ],
+    "carbon-monitor": [
+      "Domestic Aviation"
+    ]
+  },
+  "International Aviation": {
+    "climate-trace": [
+      "international-aviation"
+    ],
+    "carbon-monitor": [
+      "International Aviation"
+    ]
+  },
+  "Road Transportation": {
+    "climate-trace": [
+      "road-transportation"
+    ],
+    "carbon-monitor": [
+      "Ground Transport"
+    ]
+  },
+  "Residential and Commercial Onsite Fuel Usage": {
+    "climate-trace": [
+      "residential-and-commercial-onsite-fuel-usage"
+    ],
+    "carbon-monitor": [
+      "Residential"
+    ]
+  },
+  "Manufacturing and Industrial Processes": {
+    "climate-trace": [
+      "cement",
+      "chemicals",
+      "steel",
+      "aluminum",
+      "fluorinated-gases",
+      "petrochemicals",
+      "pulp-and-paper",
+      "sand-quarrying",
+      "rock-quarrying",
+      "bauxite-mining",
+      "iron-mining",
+      "copper-mining",
+      "other-manufacturing"
+    ],
+    "carbon-monitor": [
+      "Industry"
+    ]
+  }
+}

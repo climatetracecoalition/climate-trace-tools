@@ -1,0 +1,219 @@
+{
+  "Energy Industries and Fugitive Emissions": {
+    "climate-trace": [
+      "electricity-generation",
+      "other-energy-use",
+      "coal-mining",
+      "solid-fuel-transformation",
+      "oil-and-gas-production-and-transport",
+      "oil-and-gas-refining",
+      "other-fossil-fuel-operations"
+    ],
+    "unfccc_annex_1": [
+      "1.A.1  Energy Industries",
+      "1.B  Fugitive Emissions from Fuels"
+    ],
+    "unfccc_non_annex_1": [
+      "1.A.1  Energy Industries",
+      "1.B  Fugitive Emissions from Fuels"
+    ],
+    "edgar": [
+      "1.A.1.a Main Activity Electricity and Heat Production",
+      "1.B.1 Solid Fuels",
+      "1.B.2 Oil and Natural Gas",
+      "1.A.1.bc Petroleum Refining - Manufacture of Solid Fuels and Other Energy Industries"
+    ],
+    "cait": [
+      "Electricity/Heat",
+      "Fugitive Emissions"
+    ]
+  },
+  "Transport": {
+    "climate-trace": [
+      "domestic-aviation",
+      "international-aviation",
+      "road-transportation",
+      "international-shipping",
+      "domestic-shipping",
+      "railways",
+      "other-transport"
+    ],
+    "unfccc_annex_1": [
+      "1.A.3  Transport",
+      "International Bunkers"
+    ],
+    "unfccc_non_annex_1": [
+      "1.A.3  Transport",
+      "International Bunkers",
+      "Marine",
+      "Aviation"
+    ],
+    "edgar": [
+      "1.A.3.a Civil Aviation",
+      "1.A.3.d Water-borne Navigation",
+      "1.A.3.b_noRES Road Transportation no resuspension",
+      "1.A.3.c Railways",
+      "1.A.3.e Other Transportation"
+    ],
+    "cait": [
+      "Transportation",
+      "Bunker Fuels"
+    ]
+  },
+  "Buildings": {
+    "climate-trace": [
+      "residential-and-commercial-onsite-fuel-usage",
+      "other-onsite-fuel-usage"
+    ],
+    "unfccc_annex_1": [
+      "1.A.4  Other Sectors",
+      "1.A.5  Other (Not specified elsewhere)"
+    ],
+    "unfccc_non_annex_1": [
+      "1.A.4  Other Sectors",
+      "1.A.5  Other (Not elsewhere specified)"
+    ],
+    "edgar": [
+      "1.A.4 Residential and other sectors",
+      "1.A.5 Non-Specified"
+    ],
+    "cait": [
+      "Building",
+      "Other Fuel Consumption"
+    ]
+  },
+  "Manufacturing and Industrial Processes": {
+    "climate-trace": [
+      "petrochemicals",
+      "cement",
+      "chemicals",
+      "steel",
+      "aluminum",
+      "pulp-and-paper"
+    ],
+    "unfccc_annex_1": [
+      "1.A.2  Manufacturing Industries and Construction",
+      "2.  Industrial Processes and Product Use"
+    ],
+    "unfccc_non_annex_1": [
+      "1.A.2  Manufacturing Industries and Construction",
+      "2.  Industrial Processes"
+    ],
+    "edgar": [
+      "2.A.1 Cement production",
+      "2.B Chemical Industry",
+      "2.C Metal Industry",
+      "2.F Product Uses as Substitutes for Ozone Depleting Substances",
+      "1.A.2 Manufacturing Industries and Construction",
+      "2.G Other Product Manufacture and Use",
+      "2.D Non-Energy Products from Fuels and Solvent Use",
+      "2.E Electronics Industry",
+      "2.A.4 Other Process Uses of Carbonates",
+      "2.A.3 Glass Production",
+      "2.A.2 Lime production"
+    ],
+    "cait": [
+      "Industrial Processes",
+      "Manufacturing/Construction"
+    ]
+  },
+  "Agriculture": {
+    "climate-trace": [
+      "enteric-fermentation-cattle-feedlot",
+      "enteric--fermentation-cattle-pasture",
+      "manure-management-cattle-feedlot",
+      "manure-left-on-pasture-cattle",
+      "enteric-fermentation-other",
+      "manure-management-other",
+      "rice-cultivation",
+      "synthetic-fertilizer-application",
+      "other-agricultural-soil-emissions",
+      "cropland-fires",
+      "other-agriculture"
+    ],
+    "unfccc_annex_1": [
+      "3.  Agriculture"
+    ],
+    "unfccc_non_annex_1": [
+      "4.  Agriculture",
+      "3.  Agriculture"
+    ],
+    "edgar": [
+      "3.A.1 Enteric Fermentation",
+      "3.A.2 Manure Management",
+      "3.C.7 Rice cultivations",
+      "3.C.4 Direct N2O Emissions from managed soils",
+      "3.C.2 Liming",
+      "3.C.3 Urea application",
+      "3.C.5 Indirect N2O Emissions from managed soils",
+      "3.C.6 Indirect N2O Emissions from manure management",
+      "5.A Indirect N2O emissions from the atmospheric deposition of nitrogen in NOx and NH3"
+    ],
+    "cait": [
+      "Agriculture"
+    ],
+    "faostat": [
+      "Crop Residues",
+      "Drained organic soils (CO2)",
+      "Drained organic soils (N2O)",
+      "Manure left on Pasture (N2O)",
+      "Manure applied to Soils (N2O)",
+      "Rice Cultivation",
+      "Burning - Crop residues",
+      "Enteric Fermentation",
+      "Manure Management",
+      "Manure left on Pasture (CH4)",
+      "Manure applied to Soils (CH4)",
+      "Synthetic Fertilizers"
+    ]
+  },
+  "Waste": {
+    "climate-trace": [
+      "solid-waste-disposal",
+      "biological-treatment-of-solid-waste-and-biogenic",
+      "incineration-and-open-burning-of-waste",
+      "wastewater-treatment-and-discharge"
+    ],
+    "unfccc_annex_1": [
+      "5.  Waste"
+    ],
+    "unfccc_non_annex_1": [
+      "6.  Waste",
+      "5.  Waste"
+    ],
+    "edgar": [
+      "4.A Solid Waste Disposal",
+      "4.B Biological Treatment of Solid Waste",
+      "4.C Incineration and Open Burning of Waste",
+      "4.D Wastewater Treatment and Discharge"
+    ],
+    "cait": [
+      "Waste"
+    ]
+  },
+  "Forestry and Land Use Change": {
+    "climate-trace": [
+      "net-forest-land",
+      "net-shrubgrass",
+      "net-wetland",
+      "water-reservoirs"
+    ],
+    "unfccc_annex_1": [
+      "4.  Land Use",
+      "Land-Use Change and Forestry"
+    ],
+    "unfccc_non_annex_1": [
+      "5.  Land-Use Change and Forestry"
+    ],
+    "cait": [
+      "Land-use Change and Forestry"
+    ],
+    "faostat": [
+      "Net Forest conversion",
+      "Savanna fires",
+      "Forest fires",
+      "Fires in humid tropical forests",
+      "Fires in organic soils"
+    ]
+  }
+}
