@@ -1,16 +1,98 @@
 {
-  "electricity-generation-and-other-energy-use": {
-    "unfccc": {
+  "electricity-generation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "electricity-generation",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "1.A.1.a Main Activity Electricity and Heat Production",
+          1
+        ]
+      ]
+    },
+    "pik-tp": {
+      "pik-tp": [
+        [
+          "1.A",
+          1
+        ]
+      ],
       "unfccc_non_annex_1": [
         [
-          "1.A.1  Energy Industries",
+          "1.A.2  Manufacturing Industries and Construction",
+          -1
+        ],
+        [
+          "1.A.3  Transport",
+          -1
+        ],
+        [
+          "1.A.4  Other Sectors",
+          -1
+        ]
+      ]
+    }
+  },
+  "other-energy-use": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-energy-use",
+          1
+        ]
+      ]
+    }
+  },
+  "aviation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "domestic-aviation",
+          1
+        ],
+        [
+          "international-aviation",
+          1
+        ]
+      ]
+    }
+  },
+  "domestic-aviation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "domestic-aviation",
+          1
+        ]
+      ]
+    }
+  },
+  "international-aviation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "international-aviation",
           1
         ]
       ]
     }
   },
   "road-transportation": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "road-transportation",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "1.A.3.b  Road Transportation",
@@ -19,8 +101,60 @@
       ]
     }
   },
+  "shipping": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "international-shipping",
+          1
+        ],
+        [
+          "domestic-shipping",
+          1
+        ]
+      ]
+    }
+  },
+  "international-shipping": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "international-shipping",
+          1
+        ]
+      ]
+    }
+  },
+  "domestic-shipping": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "domestic-shipping",
+          1
+        ]
+      ]
+    }
+  },
+  "other-transport": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-transport",
+          1
+        ]
+      ]
+    }
+  },
   "residential-and-commercial-onsite-fuel-usage": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "residential-and-commercial-onsite-fuel-usage",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "1.A.4  Other Sectors",
@@ -29,8 +163,26 @@
       ]
     }
   },
+  "other-onsite-fuel-usage": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-onsite-fuel-usage",
+          1
+        ]
+      ]
+    }
+  },
   "coal-mining": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "coal-mining",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "1.B.1  Solid Fuels",
@@ -39,8 +191,26 @@
       ]
     }
   },
+  "solid-fuel-transformation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "solid-fuel-transformation",
+          1
+        ]
+      ]
+    }
+  },
   "oil-and-gas-production-and-transport": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "oil-and-gas-production-and-transport",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "1.B.2  Oil and Natural Gas",
@@ -86,7 +256,15 @@
     }
   },
   "oil-and-gas-refining": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "oil-and-gas-refining",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "1.B.2  Oil and Natural Gas",
@@ -95,8 +273,36 @@
       ]
     }
   },
+  "petrochemicals": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "petrochemicals",
+          1
+        ]
+      ]
+    }
+  },
+  "other-fossil-fuel-operations": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-fossil-fuel-operations",
+          1
+        ]
+      ]
+    }
+  },
   "cement": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "cement",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "2.A.1  Cement Production",
@@ -128,7 +334,15 @@
     }
   },
   "chemicals": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "chemicals",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "2.B  Chemical Industry",
@@ -138,7 +352,15 @@
     }
   },
   "steel": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "steel",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "2.C  Metal Production",
@@ -164,7 +386,15 @@
     }
   },
   "aluminum": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "aluminum",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "2.C  Metal Production",
@@ -181,8 +411,80 @@
       ]
     }
   },
+  "pulp-and-paper": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "pulp-and-paper",
+          1
+        ]
+      ]
+    }
+  },
+  "other-manufacturing": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-manufacturing",
+          1
+        ]
+      ]
+    }
+  },
+  "mining-and-quarrying": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "bauxite-mining",
+          1
+        ],
+        [
+          "iron-mining",
+          1
+        ],
+        [
+          "copper-mining",
+          1
+        ],
+        [
+          "rock-quarrying",
+          1
+        ],
+        [
+          "sand-quarrying",
+          1
+        ]
+      ]
+    }
+  },
+  "rock-quarrying": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "rock-quarrying",
+          1
+        ]
+      ]
+    }
+  },
   "enteric-fermentation": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "enteric-fermentation-cattle-feedlot",
+          1
+        ],
+        [
+          "enteric-fermentation-cattle-pasture",
+          1
+        ],
+        [
+          "enteric-fermentation-other",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "4.A  Enteric Fermentation",
@@ -192,7 +494,23 @@
     }
   },
   "manure-management": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "manure-left-on-pasture-cattle",
+          1
+        ],
+        [
+          "manure-management-cattle-feedlot",
+          1
+        ],
+        [
+          "manure-management-other",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "4.B  Manure Management",
@@ -202,7 +520,15 @@
     }
   },
   "rice-cultivation": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "rice-cultivation",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "4.C  Rice Cultivation",
@@ -220,7 +546,15 @@
     }
   },
   "synthetic-fertilizer-application": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "synthetic-fertilizer-application",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "4.D  Agricultural Soils",
@@ -237,8 +571,36 @@
       ]
     }
   },
+  "other-agricultural-soil-emissions": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-agricultural-soil-emissions",
+          1
+        ]
+      ]
+    }
+  },
+  "other-agriculture": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-agriculture",
+          1
+        ]
+      ]
+    }
+  },
   "solid-waste-disposal": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "solid-waste-disposal",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "6.A  Solid Waste Disposal on Land",
@@ -247,8 +609,26 @@
       ]
     }
   },
+  "biological-treatment-of-solid-waste-and-biogenic": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "biological-treatment-of-solid-waste-and-biogenic",
+          1
+        ]
+      ]
+    }
+  },
   "incineration-and-open-burning-of-waste": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "incineration-and-open-burning-of-waste",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "6.C. Waste Incineration",
@@ -258,7 +638,15 @@
     }
   },
   "wastewater-treatment-and-discharge": {
-    "unfccc": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "wastewater-treatment-and-discharge",
+          1
+        ]
+      ]
+    },
+    "unfccc_non_annex_1": {
       "unfccc_non_annex_1": [
         [
           "6.B  Wastewater Handling",
@@ -267,43 +655,109 @@
       ]
     }
   },
-  "electricity-generation": {
-    "edgar": {
-      "edgar": [
+  "fluorinated-gases": {
+    "climate-trace": {
+      "climate-trace": [
         [
-          "1.A.1.a Main Activity Electricity and Heat Production",
+          "fluorinated-gases",
           1
-        ]
-      ]
-    },
-    "pik-tp": {
-      "pik-tp": [
-        [
-          "1.A",
-          1
-        ]
-      ],
-      "unfccc_non_annex_1": [
-        [
-          "1.A.2  Manufacturing Industries and Construction",
-          -1
-        ],
-        [
-          "1.A.3  Transport",
-          -1
-        ],
-        [
-          "1.A.4  Other Sectors",
-          -1
         ]
       ]
     }
   },
   "forest-land-fires": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "forest-land-fires",
+          1
+        ]
+      ]
+    },
     "faostat": {
       "faostat": [
         [
           "Forest fires",
+          1
+        ]
+      ]
+    }
+  },
+  "forest-land-clearing": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "forest-land-clearing",
+          1
+        ]
+      ]
+    }
+  },
+  "forest-land-degradation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "forest-land-degradation",
+          1
+        ]
+      ]
+    }
+  },
+  "net-forest-land": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "net-forest-land",
+          1
+        ]
+      ]
+    }
+  },
+  "net-shrubgrass": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "net-shrubgrass",
+          1
+        ]
+      ]
+    }
+  },
+  "net-wetland": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "net-wetland",
+          1
+        ]
+      ]
+    }
+  },
+  "shrubgrass-fires": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "shrubgrass-fires",
+          1
+        ]
+      ]
+    }
+  },
+  "wetland-fires": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "wetland-fires",
+          1
+        ]
+      ]
+    }
+  },
+  "electricity-generation-and-other-energy-use": {
+    "unfccc_non_annex_1": {
+      "unfccc_non_annex_1": [
+        [
+          "1.A.1  Energy Industries",
           1
         ]
       ]

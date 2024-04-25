@@ -6,7 +6,7 @@ import json
 # and then put it in the spreadsheets directory within this directory
 xlsx_file_path = 'files/subtract-out-csv-crosswalks.xlsx'
 # Define the list of tabs in your XLSX (assuming each tab corresponds to a separate sheet)
-tabs = ['unfccc-subtract-out', 'edgar-subtract-out', 'cait-subtract-out', 'pik-tp-subtract-out', 'faostat-subtract-out']
+tabs = ['climate-trace-subtract-out','unfccc-subtract-out', 'edgar-subtract-out', 'cait-subtract-out', 'pik-tp-subtract-out', 'faostat-subtract-out']
 
 inventory_titles = {
   'climate-trace': 'ClimateTRACE',
@@ -24,7 +24,8 @@ inventory_codes = {
   'edgar-subtract-out': 'edgar',
   'cait-subtract-out': 'cait',
   'pik-tp-subtract-out': 'pik-tp',
-  'faostat-subtract-out': 'faostat'
+  'faostat-subtract-out': 'faostat',
+  'climate-trace-subtract-out':'climate-trace'
 }
 
 def create_sector_title(raw_string):
@@ -35,6 +36,14 @@ def create_sector_title(raw_string):
 
   return formatted_string
 
+def get_inventory_name(tab_name, annex_1):
+  names = inventory_codes
+  if annex_1:
+    names['unfccc-subtract-out'] = 'unfccc_annex_1'
+  else:
+    names['unfccc-subtract-out'] = 'unfccc_non_annex_1'
+
+  return names[tab_name]
 
 def generate_master_dicts():
   # Initialize JSON objects for Annex 1 and Non-Annex 1 data
@@ -45,7 +54,7 @@ def generate_master_dicts():
       # Read the XLSX file for the current tab
       df = pd.read_excel(xlsx_file_path, sheet_name=tab_name)
       df = df.dropna()
-      inventory_code = inventory_codes[tab_name]
+
 
       for index, row in df.iterrows():
         annex_1 = row['Annex 1?']
@@ -53,6 +62,7 @@ def generate_master_dicts():
         inventory = row['Inventory']
         sector = row['Sector']
         value = int(row['Value'])
+        inventory_code = get_inventory_name(tab_name, annex_1)
         if sector != 'NaN':
           if annex_1:
             if climate_trace_sector not in annex1_data:
@@ -99,6 +109,8 @@ def generate_title_dicts():
         sector = row['Sector']
         sector_title = create_sector_title(climate_trace_sector)
         value = int(row['Value'])
+        inventory_name = get_inventory_name(tab_name, annex_1)
+
         if value > 0:
           value_string = '     + '
         else:
@@ -110,36 +122,42 @@ def generate_title_dicts():
                 'title': sector_title,
                 'legend': {}
               }
-            if tab_name not in annex1_data[climate_trace_sector]['legend']:
-              annex1_data[climate_trace_sector]['legend'][tab_name] = {}
-            if inventory not in annex1_data[climate_trace_sector]['legend'][tab_name]:
-              annex1_data[climate_trace_sector]['legend'][tab_name][inventory] = {
+
+
+            # if tab_name not in annex1_data[climate_trace_sector]['legend']:
+            #
+
+            if inventory_name not in annex1_data[climate_trace_sector]['legend']:
+              annex1_data[climate_trace_sector]['legend'][inventory_name] = {}
+            if inventory not in annex1_data[climate_trace_sector]['legend'][inventory_name]:
+              annex1_data[climate_trace_sector]['legend'][inventory_name][inventory] = {
                 'desc': inventory_title,
                 'comps': []
               }
-            annex1_data[climate_trace_sector]['legend'][tab_name][inventory]['comps'].append((sector, value_string))
+            annex1_data[climate_trace_sector]['legend'][inventory_name][inventory]['comps'].append((sector, value_string))
           else:
             if climate_trace_sector not in non_annex1_data:
               non_annex1_data[climate_trace_sector] = {
                 'title': sector_title,
                 'legend': {}
               }
-            if tab_name not in non_annex1_data[climate_trace_sector]['legend']:
-              non_annex1_data[climate_trace_sector]['legend'][tab_name] = {}
-            if inventory not in non_annex1_data[climate_trace_sector]['legend'][tab_name]:
-              non_annex1_data[climate_trace_sector]['legend'][tab_name][inventory] = {
+
+            if inventory_name not in non_annex1_data[climate_trace_sector]['legend']:
+              non_annex1_data[climate_trace_sector]['legend'][inventory_name] = {}
+            if inventory not in non_annex1_data[climate_trace_sector]['legend'][inventory_name]:
+              non_annex1_data[climate_trace_sector]['legend'][inventory_name][inventory] = {
                 'desc': inventory_title,
                 'comps': []
               }
-            non_annex1_data[climate_trace_sector]['legend'][tab_name][inventory]['comps'].append((sector, value_string))
+            non_annex1_data[climate_trace_sector]['legend'][inventory_name][inventory]['comps'].append((sector, value_string))
 
   # Convert the dictionaries to JSON
   # Print or save the JSON objects as needed
 
-  with open('files/title_dict_annex1', 'w') as f:
+  with open('files/title_dict_annex1.json', 'w') as f:
     f.write(json.dumps(annex1_data, indent=2))
 
-  with open('files/title_dict_nonannex1', 'w') as f:
+  with open('files/title_dict_nonannex1.json', 'w') as f:
     f.write(json.dumps(non_annex1_data, indent=2))
 
 
