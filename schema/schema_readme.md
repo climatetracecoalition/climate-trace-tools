@@ -1,0 +1,1 @@
+![Alt text](climate_trace_data_schema.png)
