@@ -10,6 +10,7 @@ Once we have assigned an IPCC code to the sector, we have two techniques for att
 
 - Aggregate up: If two inventories define a sector slightly differently, we can aggregate sectors into larger groupings in order for the codes contained in each to match closely. For example, Climate TRACE currently groups emissions information by industry and has not split them out into 1.A (Energy use) and 1.B (Fugitive Emissions) for `oil-and-gas-production-and-transport` or `oil-and-gas-refining`. EDGAR, however, does split estimates into 1.A and 1.B. In order to compare our estimates for these sectors, we add together all of the sectors that measure emissions in either 1.A or 1.B together into a comparison sector called “Energy Industries and Fugitive Emissions”. In some cases, depending on the comparison inventory, we can aggregate to a comparison subsector as well.
     - The graph below shows an example of the output of this type of comparison.
+![aggregate_up_example](https://github.com/climatetracecoalition/climate-trace-tools/assets/43048648/5108392c-ced8-408f-a11a-ee316a956bef)
 
 
  
