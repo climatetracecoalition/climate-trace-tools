@@ -12,5 +12,5 @@ The data folder contains all of the data that Climate TRACE has scraped and proc
 
 ## Compare
 
-This folder contains many tools to help compare data across different sources and inventories. More information on the tools availble can be found in [a relative link] (compare.README.md). 
+This folder contains many tools to help compare data across different sources and inventories. More information on the tools availble can be found in [a relative link] (compare/README.md). 
 
