@@ -14,7 +14,7 @@ from compare.compare.subtract_out.util.plotting_utils import (get_layout, fonts,
                                         get_points_params)
 
 
-def plot(sector, country, gas, co2eq, plot_type, title_dict, output_folder, plotting_dict):
+def plot(sector, country, gas, co2eq, plot_type, title_dict, output_folder, plotting_dict, create_folders):
     
     layout = get_layout(country, title_dict, sector)
     fig = go.Figure(layout=go.Layout(**layout)).update_layout(font=fonts)
@@ -190,11 +190,15 @@ def plot(sector, country, gas, co2eq, plot_type, title_dict, output_folder, plot
                             points_update = get_points_params(plot_type, color_type, point_symbol,
                                                               params, co2eq, trace_type)
                             fig.update_traces(**points_update)
-    try:
-        os.makedirs(output_folder + '/' + f'{country}')
-        print('Output folder created.')
-    except OSError:
-        print('Output folder already exists.')
-    if not dont_plot:
-        plotly.offline.plot(fig, filename=f"{output_folder}/{country}/{get_country_title(country)}_{sector}_{plot_type}.html")
+
+    if create_folders:
+        try:
+            os.makedirs(output_folder + '/' + f'{country}')
+            print('Output folder created.')
+        except OSError:
+            print('Output folder already exists.')
+        if not dont_plot:
+            plotly.offline.plot(fig, filename=f"{output_folder}/{country}/{get_country_title(country)}_{sector}_{plot_type}.html")
+    else:
+        plotly.offline.plot(fig, filename=f"{get_country_title(country)}_{sector}_{plot_type}.html")
         # plotly.offline.plot(fig, filename=f"{output_folder}/{country}", image='png')

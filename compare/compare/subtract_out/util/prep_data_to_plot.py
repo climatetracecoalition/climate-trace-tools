@@ -93,7 +93,7 @@ def compare(comparison_dict, country, allinv, sector, ratio_data):
     return plotting_dict, ratio_data
 
 
-def create_plots(allinv, countries, sector, gas, co2eq, plot_type, ratio_data, output_folder, comparison_dicts, title_dicts):
+def create_plots(allinv, countries, sector, gas, co2eq, plot_type, ratio_data, output_folder, comparison_dicts, title_dicts, create_folders):
 
     for country in countries:
         if country is np.nan:
@@ -117,7 +117,7 @@ def create_plots(allinv, countries, sector, gas, co2eq, plot_type, ratio_data, o
 
         if not (all(plotting_dict[d].empty for d in plotting_dict.keys()) or plotting_dict['climate-trace'].empty):
             try:
-                plot(sector, country, gas, co2eq, plot_type, title_dict, output_folder, plotting_dict)
+                plot(sector, country, gas, co2eq, plot_type, title_dict, output_folder, plotting_dict, create_folders)
             except AttributeError:
                 print(f'Attribute missing for {sector} in {country} plot')
                 continue

@@ -25,7 +25,7 @@ class SectorComparison:
             self.title_dict_annex1 = json.loads(f.read())
 
 
-    def plot(self, countries, sectors, gases, co2eqs, plot_type, start_year, end_year):
+    def plot(self, countries, sectors, gases, co2eqs, plot_type, start_year, end_year, create_folders=False):
         ############################
         # Get the data
         ############################
@@ -69,14 +69,14 @@ class SectorComparison:
                         print('WARNING: If "gas" is "co2", "co2eq" must be "none"')
                         continue
 
-                    try:
-                        os.makedirs(path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type)
-                        print('Output folder created.')
-                    except OSError:
-                        print('Output folder already exists.')
+                    if create_folders:
+                        try:
+                            os.makedirs(path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type)
+                            print('Output folder created.')
+                        except OSError:
+                            print('Output folder already exists.')
 
                     for sector in sectors:
-                        print(sector)
                         if gas != 'all':
                             years_cols = self.allinv.filter(regex='\d').columns
                             gas_present = self.allinv.loc[(self.allinv['Data source'] == 'climate-trace') &
@@ -85,15 +85,16 @@ class SectorComparison:
                             if all(gas_present == 0):
                                 print(f'WARNING: {gas} is not present in {sector} Climate TRACE data, cannot do comparison.')
                                 continue
-                        try:
-                            os.makedirs(path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type + '/' + sector)
-                            print('Output folder created.')
-                        except OSError:
-                            print('Output folder already exists.')
+                        if create_folders:
+                            try:
+                                os.makedirs(path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type + '/' + sector)
+                                print('Output folder created.')
+                            except OSError:
+                                print('Output folder already exists.')
 
                         # create plots for all listed countries, sector by sector
                         ratio_data = create_plots(self.allinv, countries, sector, gas, co2eq, plot_type, ratio_data,
-                                     output_folder=path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type + '/' + sector, comparison_dicts=comparison_dicts, title_dicts=title_dicts)
+                                     output_folder=path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type + '/' + sector, comparison_dicts=comparison_dicts, title_dicts=title_dicts, create_folders=create_folders)
 
         # create ratios dataset
         # years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
