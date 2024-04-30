@@ -14,3 +14,15 @@ The data folder contains all of the data that Climate TRACE has scraped and proc
 
 This folder contains many tools to help compare data across different sources and inventories. More information on the tools availble can be found [here](compare/README.md). 
 
+## Installation 
+
+## Credits 
+
+Christy Lewis \
+Mikey Abela \
+Lee Gans \
+Krsna Raniga \
+Lekha Sridhar \
+Peter Thomas \
+Gabriela de Volpato 
+
