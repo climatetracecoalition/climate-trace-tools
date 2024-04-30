@@ -81,6 +81,7 @@ sc = SectorComparison()
 ```python
 sc.plot(countries = ['USA'], sectors = ['electricity-generation'], gases = ['all'], co2eqs = ['100-year'],plot_type=['subsectors'], start_year=2000, end_year=2023, create_folders=False)
 ```
+![newplot - 2024-04-29T195238 778](https://github.com/climatetracecoalition/climate-trace-tools/assets/43048648/098de5c6-36ec-4f53-94fc-2cc2c0b02792)
 
 
 ***Gases Plot***
@@ -88,4 +89,5 @@ sc.plot(countries = ['USA'], sectors = ['electricity-generation'], gases = ['all
 ```python
 sc.plot(countries = ['USA'], sectors = ['other-manufacturing'], gases = ['all'], co2eqs = ['100-year'],plot_type=['gases'], start_year=2000, end_year=2023, create_folders=False)
 ```
+![newplot - 2024-04-29T194434 813](https://github.com/climatetracecoalition/climate-trace-tools/assets/43048648/98f24edd-6aa2-421f-9947-28d67fd7b838)
 
