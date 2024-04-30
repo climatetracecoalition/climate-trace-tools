@@ -1,8 +1,6 @@
+![climateTRACE-logo](https://github.com/climatetracecoalition/climate-trace-tools/assets/43048648/abd1edac-488e-4dfd-b545-6cf3b79f3291)
 
-
-
-![ClimateTRACE-logo-black-registered](https://github.com/climatetracecoalition/climate-trace-tools/assets/43048648/55a6db34-3b29-4134-81d4-9b003f816937)
-# climate-trace-tools
+# climate-trace-tools 
 
 This repository contains tools and data to make comparing emissions data easier for the climate data community. 
 
