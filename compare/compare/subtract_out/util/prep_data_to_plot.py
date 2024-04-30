@@ -67,6 +67,9 @@ def combine_data(temp_dict, country):
 
 
 def compare(comparison_dict, country, allinv, sector, ratio_data):
+    """Create the plotting dictionary with data combined according to comparison dictionaries and ready to plot"""
+
+
     plotting_dict = {}
     for compare_inventory, subinvdict in comparison_dict.items():
         print(f"Calculating comparison to {compare_inventory.upper()} {sector} {country}")

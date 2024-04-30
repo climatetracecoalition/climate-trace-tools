@@ -66,11 +66,11 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.1.a.iii Heat Plants",
+              "1.A.1.a.iii  Heat Plants",
               "     - "
             ],
             [
-              "1.A.1.a.iv Other",
+              "1.A.1.a.iv  Other",
               "     - "
             ]
           ]
@@ -200,19 +200,19 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.3.b Road Transportation",
+              "1.A.3.b  Road Transportation",
               "     - "
             ],
             [
-              "1.A.3.c Railways",
+              "1.A.3.c  Railways",
               "     - "
             ],
             [
-              "1.A.3.d Domestic Navigation",
+              "1.A.3.d  Domestic Navigation",
               "     - "
             ],
             [
-              "1.A.3.e Other Transportation",
+              "1.A.3.e  Other Transportation",
               "     - "
             ]
           ]
@@ -340,19 +340,19 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.3.a Domestic Aviation",
+              "1.A.3.a  Domestic Aviation",
               "     - "
             ],
             [
-              "1.A.3.b Road Transportation",
+              "1.A.3.b  Road Transportation",
               "     - "
             ],
             [
-              "1.A.3.c Railways",
+              "1.A.3.c  Railways",
               "     - "
             ],
             [
-              "1.A.3.e Other Transportation",
+              "1.A.3.e  Other Transportation",
               "     - "
             ]
           ]
@@ -682,7 +682,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.B.1 Solid Fuels",
+              "1.B.1  Solid Fuels",
               "     - "
             ],
             [
@@ -690,19 +690,19 @@
               "     - "
             ],
             [
-              "1.B.2.a.v Distribution of Oil Products",
+              "1.B.2.a.v  Distribution of Oil Products",
               "     - "
             ],
             [
-              "1.B.2.a.vi Other",
+              "1.B.2.a.vi  Other",
               "     - "
             ],
             [
-              "1.B.2.b.v Distribution",
+              "1.B.2.b.v  Distribution",
               "     - "
             ],
             [
-              "1.B.2.b.vi Other",
+              "1.B.2.b.vi  Other",
               "     - "
             ]
           ]
@@ -1134,27 +1134,27 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.2.b Non-Ferrous Metals",
+              "1.A.2.b  Non-Ferrous Metals",
               "     - "
             ],
             [
-              "1.A.2.c Chemicals",
+              "1.A.2.c  Chemicals",
               "     - "
             ],
             [
-              "1.A.2.d Pulp, Paper and Print",
+              "1.A.2.d  Pulp, Paper and Print",
               "     - "
             ],
             [
-              "1.A.2.e Food Processing, Beverages and Tobacco",
+              "1.A.2.e  Food Processing, Beverages and Tobacco",
               "     - "
             ],
             [
-              "1.A.2.f Non-metallic Minerals",
+              "1.A.2.f  Non-metallic Minerals",
               "     - "
             ],
             [
-              "1.A.2.g Other",
+              "1.A.2.g  Other",
               "     - "
             ]
           ]
@@ -1636,10 +1636,6 @@
             [
               "3.A.1 Enteric Fermentation",
               "     + "
-            ],
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
             ]
           ]
         },
@@ -1652,26 +1648,6 @@
             ],
             [
               "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "manure-management-other",
               "     - "
             ]
           ]
@@ -1700,10 +1676,6 @@
             [
               "3.A.1 Enteric Fermentation",
               "     + "
-            ],
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
             ]
           ]
         },
@@ -1716,26 +1688,6 @@
             ],
             [
               "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "manure-management-other",
               "     - "
             ]
           ]
@@ -1783,10 +1735,6 @@
             [
               "3.A.1 Enteric Fermentation",
               "     + "
-            ],
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
             ]
           ]
         },
@@ -1799,26 +1747,6 @@
             ],
             [
               "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "manure-management-other",
               "     - "
             ]
           ]
@@ -1847,10 +1775,6 @@
             [
               "3.A.2 Manure Management",
               "     + "
-            ],
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
             ]
           ]
         },
@@ -1859,26 +1783,6 @@
           "comps": [
             [
               "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
               "     - "
             ],
             [
@@ -1911,10 +1815,6 @@
             [
               "3.A.2 Manure Management",
               "     + "
-            ],
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
             ]
           ]
         },
@@ -1923,26 +1823,6 @@
           "comps": [
             [
               "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
               "     - "
             ],
             [
@@ -1994,10 +1874,6 @@
             [
               "3.A.2 Manure Management",
               "     + "
-            ],
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
             ]
           ]
         },
@@ -2010,26 +1886,6 @@
             ],
             [
               "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
               "     - "
             ]
           ]
@@ -2087,11 +1943,11 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "3.A Enteric Fermentation",
+              "3.A  Enteric Fermentation",
               "     - "
             ],
             [
-              "3.B Manure Management",
+              "3.B  Manure Management",
               "     - "
             ]
           ]
@@ -2934,11 +2790,11 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "3.B Manure Management",
+              "3.B  Manure Management",
               "     - "
             ],
             [
-              "3.C Rice Cultivation",
+              "3.C  Rice Cultivation",
               "     - "
             ]
           ]
@@ -3033,11 +2889,11 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "3.A Enteric Fermentation",
+              "3.A  Enteric Fermentation",
               "     - "
             ],
             [
-              "3.C Rice Cultivation",
+              "3.C  Rice Cultivation",
               "     - "
             ]
           ]

@@ -25,7 +25,7 @@ class SectorComparison:
             self.title_dict_annex1 = json.loads(f.read())
 
 
-    def process_all(self, countries, sectors, gases, co2eqs, plot_type, start_year, end_year):
+    def plot(self, countries, sectors, gases, co2eqs, plot_type, start_year, end_year):
         ############################
         # Get the data
         ############################
@@ -76,12 +76,14 @@ class SectorComparison:
                         print('Output folder already exists.')
 
                     for sector in sectors:
+                        print(sector)
                         if gas != 'all':
                             years_cols = self.allinv.filter(regex='\d').columns
                             gas_present = self.allinv.loc[(self.allinv['Data source'] == 'climate-trace') &
                                                      (self.allinv['Sector'] == sector) &
                                                      (self.allinv['Gas'] == gas), years_cols].sum()
                             if all(gas_present == 0):
+                                print(f'WARNING: {gas} is not present in {sector} Climate TRACE data, cannot do comparison.')
                                 continue
                         try:
                             os.makedirs(path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type + '/' + sector)
@@ -89,33 +91,34 @@ class SectorComparison:
                         except OSError:
                             print('Output folder already exists.')
 
+                        # create plots for all listed countries, sector by sector
                         ratio_data = create_plots(self.allinv, countries, sector, gas, co2eq, plot_type, ratio_data,
                                      output_folder=path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type + '/' + sector, comparison_dicts=comparison_dicts, title_dicts=title_dicts)
 
         # create ratios dataset
-        years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
-        totcols = ['Data source', 'ID', 'Gas', 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
-        grpcols = ['Data source', 'ID', 'Gas']
-        country_totals = ratio_data[totcols].groupby(grpcols, as_index=False).sum(min_count=1)
-        country_totals.to_csv(path + '/processed_data/ratio_dfs/country_totals.csv', index=False)
-        for yr in years:
-            ratio_data[f'sect_ratio_{yr}'] = ''
-        for index, row in ratio_data.iterrows():
-            for yr in years:
-                val_list = ratio_data.loc[(ratio_data['Sector'] == row['Sector']) & (
-                        ratio_data['ID'] == row['ID']) & (ratio_data['Gas'] == row['Gas']) & (
-                                                  ratio_data['Data source'] == 'climate-trace'), yr].tolist()
-                if len(val_list) > 0:
-                    value = val_list[0]
-                    if ((isinstance(row[yr], float)) or (isinstance(row[yr], int))) and (
-                            (isinstance(value, float)) or (isinstance(value, int))):
-                        if not np.isnan(row[yr]) and not np.isnan(value):
-                            if value != 0:
-                                sect_ratio = row[yr] / value
-                                ratio_data.loc[(ratio_data['Sector'] == row['Sector']) & (
-                                        ratio_data['ID'] == row['ID']) & (ratio_data['Gas'] == row['Gas']) & (
-                                                       ratio_data['Data source'] == row[
-                                                   'Data source']), f'sect_ratio_{yr}'] = sect_ratio
+        # years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+        # totcols = ['Data source', 'ID', 'Gas', 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+        # grpcols = ['Data source', 'ID', 'Gas']
+        # country_totals = ratio_data[totcols].groupby(grpcols, as_index=False).sum(min_count=1)
+        # country_totals.to_csv(path + '/processed_data/ratio_dfs/country_totals.csv', index=False)
+        # for yr in years:
+        #     ratio_data[f'sect_ratio_{yr}'] = ''
+        # for index, row in ratio_data.iterrows():
+        #     for yr in years:
+        #         val_list = ratio_data.loc[(ratio_data['Sector'] == row['Sector']) & (
+        #                 ratio_data['ID'] == row['ID']) & (ratio_data['Gas'] == row['Gas']) & (
+        #                                           ratio_data['Data source'] == 'climate-trace'), yr].tolist()
+        #         if len(val_list) > 0:
+        #             value = val_list[0]
+        #             if ((isinstance(row[yr], float)) or (isinstance(row[yr], int))) and (
+        #                     (isinstance(value, float)) or (isinstance(value, int))):
+        #                 if not np.isnan(row[yr]) and not np.isnan(value):
+        #                     if value != 0:
+        #                         sect_ratio = row[yr] / value
+        #                         ratio_data.loc[(ratio_data['Sector'] == row['Sector']) & (
+        #                                 ratio_data['ID'] == row['ID']) & (ratio_data['Gas'] == row['Gas']) & (
+        #                                                ratio_data['Data source'] == row[
+        #                                            'Data source']), f'sect_ratio_{yr}'] = sect_ratio
 
         return ratio_data
 

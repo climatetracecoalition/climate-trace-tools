@@ -4,10 +4,10 @@ from compare.compare.subtract_out.util.country_lists import (countries_annex1, c
 
 class InputHelper:
     def __init__(self):
-        with open('original_code/files/master_comparison_dict_annex1.json', 'r') as f:
+        with open('files/master_comparison_dict_annex1.json', 'r') as f:
             self.master_comparison_dict_annex1 = json.loads(f.read())
 
-        with open('original_code/files/master_comparison_dict_nonannex1.json', 'r') as f:
+        with open('files/master_comparison_dict_nonannex1.json', 'r') as f:
             self.master_comparison_dict_nonannex1 = json.loads(f.read())
 
     def get_available_countries(self, annex1):

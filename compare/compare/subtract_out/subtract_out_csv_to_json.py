@@ -1,9 +1,21 @@
+"""This script builds 4 dictionaries that the SectorComparison class rely on.
+
+The 4 dictionaries that will be written from running this script are:
+- master_comparison_dict_annex1.json
+- master_comparison_dict_nonannex1.json
+- title_dict_annex1.json
+- title_dict_nonannex1.json
+
+The script requires a xlsx input, which is stored in the /files directory. This xlsx file contains
+mappings upon which the subtract out code runs.
+"""
+
 import pandas as pd
 import json
 
-# Specify the path to the XLSX file with the comparison dictionaries. For consistency
-# download the XLSX from here: https://docs.google.com/spreadsheets/d/1crBeTIm7isN5EkvLbmkhoZYJqep1xzNwDVNnIu94l6E/edit#gid=0
-# and then put it in the spreadsheets directory within this directory
+# Specify the path to the XLSX file with the comparison dictionaries.
+#
+# and then put it in the files directory within this directory
 xlsx_file_path = 'files/subtract-out-csv-crosswalks.xlsx'
 # Define the list of tabs in your XLSX (assuming each tab corresponds to a separate sheet)
 tabs = ['climate-trace-subtract-out','unfccc-subtract-out', 'edgar-subtract-out', 'cait-subtract-out', 'pik-tp-subtract-out', 'faostat-subtract-out']

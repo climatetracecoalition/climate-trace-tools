@@ -1,3 +1,6 @@
+"""This module contains the function, plot, that will build the plots that are called in SectorComparison from
+subtract_out_plotting.py"""
+
 from compare.compare.subtract_out.util.constants import (get_country_title)
 import plotly
 import plotly.graph_objects as go
@@ -19,30 +22,37 @@ def plot(sector, country, gas, co2eq, plot_type, title_dict, output_folder, plot
     fig.update_yaxes(**yaxes).update_xaxes(**xaxes)
     fig.add_annotation(**annotation)
 
+    # Check to make sure all comparison inventories have data for selected years and sector. Do not plot unless at least
+    # one non-Climate TRACE inventory has data available for comparison.
+
     non_zero_sum = {}
+    data_present_sum = {}
     for inventory, item in plotting_dict.items():
         data_present, nonzero_emissions = is_data_present(item, inventory)
         non_zero_sum[inventory] = nonzero_emissions
+        data_present_sum[inventory] = data_present
 
-    if (sum(non_zero_sum.values()) > 1) & ('climate-trace' in non_zero_sum.keys()):
+    if (sum(non_zero_sum.values()) > 1) & ('climate-trace' in non_zero_sum.keys()) & (sum(data_present_sum.values()) > 1):
         pass
     else:
-        print('No comparison available for chosen inputs')
+        print(f'None of the comparison inventories have data available to compare or {sector}')
         return
 
     dont_plot = False
     for key, item in plotting_dict.items():
         item.reset_index(drop=True, inplace=True)
         data_present, nonzero_emissions = is_data_present(item, key)
+        # check to ensure Climate TRACE is in the dictionary, otherwise don't plot
         if key == 'climate-trace' and (not data_present or not nonzero_emissions):
             dont_plot = True
             continue
 
+
         comparison_years = list(item.filter(regex='\d').columns)
         # comparison_years = list(range(startyear, endyear))
         data = item.transpose()
-
-        legend_title_params = get_legend_title_params(title_dict, comparison_years,sector, key, data_present, nonzero_emissions)
+        print(sector)
+        legend_title_params = get_legend_title_params(title_dict, comparison_years, sector, key, data_present, nonzero_emissions)
         fig.add_trace(go.Scatter(**legend_title_params))
 
         gwps = gwp_list[co2eq]
