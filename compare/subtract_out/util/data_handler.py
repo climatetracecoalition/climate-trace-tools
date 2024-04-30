@@ -12,7 +12,7 @@ from compare.compare.subtract_out.util.constants import DB_SOURCE_TO_COL_NAME
 
 
 def get_ghg_gwps_list():
-    df = pd.read_csv('../../../../data/supplementary/ghgs.csv')
+    df = pd.read_csv('../../../data/supplementary/ghgs.csv')
     df = df[['lower_designation', 'gwp_20yr','gwp_100yr']]
     return df
 

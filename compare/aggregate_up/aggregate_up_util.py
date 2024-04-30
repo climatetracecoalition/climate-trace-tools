@@ -13,7 +13,7 @@ def read_zip(inventory, iso3_country):
 
 
 def get_ghg_gwps_list():
-    df = pd.read_csv('../../../data/supplementary/ghgs.csv')
+    df = pd.read_csv('../../data/supplementary/ghgs.csv')
     df = df[['lower_designation', 'gwp_20yr','gwp_100yr']]
     return df
 

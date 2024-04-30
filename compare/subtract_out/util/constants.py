@@ -21,7 +21,7 @@ COL_NAME_TO_DB_SOURCE = {"Sector": "original_inventory_sector",
                          }
 
 def get_code_conversion():
-    df = pd.read_csv('../../../../data/supplementary/countries.csv')
+    df = pd.read_csv('../../../data/supplementary/countries.csv')
     df = df.rename(columns={'name':'country_name'})
     df = df[['iso3', 'iso3', 'country_name']]
     CODE_CONVERSION = df.applymap(lambda x: x.strip(' '))

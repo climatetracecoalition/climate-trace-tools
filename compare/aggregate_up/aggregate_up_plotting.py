@@ -50,7 +50,7 @@ class CountryPlotting:
         with open('files/comparison_sector_dictionary_pik-tp.json', 'r') as f:
             self.comparison_sector_dictionary_pik = json.loads(f.read())
 
-        with open('files/subsector_dictionary.json','r') as f:
+        with open('files/subsector_dictionary.json', 'r') as f:
             self.subsector_dictionary = json.loads(f.read())
 
     def get_latest_year_for_inventory(self, ClimateTRACE=False, UNFCCC=False, EDGAR=False, CAIT=False, PIK=False, GCP=False, CarbonMonitor=False):
