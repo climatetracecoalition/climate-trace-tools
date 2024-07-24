@@ -5,14 +5,14 @@ import numpy as np
 import pandas as pd
 import psycopg2 as psycopg2
 import os
-from compare.compare.subtract_out.util.constants import DB_SOURCE_TO_COL_NAME
+from compare.subtract_out.util.constants import DB_SOURCE_TO_COL_NAME
 # from db_connect.dh_utils import parse_and_format_query_data, parse_format_asset
 
 
 
 
 def get_ghg_gwps_list():
-    df = pd.read_csv('../../../data/supplementary/ghgs.csv')
+    df = pd.read_csv('../../data/supplementary/ghgs.csv')
     df = df[['lower_designation', 'gwp_20yr','gwp_100yr']]
     return df
 
@@ -84,10 +84,10 @@ def parse_and_format_query_data(df, years_to_columns=True, rename_columns=True, 
 def load_data():
     all_data = pd.DataFrame()
 
-    for file in os.listdir('../../../data/country'):
+    for file in os.listdir('../../data/country'):
         if file.startswith('.DS'):
             continue
-        data = pd.read_csv(f'../../../data/country/{file}')
+        data = pd.read_csv(f'../../data/country/{file}')
         all_data = pd.concat([all_data, data])
 
 

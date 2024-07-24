@@ -1,9 +1,9 @@
-from compare.compare.subtract_out.util.constants import (get_country_title)
-from compare.compare.subtract_out.util.country_lists import (countries_annex1, countries_nonannex1)
+from compare.subtract_out.util.constants import (get_country_title)
+from compare.subtract_out.util.country_lists import (countries_annex1, countries_nonannex1)
 import pandas as pd
 import numpy as np
 import copy as copy
-from compare.compare.subtract_out.util.generate_plots import plot
+from compare.subtract_out.util.generate_plots import plot
 
 def combine_data(temp_dict, country):
     combo_df = pd.DataFrame()

@@ -2,9 +2,9 @@ import os
 import pandas as pd
 import json
 import numpy as np
-from compare.compare.subtract_out.util.constants import (convert_numeric)
-from compare.compare.subtract_out.util.data_handler import load_data
-from compare.compare.subtract_out.util.prep_data_to_plot import create_plots
+from compare.subtract_out.util.constants import (convert_numeric)
+from compare.subtract_out.util.data_handler import load_data
+from compare.subtract_out.util.prep_data_to_plot import create_plots
 
 path = os.getcwd()
 
