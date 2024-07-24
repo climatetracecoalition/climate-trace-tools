@@ -1,4 +1,6 @@
-# climate-trace-tools
+![climateTRACE-logo](https://github.com/climatetracecoalition/climate-trace-tools/assets/43048648/abd1edac-488e-4dfd-b545-6cf3b79f3291)
+
+# climate-trace-tools 
 
 This repository contains tools and data to make comparing emissions data easier for the climate data community. 
 
@@ -8,7 +10,7 @@ The schema folder contains Climate TRACE's common data format. Climate TRACE bel
 
 ## Data
 
-The data folder contains all of the data that Climate TRACE has scraped and process to date. This includes country data, and source (asset) level data. The data will be updated as it becomes available. All of the data in this folder is stored in the format described in Schema. 
+The data folder contains all of the data that Climate TRACE has scraped and process to date. This includes country data, and source (asset) level data. The data will be updated as it becomes available. All of the data in this folder is stored in the format described in Schema. More information can be found [here](schema/REAMDE.md).
 
 ## Compare
 
