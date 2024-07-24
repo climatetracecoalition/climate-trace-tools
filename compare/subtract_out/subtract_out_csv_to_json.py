@@ -18,7 +18,7 @@ import json
 # and then put it in the files directory within this directory
 xlsx_file_path = 'files/subtract-out-csv-crosswalks.xlsx'
 # Define the list of tabs in your XLSX (assuming each tab corresponds to a separate sheet)
-tabs = ['climate-trace-subtract-out','unfccc-subtract-out', 'edgar-subtract-out', 'cait-subtract-out', 'pik-tp-subtract-out', 'faostat-subtract-out']
+tabs = ['climate-trace-subtract-out','unfccc-subtract-out', 'carbon-monitor-subtract-out','edgar-subtract-out', 'cait-subtract-out', 'pik-tp-subtract-out', 'faostat-subtract-out']
 
 inventory_titles = {
   'climate-trace': 'ClimateTRACE',
@@ -33,6 +33,7 @@ inventory_titles = {
 
 inventory_codes = {
   'unfccc-subtract-out': 'unfccc',
+  'carbon-monitor-subtract-out': 'carbon-monitor',
   'edgar-subtract-out': 'edgar',
   'cait-subtract-out': 'cait',
   'pik-tp-subtract-out': 'pik-tp',
@@ -83,7 +84,11 @@ def generate_master_dicts():
               annex1_data[climate_trace_sector][inventory_code] = {}
             if inventory not in annex1_data[climate_trace_sector][inventory_code]:
               annex1_data[climate_trace_sector][inventory_code][inventory] = []
-            annex1_data[climate_trace_sector][inventory_code][inventory].append((sector, value))
+            if (climate_trace_sector == 'electricity-generation') & (inventory_code == 'pik-tp') \
+                    & (inventory == 'pik-tp'):
+              annex1_data[climate_trace_sector][inventory_code][inventory].append(("1", value))
+            else:
+              annex1_data[climate_trace_sector][inventory_code][inventory].append((sector, value))
           else:
             if climate_trace_sector not in non_annex1_data:
               non_annex1_data[climate_trace_sector] = {}
@@ -91,11 +96,16 @@ def generate_master_dicts():
               non_annex1_data[climate_trace_sector][inventory_code] = {}
             if inventory not in non_annex1_data[climate_trace_sector][inventory_code]:
               non_annex1_data[climate_trace_sector][inventory_code][inventory] = []
-            non_annex1_data[climate_trace_sector][inventory_code][inventory].append((sector, value))
+            if (climate_trace_sector == 'electricity-generation') & (inventory_code == 'pik-tp') \
+                    & (inventory == 'pik-tp'):
+              non_annex1_data[climate_trace_sector][inventory_code][inventory].append(("1", value))
+            else:
+              non_annex1_data[climate_trace_sector][inventory_code][inventory].append((sector, value))
 
   # Convert the dictionaries to JSON
   # Print or save the JSON objects as needed
-
+  # annex1_data["electricity-generation"]["pik-tp"]["pik-tp"][0][0] = "1"
+  # non_annex1_data["electricity-generation"]["pik-tp"]["pik-tp"][0][0] = "1"
   with open('files/master_comparison_dict_annex1.json', 'w') as f:
     f.write(json.dumps(annex1_data, indent=2))
 
@@ -146,7 +156,12 @@ def generate_title_dicts():
                 'desc': inventory_title,
                 'comps': []
               }
-            annex1_data[climate_trace_sector]['legend'][inventory_name][inventory]['comps'].append((sector, value_string))
+            if (climate_trace_sector == 'electricity-generation') & (inventory_name == 'pik-tp') \
+                    & (inventory == 'pik-tp'):
+              annex1_data[climate_trace_sector]['legend'][inventory_name][inventory]['comps'].append(
+                ("1", value_string))
+            else:
+              annex1_data[climate_trace_sector]['legend'][inventory_name][inventory]['comps'].append((sector, value_string))
           else:
             if climate_trace_sector not in non_annex1_data:
               non_annex1_data[climate_trace_sector] = {
@@ -161,7 +176,13 @@ def generate_title_dicts():
                 'desc': inventory_title,
                 'comps': []
               }
-            non_annex1_data[climate_trace_sector]['legend'][inventory_name][inventory]['comps'].append((sector, value_string))
+            if (climate_trace_sector == 'electricity-generation') & (inventory_name == 'pik-tp') \
+                    & (inventory == 'pik-tp'):
+              non_annex1_data[climate_trace_sector]['legend'][inventory_name][inventory]['comps'].append(
+                ("1", value_string))
+            else:
+              non_annex1_data[climate_trace_sector]['legend'][inventory_name][inventory]['comps'].append((sector, value_string))
+
 
   # Convert the dictionaries to JSON
   # Print or save the JSON objects as needed

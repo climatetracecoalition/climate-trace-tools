@@ -8,6 +8,32 @@
         ]
       ]
     },
+    "unfccc_non_annex_1": {
+      "unfccc_non_annex_1": [
+        [
+          "1.A.1  Energy Industries",
+          1
+        ]
+      ]
+    },
+    "carbon-monitor": {
+      "carbon-monitor": [
+        [
+          "Power",
+          1
+        ]
+      ],
+      "unfccc_annex_1": [
+        [
+          "1.A.1.a.iii Heat Plants",
+          -1
+        ],
+        [
+          "1.A.1.a.iv  Other",
+          -1
+        ]
+      ]
+    },
     "edgar": {
       "edgar": [
         [
@@ -19,7 +45,7 @@
     "pik-tp": {
       "pik-tp": [
         [
-          "1.A",
+          "1",
           1
         ]
       ],
@@ -71,6 +97,22 @@
           1
         ]
       ]
+    },
+    "unfccc_non_annex_1": {
+      "unfccc_non_annex_1": [
+        [
+          "Aviation",
+          1
+        ]
+      ]
+    },
+    "carbon-monitor": {
+      "carbon-monitor": [
+        [
+          "Domestic Aviation",
+          1
+        ]
+      ]
     }
   },
   "international-aviation": {
@@ -78,6 +120,14 @@
       "climate-trace": [
         [
           "international-aviation",
+          1
+        ]
+      ]
+    },
+    "carbon-monitor": {
+      "carbon-monitor": [
+        [
+          "International Aviation",
           1
         ]
       ]
@@ -748,16 +798,6 @@
       "climate-trace": [
         [
           "wetland-fires",
-          1
-        ]
-      ]
-    }
-  },
-  "electricity-generation-and-other-energy-use": {
-    "unfccc_non_annex_1": {
-      "unfccc_non_annex_1": [
-        [
-          "1.A.1  Energy Industries",
           1
         ]
       ]

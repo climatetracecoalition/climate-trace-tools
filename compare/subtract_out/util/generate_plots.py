@@ -39,6 +39,9 @@ def plot(sector, country, gas, co2eq, plot_type, title_dict, output_folder, plot
         return
 
     dont_plot = False
+    item = plotting_dict['climate-trace']
+    comparison_years = list(item.filter(regex='\d').columns)
+
     for key, item in plotting_dict.items():
         item.reset_index(drop=True, inplace=True)
         data_present, nonzero_emissions = is_data_present(item, key)
@@ -48,7 +51,7 @@ def plot(sector, country, gas, co2eq, plot_type, title_dict, output_folder, plot
             continue
 
 
-        comparison_years = list(item.filter(regex='\d').columns)
+        # comparison_years = list(item.filter(regex='\d').columns)
         # comparison_years = list(range(startyear, endyear))
         data = item.transpose()
         print(sector)
