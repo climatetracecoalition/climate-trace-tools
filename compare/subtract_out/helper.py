@@ -1,5 +1,5 @@
 import json
-from compare.compare.subtract_out.util.country_lists import (countries_annex1, countries_nonannex1)
+from compare.subtract_out.util.country_lists import (countries_annex1, countries_nonannex1)
 
 
 class InputHelper:

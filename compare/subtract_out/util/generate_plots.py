@@ -1,13 +1,13 @@
 """This module contains the function, plot, that will build the plots that are called in SectorComparison from
 subtract_out_plotting.py"""
 
-from compare.compare.subtract_out.util.constants import (get_country_title)
+from compare.subtract_out.util.constants import (get_country_title)
 import plotly
 import plotly.graph_objects as go
 import plotly.offline
 import numpy as np
 import os
-from compare.compare.subtract_out.util.plotting_utils import (get_layout, fonts, get_yaxes, xaxes, is_data_present,
+from compare.subtract_out.util.plotting_utils import (get_layout, fonts, get_yaxes, xaxes, is_data_present,
                                         get_legend_title_params, get_numerical_data, get_params, gwp_list,
                                         get_missing_subsector_params, is_gas_present, get_numerical_addition,
                                         get_missing_gas_params, get_point_symbol, annotation, baseline_first,
