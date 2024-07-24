@@ -13,6 +13,41 @@
           ]
         }
       },
+      "unfccc_non_annex_1": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1  Energy Industries",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "carbon-monitor": {
+        "carbon-monitor": {
+          "desc": "Carbon Monitor",
+          "comps": [
+            [
+              "Power",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.a.iii Heat Plants",
+              "     - "
+            ],
+            [
+              "1.A.1.a.iv  Other",
+              "     - "
+            ]
+          ]
+        }
+      },
       "edgar": {
         "edgar": {
           "desc": "EDGAR",
@@ -29,7 +64,7 @@
           "desc": "PIK",
           "comps": [
             [
-              "1.A",
+              "1",
               "     + "
             ]
           ]
@@ -103,6 +138,28 @@
             ]
           ]
         }
+      },
+      "unfccc_non_annex_1": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "Aviation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "carbon-monitor": {
+        "carbon-monitor": {
+          "desc": "Carbon Monitor",
+          "comps": [
+            [
+              "Domestic Aviation",
+              "     + "
+            ]
+          ]
+        }
       }
     }
   },
@@ -115,6 +172,17 @@
           "comps": [
             [
               "international-aviation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "carbon-monitor": {
+        "carbon-monitor": {
+          "desc": "Carbon Monitor",
+          "comps": [
+            [
+              "International Aviation",
               "     + "
             ]
           ]
@@ -1112,22 +1180,6 @@
           "comps": [
             [
               "wetland-fires",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "electricity-generation-and-other-energy-use": {
-    "title": "Electricity Generation And Other Energy Use",
-    "legend": {
-      "unfccc_non_annex_1": {
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "1.A.1  Energy Industries",
               "     + "
             ]
           ]
