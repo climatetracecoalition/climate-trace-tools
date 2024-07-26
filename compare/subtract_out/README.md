@@ -66,6 +66,7 @@ Once SectorComparison is initialized, you only need to run .plot() to get plots 
 - `start_year` : *int.* start_year for plot.
 - `end_year` : *int.* end_year for plot.
 - `create_folders` : *bool*. Defaults to False. True will create a system of folders according to your inputs, and store plots in these folders. False will result in the html plot being written to whatever directory you are working in.
+- `plot_live` : *bool*. Defaults to True. True will generate html plots in your browser as the code runs. False will not plot the data live, but will save the html plots to your data folder. Helpful to set to False if you are generating a large number of plots.
 
 ### Examples
 
