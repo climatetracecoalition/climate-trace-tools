@@ -37,19 +37,6 @@
               "     + "
             ]
           ]
-        },
-        "unfccc_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "1.A.1.a.iii Heat Plants",
-              "     - "
-            ],
-            [
-              "1.A.1.a.iv  Other",
-              "     - "
-            ]
-          ]
         }
       },
       "edgar": {
