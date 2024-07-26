@@ -9,7 +9,9 @@ from compare.subtract_out.util.prep_data_to_plot import create_plots
 path = os.getcwd()
 
 class SectorComparison:
-    def __init__(self):
+    def __init__(self, handler):
+        #self.data_handler = csv_handler
+        #self.allinv = self.data_handler.load_data()
         self.allinv = load_data()
 
         with open('files/master_comparison_dict_annex1.json', 'r') as f:
