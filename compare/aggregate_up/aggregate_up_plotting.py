@@ -1,12 +1,7 @@
-import pandas
-import pandas as pd
-import numpy as np
 import plotly.graph_objects as go
-import plotly
-import geopandas as gpd
-import json
 from aggregate_up_util import *
 from compare.data_handler import CsvDataHandler, get_ghg_gwps_list, calculate_gwp
+import pandas as pd
 
 fonts = {"family": "Foros, medium"}
 
