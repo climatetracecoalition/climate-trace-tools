@@ -1,0 +1,387 @@
+code,description,internal_code
+1.,Energy,False
+1.A.1,Energy Industries,False
+1.A.1.a,Public Electricity and Heat Production,False
+1.A.1.a.i,Electricity Generation,False
+1.A.1.a.ii,Combined Heat and Power Generation,False
+1.A.1.a.iii,Heat Plants,False
+1.A.1.a.iv,Other,False
+1.A.1.b,Petroleum Refining,False
+1.A.1.c,Manufacture of Solid Fuels and Other Energy Industries,False
+1.A.1.c.i,Manufacture of Solid Fuels,False
+1.A.1.c.ii,Oil and Gas Extraction,False
+1.A.1.c.iii,Other Energy Industries,False
+1.A.1.c.iv,Other,False
+1.A.2,Manufacturing Industries and Construction,False
+1.A.2.a,Iron and Steel,False
+1.A.2.b,Non-Ferrous Metals,False
+1.A.2.c,Chemicals,False
+1.A.2.d,"Pulp, Paper and Print",False
+1.A.2.e,"Food Processing, Beverages and Tobacco",False
+1.A.2.f,Non-metallic Minerals,False
+1.A.2.g,Other,False
+1.A.2.g.i,Manufacturing of Machinery,False
+1.A.2.g.ii,Manufacturing of Transport Equipment,False
+1.A.2.g.iii,Mining (Excluding Fuels) and Quarrying,False
+1.A.2.g.iv,Wood and Wood Products,False
+1.A.2.g.v,Construction,False
+1.A.2.g.vi,Textile and Leather,False
+1.A.2.g.vii,Off-road Vehicles and Other Machinery,False
+1.A.2.g.viii,Other,False
+1.A.3,Transport,False
+1.A.3.a,Domestic Aviation,False
+1.A.3.b,Road Transportation,False
+1.A.3.b.i,Cars,False
+1.A.3.b.ii,Light Duty Trucks,False
+1.A.3.b.iii,Heavy Duty Trucks and Buses,False
+1.A.3.b.iv,Motorcycles,False
+1.A.3.b.v,Other,False
+1.A.3.c,Railways,False
+1.A.3.d,Domestic Navigation,False
+1.A.3.e,Other Transportation,False
+1.A.3.e.i,Pipeline Transport,False
+1.A.3.e.ii,Other,False
+1.A.4,Other Sectors,False
+1.A.4.a,Commercial/Institutional,False
+1.A.4.a.i,Stationary Combustion,False
+1.A.4.a.ii,Off-road Vehicles and Other Machinery,False
+1.A.4.a.iii,Other,False
+1.A.4.b,Residential,False
+1.A.4.b.i,Stationary Combustion,False
+1.A.4.b.ii,Off-road Vehicles and Other Machinery,False
+1.A.4.b.iii,Other,False
+1.A.4.c,Agriculture/Forestry/Fishing,False
+1.A.4.c.i,Stationary,False
+1.A.4.c.ii,Off-road Vehicles and Other Machinery,False
+1.A.4.c.iii,Fishing,False
+1.A.5,Other (Not specified elsewhere),False
+1.A.5.a,Stationary,False
+1.A.5.b,Mobile,False
+1.AA,Fuel Combustion - Sectoral approach,False
+1.AB,Fuel Combustion - Reference Approach,False
+1.AD,"Feedstocks, Reductants and Other Non-energy Use of Fuels",False
+1.B,Fugitive Emissions from Fuels,False
+1.B.1,Solid Fuels,False
+1.B.1.a,Coal Mining and Handling,False
+1.B.1.a.i,Underground Mines,False
+1.B.1.a.i.1,Mining Activities,False
+1.B.1.a.i.2,Post-Mining Activities,False
+1.B.1.a.i.3,Abandoned Underground Mines,False
+1.B.1.a.ii,Surface Mines,False
+1.B.1.a.ii.1,Mining Activities,False
+1.B.1.a.ii.2,Post-Mining Activities,False
+1.B.1.b,Solid Fuel Transformation,False
+1.B.1.c,Other,False
+1.B.2,Oil and Natural Gas and Other Emissions from Energy Production,False
+1.B.2.a,Oil,False
+1.B.2.a.i,Exploration,False
+1.B.2.a.ii,Production,False
+1.B.2.a.iii,Transport,False
+1.B.2.a.iv,Refining / Storage,False
+1.B.2.a.v,Distribution of Oil Products,False
+1.B.2.a.vi,Other,False
+1.B.2.b,Natural Gas,False
+1.B.2.b.i,Exploration,False
+1.B.2.b.ii,Production,False
+1.B.2.b.iii,Processing,False
+1.B.2.b.iv,Transmission and Storage,False
+1.B.2.b.v,Distribution,False
+1.B.2.b.vi,Other,False
+1.B.2.c,Venting and Flaring,False
+1.B.2.c.i,Venting,False
+1.B.2.c.i.1,Oil,False
+1.B.2.c.i.2,Gas,False
+1.B.2.c.i.3,Combined,False
+1.B.2.c.ii,Flaring,False
+1.B.2.c.ii.1,Oil,False
+1.B.2.c.ii.2,Gas,False
+1.B.2.c.ii.3,Combined,False
+1.B.2.d,Other,False
+1.C,CO₂ Transport and Storage,False
+1.C.1,Transport of CO₂,False
+1.C.1.a,Pipelines,False
+1.C.1.b,Ships,False
+1.C.1.c,Other,False
+1.C.2,Injection and Storage,False
+1.C.2.a,Injection,False
+1.C.2.b,Storage,False
+1.C.3,Other,False
+2.,Industrial Processes and Product Use,False
+2.A,Mineral Industry,False
+2.A.1,Cement Production,False
+2.A.2,Lime Production,False
+2.A.3,Glass production,False
+2.A.4,Other Process Uses of Carbonates,False
+2.A.4.a,Ceramics,False
+2.A.4.b,Other Uses of Soda Ash,False
+2.A.4.c,Non-metallurgical Magnesium Production,False
+2.A.4.d,Other,False
+2.B,Chemical Industry,False
+2.B.1,Ammonia Production,False
+2.B.10,Other,False
+2.B.2,Nitric Acid Production,False
+2.B.3,Adipic Acid Production,False
+2.B.4,"Caprolactam, Glyoxal and Glyoxylic Acid Production",False
+2.B.4.a,Caprolactam,False
+2.B.4.b,Glyoxal,False
+2.B.4.c,Glyoxylic Acid,False
+2.B.5,Carbide Production,False
+2.B.5.a,Silicon Carbide,False
+2.B.5.b,Calcium Carbide,False
+2.B.6,Titanium Dioxide Production,False
+2.B.7,Soda Ash Production,False
+2.B.8,Petrochemical and Carbon Black Production,False
+2.B.8.a,Methanol,False
+2.B.8.b,Ethylene,False
+2.B.8.c,Ethylene Dichloride and Vinyl Chloride Monomer,False
+2.B.8.d,Ethylene Oxide,False
+2.B.8.e,Acrylonitrile,False
+2.B.8.f,Carbon Black,False
+2.B.8.g,Other,False
+2.B.8.g.i,Styrene,False
+2.B.8.g.ii,Other,False
+2.B.9,Fluorochemical Production,False
+2.B.9.a,By-Product Emissions,False
+2.B.9.a.i,Production of HCFC-22,False
+2.B.9.a.ii,Other,False
+2.B.9.b,Fugitive Emissions,False
+2.B.9.b.i,Production of HFC-134a,False
+2.B.9.b.ii,Production of SF₆,False
+2.B.9.b.iii,Other,False
+2.C,Metal Industry,False
+2.C.1,Iron and Steel Production,False
+2.C.1.a,Steel,False
+2.C.1.b,Pig Iron,False
+2.C.1.c,Direct Reduced Iron,False
+2.C.1.d,Sinter,False
+2.C.1.e,Pellet,False
+2.C.1.f,Other,False
+2.C.2,Ferroalloys Production,False
+2.C.3,Aluminium Production,False
+2.C.3.a,CO₂ Emissions,False
+2.C.3.b,By-Product Emissions,False
+2.C.3.c,F-gases Used in Foundries,False
+2.C.4,Magnesium Production,False
+2.C.5,Lead Production,False
+2.C.6,Zinc Production,False
+2.C.7,Other,False
+2.D,Non-energy Products from Fuels and Solvent Use,False
+2.D.1,Lubricant Use,False
+2.D.2,Paraffin Wax Use,False
+2.D.3,Other,False
+2.D.3.a,Solvent Use,False
+2.D.3.b,Road Paving with Asphalt,False
+2.D.3.c,Asphalt Roofing,False
+2.D.3.d,Other,False
+2.E,Electronics Industry,False
+2.E.1,Integrated Circuit or Semiconductor,False
+2.E.2,TFT Flat Panel Display,False
+2.E.3,Photovoltaics,False
+2.E.4,Heat Transfer Fluid,False
+2.E.5,Other,False
+2.F,Product Uses as Substitutes for ODS,False
+2.F.1,Refrigeration and Air-conditioning,False
+2.F.1.a,Commercial Refrigeration,False
+2.F.1.b,Domestic Refrigeration,False
+2.F.1.c,Industrial Refrigeration,False
+2.F.1.d,Transport Refrigeration,False
+2.F.1.e,Mobile Air-conditioning,False
+2.F.1.f,Stationary Air-conditioning,False
+2.F.2,Foam Blowing Agents,False
+2.F.2.a,Closed Cells,False
+2.F.2.b,Open Cells,False
+2.F.3,Fire Protection,False
+2.F.4,Aerosols,False
+2.F.4.a,Metered Dose Inhalers,False
+2.F.4.b,Other,False
+2.F.5,Solvents,False
+2.F.6,Other Applications,False
+2.F.6.a,Emissive,False
+2.F.6.b,Contained,False
+2.G,Other Product Manufacture and Use,False
+2.G.1,Electrical Equipment,False
+2.G.2,SF₆ and PFCs from Other Product Use,False
+2.G.2.a,Military Applications,False
+2.G.2.b,Accelerators,False
+2.G.2.c,Soundproof Windows,False
+2.G.2.d,Adiabatic Properties: Shoes and Tyres,False
+2.G.2.e,Other,False
+2.G.3,N₂O from Product Uses,False
+2.G.3.a,Medical Applications,False
+2.G.3.b,Other,False
+2.G.3.b.i,Propellant for Pressure and Aerosol Products,False
+2.G.3.b.ii,Other,False
+2.G.4,Other,False
+2.H,Other,False
+2.H.1,Pulp and Paper,False
+2.H.2,Food and Beverages Industry,False
+2.H.3,Other,False
+3.,Agriculture,False
+3.A,Enteric Fermentation,False
+3.B,Manure Management,False
+3.C,Rice Cultivation,False
+3.C.1,Irrigated,False
+3.C.1.a,Continuously Flooded,False
+3.C.1.b,Intermittently Flooded,False
+3.C.1.b.i,Single Aeration,False
+3.C.1.b.ii,Multiple Aeration,False
+3.C.2,Rainfed,False
+3.C.2.a,Flood Prone,False
+3.C.2.b,Drought Prone,False
+3.C.3,Deep Water,False
+3.C.3.a,Water Depth 50-100 cm,False
+3.C.3.b,Water Depth > 100 cm,False
+3.C.4,Other,False
+3.D,Agricultural Soils,False
+3.D.1,Direct N₂O Emissions From Managed Soils,False
+3.D.1.a,Inorganic N Fertilizers,False
+3.D.1.b,Organic N Fertilizers,False
+3.D.1.b.i,Animal Manure Applied to Soils,False
+3.D.1.b.ii,Sewage Sludge Applied to Soils,False
+3.D.1.b.iii,Other Organic Fertilizers Applied to Soils,False
+3.D.1.c,Urine and Dung Deposited by Grazing Animals,False
+3.D.1.d,Crop Residues,False
+3.D.1.e,Mineralization/Immobilization Associated with Loss/Gain of Soil Organic Matter,False
+3.D.1.f,Cultivation of Organic Soils,False
+3.D.1.g,Other,False
+3.D.2,Indirect N₂O Emissions From Managed Soils,False
+3.D.2.a,Atmospheric Deposition,False
+3.D.2.b,Nitrogen Leaching and Run-off,False
+3.E,Prescribed Burning of Savannas,False
+3.E.1,Forest Land,False
+3.E.2,Grassland,False
+3.F,Field Burning of Agricultural Residues,False
+3.F.1,Cereals,False
+3.F.1.a,Wheat,False
+3.F.1.b,Barley,False
+3.F.1.c,Maize,False
+3.F.1.d,Other,False
+3.F.2,Pulses,False
+3.F.3,Tubers and Roots,False
+3.F.4,Sugar Cane,False
+3.F.5,Other,False
+3.G,Liming,False
+3.G.1,Limestone CaCO₃,False
+3.G.2,Dolomite CaMg(CO₃)₂,False
+3.H,Urea Application,False
+3.I,Other Carbon-containing Fertilizers,False
+3.J,Other,False
+4.,"Land Use, Land-Use Change and Forestry",False
+4.A,Forest Land,False
+4.A.1,Forest Land Remaining Forest Land,False
+4.A.2,Land Converted to Forest Land,False
+4.A.2.a,Cropland Converted to Forest Land,False
+4.A.2.b,Grassland Converted to Forest Land,False
+4.A.2.c,Wetlands Converted to Forest Land,False
+4.A.2.d,Settlements Converted to Forest Land,False
+4.A.2.e,Other Land Converted to Forest Land,False
+4.B,Cropland,False
+4.B.1,Cropland Remaining Cropland,False
+4.B.2,Land Converted to Cropland,False
+4.B.2.a,Forest Land Converted to Cropland,False
+4.B.2.b,Grassland Converted to Cropland,False
+4.B.2.c,Wetlands Converted to Cropland,False
+4.B.2.d,Settlements Converted to Cropland,False
+4.B.2.e,Other Land Converted to Cropland,False
+4.C,Grassland,False
+4.C.1,Grassland Remaining Grassland,False
+4.C.2,Land Converted to Grassland,False
+4.C.2.a,Forest Land Converted to Grassland,False
+4.C.2.b,Cropland Converted to Grassland,False
+4.C.2.c,Wetlands Converted to Grassland,False
+4.C.2.d,Settlements Converted to Grassland,False
+4.C.2.e,Other Land Converted to Grassland,False
+4.D,Wetlands,False
+4.D.1,Wetlands Remaining Wetlands,False
+4.D.1.a,Peat Extraction Remaining Peat Extraction,False
+4.D.1.b,Flooded Land Remaining Flooded Land,False
+4.D.1.c,Other Wetlands Remaining Other Wetlands,False
+4.D.2,Land Converted to Wetlands,False
+4.E,Settlements,False
+4.E.1,Settlements Remaining Settlements,False
+4.E.2,Land Converted to Settlements,False
+4.E.2.a,Forest Land Converted to Settlements,False
+4.E.2.b,Cropland Converted to Settlements,False
+4.E.2.c,Grassland Converted to Settlements,False
+4.E.2.d,Wetlands Converted to Settlements,False
+4.E.2.e,Other Land Converted to Settlements,False
+4.F,Other Land,False
+4.F.2,Land Converted to Other Land,False
+4.F.2.a,Forest Land Converted to Other Land,False
+4.F.2.b,Cropland Converted to Other Land,False
+4.F.2.c,Grassland Converted,False
+4.F.2.d,Wetlands Converted to Other Land,False
+4.F.2.e,Settlements Converted to Other Land,False
+4.G,Harvested Wood Products,False
+4.G.1,Solid Wood,False
+4.G.1.a,Sawnwood,False
+4.G.1.b,Wood Panels,False
+4.G.1.c,Other Solid Wood Products,False
+4.G.2,Paper and Paperboard,False
+4.G.3,Other,False
+4.H,Other,False
+5.,Waste,False
+5.A,Solid Waste Disposal,False
+5.A.1,Managed Waste Disposal Sites,False
+5.A.1.a,Anaerobic,False
+5.A.1.b,Semi-aerobic,False
+5.A.2,Unmanaged Waste Disposal Sites,False
+5.A.3,Uncategorized Waste Disposal Sites,False
+5.B,Biological Treatment of Solid Waste,False
+5.B.1,Composting,False
+5.B.1.a,Municipal Solid Waste,False
+5.B.1.b,Other,False
+5.B.2,Anaerobic Digestion at Biogas Facilities,False
+5.B.2.a,Municipal Solid Waste,False
+5.B.2.b,Other,False
+5.C,Incineration and Open Burning of Waste,False
+5.C.1,Waste Incineration,False
+5.C.1.a,Biogenic,False
+5.C.1.a.i,Municipal Solid Waste,False
+5.C.1.a.ii,Other,False
+5.C.1.a.ii.1,Industrial Solid Wastes,False
+5.C.1.a.ii.2,Hazardous Waste,False
+5.C.1.a.ii.3,Clinical Waste,False
+5.C.1.a.ii.4,Sewage Sludge,False
+5.C.1.a.ii.5,Other,False
+5.C.1.b,Non-biogenic,False
+5.C.1.b.i,Municipal Solid Waste,False
+5.C.1.b.ii,Other,False
+5.C.1.b.ii.1,Industrial Solid Wastes,False
+5.C.1.b.ii.2,Hazardous Waste,False
+5.C.1.b.ii.3,Clinical Waste,False
+5.C.1.b.ii.4,Sewage Sludge,False
+5.C.1.b.ii.5,Fossil Liquid Waste,False
+5.C.1.b.ii.6,Other,False
+5.C.2,Open Burning of Waste,False
+5.C.2.a,Biogenic,False
+5.C.2.a.i,Municipal Solid Waste,False
+5.C.2.a.ii,Other,False
+5.C.2.b,Non-biogenic,False
+5.C.2.b.i,Municipal Solid Waste,False
+5.C.2.b.ii,Other,False
+5.D,Wastewater Treatment and Discharge,False
+5.D.1,Domestic Wastewater,False
+5.D.2,Industrial Wastewater,False
+5.D.3,Other,False
+5.E,Other,False
+6.,Other,False
+10.A,Annual Change in Total Long-term C Storage,True
+10.B,Annual Change in Total Long-term C Storage in HWP Waste,True
+7.A,International Aviation,True
+7.B,International Navigation,True
+X.7,Total Amount Captured for Storage,True
+X.8,Total Amount of CO₂ Injected at Storage Sites,True
+X.9,Total Amount of Exports for Storage,True
+X.10,Total Amount of Imports for Storage,True
+X.1,Total GHG emissions with LULUCF,True
+X.2,Total GHG emissions with LULUCF including indirect CO₂,True
+X.3,Total GHG emissions without LULUCF,True
+X.4,Total GHG emissions without LULUCF including indirect CO₂,True
+X.11,"Total Leakage from Transport, Injection and Storage",True
+X.5,Waste Incineration with Energy Recovery included as Biomass,True
+X.6,Waste Incineration with Energy Recovery included as Fossil Fuels,True
+9.,HWP in SWDS,True
+10.,Long-term Storage of C in Waste Disposal Sites,True
+8.,Multilateral Operations,True
+7.,International Bunkers,True

@@ -1,0 +1,39 @@
+name,lower_designation,mixed_designation,gwp_20yr,gwp_100yr,other_designation_lower,other_designation_mixed,chemical_formula,f_gas_category,modified_date
+decafluoropentane,hfc-43-10-mee ,HFC-43-10-mee,3960.0,1600.0,hfc-43-10mee,HFC-43-10mee,CF3CHFCHFCF2CF3,HFC,2024-04-11 21:44:03.474115
+"1,1,1,2,2,3-hexafluoropropane",hfc-236cb,HFC-236cb,3750.0,1350.0,,,CH2FCF2CF3,HFC,2024-04-12 17:35:09.480412
+"1,1,1,2,3,3,3-heptafluoropropane",hfc-227ea,HFC-227ea,5850.0,3600.0,,,CF3CHFCF3,HFC,2024-04-12 17:35:09.480412
+"1,1,1,2,3,3-hexafluoropropane",hfc-236ea,HFC-236ea,4420.0,1500.0,,,CHF2CHFCF3,HFC,2024-04-12 17:35:09.480412
+"1,1,1,2-tetrafluoroethane",hfc-134a,HFC-134a,4140.0,1530.0,,,CH2FCF3,HFC,2024-04-12 17:35:09.480412
+"1,1,1,3,3,3-hexafluoropropane",hfc-236fa,HFC-236fa,7450.0,8690.0,,,CF3CH2CF3,HFC,2024-04-12 17:35:09.480412
+"1,1,1,3,3-pentafluorobutane",hfc-365mfc,HFC-365mfc,2920.0,914.0,,,CF3CH2CF2CH3,HFC,2024-04-12 17:35:09.480412
+"1,1,1,3,3-pentafluoropropane",hfc-245fa,HFC-245fa,3170.0,962.0,,,CHF2CH2CF3,HFC,2024-04-12 17:35:09.480412
+"1,1,1-trifluoroethane",hfc-143a,HFC-143a,7840.0,5810.0,,,CH3CF3,HFC,2024-04-12 17:35:09.480412
+"1,1,2,2,3-pentafluoropropane",hfc-245ca,HFC-245ca,2680.0,787.0,,,CH2FCF2CHF2,HFC,2024-04-12 17:35:09.480412
+"1,1,2,2-tetrafluoroethane",hfc-134,HFC-134,3900.0,1260.0,,,CHF2CHF2,HFC,2024-04-12 17:35:09.480412
+"1,1,2-trifluoroethane",hfc-143,HFC-143,1300.0,364.0,,,CH2FCHF2,HFC,2024-04-12 17:35:09.480412
+"1,1-Dichloro-1-fluoroethane",hcfc-141b,HCFC-141b,2710.0,860.0,,,C2H3Cl2F,HCFC,2024-04-12 17:35:09.480412
+"1,1-difluoroethane",hfc-152a,HFC-152a,591.0,164.0,,,CH3CHF2,HFC,2024-04-12 17:35:09.480412
+"1,2-difluoroethane",hfc-152,HFC-152,77.6,21.5,,,CH2FCH2F,HFC,2024-04-12 17:35:09.480412
+"1-Chloro-1,1-difluoroethane",hcfc-142b,HCFC-142b,5510.0,2300.0,,,,HCFC,2024-04-12 17:35:09.480412
+carbon_dioxide,co2,CO2,1.0,1.0,,,,,2024-04-12 17:35:09.480412
+carbon_dioxide_equivalent,co2e,CO2e,1.0,1.0,,,,,2024-04-12 17:35:09.480412
+decafluorobutane,c4f10,C4F10,7300.0,10000.0,pfc-31-10,PFC-31-10 ,,PFC,2024-04-12 17:35:09.480412
+difluoromethane,hfc-32,HFC-32,2690.0,771.0,,,CH2F2,HFC,2024-04-12 17:35:09.480412
+dodecafluoropentane,c5f12,C5F12,6350.0,8550.0,pfc-41-12,PFC-41-12,,PFC,2024-04-12 17:35:09.480412
+fluoroethane,hfc-161,HFC-161,17.4,4.84,,,CH3CH2F,HFC,2024-04-12 17:35:09.480412
+fluoromethane,hfc-41,HFC-41,485.0,135.0,,,CH3F,HFC,2024-04-12 17:35:09.480412
+hexafluoroethane,c2f6,C2F6,8940.0,12400.0,pfc-116,PFC-116,,PFC,2024-04-12 17:35:09.480412
+hydroflurocarbons,hfcs,HFCs,1.0,1.0,,,,,2024-04-12 17:35:09.480412
+methane,ch4,CH4,81.2,27.9,,,,,2024-04-12 17:35:09.480412
+nitrogen trifluoride,nf3,NF3,13400.0,17400.0,,,,PFC,2024-04-12 17:35:09.480412
+nitrous oxide,n2o,N2O,273.0,273.0,,,,,2024-04-12 17:35:09.480412
+octafluoropropane,c3f8,C3F8,6640.0,8900.0,pfc-218,PFC-218,,PFC,2024-04-12 17:35:09.480412
+pentafluoroethane,hfc-125,HFC-125,6740.0,3740.0,,,CHF2CF3,HFC,2024-04-12 17:35:09.480412
+perfluorocarbons,pfcs,PFCs,1.0,1.0,,,,,2024-04-12 17:35:09.480412
+perfluorocyclobutane,c-c4f8,c-C4F8,7400.0,10200.0,pfc-c-318,PFC-c-318,,PFC,2024-04-12 17:35:09.480412
+perfluorocyclopropane,c-c3f6,c-C3F6,6850.0,9200.0,,,,PFC,2024-04-12 17:35:09.480412
+Perfluorodecalin,c10f18,C10F18,5710.0,7800.0,pfc-91-18,PFC-91-18,,PFC,2024-04-12 17:35:09.480412
+sulphur hexafluoride,sf6,SF6,18300.0,25200.0,,,,PFC,2024-04-12 17:35:09.480412
+tetradecafluorohexane,c6f14,C6F14,6260.0,8620.0,pfc-51-14,PFC-51-14,,PFC,2024-04-12 17:35:09.480412
+tetrafluoromethane,cf4,CF4,4880.0,6630.0,pfc-14,PFC-14,,PFC,2024-04-12 17:35:09.480412
+trifluoromethane,hfc-23,HFC-23,12400.0,14600.0,,,CHF3,HFC,2024-04-12 17:35:09.480412

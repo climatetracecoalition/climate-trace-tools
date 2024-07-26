@@ -1,0 +1,319 @@
+iso3,name,annex,iso2
+ABW,Aruba,nonannex1,AW
+AFG,Afghanistan,nonannex1,AF
+AGO,Angola,nonannex1,AO
+ANT,Antigua and Barbuda,nonannex1,AN
+ARE,United Arab Emirates,nonannex1,AE
+ARG,Argentina,nonannex1,AR
+ASM,American Samoa,nonannex1,AS
+ATF,French Southern Territories,nonannex1,TF
+AUT,Austria,annex1,AT
+AZE,Azerbaijan,nonannex1,AZ
+BDI,Burundi,nonannex1,BI
+BEL,Belgium,annex1,BE
+BEN,Benin,nonannex1,BJ
+BES,"Bonaire, Sint Eustatius and Saba",nonannex1,BQ
+BFA,Burkina Faso,nonannex1,BF
+BGD,Bangladesh,nonannex1,BD
+BGR,Bulgaria,annex1,BG
+BHR,Bahrain,nonannex1,BH
+BHS,Bahamas,nonannex1,BS
+BIH,Bosnia and Herzegovina,nonannex1,BA
+BLM,Saint Barthélemy,nonannex1,BL
+BLR,Belarus,annex1,BY
+BLZ,Belize,nonannex1,BZ
+BMU,Bermuda,nonannex1,BM
+BOL,Bolivia (Plurinational State of),nonannex1,BO
+BRA,Brazil,nonannex1,BR
+BRB,Barbados,nonannex1,BB
+BRN,Brunei Darussalam,nonannex1,BN
+BTN,Bhutan,nonannex1,BT
+BVT,Bouvet Island,nonannex1,BV
+BWA,Botswana,nonannex1,BW
+CAF,Central African Republic,nonannex1,CF
+CAN,Canada,annex1,CA
+CCK,Cocos (Keeling) Islands,nonannex1,CC
+CHE,Switzerland,annex1,CH
+CHL,Chile,nonannex1,CL
+CHN,China,nonannex1,CN
+CIV,Côte d'Ivoire,nonannex1,CI
+CMR,Cameroon,nonannex1,CM
+COD,Democratic Republic of the Congo,nonannex1,CD
+COG,Congo,nonannex1,CG
+COK,Cook Islands,nonannex1,CK
+COL,Colombia,nonannex1,CO
+COM,Comoros,nonannex1,KM
+CPV,Cabo Verde,nonannex1,CV
+CRI,Costa Rica,nonannex1,CR
+CUB,Cuba,nonannex1,CU
+CUW,Curaçao,nonannex1,CW
+CXR,Christmas Island,nonannex1,CX
+CYM,Cayman Islands,nonannex1,KY
+CYP,Cyprus,annex1,CY
+CZE,Czechia,annex1,CZ
+DEU,Germany,annex1,DE
+DJI,Djibouti,nonannex1,DJ
+DMA,Dominica,nonannex1,DM
+DNK,Denmark,annex1,DK
+DOM,Dominican Republic,nonannex1,DO
+DZA,Algeria,nonannex1,DZ
+ECU,Ecuador,nonannex1,EC
+EGY,Egypt,nonannex1,EG
+ERI,Eritrea,nonannex1,ER
+ESH,Western Sahara,nonannex1,EH
+ESP,Spain,annex1,ES
+EST,Estonia,annex1,EE
+ETH,Ethiopia,nonannex1,ET
+FIN,Finland,annex1,FI
+FJI,Fiji,nonannex1,FJ
+FLK,Falkland Islands (Malvinas),nonannex1,FK
+FRA,France,annex1,FR
+FRO,Faroe Islands,nonannex1,FO
+FSM,Micronesia (Federated States of),nonannex1,FM
+GAB,Gabon,nonannex1,GA
+GBR,United Kingdom of Great Britain and Northern Ireland,annex1,GB
+GEO,Georgia,nonannex1,GE
+GGY,Guernsey,nonannex1,GG
+GHA,Ghana,nonannex1,GH
+GIB,Gibraltar,nonannex1,GI
+GIN,Guinea,nonannex1,GN
+GLP,Guadeloupe,nonannex1,GP
+GMB,Gambia,nonannex1,GM
+GNB,Guinea-Bissau,nonannex1,GW
+GNQ,Equatorial Guinea,nonannex1,GQ
+GRC,Greece,annex1,GR
+GRD,Grenada,nonannex1,GD
+GRL,Greenland,nonannex1,GL
+GTM,Guatemala,nonannex1,GT
+GUF,French Guiana,nonannex1,GF
+GUM,Guam,nonannex1,GU
+GUY,Guyana,nonannex1,GY
+HKG,"China, Hong Kong Special Administrative Region",nonannex1,HK
+HMD,Heard Island and McDonald Islands,nonannex1,HM
+HND,Honduras,nonannex1,HN
+HRV,Croatia,annex1,HR
+HTI,Haiti,nonannex1,HT
+HUN,Hungary,annex1,HU
+IDN,Indonesia,nonannex1,ID
+IMN,Isle of Man,nonannex1,IM
+IND,India,nonannex1,IN
+IOT,British Indian Ocean Territory,nonannex1,IO
+IRL,Ireland,annex1,IE
+IRN,Iran (Islamic Republic of),nonannex1,IR
+IRQ,Iraq,nonannex1,IQ
+ISL,Iceland,annex1,IS
+ISR,Israel,nonannex1,IL
+ITA,Italy,annex1,IT
+JAM,Jamaica,nonannex1,JM
+JEY,Jersey,nonannex1,JE
+JOR,Jordan,nonannex1,JO
+JPN,Japan,annex1,JP
+KAZ,Kazakhstan,annex1,KZ
+KEN,Kenya,nonannex1,KE
+KGZ,Kyrgyzstan,nonannex1,KG
+KHM,Cambodia,nonannex1,KH
+KIR,Kiribati,nonannex1,KI
+KNA,Saint Kitts and Nevis,nonannex1,KN
+KOR,Republic of Korea,nonannex1,KR
+XKX,Kosovo,nonannex1,XK
+KWT,Kuwait,nonannex1,KW
+LAO,Lao People's Democratic Republic,nonannex1,LA
+LBN,Lebanon,nonannex1,LB
+LBR,Liberia,nonannex1,LR
+LBY,Libya,nonannex1,LY
+LCA,Saint Lucia,nonannex1,LC
+LIE,Liechtenstein,annex1,LI
+LKA,Sri Lanka,nonannex1,LK
+LSO,Lesotho,nonannex1,LS
+LTU,Lithuania,annex1,LT
+LUX,Luxembourg,annex1,LU
+LVA,Latvia,annex1,LV
+MAC,"China, Macao Special Administrative Region",nonannex1,MO
+MAF,Saint Martin (French Part),nonannex1,MF
+MAR,Morocco,nonannex1,MA
+MCO,Monaco,annex1,MC
+MDA,Republic of Moldova,nonannex1,MD
+MDG,Madagascar,nonannex1,MG
+MDV,Maldives,nonannex1,MV
+MEX,Mexico,nonannex1,MX
+MHL,Marshall Islands,nonannex1,MH
+MKD,The former Yugoslav Republic of Macedonia,nonannex1,MK
+MLI,Mali,nonannex1,ML
+MLT,Malta,annex1,MT
+MMR,Myanmar,nonannex1,MM
+MNE,Montenegro,nonannex1,ME
+MNG,Mongolia,nonannex1,MN
+MNP,Northern Mariana Islands,nonannex1,MP
+MOZ,Mozambique,nonannex1,MZ
+MRT,Mauritania,nonannex1,MR
+MSR,Montserrat,nonannex1,MS
+MTQ,Martinique,nonannex1,MQ
+MUS,Mauritius,nonannex1,MU
+MWI,Malawi,nonannex1,MW
+MYS,Malaysia,nonannex1,MY
+MYT,Mayotte,nonannex1,YT
+NAM,Namibia,nonannex1,NA
+NCL,New Caledonia,nonannex1,NC
+NER,Niger,nonannex1,NE
+NFK,Norfolk Island,nonannex1,NF
+NGA,Nigeria,nonannex1,NG
+NIC,Nicaragua,nonannex1,NI
+NIU,Niue,nonannex1,NU
+NLD,Netherlands,annex1,NL
+NOR,Norway,annex1,NO
+NPL,Nepal,nonannex1,NP
+NRU,Nauru,nonannex1,NR
+NZL,New Zealand,annex1,NZ
+OMN,Oman,nonannex1,OM
+PAK,Pakistan,nonannex1,PK
+PAN,Panama,nonannex1,PA
+PCN,Pitcairn,nonannex1,PN
+PER,Peru,nonannex1,PE
+PHL,Philippines,nonannex1,PH
+PLW,Palau,nonannex1,PW
+PNG,Papua New Guinea,nonannex1,PG
+POL,Poland,annex1,PL
+PRI,Puerto Rico,nonannex1,PR
+PRK,Democratic People's Republic of Korea,nonannex1,KP
+PRT,Portugal,annex1,PT
+PRY,Paraguay,nonannex1,PY
+PSE,State of Palestine,nonannex1,PS
+PYF,French Polynesia,nonannex1,PF
+QAT,Qatar,nonannex1,QA
+REU,Réunion,nonannex1,RE
+ROU,Romania,annex1,RO
+RUS,Russian Federation,annex1,RU
+RWA,Rwanda,nonannex1,RW
+SAU,Saudi Arabia,nonannex1,SA
+SDN,Sudan,nonannex1,SD
+SEN,Senegal,nonannex1,SN
+SGP,Singapore,nonannex1,SG
+SGS,South Georgia and the South Sandwich Islands,nonannex1,GS
+SHN,Saint Helena,nonannex1,SH
+SJM,Svalbard and Jan Mayen Islands,nonannex1,SJ
+SLB,Solomon Islands,nonannex1,SB
+SLE,Sierra Leone,nonannex1,SL
+SLV,El Salvador,nonannex1,SV
+SMR,San Marino,nonannex1,SM
+SOM,Somalia,nonannex1,SO
+SPM,Saint Pierre and Miquelon,nonannex1,PM
+SRB,Serbia,nonannex1,RS
+SSD,South Sudan,nonannex1,SS
+STP,Sao Tome and Principe,nonannex1,ST
+SUR,Suriname,nonannex1,SR
+SVK,Slovakia,annex1,SK
+SVN,Slovenia,annex1,SI
+SWE,Sweden,annex1,SE
+SWZ,Eswatini,nonannex1,SZ
+SXM,Sint Maarten (Dutch part),nonannex1,SX
+SYC,Seychelles,nonannex1,SC
+SYR,Syrian Arab Republic,nonannex1,SY
+TCA,Turks and Caicos Islands,nonannex1,TC
+TCD,Chad,nonannex1,TD
+TGO,Togo,nonannex1,TG
+THA,Thailand,nonannex1,TH
+TJK,Tajikistan,nonannex1,TJ
+TKL,Tokelau,nonannex1,TK
+TKM,Turkmenistan,nonannex1,TM
+TLS,Timor-Leste,nonannex1,TL
+TON,Tonga,nonannex1,TO
+TTO,Trinidad and Tobago,nonannex1,TT
+TUN,Tunisia,nonannex1,TN
+TUR,Turkey,annex1,TR
+TUV,Tuvalu,nonannex1,TV
+TWN,Taiwan,nonannex1,TW
+TZA,United Republic of Tanzania,nonannex1,TZ
+UGA,Uganda,nonannex1,UG
+UKR,Ukraine,annex1,UA
+UMI,United States Minor Outlying Islands,nonannex1,UM
+URY,Uruguay,nonannex1,UY
+USA,United States of America,annex1,US
+UZB,Uzbekistan,nonannex1,UZ
+VAT,Holy See,nonannex1,VA
+VCT,Saint Vincent and the Grenadines,nonannex1,VC
+VEN,Venezuela (Bolivarian Republic of),nonannex1,VE
+VGB,British Virgin Islands,nonannex1,VG
+VIR,United States Virgin Islands,nonannex1,VI
+VNM,Viet Nam,annex1,VN
+VUT,Vanuatu,nonannex1,VU
+WLF,Wallis and Futuna Islands,nonannex1,WF
+WSM,Samoa,nonannex1,WS
+YEM,Yemen,nonannex1,YE
+ZAF,South Africa,nonannex1,ZA
+ZMB,Zambia,nonannex1,ZM
+ZWE,Zimbabwe,nonannex1,ZW
+BOL,Bolivia,nonannex1,BO
+BRN,Brunei,nonannex1,BN
+CHN,"China, mainland",nonannex1,CN
+CIV,Cote d'Ivoire,nonannex1,CI
+COD,Congo_the Democratic Republic of the,nonannex1,CD
+COG,Republic of Congo,nonannex1,CG
+CPV,Cape Verde,nonannex1,CV
+CZE,Czech Republic,nonannex1,CZ
+FSM,Micronesia,nonannex1,FM
+FSM,"Micronesia, Federated States of",nonannex1,FM
+GBR,UK,nonannex1,GB
+GBR,United Kingdom,nonannex1,GB
+GUF,French Guyana,nonannex1,GF
+HKG,"China, Hong Kong SAR",nonannex1,HK
+HKG,Hong Kong,nonannex1,HK
+IRN,Iran,nonannex1,IR
+IRN,"Iran, Islamic Republic of",nonannex1,IR
+KOR,"Korea, Republic of",nonannex1,KR
+KOR,South Korea,nonannex1,KR
+LAO,Laos,nonannex1,LA
+LBY,Libyan Arab Jamahiriya,nonannex1,LY
+MAC,"China, Macao SAR",nonannex1,MO
+MAC,Macao,nonannex1,MO
+MDA,Moldova,nonannex1,MD
+MDA,"Moldova, Republic of",nonannex1,MD
+MKD,Macedonia,nonannex1,MK
+MKD,"Macedonia, the former Yugoslav Republic of",nonannex1,MK
+MKD,North Macedonia,nonannex1,MK
+PRK,"Korea, Democratic People's Republic of",nonannex1,KP
+PRK,North Korea,nonannex1,KP
+PSE,Palestine,nonannex1,PS
+REU,Reunion,nonannex1,RE
+RUS,Russia,nonannex1,RU
+SHN,"Saint Helena, Ascension and Tristan da Cunha",nonannex1,SH
+SWZ,Swaziland,nonannex1,SZ
+SYR,Syria,nonannex1,SY
+TWN,"China, Taiwan Province of",nonannex1,TW
+TWN,Taiwan_Province of China,nonannex1,TW
+TZA,Tanzania,nonannex1,TZ
+TZA,Tanzania_United Republic of,nonannex1,TZ
+USA,United States,nonannex1,US
+USA,US,nonannex1,US
+VEN,Venezuela,nonannex1,VE
+VGB,Virgin Islands_British,nonannex1,VG
+VIR,Virgin Islands_USA,nonannex1,VI
+VNM,Vietnam,nonannex1,VN
+WLF,Wallis and Futuna,nonannex1,WF
+,Belgium-Luxembourg,,
+,Channel Islands,,
+,Czechoslovakia,,
+,Ethiopia PDR,,
+,EU27 & UK,,
+,European Union (27),,
+,Int. Aviation,,
+,Int. Shipping,,
+,Netherlands Antilles,,
+,Netherlands Antilles (former),,
+,Pacific Islands Trust Territory,,
+,ROW,,
+,Sudan (former),,
+,Unknown,,
+,USSR,,
+,World,,
+,WORLD,,
+,Yugoslav SFR,,
+SCG,Serbia and Montenegro,nonannex1,
+AIA,Anguilla,nonannex1,AI
+ALA,Åland Islands,nonannex1,AX
+ALB,Albania,nonannex1,AL
+AND,Andorra,nonannex1,AD
+ARM,Armenia,nonannex1,AM
+ATA,Antarctica,nonannex1,AQ
+ATG,Antigua and Barbuda,nonannex1,AG
+AUS,Australia,annex1,AU
+UNK,Unknown,,
