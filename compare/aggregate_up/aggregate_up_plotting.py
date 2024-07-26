@@ -6,12 +6,13 @@ import plotly
 import geopandas as gpd
 import json
 from aggregate_up_util import *
+from compare.data_handler import CsvDataHandler, get_ghg_gwps_list, calculate_gwp
 
 fonts = {"family": "Foros, medium"}
 
 
 class CountryPlotting:
-    def __init__(self, iso3_country):
+    def __init__(self, iso3_country, data_handler=CsvDataHandler()):
         """
         Pulls data for all three inventories, climate-trace, unfccc_non_annex_1, and unfccc_annex_1
         for the chosen country. Within functions the appropriate unfccc inventory is selected based
@@ -23,13 +24,21 @@ class CountryPlotting:
         else:
             self.country = False
 
-        self.climate_trace = read_zip("climate-trace", iso3_country)
-        self.unfccc_non_annex_1 = read_zip("unfccc_non_annex_1", iso3_country)
-        self.unfccc_annex_1 = read_zip("unfccc_annex_1", iso3_country)
-        self.edgar = read_zip("edgar", iso3_country)
-        self.pik_tp = read_zip("pik-tp", iso3_country)
-        self.cait = read_zip("cait", iso3_country)
-        self.carbon_monitor = read_zip("carbon-monitor", iso3_country)
+        self.climate_trace = data_handler.load_by_sector_country(
+            "climate-trace", iso3_country
+        )
+        self.unfccc_non_annex_1 = data_handler.load_by_sector_country(
+            "unfccc_non_annex_1", iso3_country
+        )
+        self.unfccc_annex_1 = data_handler.load_by_sector_country(
+            "unfccc_annex_1", iso3_country
+        )
+        self.edgar = data_handler.load_by_sector_country("edgar", iso3_country)
+        self.pik_tp = data_handler.load_by_sector_country("pik-tp", iso3_country)
+        self.cait = data_handler.load_by_sector_country("cait", iso3_country)
+        self.carbon_monitor = data_handler.load_by_sector_country(
+            "carbon-monitor", iso3_country
+        )
         self.non_annex_iso3 = self.unfccc_non_annex_1["iso3_country"].unique()
         self.annex_iso3 = self.unfccc_annex_1["iso3_country"].unique()
 
