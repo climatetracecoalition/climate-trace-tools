@@ -1,5 +1,5 @@
 export_csvs.py
-"*.html"
+*.html
 "*.png"
 "*.json"
 test.py
