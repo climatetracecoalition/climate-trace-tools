@@ -27,7 +27,7 @@ class SectorComparison:
             self.title_dict_annex1 = json.loads(f.read())
 
 
-    def plot(self, countries, sectors, gases, co2eqs, plot_type, start_year, end_year, create_folders=False):
+    def plot(self, countries, sectors, gases, co2eqs, plot_type, start_year, end_year, create_folders=False, plot_live=True):
         ############################
         # Get the data
         ############################
@@ -102,7 +102,7 @@ class SectorComparison:
 
                         # create plots for all listed countries, sector by sector
                         raw_data = create_plots(self.allinv, countries, sector, gas, co2eq, plot_type, ratio_data,
-                                     output_folder=path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type + '/' + sector, comparison_dicts=comparison_dicts, title_dicts=title_dicts, create_folders=create_folders)
+                                     output_folder=path + '/processed_data/' + gas + '/' + co2eq + '/' + plot_type + '/' + sector, comparison_dicts=comparison_dicts, title_dicts=title_dicts, create_folders=create_folders, plot_live=plot_live)
 
                         ratio_data_column_order = ['Data source',
                                                    'ID',
@@ -172,6 +172,6 @@ class SectorComparison:
 
 
 
-        return ratio_data
+
 
 
