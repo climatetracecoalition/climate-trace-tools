@@ -107,36 +107,37 @@ def parse_and_format_query_data(
     return transformed_df
 
 
-def load_data():
-    all_data = pd.DataFrame()
+class CsvDataHandler:
+    def load_data(self):
+        all_data = pd.DataFrame()
 
-    for file in os.listdir("../../data/country"):
-        if file.startswith(".DS"):
-            continue
-        data = pd.read_csv(f"../../data/country/{file}")
-        all_data = pd.concat([all_data, data])
+        for file in os.listdir("../../data/country"):
+            if file.startswith(".DS"):
+                continue
+            data = pd.read_csv(f"../../data/country/{file}")
+            all_data = pd.concat([all_data, data])
 
-    all_data = all_data[
-        [
-            "original_inventory_sector",
-            "iso3_country",
-            "reporting_entity",
-            "gas",
-            "emissions_quantity",
-            "emissions_quantity_units",
-            "start_time",
-            "end_time",
+        all_data = all_data[
+            [
+                "original_inventory_sector",
+                "iso3_country",
+                "reporting_entity",
+                "gas",
+                "emissions_quantity",
+                "emissions_quantity_units",
+                "start_time",
+                "end_time",
+            ]
         ]
-    ]
 
-    all_data = all_data[all_data.gas.isin(["co2", "n2o", "ch4"])]
+        all_data = all_data[all_data.gas.isin(["co2", "n2o", "ch4"])]
 
-    # all_data = calculate_gwp(all_data)
-    all_data = all_data.drop(columns="end_time")
+        # all_data = calculate_gwp(all_data)
+        all_data = all_data.drop(columns="end_time")
 
-    transformed_data = parse_and_format_query_data(all_data)
+        transformed_data = parse_and_format_query_data(all_data)
 
-    return transformed_data
+        return transformed_data
 
 
 # def init_db_connect():
