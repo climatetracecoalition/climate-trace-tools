@@ -3,7 +3,7 @@ import pandas as pd
 import json
 import numpy as np
 from compare.subtract_out.util.constants import convert_numeric
-from compare.subtract_out.util.data_handler import CsvDataHandler
+from compare.data_handler import CsvDataHandler
 from compare.subtract_out.util.prep_data_to_plot import create_plots
 
 path = os.getcwd()
@@ -11,7 +11,7 @@ path = os.getcwd()
 
 class SectorComparison:
     def __init__(self, data_handler=CsvDataHandler()):
-        self.allinv = data_handler.load_data()
+        self.allinv = data_handler.load_all_data()
 
         with open("files/master_comparison_dict_annex1.json", "r") as f:
             self.master_comparison_dict_annex1 = json.loads(f.read())
