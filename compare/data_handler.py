@@ -5,9 +5,6 @@ import numpy as np
 import pandas as pd
 import psycopg2 as psycopg2
 import os
-from compare.subtract_out.util.constants import DB_SOURCE_TO_COL_NAME
-
-# from db_connect.dh_utils import parse_and_format_query_data, parse_format_asset
 
 
 def get_ghg_gwps_list():
@@ -71,6 +68,7 @@ def calculate_gwp(datasourcedf):
 def parse_and_format_query_data(
     df, years_to_columns=True, rename_columns=True, times_to_years=True
 ):
+    from compare.subtract_out.util.constants import DB_SOURCE_TO_COL_NAME
 
     if times_to_years:
         df["start_time"] = pd.to_datetime(df.start_time)
@@ -140,7 +138,7 @@ class CsvDataHandler:
         return transformed_data
 
     def load_by_sector_country(self, inventory, iso3_country):
-        df = pd.read_csv(f"../../../data/country/{inventory}.zip")
+        df = pd.read_csv(f"../../data/country/{inventory}.zip")
         df["start_time"] = pd.to_datetime(df.start_time)
         df["end_time"] = pd.to_datetime(df.end_time)
 
