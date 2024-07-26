@@ -1,0 +1,13 @@
+{
+  "Fires": {
+    "climate-trace": [
+      "cropland-fires",
+      "forest-land-fires",
+      "shrubgrass-fires",
+      "wetland-fires"
+    ],
+    "edgar": [
+      "3.C.1 Emissions from biomass burning"
+    ]
+  }
+}

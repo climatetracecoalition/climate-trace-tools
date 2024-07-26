@@ -1,0 +1,76 @@
+{
+  "Cement": {
+    "climate-trace": [
+      "cement"
+    ],
+    "gcp": [
+      "Cement"
+    ]
+  },
+  "Energy Industries, Fossil Fuel Operations, Buildings, and Transport": {
+    "climate-trace": [
+      "electricity-generation",
+      "other-energy-use",
+      "residential-and-commercial-onsite-fuel-usage",
+      "other-onsite-fuel-usage",
+      "domestic-aviation",
+      "domestic-shipping",
+      "road-transportation",
+      "railways",
+      "other-transport",
+      "chemicals",
+      "steel",
+      "aluminum",
+      "petrochemicals",
+      "pulp-and-paper",
+      "sand-quarrying",
+      "rock-quarrying",
+      "bauxite-mining",
+      "iron-mining",
+      "copper-mining",
+      "other-manufacturing",
+      "coal-mining",
+      "solid-fuel-transformation",
+      "oil-and-gas-refining",
+      "other-fossil-fuel-operations"
+    ],
+    "gcp": [
+      "Coal",
+      "Oil",
+      "Gas"
+    ]
+  },
+  "Fossil Fuel Operations": {
+    "climate-trace": [
+      "oil-and-gas-production-and-transport"
+    ],
+    "gcp": [
+      "Gas flaring"
+    ]
+  },
+  "Forestry and Land Use Change": {
+    "climate-trace": [
+      "forest-land-fires",
+      "forest-land-clearing",
+      "forest-land-degradation",
+      "shrubgrass-fires",
+      "wetland-fires",
+      "water-reservoirs",
+      "removals"
+    ],
+    "gcp": [
+      "Gross Source",
+      "Gross Sink"
+    ]
+  },
+  "Net Forestry and Land Use Change": {
+    "climate-trace": [
+      "net-forest-land",
+      "net-wetland",
+      "net-shrubgrass"
+    ],
+    "gcp": [
+      "Net"
+    ]
+  }
+}
