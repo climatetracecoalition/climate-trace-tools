@@ -11,5 +11,14 @@ setup(
         "pandas",
         "plotly",
     ],
-    include_package_data=True,
+    include_package_data={
+        "climate_trace_tools": [
+            "data/country/*.zip",
+            "data/source/*.zip",
+            "data/supplementary/*.zip",
+            "compare/subtract_out/files/*.csv",
+            "compare/subtract_out/files/*.xlsx",
+            "compare.aggregate_up/files/*.xlsx",
+        ]
+    },
 )
