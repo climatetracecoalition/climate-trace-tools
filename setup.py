@@ -10,7 +10,6 @@ setup(
         "numpy",
         "pandas",
         "plotly",
-        "json",
         "copy",
     ],
     include_package_data=True,
