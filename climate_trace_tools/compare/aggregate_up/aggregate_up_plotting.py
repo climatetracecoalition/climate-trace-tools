@@ -1,11 +1,13 @@
 import plotly.graph_objects as go
-from aggregate_up_util import *
+from climate_trace_tools.compare.aggregate_up.aggregate_up_util import *
 from climate_trace_tools.compare.data_handler import (
     CsvDataHandler,
     get_ghg_gwps_list,
     calculate_gwp,
 )
 import pandas as pd
+import importlib.resources as pkg_resources
+from climate_trace_tools.compare.aggregate_up import files
 
 fonts = {"family": "Foros, medium"}
 
@@ -44,22 +46,30 @@ class CountryPlotting:
         self.gas_gwps = get_ghg_gwps_list()
         self.tick_label_dict = get_tick_label_dict()
 
-        with open("files/comparison_sector_dictionary.json", "r") as f:
+        with pkg_resources.open_text(files, "comparison_sector_dictionary.json") as f:
             self.comparison_sector_dictionary = json.loads(f.read())
 
-        with open("files/comparison_sector_dictionary_fires.json", "r") as f:
+        with pkg_resources.open_text(
+            files, "comparison_sector_dictionary_fires.json"
+        ) as f:
             self.comparison_sector_dictionary_fires = json.loads(f.read())
 
-        with open("files/comparison_sector_dictionary_carbon-monitor.json", "r") as f:
+        with pkg_resources.open_text(
+            files, "comparison_sector_dictionary_carbon-monitor.json"
+        ) as f:
             self.comparison_sector_dictionary_carbon_monitor = json.loads(f.read())
 
-        with open("files/comparison_sector_dictionary_gcp.json", "r") as f:
+        with pkg_resources.open_text(
+            files, "comparison_sector_dictionary_gcp.json"
+        ) as f:
             self.comparison_sector_dictionary_gcp = json.loads(f.read())
 
-        with open("files/comparison_sector_dictionary_pik-tp.json", "r") as f:
+        with pkg_resources.open_text(
+            files, "comparison_sector_dictionary_pik-tp.json"
+        ) as f:
             self.comparison_sector_dictionary_pik = json.loads(f.read())
 
-        with open("files/subsector_dictionary.json", "r") as f:
+        with pkg_resources.open_text(files, "subsector_dictionary.json") as f:
             self.subsector_dictionary = json.loads(f.read())
 
     def get_latest_year_for_inventory(
