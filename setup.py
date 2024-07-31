@@ -17,10 +17,10 @@ setup(
         "climate_trace_tools": [
             "data/country/*.zip",
             "data/source/*.zip",
-            "data/supplementary/*.zip",
+            "data/supplementary/*.csv",
             "compare/subtract_out/files/*.csv",
             "compare/subtract_out/files/*.xlsx",
-            "compare.aggregate_up/files/*.xlsx",
+            "compare/aggregate_up/files/*.xlsx",
         ]
     },
 )
