@@ -4,11 +4,18 @@ import json
 import numpy as np
 import pandas as pd
 import psycopg2 as psycopg2
+import importlib.resources as pkg_resources
+from climate_trace_tools.data import supplementary
+from climate_trace_tools.data import country
+from io import BytesIO
+import zipfile
+from climate_trace_tools.data import source
 import os
 
 
 def get_ghg_gwps_list():
-    df = pd.read_csv("../../data/supplementary/ghgs.csv")
+    with pkg_resources.open_text(supplementary, "ghgs.csv") as file:
+        df = pd.read_csv(file)
     df = df[["lower_designation", "gwp_20yr", "gwp_100yr"]]
     return df
 
@@ -108,13 +115,24 @@ def parse_and_format_query_data(
 
 
 class CsvDataHandler:
+
+    def read_csv_from_zip(self, module, inventory):
+        # Open the ZIP file in binary mode
+        with pkg_resources.open_binary(module, f"{inventory}.zip") as zip_binary_file:
+            # Convert the binary file to a BytesIO object
+            with zipfile.ZipFile(BytesIO(zip_binary_file.read())) as zip_file:
+                # Open the CSV file inside the ZIP archive
+                with zip_file.open(f"{inventory}.csv") as csv_file:
+                    # Read the CSV file into a DataFrame
+                    return pd.read_csv(csv_file)
+
     def load_all_data(self):
         all_data = pd.DataFrame()
-
-        for file in os.listdir("../../data/country"):
-            if file.startswith(".DS"):
-                continue
-            data = pd.read_csv(f"../../data/country/{file}")
+        file_list = pkg_resources.contents(country)
+        zip_files = [f for f in file_list if f.endswith(".zip")]
+        for file in zip_files:
+            inventory = file[:-4]
+            data = self.read_csv_from_zip(country, inventory)
             all_data = pd.concat([all_data, data])
 
         all_data = all_data[
@@ -140,7 +158,10 @@ class CsvDataHandler:
         return transformed_data
 
     def load_by_sector_country(self, inventory, iso3_country):
-        df = pd.read_csv(f"../../data/country/{inventory}.zip")
+
+        df = self.read_csv_from_zip(country, inventory)
+        # with pkg_resources.open_text(country, f"{inventory}.zip") as file:
+        #     df = pd.read_csv(file)
         df["start_time"] = pd.to_datetime(df.start_time)
         df["end_time"] = pd.to_datetime(df.end_time)
 
