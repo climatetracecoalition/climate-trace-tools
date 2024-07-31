@@ -1,9 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="climate_trace_tools",
     version="0.0.1",
-    description="tools for comparing climate trace data to other data sources",
+    description="Tools for comparing climate trace data to other data sources",
     author="Christy Lewis",
     author_email="christy@watttime.org",
     install_requires=[
@@ -11,7 +11,9 @@ setup(
         "pandas",
         "plotly",
     ],
-    include_package_data={
+    packages=find_packages(),  # This ensures that all packages and sub-packages are included
+    include_package_data=True,  # This tells setuptools to include files specified in MANIFEST.in or package_data
+    package_data={
         "climate_trace_tools": [
             "data/country/*.zip",
             "data/source/*.zip",
