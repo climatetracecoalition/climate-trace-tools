@@ -9,6 +9,8 @@ from climate_trace_tools.compare.subtract_out.util.country_lists import (
 )
 import numpy as np
 import json
+import importlib.resources as pkg_resources
+from climate_trace_tools.compare.subtract_out import files
 
 # Settings for which data to plot
 
@@ -36,10 +38,12 @@ import json
 ## list of sectors. Keep in mind, only sectors named in those dictionaries can be specified in custom list.
 ## For instance 'aviation' is a plotting sector, 'international-aviation' and 'domestic-aviation' are not.
 
-with open("files/master_comparison_dict_annex1.json", "r") as f:
-    master_dict_annex1 = json.loads(f.read())
+with pkg_resources.open_text(files, "master_comparison_dict_annex1.json") as file_path:
+    master_dict_annex1 = json.load(file_path)
 
 ratio_sectors = []
+
+
 for item in master_dict_annex1.keys():
     invs = master_dict_annex1[item].keys()
     if not all([inv == "climate-trace" for inv in invs]) and any(

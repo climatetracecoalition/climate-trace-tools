@@ -5,6 +5,8 @@ import numpy as np
 from climate_trace_tools.compare.subtract_out.util.constants import convert_numeric
 from climate_trace_tools.compare.data_handler import CsvDataHandler
 from climate_trace_tools.compare.subtract_out.util.prep_data_to_plot import create_plots
+import importlib.resources as pkg_resources
+from climate_trace_tools.compare.subtract_out import files
 
 path = os.getcwd()
 
@@ -13,16 +15,18 @@ class SectorComparison:
     def __init__(self, data_handler=CsvDataHandler()):
         self.allinv = data_handler.load_all_data()
 
-        with open("files/master_comparison_dict_annex1.json", "r") as f:
+        with pkg_resources.open_text(files, "master_comparison_dict_annex1.json") as f:
             self.master_comparison_dict_annex1 = json.loads(f.read())
 
-        with open("files/master_comparison_dict_nonannex1.json", "r") as f:
+        with pkg_resources.open_text(
+            files, "master_comparison_dict_nonannex1.json"
+        ) as f:
             self.master_comparison_dict_nonannex1 = json.loads(f.read())
 
-        with open("files/title_dict_nonannex1.json", "r") as f:
+        with pkg_resources.open_text(files, "title_dict_nonannex1.json") as f:
             self.title_dict_nonannex1 = json.loads(f.read())
 
-        with open("files/title_dict_annex1.json", "r") as f:
+        with pkg_resources.open_text(files, "title_dict_annex1.json") as f:
             self.title_dict_annex1 = json.loads(f.read())
 
     def plot(
