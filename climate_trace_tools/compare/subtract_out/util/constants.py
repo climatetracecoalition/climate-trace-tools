@@ -1,10 +1,21 @@
 import pandas as pd
+import importlib.resources as pkg_resources
+
+
+def load_title_conversion():
+    with pkg_resources.open_text(
+        "climate_trace_tools.compare.subtract_out.files", "CT_country_titles.csv"
+    ) as csv_path:
+        return pd.read_csv(csv_path).applymap(lambda x: x.strip(" "))
+
+
+TITLE_CONVERSION = load_title_conversion()
 
 
 # CODE_CONVERSION = pd.read_csv('../../../../data/supplementary/countries.csv').applymap(lambda x: x.strip(' '))
-TITLE_CONVERSION = pd.read_csv("files/CT_country_titles.csv").applymap(
-    lambda x: x.strip(" ")
-)
+# TITLE_CONVERSION = pd.read_csv("files/CT_country_titles.csv").applymap(
+#     lambda x: x.strip(" ")
+# )
 GAS_TITLES = pd.read_csv("files/gas_title_dict.csv").applymap(lambda x: x.strip(" "))
 
 # Dictionaries convert database column names to db_connect column names
