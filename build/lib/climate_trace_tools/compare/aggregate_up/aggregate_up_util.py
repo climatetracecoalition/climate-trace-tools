@@ -241,26 +241,3 @@ def plotly_formatting():
     xaxes = {"gridcolor": "#e6f3ff", "linewidth": 1, "tickfont": {"size": 13}}
 
     return fonts, layout, yaxes, xaxes
-
-
-def get_sector_options(inventory):
-    with open("files/subsector_dictionary.json", "r") as f:
-        sector_dictionary = json.loads(f.read())
-
-    inventory_dict = sector_dictionary[inventory]
-    inventory_sectors = list(inventory_dict.keys())
-
-    return inventory_sectors
-
-
-def get_subsector_options(inventory):
-    with open("files/subsector_dictionary.json", "r") as f:
-        sector_dictionary = json.loads(f.read())
-
-    inventory_dict = sector_dictionary[inventory]
-    subsectors = []
-
-    for sectors, sdict in inventory_dict.items():
-        subsectors.append(list(sdict.keys()))
-
-    return subsectors
