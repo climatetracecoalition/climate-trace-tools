@@ -8,17 +8,20 @@ climate_trace_tools.egg-info/requires.txt
 climate_trace_tools.egg-info/top_level.txt
 climate_trace_tools/compare/__init__.py
 climate_trace_tools/compare/data_handler.py
+climate_trace_tools/compare/input_helper.py
 climate_trace_tools/compare/aggregate_up/__init__.py
 climate_trace_tools/compare/aggregate_up/aggregate_up_csv_to_json.py
 climate_trace_tools/compare/aggregate_up/aggregate_up_plotting.py
 climate_trace_tools/compare/aggregate_up/aggregate_up_util.py
 climate_trace_tools/compare/aggregate_up/test.py
+climate_trace_tools/compare/aggregate_up/files/__init__.py
+climate_trace_tools/compare/aggregate_up/files/aggregate-up-csv-crosswalks.xlsx
 climate_trace_tools/compare/subtract_out/__init__.py
-climate_trace_tools/compare/subtract_out/helper.py
 climate_trace_tools/compare/subtract_out/subtract_out_csv_to_json.py
 climate_trace_tools/compare/subtract_out/subtract_out_plotting.py
 climate_trace_tools/compare/subtract_out/test.py
 climate_trace_tools/compare/subtract_out/files/CT_country_titles.csv
+climate_trace_tools/compare/subtract_out/files/__init__.py
 climate_trace_tools/compare/subtract_out/files/gas_title_dict.csv
 climate_trace_tools/compare/subtract_out/files/subtract-out-csv-crosswalks.xlsx
 climate_trace_tools/compare/subtract_out/util/__init__.py
@@ -29,6 +32,7 @@ climate_trace_tools/compare/subtract_out/util/plotting_utils.py
 climate_trace_tools/compare/subtract_out/util/prep_data_to_plot.py
 climate_trace_tools/data/__init__.py
 climate_trace_tools/data/export_csvs.py
+climate_trace_tools/data/country/__init__.py
 climate_trace_tools/data/country/cait.zip
 climate_trace_tools/data/country/carbon-monitor.zip
 climate_trace_tools/data/country/climate-trace.zip
@@ -39,6 +43,7 @@ climate_trace_tools/data/country/pik-cr.zip
 climate_trace_tools/data/country/pik-tp.zip
 climate_trace_tools/data/country/unfccc_annex_1.zip
 climate_trace_tools/data/country/unfccc_non_annex_1.zip
+climate_trace_tools/data/source/__init__.py
 climate_trace_tools/data/source/can-ghgrp.zip
 climate_trace_tools/data/source/epa-flight.zip
 climate_trace_tools/data/source/eprtr.zip
@@ -48,3 +53,9 @@ climate_trace_tools/data/source/global-power-plant-database.zip
 climate_trace_tools/data/source/isreal-prtr.zip
 climate_trace_tools/data/source/meter.zip
 climate_trace_tools/data/source/spatial-finance-initiative.zip
+climate_trace_tools/data/supplementary/__init__.py
+climate_trace_tools/data/supplementary/countries.csv
+climate_trace_tools/data/supplementary/data_sources_external.csv
+climate_trace_tools/data/supplementary/ghgs.csv
+climate_trace_tools/data/supplementary/sector_coverage.csv
+climate_trace_tools/data/supplementary/unfccc_codes.csv
