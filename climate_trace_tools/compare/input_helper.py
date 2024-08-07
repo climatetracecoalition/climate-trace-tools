@@ -30,7 +30,7 @@ class InputHelper:
             return countries_annex1
         elif not annex1:
             return countries_nonannex1
-        else:
+        elif annex1 == "all":
             return countries_nonannex1 + countries_annex1
 
     def sectors_available_to_plot_subtract_out(self, annex1: bool):

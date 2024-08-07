@@ -7,6 +7,7 @@ from climate_trace_tools.compare.data_handler import CsvDataHandler
 from climate_trace_tools.compare.subtract_out.util.prep_data_to_plot import create_plots
 import importlib.resources as pkg_resources
 from climate_trace_tools.compare.subtract_out import files
+import datetime
 
 path = os.getcwd()
 
@@ -38,6 +39,7 @@ class SectorComparison:
         plot_type,
         start_year,
         end_year,
+        name,
         create_folders=False,
         plot_live=True,
     ):
@@ -183,21 +185,6 @@ class SectorComparison:
                             "Gas",
                             "Unit",
                             "carbon_eq",
-                            2000,
-                            2001,
-                            2002,
-                            2003,
-                            2004,
-                            2005,
-                            2006,
-                            2007,
-                            2008,
-                            2009,
-                            2010,
-                            2011,
-                            2012,
-                            2013,
-                            2014,
                             2015,
                             2016,
                             2017,
@@ -231,9 +218,20 @@ class SectorComparison:
                             .groupby(grpcols, as_index=False)
                             .sum(min_count=1)
                         )
+
+                        country_totals = country_totals.rename(
+                            columns={
+                                "Data source": "reporting_entity",
+                                "ID": "iso3_country",
+                                "Sector": "climate_trace_sector",
+                            }
+                        )
+
+                        timestamp = datetime.datetime.now().strftime("%Y%m%d")
+
                         country_totals.to_csv(
                             path
-                            + f"/processed_data/ratio_dfs/{sector}/{sector}_raw_data.csv",
+                            + f"/processed_data/ratio_dfs/{sector}/{sector}_raw-data_{name}_{timestamp}.csv",
                             index=False,
                         )
                         for yr in years:
@@ -261,6 +259,7 @@ class SectorComparison:
                                         ):
                                             if value != 0:
                                                 sect_ratio = row[yr] / value
+                                                # difference_tonnes = row[yr]
                                                 ratio_data.loc[
                                                     (
                                                         ratio_data["Sector"]
@@ -272,7 +271,7 @@ class SectorComparison:
                                                         ratio_data["Data source"]
                                                         == row["Data source"]
                                                     ),
-                                                    f"sect_ratio_{yr}",
+                                                    f"inv_to_ct_ratio_{yr}",
                                                 ] = sect_ratio
 
                         ratio_data = ratio_data.rename(
@@ -286,6 +285,7 @@ class SectorComparison:
 
                         ratio_data.to_csv(
                             path
-                            + f"/processed_data/ratio_dfs/{sector}/{sector}_ratio_data.csv",
+                            + f"/processed_data/ratio_dfs/{sector}/{sector}_ratio-data_{name}_{timestamp}.csv",
                             index=False,
                         )
+        return ratio_data
