@@ -94,7 +94,7 @@ def parse_and_format_query_data(
             "year",
         ],
         as_index=False,
-    ).sum()
+    ).sum(min_count=1)
 
     if rename_columns:
         df = df.rename(columns=DB_SOURCE_TO_COL_NAME)
