@@ -92,26 +92,6 @@
       }
     }
   },
-  "aviation": {
-    "title": "Aviation",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "domestic-aviation",
-              "     + "
-            ],
-            [
-              "international-aviation",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
   "domestic-aviation": {
     "title": "Domestic Aviation",
     "legend": {
@@ -204,26 +184,6 @@
       }
     }
   },
-  "shipping": {
-    "title": "Shipping",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "international-shipping",
-              "     + "
-            ],
-            [
-              "domestic-shipping",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
   "international-shipping": {
     "title": "International Shipping",
     "legend": {
@@ -249,6 +209,22 @@
           "comps": [
             [
               "domestic-shipping",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "railways": {
+    "title": "Railways",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "railways",
               "     + "
             ]
           ]
@@ -463,22 +439,6 @@
       }
     }
   },
-  "petrochemicals": {
-    "title": "Petrochemicals",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "petrochemicals",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
   "other-fossil-fuel-operations": {
     "title": "Other Fossil Fuel Operations",
     "legend": {
@@ -488,6 +448,22 @@
           "comps": [
             [
               "other-fossil-fuel-operations",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "petrochemicals": {
+    "title": "Petrochemicals",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "petrochemicals",
               "     + "
             ]
           ]
@@ -696,8 +672,8 @@
       }
     }
   },
-  "mining-and-quarrying": {
-    "title": "Mining And Quarrying",
+  "bauxite-mining": {
+    "title": "Bauxite Mining",
     "legend": {
       "climate-trace": {
         "climate-trace": {
@@ -706,21 +682,37 @@
             [
               "bauxite-mining",
               "     + "
-            ],
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "iron-mining": {
+    "title": "Iron Mining",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
             [
               "iron-mining",
               "     + "
-            ],
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "copper-mining": {
+    "title": "Copper Mining",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
             [
               "copper-mining",
-              "     + "
-            ],
-            [
-              "rock-quarrying",
-              "     + "
-            ],
-            [
-              "sand-quarrying",
               "     + "
             ]
           ]
@@ -744,8 +736,24 @@
       }
     }
   },
-  "enteric-fermentation": {
-    "title": "Enteric Fermentation",
+  "sand-quarrying": {
+    "title": "Sand Quarrying",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "sand-quarrying",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation-cattle-feedlot": {
+    "title": "Enteric Fermentation Cattle Feedlot",
     "legend": {
       "climate-trace": {
         "climate-trace": {
@@ -754,11 +762,107 @@
             [
               "enteric-fermentation-cattle-feedlot",
               "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
             ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation-cattle-pasture": {
+    "title": "Enteric Fermentation Cattle Pasture",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
             [
               "enteric-fermentation-cattle-pasture",
               "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
             ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation-other": {
+    "title": "Enteric Fermentation Other",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
             [
               "enteric-fermentation-other",
               "     + "
@@ -766,21 +870,46 @@
           ]
         }
       },
-      "unfccc_non_annex_1": {
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
           "comps": [
             [
-              "4.A  Enteric Fermentation",
+              "3.A.1 Enteric Fermentation",
               "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
             ]
           ]
         }
       }
     }
   },
-  "manure-management": {
-    "title": "Manure Management",
+  "manure-left-on-pasture-cattle": {
+    "title": "Manure Left On Pasture Cattle",
     "legend": {
       "climate-trace": {
         "climate-trace": {
@@ -789,11 +918,107 @@
             [
               "manure-left-on-pasture-cattle",
               "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
             ],
             [
               "manure-management-cattle-feedlot",
-              "     + "
+              "     - "
             ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-management-cattle-feedlot": {
+    "title": "Manure Management Cattle Feedlot",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-management-cattle-feedlot",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-management-other": {
+    "title": "Manure Management Other",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
             [
               "manure-management-other",
               "     + "
@@ -801,13 +1026,38 @@
           ]
         }
       },
-      "unfccc_non_annex_1": {
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
           "comps": [
             [
-              "4.B  Manure Management",
+              "3.A.1 Enteric Fermentation",
               "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
             ]
           ]
         }
@@ -906,15 +1156,15 @@
       }
     }
   },
-  "other-agriculture": {
-    "title": "Other Agriculture",
+  "cropland-fires": {
+    "title": "Cropland Fires",
     "legend": {
       "climate-trace": {
         "climate-trace": {
           "desc": "ClimateTRACE",
           "comps": [
             [
-              "other-agriculture",
+              "cropland-fires",
               "     + "
             ]
           ]
@@ -1174,246 +1424,64 @@
       }
     }
   },
-  "enteric-fermentation-cattle-feedlot": {
-    "title": "Enteric Fermentation Cattle Feedlot",
+  "removals": {
+    "title": "Removals",
     "legend": {
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
-            ]
-          ]
-        },
+      "climate-trace": {
         "climate-trace": {
           "desc": "ClimateTRACE",
           "comps": [
             [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
+              "removals",
+              "     + "
             ]
           ]
         }
       }
     }
   },
-  "manure-left-on-pasture-cattle": {
-    "title": "Manure Left On Pasture Cattle",
+  "water-reservoirs": {
+    "title": "Water Reservoirs",
     "legend": {
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
-            ]
-          ]
-        },
+      "climate-trace": {
         "climate-trace": {
           "desc": "ClimateTRACE",
           "comps": [
             [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
+              "water-reservoirs",
+              "     + "
             ]
           ]
         }
       }
     }
   },
-  "manure-management-cattle-feedlot": {
-    "title": "Manure Management Cattle Feedlot",
+  "enteric-fermentation": {
+    "title": "Enteric Fermentation",
     "legend": {
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
+      "unfccc_non_annex_1": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
           "comps": [
             [
-              "3.A.1 Enteric Fermentation",
+              "4.A  Enteric Fermentation",
               "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
             ]
           ]
         }
       }
     }
   },
-  "enteric-fermentation-other": {
-    "title": "Enteric Fermentation Other",
+  "manure-management": {
+    "title": "Manure Management",
     "legend": {
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
+      "unfccc_non_annex_1": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
           "comps": [
             [
-              "3.A.1 Enteric Fermentation",
+              "4.B  Manure Management",
               "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "manure-management-other": {
-    "title": "Manure Management Other",
-    "legend": {
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "enteric-fermentation-cattle-pasture": {
-    "title": "Enteric Fermentation Cattle Pasture",
-    "legend": {
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
             ]
           ]
         }

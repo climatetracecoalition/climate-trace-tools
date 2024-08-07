@@ -385,16 +385,23 @@ def plot(
 
     if create_folders:
         try:
-            os.makedirs(output_folder + "/" + f"{country}")
+            os.makedirs(output_folder + "/")
             print("Output folder created.")
         except OSError:
             print("Output folder already exists.")
         if plot_live:
             plotly.offline.plot(
                 fig,
-                filename=f"{output_folder}/{country}/{get_country_title(country)}_{sector}_{plot_type}.html",
+                filename=f"{output_folder}/{get_country_title(country)}_{sector}_{plot_type}.html",
+            )
+        else:
+            plotly.offline.plot(
+                fig,
+                filename=f"{output_folder}/{get_country_title(country)}_{sector}_{plot_type}.html",
+                auto_open=False,
             )
     else:
         plotly.offline.plot(
-            fig, filename=f"{get_country_title(country)}_{sector}_{plot_type}.html"
+            fig,
+            filename=f"{get_country_title(country)}_{sector}_{plot_type}.html",
         )

@@ -2538,182 +2538,9 @@
       }
     }
   },
-  "aviation": {
-    "title": "Aviation",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "domestic-aviation",
-              "     + "
-            ],
-            [
-              "international-aviation",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "1.A.3.a Civil Aviation",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "shipping": {
-    "title": "Shipping",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "international-shipping",
-              "     + "
-            ],
-            [
-              "domestic-shipping",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "1.A.3.d Water-borne Navigation",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "bunker-fuels": {
-    "title": "Bunker Fuels",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "international-aviation",
-              "     + "
-            ],
-            [
-              "international-shipping",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "domestic-transportation": {
-    "title": "Domestic Transportation",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "domestic-aviation",
-              "     + "
-            ],
-            [
-              "domestic-shipping",
-              "     + "
-            ],
-            [
-              "road-transportation",
-              "     + "
-            ],
-            [
-              "railways",
-              "     + "
-            ],
-            [
-              "other-transport",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "fossil-fuel-operations": {
-    "title": "Fossil Fuel Operations",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "coal-mining",
-              "     + "
-            ],
-            [
-              "solid-fuel-transformation",
-              "     + "
-            ],
-            [
-              "oil-and-gas-production-and-transport",
-              "     + "
-            ],
-            [
-              "oil-and-gas-refining",
-              "     + "
-            ],
-            [
-              "other-fossil-fuel-operations",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
   "mining-and-quarrying": {
     "title": "Mining And Quarrying",
     "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "bauxite-mining",
-              "     + "
-            ],
-            [
-              "iron-mining",
-              "     + "
-            ],
-            [
-              "copper-mining",
-              "     + "
-            ],
-            [
-              "rock-quarrying",
-              "     + "
-            ],
-            [
-              "sand-quarrying",
-              "     + "
-            ]
-          ]
-        }
-      },
       "unfccc_annex_1": {
         "unfccc_annex_1": {
           "desc": "UNFCCC",
@@ -2787,72 +2614,9 @@
       }
     }
   },
-  "enteric-fermentation": {
-    "title": "Enteric Fermentation",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     + "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     + "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "cait": {
-        "cait": {
-          "desc": "CAIT",
-          "comps": [
-            [
-              "Agriculture",
-              "     + "
-            ]
-          ]
-        },
-        "unfccc_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "3.B  Manure Management",
-              "     - "
-            ],
-            [
-              "3.C  Rice Cultivation",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
   "enteric-fermentation-cattle": {
     "title": "Enteric Fermentation Cattle",
     "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     + "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     + "
-            ]
-          ]
-        }
-      },
       "unfccc_annex_1": {
         "unfccc_annex_1": {
           "desc": "UNFCCC",
@@ -2886,72 +2650,9 @@
       }
     }
   },
-  "manure-management": {
-    "title": "Manure Management",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "manure-left-on-pasture-cattle",
-              "     + "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     + "
-            ],
-            [
-              "manure-management-other",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "cait": {
-        "cait": {
-          "desc": "CAIT",
-          "comps": [
-            [
-              "Agriculture",
-              "     + "
-            ]
-          ]
-        },
-        "unfccc_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "3.A  Enteric Fermentation",
-              "     - "
-            ],
-            [
-              "3.C  Rice Cultivation",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
   "manure-management-cattle": {
     "title": "Manure Management Cattle",
     "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "manure-left-on-pasture-cattle",
-              "     + "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     + "
-            ]
-          ]
-        }
-      },
       "unfccc_annex_1": {
         "unfccc_annex_1": {
           "desc": "UNFCCC",
@@ -2979,353 +2680,6 @@
             [
               "manure-management-other",
               "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "energy-industries-and-fugitive-emissions": {
-    "title": "Energy Industries And Fugitive Emissions",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "electricity-generation",
-              "     + "
-            ],
-            [
-              "other-energy-use",
-              "     + "
-            ],
-            [
-              "coal-mining",
-              "     + "
-            ],
-            [
-              "solid-fuel-transformation",
-              "     + "
-            ],
-            [
-              "oil-and-gas-production-and-transport",
-              "     + "
-            ],
-            [
-              "oil-and-gas-refining",
-              "     + "
-            ],
-            [
-              "other-fossil-fuel-operations",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "manufacturing-and-industrial-processes": {
-    "title": "Manufacturing And Industrial Processes",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "petrochemicals",
-              "     + "
-            ],
-            [
-              "cement",
-              "     + "
-            ],
-            [
-              "chemicals",
-              "     + "
-            ],
-            [
-              "steel",
-              "     + "
-            ],
-            [
-              "aluminum",
-              "     + "
-            ],
-            [
-              "pulp-and-paper",
-              "     + "
-            ],
-            [
-              "other-manufacturing",
-              "     + "
-            ],
-            [
-              "bauxite-mining",
-              "     + "
-            ],
-            [
-              "iron-mining",
-              "     + "
-            ],
-            [
-              "copper-mining",
-              "     + "
-            ],
-            [
-              "rock-quarrying",
-              "     + "
-            ],
-            [
-              "sand-quarrying",
-              "     + "
-            ],
-            [
-              "fluorinated-gases",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "transport": {
-    "title": "Transport",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "domestic-aviation",
-              "     + "
-            ],
-            [
-              "international-aviation",
-              "     + "
-            ],
-            [
-              "road-transportation",
-              "     + "
-            ],
-            [
-              "international-shipping",
-              "     + "
-            ],
-            [
-              "domestic-shipping",
-              "     + "
-            ],
-            [
-              "railways",
-              "     + "
-            ],
-            [
-              "other-transport",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "buildings": {
-    "title": "Buildings",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "residential-and-commercial-onsite-fuel-usage",
-              "     + "
-            ],
-            [
-              "other-onsite-fuel-usage",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "agriculture": {
-    "title": "Agriculture",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     + "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     + "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     + "
-            ],
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     + "
-            ],
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     + "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     + "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     + "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     + "
-            ],
-            [
-              "manure-management-other",
-              "     + "
-            ],
-            [
-              "manure-left-on-pasture-cattle",
-              "     + "
-            ],
-            [
-              "manure-management-cattle-feedlot",
-              "     + "
-            ],
-            [
-              "manure-management-other",
-              "     + "
-            ],
-            [
-              "rice-cultivation",
-              "     + "
-            ],
-            [
-              "cropland-fires",
-              "     + "
-            ],
-            [
-              "synthetic-fertilizer-application",
-              "     + "
-            ],
-            [
-              "other-agricultural-soil-emissions",
-              "     + "
-            ],
-            [
-              "other-agriculture",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "waste": {
-    "title": "Waste",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "solid-waste-disposal",
-              "     + "
-            ],
-            [
-              "biological-treatment-of-solid-waste-and-biogenic",
-              "     + "
-            ],
-            [
-              "incineration-and-open-burning-of-waste",
-              "     + "
-            ],
-            [
-              "wastewater-treatment-and-discharge",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "forestry-and-land-use-change": {
-    "title": "Forestry And Land Use Change",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "forest-land-fires",
-              "     + "
-            ],
-            [
-              "forest-land-clearing",
-              "     + "
-            ],
-            [
-              "forest-land-degradation",
-              "     + "
-            ],
-            [
-              "shrubgrass-fires",
-              "     + "
-            ],
-            [
-              "wetland-fires",
-              "     + "
-            ],
-            [
-              "removals",
-              "     + "
-            ],
-            [
-              "water-reservoirs",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "net-forestry-and-land-use-change": {
-    "title": "Net Forestry And Land Use Change",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "net-forest-land",
-              "     + "
-            ],
-            [
-              "net-shrubgrass",
-              "     + "
-            ],
-            [
-              "net-wetland",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "cait": {
-        "cait": {
-          "desc": "CAIT",
-          "comps": [
-            [
-              "Land-Use Change and Forestry",
-              "     + "
             ]
           ]
         }
@@ -3362,6 +2716,112 @@
             [
               "3.F Field Burning of Agricultural Residues",
               "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "aviation": {
+    "title": "Aviation",
+    "legend": {
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.3.a Civil Aviation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "shipping": {
+    "title": "Shipping",
+    "legend": {
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.3.d Water-borne Navigation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "enteric-fermentation": {
+    "title": "Enteric Fermentation",
+    "legend": {
+      "cait": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Agriculture",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.B  Manure Management",
+              "     - "
+            ],
+            [
+              "3.C  Rice Cultivation",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-management": {
+    "title": "Manure Management",
+    "legend": {
+      "cait": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Agriculture",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "3.A  Enteric Fermentation",
+              "     - "
+            ],
+            [
+              "3.C  Rice Cultivation",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "net-forestry-and-land-use-change": {
+    "title": "Net Forestry And Land Use Change",
+    "legend": {
+      "cait": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Land-Use Change and Forestry",
+              "     + "
             ]
           ]
         }
