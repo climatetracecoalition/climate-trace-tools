@@ -12,6 +12,8 @@ from climate_trace_tools.compare.subtract_out.util.generate_plots import plot
 def combine_data(temp_dict, country):
     combo_df = pd.DataFrame()
     available = True
+    missing_data = []
+    sub_availabilities = []
     if len(temp_dict) == 0:
         available = False
     else:
@@ -29,8 +31,11 @@ def combine_data(temp_dict, country):
             df = item[item.ID == f"{country}"].reset_index(drop=True)
             available = True
             if df.empty:
-                print(f"No data available for {key.upper()} in {country.upper()}")
                 available = False
+            sub_availabilities.append(available)
+            if df.empty:
+                print(f"No data available for {key.upper()} in {country.upper()}")
+                missing_data.append(key)  # document which sectors are not available
                 continue
 
             df["carbon_eq"] = "none"
@@ -88,7 +93,7 @@ def combine_data(temp_dict, country):
 
             combo_df = pd.concat([combo_df, totals_df, subsector_df, grand_totals])
 
-    return combo_df, available
+    return combo_df, sub_availabilities, missing_data
 
 
 def compare(comparison_dict, country, allinv, sector, ratio_data):
@@ -100,6 +105,7 @@ def compare(comparison_dict, country, allinv, sector, ratio_data):
             f"Calculating comparison to {compare_inventory.upper()} {sector} {country}"
         )
         temp_dict = {}
+        availabilities = []
         for subinv, termdetails in subinvdict.items():
             print(f"       Manipulating data from {subinv.upper()}")
             for tup in termdetails:
@@ -111,16 +117,33 @@ def compare(comparison_dict, country, allinv, sector, ratio_data):
                     data_cols = df.filter(regex="\d").columns
                     df.loc[:, data_cols] = df.loc[:, data_cols] * tup[1]
                     temp_dict[f"{tup[0]}"] = df
-            combo_df, available = combine_data(temp_dict, country)
+            combo_df, sub_availabilities, missing_data = combine_data(
+                temp_dict, country
+            )
+            availabilities.extend(
+                sub_availabilities
+            )  # sub_availabilities tracks availabilit of all subitems within one subinv
+
         plotting_dict[compare_inventory] = combo_df
-        if available:
+
+        if sum(availabilities) >= 1:
             ratio_agg = combo_df.loc[
                 (combo_df["carbon_eq"] == "100-year")
                 & ((combo_df["Sector"] == "Subtotal") | (combo_df["Sector"] == "Total"))
             ].copy()
             ratio_agg["Data source"] = compare_inventory
             ratio_agg["Sector"] = sector
-            ratio_data = pd.concat([ratio_data, ratio_agg])
+        if sum(availabilities) == len(
+            availabilities
+        ):  # indicates all data was available for comparison
+            ratio_agg["data_available"] = "complete"
+        elif sum(availabilities) < len(
+            availabilities
+        ):  # indicates some inventories missing from comparison
+            ratio_agg["data_available"] = "missing " + ", ".join(
+                [item for item in missing_data]
+            )
+        ratio_data = pd.concat([ratio_data, ratio_agg])
     return plotting_dict, ratio_data
 
 

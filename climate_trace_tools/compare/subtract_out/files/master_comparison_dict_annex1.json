@@ -15,7 +15,7 @@
           1
         ],
         [
-          "1.A.1.a.ii Combined Heat and Power Generation",
+          "1.A.1.a.ii  Combined Heat and Power Generation",
           1
         ]
       ]
@@ -37,7 +37,7 @@
       ],
       "unfccc_annex_1": [
         [
-          "1.A.1.a.iii Heat Plants",
+          "1.A.1.a.iii  Heat Plants",
           -1
         ],
         [
@@ -123,7 +123,7 @@
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
-          "1.A.1.a.iii Heat Plants",
+          "1.A.1.a.iii  Heat Plants",
           1
         ],
         [
@@ -154,6 +154,14 @@
       "carbon-monitor": [
         [
           "Domestic Aviation",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "1.A.3.a Civil Aviation",
           1
         ]
       ]
@@ -264,6 +272,14 @@
         ]
       ]
     },
+    "edgar": {
+      "edgar": [
+        [
+          "1.A.3.d Water-borne Navigation",
+          1
+        ]
+      ]
+    },
     "cait": {
       "cait": [
         [
@@ -349,7 +365,7 @@
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
-          "1.A.5 Other (Not specified elsewhere)",
+          "1.A.5  Other (Not specified elsewhere)",
           1
         ]
       ]
@@ -511,7 +527,27 @@
       ],
       "unfccc_annex_1": [
         [
-          "1.B.2.a.v Distribution of Oil Products ",
+          "1.B.2.a.v  Distribution of Oil Products ",
+          -1
+        ],
+        [
+          "1.B.2.a.vi  Other",
+          -1
+        ],
+        [
+          "1.B.2.b.v  Distribution",
+          -1
+        ],
+        [
+          "1.B.2.b.vi  Other",
+          -1
+        ],
+        [
+          "1.B.2.d  Other",
+          -1
+        ],
+        [
+          "1.A.1.c.ii  Oil and Gas Extraction",
           -1
         ]
       ]
@@ -595,7 +631,7 @@
       ],
       "unfccc_annex_1": [
         [
-          "1.A.1.c. Manufacture of Solid Fuels and Other Energy Industries",
+          "1.A.1.c.  Manufacture of Solid Fuels and Other Energy Industries",
           -1
         ]
       ]
@@ -647,15 +683,15 @@
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
-          "1.B.2.b.vi Other",
+          "1.B.2.b.vi  Other",
           1
         ],
         [
-          "1.B.2.a.vi Other",
+          "1.B.2.a.vi  Other",
           1
         ],
         [
-          "1.B.2.d Other",
+          "1.B.2.d  Other",
           1
         ],
         [
@@ -767,15 +803,15 @@
           1
         ],
         [
-          "2.B.8.a Methanol",
+          "2.B.8.a  Methanol",
           1
         ],
         [
-          "2.B.7 Soda Ash Production",
+          "2.B.7  Soda Ash Production",
           1
         ],
         [
-          "1.A.2.c Chemicals",
+          "1.A.2.c  Chemicals",
           1
         ]
       ]
@@ -847,11 +883,11 @@
           -1
         ],
         [
-          "1.A.2.b Non-Ferrous Metals",
+          "1.A.2.b  Non-Ferrous Metals",
           -1
         ],
         [
-          "1.A.2.d Pulp, Paper and Print",
+          "1.A.2.d  Pulp, Paper and Print",
           -1
         ],
         [
@@ -979,7 +1015,7 @@
           -1
         ],
         [
-          "1.A.2.d Pulp, Paper and Print",
+          "1.A.2.d  Pulp, Paper and Print",
           -1
         ],
         [
@@ -1169,7 +1205,7 @@
           -1
         ],
         [
-          "1.A.2.c Chemicals",
+          "1.A.2.c  Chemicals",
           -1
         ],
         [
@@ -1197,11 +1233,11 @@
           -1
         ],
         [
-          "2.B.8.a Methanol",
+          "2.B.8.a  Methanol",
           -1
         ],
         [
-          "2.B.7 Soda Ash Production",
+          "2.B.7  Soda Ash Production",
           -1
         ],
         [
@@ -1217,7 +1253,7 @@
           -1
         ],
         [
-          "2.B.8.b. Ethylene",
+          "2.B.8.b  Ethylene",
           -1
         ]
       ]
@@ -1613,7 +1649,7 @@
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
-          "3.D. Agricultural Soils",
+          "3.D  Agricultural Soils",
           1
         ],
         [
@@ -1635,7 +1671,7 @@
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
-          "3.F Field Burning of Agricultural Residues",
+          "3.F  Field Burning of Agricultural Residues",
           1
         ]
       ]
@@ -1894,6 +1930,198 @@
       "unfccc_annex_1": [
         [
           "4.D.1.b  Flooded Land Remaining Flooded Land",
+          1
+        ]
+      ]
+    }
+  },
+  "mining-and-quarrying": {
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "1.A.2.g.iii  Mining (Excluding Fuels) and Quarrying",
+          1
+        ]
+      ]
+    },
+    "cait": {
+      "cait": [
+        [
+          "Manufacturing/Construction",
+          1
+        ]
+      ],
+      "unfccc_annex_1": [
+        [
+          "1.A.2.c  Chemicals",
+          -1
+        ],
+        [
+          "1.A.2.b  Non-Ferrous Metals",
+          -1
+        ],
+        [
+          "1.A.2.g.ii  Manufacturing of Transport Equipment",
+          -1
+        ],
+        [
+          "1.A.2.g.i  Manufacturing of Machinery",
+          -1
+        ],
+        [
+          "1.A.2.e  Food Processing, Beverages and Tobacco",
+          -1
+        ],
+        [
+          "1.A.2.d  Pulp, Paper and Print",
+          -1
+        ],
+        [
+          "1.A.2.g.iv  Wood and Wood Products",
+          -1
+        ],
+        [
+          "1.A.2.g.v  Construction",
+          -1
+        ],
+        [
+          "1.A.2.g.vi  Textile and Leather",
+          -1
+        ],
+        [
+          "1.A.2.g.viii  Other",
+          -1
+        ],
+        [
+          "1.A.2.a  Iron and Steel",
+          -1
+        ]
+      ]
+    }
+  },
+  "enteric-fermentation-cattle": {
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "3.A.1  Cattle",
+          1
+        ]
+      ]
+    },
+    "faostat": {
+      "faostat": [
+        [
+          "Enteric Fermentation",
+          1
+        ]
+      ],
+      "climate-trace": [
+        [
+          "enteric-fermentation-other",
+          -1
+        ]
+      ]
+    }
+  },
+  "manure-management-cattle": {
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "3.B.1  Cattle",
+          1
+        ]
+      ]
+    },
+    "faostat": {
+      "faostat": [
+        [
+          "Manure Management",
+          1
+        ]
+      ],
+      "climate-trace": [
+        [
+          "manure-management-other",
+          -1
+        ]
+      ]
+    }
+  },
+  "other-agriculture": {
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "3.  Agriculture",
+          1
+        ],
+        [
+          "3.A  Enteric Fermentation",
+          -1
+        ],
+        [
+          "3.B  Manure Management",
+          -1
+        ],
+        [
+          "3.C  Rice Cultivation",
+          -1
+        ],
+        [
+          "3.D  Agricultural Soils",
+          -1
+        ],
+        [
+          "3.F  Field Burning of Agricultural Residues",
+          -1
+        ]
+      ]
+    }
+  },
+  "enteric-fermentation": {
+    "cait": {
+      "cait": [
+        [
+          "Agriculture",
+          1
+        ]
+      ],
+      "unfccc_annex_1": [
+        [
+          "3.B  Manure Management",
+          -1
+        ],
+        [
+          "3.C  Rice Cultivation",
+          -1
+        ]
+      ]
+    }
+  },
+  "manure-management": {
+    "cait": {
+      "cait": [
+        [
+          "Agriculture",
+          1
+        ]
+      ],
+      "unfccc_annex_1": [
+        [
+          "3.A  Enteric Fermentation",
+          -1
+        ],
+        [
+          "3.C  Rice Cultivation",
+          -1
+        ]
+      ]
+    }
+  },
+  "net-forestry-and-land-use-change": {
+    "cait": {
+      "cait": [
+        [
+          "Land-Use Change and Forestry",
           1
         ]
       ]
