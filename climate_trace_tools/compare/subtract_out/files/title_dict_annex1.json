@@ -22,7 +22,7 @@
               "     + "
             ],
             [
-              "1.A.1.a.ii Combined Heat and Power Generation",
+              "1.A.1.a.ii  Combined Heat and Power Generation",
               "     + "
             ]
           ]
@@ -53,7 +53,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.1.a.iii Heat Plants",
+              "1.A.1.a.iii  Heat Plants",
               "     - "
             ],
             [
@@ -160,7 +160,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.1.a.iii Heat Plants",
+              "1.A.1.a.iii  Heat Plants",
               "     + "
             ],
             [
@@ -203,6 +203,17 @@
           "comps": [
             [
               "Domestic Aviation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.3.a Civil Aviation",
               "     + "
             ]
           ]
@@ -359,6 +370,17 @@
           ]
         }
       },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.3.d Water-borne Navigation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "cait": {
         "cait": {
           "desc": "CAIT",
@@ -482,7 +504,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.5 Other (Not specified elsewhere)",
+              "1.A.5  Other (Not specified elsewhere)",
               "     + "
             ]
           ]
@@ -695,7 +717,27 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.B.2.a.v Distribution of Oil Products ",
+              "1.B.2.a.v  Distribution of Oil Products ",
+              "     - "
+            ],
+            [
+              "1.B.2.a.vi  Other",
+              "     - "
+            ],
+            [
+              "1.B.2.b.v  Distribution",
+              "     - "
+            ],
+            [
+              "1.B.2.b.vi  Other",
+              "     - "
+            ],
+            [
+              "1.B.2.d  Other",
+              "     - "
+            ],
+            [
+              "1.A.1.c.ii  Oil and Gas Extraction",
               "     - "
             ]
           ]
@@ -806,7 +848,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.1.c. Manufacture of Solid Fuels and Other Energy Industries",
+              "1.A.1.c.  Manufacture of Solid Fuels and Other Energy Industries",
               "     - "
             ]
           ]
@@ -873,15 +915,15 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.B.2.b.vi Other",
+              "1.B.2.b.vi  Other",
               "     + "
             ],
             [
-              "1.B.2.a.vi Other",
+              "1.B.2.a.vi  Other",
               "     + "
             ],
             [
-              "1.B.2.d Other",
+              "1.B.2.d  Other",
               "     + "
             ],
             [
@@ -1029,15 +1071,15 @@
               "     + "
             ],
             [
-              "2.B.8.a Methanol",
+              "2.B.8.a  Methanol",
               "     + "
             ],
             [
-              "2.B.7 Soda Ash Production",
+              "2.B.7  Soda Ash Production",
               "     + "
             ],
             [
-              "1.A.2.c Chemicals",
+              "1.A.2.c  Chemicals",
               "     + "
             ]
           ]
@@ -1127,11 +1169,11 @@
               "     - "
             ],
             [
-              "1.A.2.b Non-Ferrous Metals",
+              "1.A.2.b  Non-Ferrous Metals",
               "     - "
             ],
             [
-              "1.A.2.d Pulp, Paper and Print",
+              "1.A.2.d  Pulp, Paper and Print",
               "     - "
             ],
             [
@@ -1286,7 +1328,7 @@
               "     - "
             ],
             [
-              "1.A.2.d Pulp, Paper and Print",
+              "1.A.2.d  Pulp, Paper and Print",
               "     - "
             ],
             [
@@ -1512,7 +1554,7 @@
               "     - "
             ],
             [
-              "1.A.2.c Chemicals",
+              "1.A.2.c  Chemicals",
               "     - "
             ],
             [
@@ -1540,11 +1582,11 @@
               "     - "
             ],
             [
-              "2.B.8.a Methanol",
+              "2.B.8.a  Methanol",
               "     - "
             ],
             [
-              "2.B.7 Soda Ash Production",
+              "2.B.7  Soda Ash Production",
               "     - "
             ],
             [
@@ -1560,7 +1602,7 @@
               "     - "
             ],
             [
-              "2.B.8.b. Ethylene",
+              "2.B.8.b  Ethylene",
               "     - "
             ]
           ]
@@ -2115,7 +2157,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "3.D. Agricultural Soils",
+              "3.D  Agricultural Soils",
               "     + "
             ],
             [
@@ -2146,7 +2188,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "3.F Field Burning of Agricultural Residues",
+              "3.F  Field Burning of Agricultural Residues",
               "     + "
             ]
           ]
@@ -2710,44 +2752,12 @@
               "     - "
             ],
             [
-              "3.D. Agricultural Soils",
+              "3.D  Agricultural Soils",
               "     - "
             ],
             [
-              "3.F Field Burning of Agricultural Residues",
+              "3.F  Field Burning of Agricultural Residues",
               "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "aviation": {
-    "title": "Aviation",
-    "legend": {
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "1.A.3.a Civil Aviation",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "shipping": {
-    "title": "Shipping",
-    "legend": {
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "1.A.3.d Water-borne Navigation",
-              "     + "
             ]
           ]
         }

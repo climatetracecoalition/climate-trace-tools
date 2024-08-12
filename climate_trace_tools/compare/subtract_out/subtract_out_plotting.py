@@ -185,6 +185,7 @@ class SectorComparison:
                             "Gas",
                             "Unit",
                             "carbon_eq",
+                            "data_available",
                             2015,
                             2016,
                             2017,
@@ -203,6 +204,7 @@ class SectorComparison:
                             "Data source",
                             "ID",
                             "Gas",
+                            "data_available",
                             2015,
                             2016,
                             2017,
@@ -212,7 +214,7 @@ class SectorComparison:
                             2021,
                             2022,
                         ]
-                        grpcols = ["Data source", "ID", "Gas"]
+                        grpcols = ["Data source", "ID", "Gas", "data_available"]
                         country_totals = (
                             ratio_data[totcols]
                             .groupby(grpcols, as_index=False)

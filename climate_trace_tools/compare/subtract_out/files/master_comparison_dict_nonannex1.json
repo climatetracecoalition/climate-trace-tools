@@ -30,6 +30,16 @@
           "1.A.1.a Main Activity Electricity and Heat Production",
           1
         ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.A.1.a.iii  Heat Plants",
+          -1
+        ],
+        [
+          "1.A.1.a.iv  Other",
+          -1
+        ]
       ]
     },
     "pik-tp": {
@@ -89,6 +99,14 @@
           1
         ]
       ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "1.A.3.a Civil Aviation",
+          1
+        ]
+      ]
     }
   },
   "international-aviation": {
@@ -142,6 +160,14 @@
       "climate-trace": [
         [
           "domestic-shipping",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "1.A.3.d Water-borne Navigation",
           1
         ]
       ]
@@ -211,6 +237,24 @@
           1
         ]
       ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "1.B.1 Solid Fuels",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.B.1.b  Solid Fuel Transformation",
+          -1
+        ],
+        [
+          "1.B.1.c  Other",
+          -1
+        ]
+      ]
     }
   },
   "solid-fuel-transformation": {
@@ -245,6 +289,32 @@
         [
           "1.B.2 Oil and Natural Gas",
           1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.B.2.a.v  Distribution of Oil Products ",
+          -1
+        ],
+        [
+          "1.B.2.a.vi  Other",
+          -1
+        ],
+        [
+          "1.B.2.b.v  Distribution",
+          -1
+        ],
+        [
+          "1.B.2.b.vi  Other",
+          -1
+        ],
+        [
+          "1.B.2.d  Other",
+          -1
+        ],
+        [
+          "1.A.1.c.ii  Oil and Gas Extraction",
+          -1
         ]
       ]
     },
@@ -293,6 +363,20 @@
           1
         ]
       ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "1.A.1.bc Petroleum Refining - Manufacture of Solid Fuels and Other Energy Industries",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.A.1.c.  Manufacture of Solid Fuels and Other Energy Industries",
+          -1
+        ]
+      ]
     }
   },
   "other-fossil-fuel-operations": {
@@ -328,6 +412,14 @@
       "unfccc_non_annex_1": [
         [
           "2.A.1  Cement Production",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "2.A.1 Cement production",
           1
         ]
       ]
@@ -371,6 +463,14 @@
           1
         ]
       ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "2.B Chemical Industry",
+          1
+        ]
+      ]
     }
   },
   "steel": {
@@ -395,6 +495,60 @@
         [
           "2.C Metal Industry",
           1
+        ],
+        [
+          "1.A.2 Manufacturing Industries and Construction",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "2.C.3  Aluminium Production",
+          -1
+        ],
+        [
+          "2.C.2  Ferroalloys Production",
+          -1
+        ],
+        [
+          "2.C.4  Magnesium Production",
+          -1
+        ],
+        [
+          "2.C.5  Lead Production",
+          -1
+        ],
+        [
+          "2.C.6  Zinc Production",
+          -1
+        ],
+        [
+          "2.C.7  Other",
+          -1
+        ],
+        [
+          "1.A.2.b  Non-Ferrous Metals",
+          -1
+        ],
+        [
+          "1.A.2.d  Pulp, Paper and Print",
+          -1
+        ],
+        [
+          "1.A.2.c  Chemicals",
+          -1
+        ],
+        [
+          "1.A.2.e  Food Processing, Beverages and Tobacco",
+          -1
+        ],
+        [
+          "1.A.2.f  Non-metallic Minerals",
+          -1
+        ],
+        [
+          "1.A.2.g  Other",
+          -1
         ]
       ]
     },
@@ -429,6 +583,60 @@
         [
           "2.C Metal Industry",
           1
+        ],
+        [
+          "1.A.2 Manufacturing Industries and Construction",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.A.2.a  Iron and Steel",
+          -1
+        ],
+        [
+          "1.A.2.d  Pulp, Paper and Print",
+          -1
+        ],
+        [
+          "1.A.2.c  Chemicals",
+          -1
+        ],
+        [
+          "1.A.2.e  Food Processing, Beverages and Tobacco",
+          -1
+        ],
+        [
+          "1.A.2.f  Non-metallic Minerals",
+          -1
+        ],
+        [
+          "1.A.2.g  Other",
+          -1
+        ],
+        [
+          "2.C.1  Iron and Steel Production",
+          -1
+        ],
+        [
+          "2.C.2  Ferroalloys Production",
+          -1
+        ],
+        [
+          "2.C.4  Magnesium Production",
+          -1
+        ],
+        [
+          "2.C.5  Lead Production",
+          -1
+        ],
+        [
+          "2.C.6  Zinc Production",
+          -1
+        ],
+        [
+          "2.C.7  Other",
+          -1
         ]
       ]
     }
@@ -439,6 +647,40 @@
         [
           "pulp-and-paper",
           1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "1.A.2 Manufacturing Industries and Construction",
+          1
+        ]
+      ],
+      "unfccc_non_annex_1": [
+        [
+          "1.A.2.a  Iron and Steel",
+          -1
+        ],
+        [
+          "1.A.2.b  Non-Ferrous Metals",
+          -1
+        ],
+        [
+          "1.A.2.c  Chemicals",
+          -1
+        ],
+        [
+          "1.A.2.e  Food Processing, Beverages and Tobacco",
+          -1
+        ],
+        [
+          "1.A.2.f  Non-metallic Minerals",
+          -1
+        ],
+        [
+          "1.A.2.g  Other",
+          -1
         ]
       ]
     }
@@ -525,19 +767,7 @@
           -1
         ],
         [
-          "manure-left-on-pasture-cattle",
-          -1
-        ],
-        [
-          "manure-management-cattle-feedlot",
-          -1
-        ],
-        [
           "enteric-fermentation-other",
-          -1
-        ],
-        [
-          "manure-management-other",
           -1
         ]
       ]
@@ -565,19 +795,7 @@
           -1
         ],
         [
-          "manure-left-on-pasture-cattle",
-          -1
-        ],
-        [
-          "manure-management-cattle-feedlot",
-          -1
-        ],
-        [
           "enteric-fermentation-other",
-          -1
-        ],
-        [
-          "manure-management-other",
           -1
         ]
       ]
@@ -607,18 +825,6 @@
         [
           "enteric-fermentation-cattle-pasture",
           -1
-        ],
-        [
-          "manure-left-on-pasture-cattle",
-          -1
-        ],
-        [
-          "manure-management-cattle-feedlot",
-          -1
-        ],
-        [
-          "manure-management-other",
-          -1
         ]
       ]
     }
@@ -635,25 +841,13 @@
     "edgar": {
       "edgar": [
         [
-          "3.A.1 Enteric Fermentation",
+          "3.A.2 Manure Management",
           1
         ]
       ],
       "climate-trace": [
         [
-          "enteric-fermentation-cattle-feedlot",
-          -1
-        ],
-        [
-          "enteric-fermentation-cattle-pasture",
-          -1
-        ],
-        [
           "manure-management-cattle-feedlot",
-          -1
-        ],
-        [
-          "enteric-fermentation-other",
           -1
         ],
         [
@@ -675,25 +869,13 @@
     "edgar": {
       "edgar": [
         [
-          "3.A.1 Enteric Fermentation",
+          "3.A.2 Manure Management",
           1
         ]
       ],
       "climate-trace": [
         [
-          "enteric-fermentation-cattle-feedlot",
-          -1
-        ],
-        [
-          "enteric-fermentation-cattle-pasture",
-          -1
-        ],
-        [
           "manure-left-on-pasture-cattle",
-          -1
-        ],
-        [
-          "enteric-fermentation-other",
           -1
         ],
         [
@@ -715,29 +897,17 @@
     "edgar": {
       "edgar": [
         [
-          "3.A.1 Enteric Fermentation",
+          "3.A.2 Manure Management",
           1
         ]
       ],
       "climate-trace": [
-        [
-          "enteric-fermentation-cattle-feedlot",
-          -1
-        ],
-        [
-          "enteric-fermentation-cattle-pasture",
-          -1
-        ],
         [
           "manure-left-on-pasture-cattle",
           -1
         ],
         [
           "manure-management-cattle-feedlot",
-          -1
-        ],
-        [
-          "enteric-fermentation-other",
           -1
         ]
       ]
@@ -756,6 +926,14 @@
       "unfccc_non_annex_1": [
         [
           "4.C  Rice Cultivation",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "3.C.7 Rice cultivations",
           1
         ]
       ]
@@ -782,6 +960,14 @@
       "unfccc_non_annex_1": [
         [
           "4.D  Agricultural Soils",
+          1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "3.C.4 Direct N2O Emissions from managed soils",
           1
         ]
       ]
@@ -992,6 +1178,26 @@
       "climate-trace": [
         [
           "water-reservoirs",
+          1
+        ]
+      ]
+    }
+  },
+  "enteric-fermentation": {
+    "unfccc_non_annex_1": {
+      "unfccc_non_annex_1": [
+        [
+          "4.A  Enteric Fermentation",
+          1
+        ]
+      ]
+    }
+  },
+  "manure-management": {
+    "unfccc_non_annex_1": {
+      "unfccc_non_annex_1": [
+        [
+          "4.B  Manure Management",
           1
         ]
       ]
