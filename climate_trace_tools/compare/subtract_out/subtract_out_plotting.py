@@ -233,7 +233,7 @@ class SectorComparison:
 
                         country_totals.to_csv(
                             path
-                            + f"/processed_data/ratio_dfs/{sector}/{sector}_raw-data_{name}_{timestamp}.csv",
+                            + f"/processed_data/ratio_dfs/{sector}/{sector}_raw-data_{name}.csv",
                             index=False,
                         )
                         for yr in years:
@@ -287,7 +287,7 @@ class SectorComparison:
 
                         ratio_data.to_csv(
                             path
-                            + f"/processed_data/ratio_dfs/{sector}/{sector}_ratio-data_{name}_{timestamp}.csv",
+                            + f"/processed_data/ratio_dfs/{sector}/{sector}_ratio-data_{name}.csv",
                             index=False,
                         )
         return ratio_data
