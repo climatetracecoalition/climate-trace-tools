@@ -117,6 +117,10 @@ def compare(comparison_dict, country, allinv, sector, ratio_data):
                     data_cols = df.filter(regex="\d").columns
                     df.loc[:, data_cols] = df.loc[:, data_cols] * tup[1]
                     temp_dict[f"{tup[0]}"] = df
+                if (
+                    df.empty
+                ):  # store empty ef so that we can record missing data in combine_data func
+                    temp_dict[f"{tup[0]}"] = df
             combo_df, sub_availabilities, missing_data = combine_data(
                 temp_dict, country
             )
