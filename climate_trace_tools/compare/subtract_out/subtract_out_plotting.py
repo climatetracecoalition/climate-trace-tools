@@ -13,8 +13,10 @@ path = os.getcwd()
 
 
 class SectorComparison:
-    def __init__(self, data_handler=CsvDataHandler()):
+    def __init__(self, data_handler=CsvDataHandler(), dh_type="csv"):
         self.allinv = data_handler.load_all_data()
+        self.data_handler = data_handler
+        self.dh_type = dh_type
 
         with pkg_resources.open_text(files, "master_comparison_dict_annex1.json") as f:
             self.master_comparison_dict_annex1 = json.loads(f.read())
@@ -52,7 +54,7 @@ class SectorComparison:
         ############################
         # Transform the data into dataframe for graphs
         # allinv = dh.load_data(years_to_columns=True)
-        COMP_YEARS = list(range(start_year, end_year))
+        COMP_YEARS = list(range(start_year, end_year + 1))
         COL_ORDER = ["Data source", "ID", "Sector", "Gas", "Unit"] + COMP_YEARS
         self.allinv = self.allinv[COL_ORDER]
 
@@ -101,16 +103,18 @@ class SectorComparison:
                         print('WARNING: If "gas" is "co2", "co2eq" must be "none"')
                         continue
 
+                    # determine if using database data_handler
+
+                    if self.dh_type == "db":
+                        release = self.data_handler.release
+                        base_folder = f"/processed_data_{release}/"
+                    else:
+                        base_folder = "/processed_data/"
+
                     if create_folders:
                         try:
                             os.makedirs(
-                                path
-                                + "/processed_data/"
-                                + gas
-                                + "/"
-                                + co2eq
-                                + "/"
-                                + plot_type
+                                path + base_folder + gas + "/" + co2eq + "/" + plot_type
                             )
                             print("Output folder created.")
                         except OSError:
@@ -134,7 +138,7 @@ class SectorComparison:
                             try:
                                 os.makedirs(
                                     path
-                                    + "/processed_data/"
+                                    + base_folder
                                     + gas
                                     + "/"
                                     + co2eq
@@ -148,9 +152,7 @@ class SectorComparison:
                                 print("Output folder already exists.")
 
                             try:
-                                os.makedirs(
-                                    path + "/processed_data/ratio_dfs/" + sector
-                                )
+                                os.makedirs(path + f"{base_folder}ratio_dfs/" + sector)
                                 print("Output folder created.")
                             except OSError:
                                 print("Output folder already exists.")
@@ -165,7 +167,7 @@ class SectorComparison:
                             plot_type,
                             ratio_data,
                             output_folder=path
-                            + "/processed_data/"
+                            + base_folder
                             + gas
                             + "/"
                             + co2eq
@@ -236,7 +238,7 @@ class SectorComparison:
 
                         country_totals.to_csv(
                             path
-                            + f"/processed_data/ratio_dfs/{sector}/{sector}_raw-data_{name}.csv",
+                            + f"{base_folder}ratio_dfs/{sector}/{sector}_raw-data_{name}.csv",
                             index=False,
                         )
                         for yr in years:
@@ -290,7 +292,7 @@ class SectorComparison:
 
                         ratio_data.to_csv(
                             path
-                            + f"/processed_data/ratio_dfs/{sector}/{sector}_ratio-data_{name}.csv",
+                            + f"{base_folder}ratio_dfs/{sector}/{sector}_ratio-data_{name}.csv",
                             index=False,
                         )
         return ratio_data
