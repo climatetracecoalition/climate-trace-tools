@@ -73,6 +73,7 @@ class SectorComparison:
             2020,
             2021,
             2022,
+            2023,
         ]
         ratio_data = pd.DataFrame(columns=ratiocols)
 
@@ -194,12 +195,13 @@ class SectorComparison:
                             2020,
                             2021,
                             2022,
+                            2023,
                         ]
 
                         raw_data = raw_data[ratio_data_column_order]
                         ratio_data = raw_data.copy()
                         # create ratios dataset
-                        years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                        years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
                         totcols = [
                             "Data source",
                             "ID",
@@ -213,6 +215,7 @@ class SectorComparison:
                             2020,
                             2021,
                             2022,
+                            2023,
                         ]
                         grpcols = ["Data source", "ID", "Gas", "data_available"]
                         country_totals = (
