@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 import plotly.offline
 import numpy as np
 import os
+from climate_trace_tools.compare.subtract_out.util.logger_setup import logger
 from climate_trace_tools.compare.subtract_out.util.plotting_utils import (
     get_layout,
     fonts,
@@ -64,7 +65,7 @@ def plot(
     ):
         pass
     else:
-        print(
+        logger.debug(
             f"None of the comparison inventories have data available to compare or {sector}"
         )
         return
@@ -84,7 +85,6 @@ def plot(
         # comparison_years = list(item.filter(regex='\d').columns)
         # comparison_years = list(range(startyear, endyear))
         data = item.transpose()
-        print(sector)
         legend_title_params = get_legend_title_params(
             title_dict, comparison_years, sector, key, data_present, nonzero_emissions
         )
@@ -386,22 +386,18 @@ def plot(
     if create_folders:
         try:
             os.makedirs(output_folder + "/")
-            print("Output folder created.")
+            logger.debug("Output folder created.")
         except OSError:
-            print("Output folder already exists.")
+            logger.debug("Output folder already exists.")
         if plot_live:
-            plotly.offline.plot(
-                fig,
-                filename=f"{output_folder}/{get_country_title(country)}_{sector}_{plot_type}.html",
-            )
+            plot_file = f"{output_folder}/{get_country_title(country)}_{sector}_{plot_type}.html"
+            plotly.offline.plot(fig, filename=plot_file)
+            logger.info(f"Live plot created: {plot_file}")
         else:
-            plotly.offline.plot(
-                fig,
-                filename=f"{output_folder}/{get_country_title(country)}_{sector}_{plot_type}.html",
-                auto_open=False,
-            )
+            plot_file = f"{output_folder}/{get_country_title(country)}_{sector}_{plot_type}.html"
+            plotly.offline.plot(fig, filename=plot_file, auto_open=False)
+            logger.info(f"Plot file created: {plot_file}")
     else:
-        plotly.offline.plot(
-            fig,
-            filename=f"{get_country_title(country)}_{sector}_{plot_type}.html",
-        )
+        plot_file = f"{get_country_title(country)}_{sector}_{plot_type}.html"
+        plotly.offline.plot(fig, filename=plot_file)
+        logger.info(f"Plot file created: {plot_file}")
