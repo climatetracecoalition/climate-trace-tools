@@ -8,6 +8,7 @@ from climate_trace_tools.compare.subtract_out.util.prep_data_to_plot import crea
 import importlib.resources as pkg_resources
 from climate_trace_tools.compare.subtract_out import files
 import datetime
+from climate_trace_tools.compare.subtract_out.util.logger_setup import logger
 
 path = os.getcwd()
 
@@ -15,8 +16,8 @@ path = os.getcwd()
 class SectorComparison:
     def __init__(self, data_handler=CsvDataHandler(), dh_type="csv"):
         self.allinv = data_handler.load_all_data()
-        self.data_handler = data_handler
         self.dh_type = dh_type
+        self.release = getattr(data_handler, "release", None)
 
         with pkg_resources.open_text(files, "master_comparison_dict_annex1.json") as f:
             self.master_comparison_dict_annex1 = json.loads(f.read())
@@ -106,7 +107,7 @@ class SectorComparison:
                     # determine if using database data_handler
 
                     if self.dh_type == "db":
-                        release = self.data_handler.release
+                        release = self.release
                         base_folder = f"/processed_data_{release}/"
                     else:
                         base_folder = "/processed_data/"
@@ -134,28 +135,6 @@ class SectorComparison:
                                     f"WARNING: {gas} is not present in {sector} Climate TRACE data, cannot do comparison."
                                 )
                                 continue
-                        if create_folders:
-                            try:
-                                os.makedirs(
-                                    path
-                                    + base_folder
-                                    + gas
-                                    + "/"
-                                    + co2eq
-                                    + "/"
-                                    + plot_type
-                                    + "/"
-                                    + sector
-                                )
-                                print("Output folder created.")
-                            except OSError:
-                                print("Output folder already exists.")
-
-                            try:
-                                os.makedirs(path + f"{base_folder}ratio_dfs/" + sector)
-                                print("Output folder created.")
-                            except OSError:
-                                print("Output folder already exists.")
 
                         # create plots for all listed countries, sector by sector
                         raw_data = create_plots(
@@ -181,118 +160,148 @@ class SectorComparison:
                             plot_live=plot_live,
                         )
 
-                        ratio_data_column_order = [
-                            "Data source",
-                            "ID",
-                            "Sector",
-                            "Gas",
-                            "Unit",
-                            "carbon_eq",
-                            "data_available",
-                            2015,
-                            2016,
-                            2017,
-                            2018,
-                            2019,
-                            2020,
-                            2021,
-                            2022,
-                            2023,
-                        ]
+                        if not raw_data.empty:
+                            # Create folders only if data is returned
+                            if create_folders:
+                                # Create directory for ratio_dfs before saving CSV
+                                ratio_dfs_path = os.path.join(
+                                    path + base_folder, "ratio_dfs", sector
+                                )
+                                os.makedirs(ratio_dfs_path, exist_ok=True)
 
-                        raw_data = raw_data[ratio_data_column_order]
-                        ratio_data = raw_data.copy()
-                        # create ratios dataset
-                        years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
-                        totcols = [
-                            "Data source",
-                            "ID",
-                            "Gas",
-                            "data_available",
-                            2015,
-                            2016,
-                            2017,
-                            2018,
-                            2019,
-                            2020,
-                            2021,
-                            2022,
-                            2023,
-                        ]
-                        grpcols = ["Data source", "ID", "Gas", "data_available"]
-                        country_totals = (
-                            ratio_data[totcols]
-                            .groupby(grpcols, as_index=False)
-                            .sum(min_count=1)
-                        )
+                            ratio_data_column_order = [
+                                "Data source",
+                                "ID",
+                                "Sector",
+                                "Gas",
+                                "Unit",
+                                "carbon_eq",
+                                "data_available",
+                                2015,
+                                2016,
+                                2017,
+                                2018,
+                                2019,
+                                2020,
+                                2021,
+                                2022,
+                                2023,
+                            ]
 
-                        country_totals = country_totals.rename(
-                            columns={
-                                "Data source": "reporting_entity",
-                                "ID": "iso3_country",
-                                "Sector": "climate_trace_sector",
-                            }
-                        )
+                            raw_data = raw_data[ratio_data_column_order]
+                            ratio_data = raw_data.copy()
+                            # create ratios dataset
+                            years = [
+                                2015,
+                                2016,
+                                2017,
+                                2018,
+                                2019,
+                                2020,
+                                2021,
+                                2022,
+                                2023,
+                            ]
+                            totcols = [
+                                "Data source",
+                                "ID",
+                                "Gas",
+                                "data_available",
+                                2015,
+                                2016,
+                                2017,
+                                2018,
+                                2019,
+                                2020,
+                                2021,
+                                2022,
+                                2023,
+                            ]
+                            grpcols = ["Data source", "ID", "Gas", "data_available"]
+                            country_totals = (
+                                ratio_data[totcols]
+                                .groupby(grpcols, as_index=False)
+                                .sum(min_count=1)
+                            )
 
-                        timestamp = datetime.datetime.now().strftime("%Y%m%d")
+                            country_totals = country_totals.rename(
+                                columns={
+                                    "Data source": "reporting_entity",
+                                    "ID": "iso3_country",
+                                    "Sector": "climate_trace_sector",
+                                }
+                            )
 
-                        country_totals.to_csv(
-                            path
-                            + f"{base_folder}ratio_dfs/{sector}/{sector}_raw-data_{name}.csv",
-                            index=False,
-                        )
-                        for yr in years:
-                            ratio_data[f"inv_to_ct_ratio_{yr}"] = ""
-                        for index, row in ratio_data.iterrows():
+                            timestamp = datetime.datetime.now().strftime("%Y%m%d")
+
+                            # Save CSV files
+                            csv_path = os.path.join(
+                                ratio_dfs_path, f"{sector}_raw-data_{name}.csv"
+                            )
+                            country_totals.to_csv(csv_path, index=False)
+                            logger.info(f"Saved raw data to: {csv_path}")
+
                             for yr in years:
-                                val_list = ratio_data.loc[
-                                    (ratio_data["Sector"] == row["Sector"])
-                                    & (ratio_data["ID"] == row["ID"])
-                                    & (ratio_data["Gas"] == row["Gas"])
-                                    & (ratio_data["Data source"] == "climate-trace"),
-                                    yr,
-                                ].tolist()
-                                if len(val_list) > 0:
-                                    value = val_list[0]
-                                    if (
-                                        (isinstance(row[yr], float))
-                                        or (isinstance(row[yr], int))
-                                    ) and (
-                                        (isinstance(value, float))
-                                        or (isinstance(value, int))
-                                    ):
-                                        if not np.isnan(row[yr]) and not np.isnan(
-                                            value
+                                ratio_data[f"inv_to_ct_ratio_{yr}"] = ""
+                            for index, row in ratio_data.iterrows():
+                                for yr in years:
+                                    val_list = ratio_data.loc[
+                                        (ratio_data["Sector"] == row["Sector"])
+                                        & (ratio_data["ID"] == row["ID"])
+                                        & (ratio_data["Gas"] == row["Gas"])
+                                        & (
+                                            ratio_data["Data source"] == "climate-trace"
+                                        ),
+                                        yr,
+                                    ].tolist()
+                                    if len(val_list) > 0:
+                                        value = val_list[0]
+                                        if (
+                                            (isinstance(row[yr], float))
+                                            or (isinstance(row[yr], int))
+                                        ) and (
+                                            (isinstance(value, float))
+                                            or (isinstance(value, int))
                                         ):
-                                            if value != 0:
-                                                sect_ratio = row[yr] / value
-                                                # difference_tonnes = row[yr]
-                                                ratio_data.loc[
-                                                    (
-                                                        ratio_data["Sector"]
-                                                        == row["Sector"]
-                                                    )
-                                                    & (ratio_data["ID"] == row["ID"])
-                                                    & (ratio_data["Gas"] == row["Gas"])
-                                                    & (
-                                                        ratio_data["Data source"]
-                                                        == row["Data source"]
-                                                    ),
-                                                    f"inv_to_ct_ratio_{yr}",
-                                                ] = sect_ratio
+                                            if not np.isnan(row[yr]) and not np.isnan(
+                                                value
+                                            ):
+                                                if value != 0:
+                                                    sect_ratio = row[yr] / value
+                                                    # difference_tonnes = row[yr]
+                                                    ratio_data.loc[
+                                                        (
+                                                            ratio_data["Sector"]
+                                                            == row["Sector"]
+                                                        )
+                                                        & (
+                                                            ratio_data["ID"]
+                                                            == row["ID"]
+                                                        )
+                                                        & (
+                                                            ratio_data["Gas"]
+                                                            == row["Gas"]
+                                                        )
+                                                        & (
+                                                            ratio_data["Data source"]
+                                                            == row["Data source"]
+                                                        ),
+                                                        f"inv_to_ct_ratio_{yr}",
+                                                    ] = sect_ratio
 
-                        ratio_data = ratio_data.rename(
-                            columns={
-                                "Data source": "reporting_entity",
-                                "ID": "iso3_country",
-                                "Sector": "climate_trace_sector",
-                                "Unit": "unit",
-                            }
-                        )
+                            ratio_data = ratio_data.rename(
+                                columns={
+                                    "Data source": "reporting_entity",
+                                    "ID": "iso3_country",
+                                    "Sector": "climate_trace_sector",
+                                    "Unit": "unit",
+                                }
+                            )
 
-                        ratio_data.to_csv(
-                            path
-                            + f"{base_folder}ratio_dfs/{sector}/{sector}_ratio-data_{name}.csv",
-                            index=False,
-                        )
+                            csv_path = os.path.join(
+                                ratio_dfs_path, f"{sector}_ratio-data_{name}.csv"
+                            )
+                            ratio_data.to_csv(csv_path, index=False)
+                            logger.info(f"Saved ratio data to: {csv_path}")
+
         return ratio_data
