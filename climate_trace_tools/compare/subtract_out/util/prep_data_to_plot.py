@@ -7,28 +7,7 @@ import pandas as pd
 import numpy as np
 import copy as copy
 from climate_trace_tools.compare.subtract_out.util.generate_plots import plot
-
-
-def nan_sum_with_min_count(series, min_count=1):
-    if series.count() < min_count:
-        return np.nan
-    return np.nan if series.isna().any() else series.sum()
-
-
-def custom_groupby_sum(df, group_col, exclude_cols=None):
-    if exclude_cols is None:
-        exclude_cols = []
-
-    def agg_func(x):
-        if x.name in exclude_cols:
-            return x.sum()
-        else:
-            return np.nan if x.isna().any() else x.sum()
-
-    # Group by and apply the custom aggregation
-    result = df.groupby(group_col, as_index=False).agg(agg_func)
-
-    return result
+from climate_trace_tools.compare.subtract_out.util.logger_setup import logger
 
 
 def custom_groupby_sum(df, group_col, exclude_cols=None, min_count=1):
@@ -74,7 +53,9 @@ def combine_data(temp_dict, country):
                 available = False
             sub_availabilities.append(available)
             if df.empty:
-                print(f"No data available for {key.upper()} in {country.upper()}")
+                logger.debug(
+                    f"No data available for {key.upper()} in {country.upper()}"
+                )
                 missing_data.append(key)  # document which sectors are not available
                 continue
 
@@ -158,16 +139,16 @@ def combine_data(temp_dict, country):
 
 def compare(comparison_dict, country, allinv, sector, ratio_data):
     """Create the plotting dictionary with data combined according to comparison dictionaries and ready to plot"""
-
+    logger.info(f"Attempting comparison for {sector} in {country}")
     plotting_dict = {}
     for compare_inventory, subinvdict in comparison_dict.items():
-        print(
+        logger.debug(
             f"Calculating comparison to {compare_inventory.upper()} {sector} {country}"
         )
         temp_dict = {}
         availabilities = []
         for subinv, termdetails in subinvdict.items():
-            print(f"       Manipulating data from {subinv.upper()}")
+            logger.debug(f"Manipulating data from {subinv.upper()}")
             for tup in termdetails:
                 df = allinv[
                     (allinv.Sector == f"{tup[0]}")
@@ -184,11 +165,18 @@ def compare(comparison_dict, country, allinv, sector, ratio_data):
             combo_df, sub_availabilities, missing_data = combine_data(
                 temp_dict, country
             )
+
             availabilities.extend(
                 sub_availabilities
             )  # sub_availabilities tracks availabilit of all subitems within one subinv
 
         plotting_dict[compare_inventory] = combo_df
+
+        # if there is no climate-trace data for this sector/country, don't retunr anything
+        # Check if climate-trace data exists for this sector/country
+        if "climate-trace" not in plotting_dict or plotting_dict["climate-trace"].empty:
+            logger.debug(f"No Climate TRACE data available for {sector} in {country}")
+            return plotting_dict, pd.DataFrame()
 
         if sum(availabilities) >= 1:
             ratio_agg = combo_df.loc[
@@ -201,6 +189,8 @@ def compare(comparison_dict, country, allinv, sector, ratio_data):
             availabilities
         ):  # indicates all data was available for comparison
             ratio_agg["data_available"] = "complete"
+        elif sum(availabilities) == 0:
+            continue
         elif sum(availabilities) < len(
             availabilities
         ):  # indicates some inventories missing from comparison
@@ -248,10 +238,13 @@ def create_plots(
             comparison_dict, country, allinv, sector, ratio_data
         )
 
-        if not (
-            all(plotting_dict[d].empty for d in plotting_dict.keys())
-            or plotting_dict["climate-trace"].empty
-        ):
+        if "climate-trace" not in plotting_dict or plotting_dict["climate-trace"].empty:
+            logger.info(
+                f"Skipping plot for {sector} in {country} due to missing Climate TRACE data"
+            )
+            continue
+
+        if not all(plotting_dict[d].empty for d in plotting_dict.keys()):
             try:
                 plot(
                     sector,
@@ -266,9 +259,9 @@ def create_plots(
                     plot_live,
                 )
             except AttributeError:
-                print(f"Attribute missing for {sector} in {country} plot")
+                logger.error(f"Attribute missing for {sector} in {country} plot")
                 continue
         else:
-            print(f"No data to plot for {sector} in {country}")
+            logger.debug(f"No data to plot for {sector} in {country}")
 
     return ratio_data
