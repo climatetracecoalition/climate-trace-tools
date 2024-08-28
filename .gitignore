@@ -3,4 +3,4 @@ export_csvs.py
 "*.png"
 "*.json"
 test.py
-__pycache__/
+__pycache__/climate_trace_tools/data/country/climate-trace.csv
