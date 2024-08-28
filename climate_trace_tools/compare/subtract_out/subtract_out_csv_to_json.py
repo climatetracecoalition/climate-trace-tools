@@ -21,6 +21,7 @@ xlsx_file_path = "files/subtract-out-csv-crosswalks.xlsx"
 tabs = [
     "climate-trace-subtract-out",
     "unfccc-subtract-out",
+    "ceds-subtract-out",
     "carbon-monitor-subtract-out",
     "edgar-subtract-out",
     "cait-subtract-out",
@@ -35,6 +36,7 @@ inventory_titles = {
     "edgar": "EDGAR",
     "cait": "CAIT",
     "pik-tp": "PIK",
+    "ceds": "CEDS",
     "carbon-monitor": "Carbon Monitor",
     "faostat": "FAOSTAT",
 }
@@ -44,6 +46,7 @@ inventory_codes = {
     "carbon-monitor-subtract-out": "carbon-monitor",
     "edgar-subtract-out": "edgar",
     "cait-subtract-out": "cait",
+    "ceds-subtract-out": "ceds",
     "pik-tp-subtract-out": "pik-tp",
     "faostat-subtract-out": "faostat",
     "climate-trace-subtract-out": "climate-trace",

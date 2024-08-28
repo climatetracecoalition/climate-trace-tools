@@ -217,6 +217,17 @@
   },
   "edgar": {
     "Agriculture": {
+      "Direct Nitrogen Emissions from Agricultural Soils ": {
+        "climate-trace": [
+          "synthetic-fertilizer-application",
+          "manure-applied-to-soils",
+          "crop-residues\nsoil-organic-carbon",
+          "manure-left-on-pasture-cattle (N2O)"
+        ],
+        "edgar": [
+          "3.C.4 Direct N2O Emissions from managed soils"
+        ]
+      },
       "Enteric Fermentation": {
         "climate-trace": [
           "enteric-fermentation-cattle-feedlot",
@@ -229,9 +240,9 @@
       },
       "Manure Management": {
         "climate-trace": [
-          "manure-left-on-pasture-cattle",
           "manure-management-cattle-feedlot",
-          "manure-management-other"
+          "manure-management-other",
+          "manure-left-on-pasture-cattle (CH4)"
         ],
         "edgar": [
           "3.A.2 Manure Management"
@@ -239,7 +250,6 @@
       },
       "Other Agriculture": {
         "climate-trace": [
-          "other-agriculture",
           "other-agricultural-soils"
         ],
         "edgar": [
@@ -257,14 +267,6 @@
         "edgar": [
           "3.C.7 Rice cultivations"
         ]
-      },
-      "Synthetic Fertilizer Application": {
-        "climate-trace": [
-          "synthetic-fertilizer-application"
-        ],
-        "edgar": [
-          "3.C.4 Direct N2O Emissions from managed soils"
-        ]
       }
     },
     "Buildings": {
@@ -278,7 +280,8 @@
       },
       "Residential and Commercial Onsite Fuel Usage": {
         "climate-trace": [
-          "residential-and-commercial-onsite-fuel-usage"
+          "residential-onsite-fuel-usage",
+          "non-residential-onsite-fuel-usage"
         ],
         "edgar": [
           "1.A.4 Residential and other sectors"
@@ -299,7 +302,8 @@
         "climate-trace": [
           "coal-mining",
           "solid-fuel-transformation",
-          "oil-and-gas-production-and-transport",
+          "oil-and-gas-production",
+          "oil-and-gas-transport",
           "oil-and-gas-refining",
           "other-fossil-fuel-operations"
         ],
@@ -450,7 +454,8 @@
       },
       "Wastewater Treatment and Discharge": {
         "climate-trace": [
-          "wastewater-treatment-and-discharge"
+          "industrial-wastewater-treatment-and-discharge",
+          "domestic-wastewater-treatment-and-discharge"
         ],
         "edgar": [
           "4.D Wastewater Treatment and Discharge"
@@ -769,7 +774,7 @@
       }
     }
   },
-  "unfccc_annex_1": {
+  "unfccc": {
     "Agriculture": {
       "Cropland Fires": {
         "climate-trace": [
