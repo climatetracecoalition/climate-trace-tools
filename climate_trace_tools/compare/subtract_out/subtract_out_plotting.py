@@ -33,6 +33,44 @@ class SectorComparison:
         with pkg_resources.open_text(files, "title_dict_annex1.json") as f:
             self.title_dict_annex1 = json.loads(f.read())
 
+        # Perform forward-filling
+        self._forward_fill_data()
+
+    def _forward_fill_data(self):
+        # Identify year columns
+        year_columns = [col for col in self.allinv.columns if str(col).isdigit()]
+        year_columns.sort()
+
+        # Create a new DataFrame for forward-fill information
+        ff_data = pd.DataFrame(
+            index=self.allinv.index, columns=[f"{year}_ff" for year in year_columns]
+        )
+
+        # Calculate last true year
+        self.allinv["last_true_year"] = self.allinv[year_columns].apply(
+            lambda x: x.last_valid_index(), axis=1
+        )
+
+        # Forward fill the data
+        filled_data = self.allinv[year_columns].ffill(axis=1)
+
+        # Create boolean mask for forward-filled values
+        for year in year_columns:
+            year_int = int(year)
+            ff_data[f"{year}_ff"] = self.allinv["last_true_year"].apply(
+                lambda x: pd.notna(x) and int(x) < min(year_int, 2023)
+            )
+
+        # Combine original data with filled data and forward-fill information
+        self.allinv = pd.concat(
+            [
+                self.allinv.drop(columns=year_columns),
+                filled_data,
+                ff_data,
+            ],
+            axis=1,
+        )
+
     def plot(
         self,
         countries,
@@ -56,7 +94,13 @@ class SectorComparison:
         # Transform the data into dataframe for graphs
         # allinv = dh.load_data(years_to_columns=True)
         COMP_YEARS = list(range(start_year, end_year + 1))
-        COL_ORDER = ["Data source", "ID", "Sector", "Gas", "Unit"] + COMP_YEARS
+        FF_COLS = [f"{year}_ff" for year in COMP_YEARS]
+
+        COL_ORDER = (
+            ["Data source", "ID", "Sector", "Gas", "Unit", "last_true_year"]
+            + COMP_YEARS
+            + FF_COLS
+        )
         self.allinv = self.allinv[COL_ORDER]
 
         self.allinv.columns = [convert_numeric(c) for c in self.allinv.columns]
@@ -67,6 +111,7 @@ class SectorComparison:
             "Sector",
             "Gas",
             "Unit",
+            "last_true_year",
             "carbon_eq",
             2015,
             2016,
@@ -177,6 +222,7 @@ class SectorComparison:
                                 "Unit",
                                 "carbon_eq",
                                 "data_available",
+                                "last_true_year",
                                 2015,
                                 2016,
                                 2017,
@@ -207,6 +253,7 @@ class SectorComparison:
                                 "ID",
                                 "Gas",
                                 "data_available",
+                                "last_true_year",
                                 2015,
                                 2016,
                                 2017,
@@ -217,7 +264,13 @@ class SectorComparison:
                                 2022,
                                 2023,
                             ]
-                            grpcols = ["Data source", "ID", "Gas", "data_available"]
+                            grpcols = [
+                                "Data source",
+                                "ID",
+                                "Gas",
+                                "data_available",
+                                "last_true_year",
+                            ]
                             country_totals = (
                                 ratio_data[totcols]
                                 .groupby(grpcols, as_index=False)
