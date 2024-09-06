@@ -78,6 +78,8 @@ def get_gas_title(gas):
 
 
 def convert_numeric(x):
+    if str(x).endswith("ff"):
+        return x
     try:
         return int(x)
     except Exception:

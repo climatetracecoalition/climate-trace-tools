@@ -10,6 +10,7 @@ from climate_trace_tools.compare.subtract_out.util.country_lists import (
 import numpy as np
 import json
 import importlib.resources as pkg_resources
+from climate_trace_tools.compare.subtract_out.util.logger_setup import logger
 from climate_trace_tools.compare.subtract_out import files
 
 # Settings for which data to plot
@@ -76,6 +77,7 @@ color_dictionary = {
     "pik-tp": "blueviolet",
     "edgar": "deepskyblue",
     "cait": "deeppink",
+    "ceds": "orange",
     "carbon-monitor": "red",
     "faostat": "gold",
     "iea": "yellow",
@@ -148,6 +150,7 @@ legend_rank = {
     "pik-tp": 2,
     "edgar": 2,
     "cait": 2,
+    "ceds": 2,
     "carbon-monitor": 2,
     "faostat": 2,
     "iea": 2,
@@ -161,6 +164,7 @@ visibility = {
     "unfccc_non_annex_1": "legendonly",
     "pik-tp": "legendonly",
     "edgar": "legendonly",
+    "ceds": "legendonly",
     "cait": "legendonly",
     "carbon-monitor": "legendonly",
     "faostat": "legendonly",
@@ -175,6 +179,7 @@ total_title = {
     "unfccc_non_annex_1": "Total comparable estimate from UNFCCC",
     "pik-tp": "Total comparable estimate from PIK",
     "edgar": "Total comparable estimate from EDGAR",
+    "ceds": "Total compareable estimate from CEDS",
     "cait": "Total comparable estimate from CAIT",
     "carbon-monitor": "Total comparable estimate from Carbon Monitor",
     "faostat": "Total comparable estimate from FAO",
@@ -504,58 +509,65 @@ def get_numerical_addition(
     return numerical_data, nonzero_emissions, data_present
 
 
-def get_numerical_data(
-    data,
-    comparison_years,
-    column,
-    item,
-    key,
-    title_dict,
-    sector,
-    nonzero_emissions,
-    data_present,
-):
-    data_present = True
-    nonzero_emissions = True
-    startyear = comparison_years[0]
-    endyear = comparison_years[-1]
-    if data.loc[comparison_years, column].isnull().all():
-        data_present = False
-    elif data.loc[comparison_years, column].sum() == 0:
-        nonzero_emissions = False
-    numerical_data = data.loc[comparison_years, column].replace(0, np.nan).to_list()
-    missingyrs = np.where(
-        [
-            item[item["Data source"] == key][comparison_years].isnull().all()
-            for comparison_years in item[comparison_years]
-        ]
-    )[0]
-    numerical_data = np.array(numerical_data)
-    numerical_data[missingyrs] = np.nan
-    numerical_data = numerical_data.tolist()
+# def get_numerical_data(
+#     data,
+#     comparison_years,
+#     column,
+#     item,
+#     key,
+#     title_dict,
+#     sector,
+#     nonzero_emissions,
+#     data_present,
+# ):
+#     data_present = True
+#     nonzero_emissions = True
+#     startyear = comparison_years[0]
+#     endyear = comparison_years[-1]
+#     if data.loc[comparison_years, column].isnull().all():
+#         data_present = False
+#     elif data.loc[comparison_years, column].sum() == 0:
+#         nonzero_emissions = False
+#
+#         # Filter for year rows
+#     year_rows = [row for row in data.index if str(row).isdigit()]
+#     numerical_data = data.loc[year_rows, column].replace(0, np.nan).tolist()
+#
+#     missingyrs = np.where(
+#         [
+#             item[item["Data source"] == key][year_rows].isnull().all()
+#             for comparison_years in item[year_rows]
+#         ]
+#     )[0]
+#     numerical_data = np.array(numerical_data)
+#     numerical_data[missingyrs] = np.nan
+#     numerical_data = numerical_data.tolist()
+#
+#     if key in missing_years.keys():
+#         missingyrs = list(range(missing_years[key], endyear))
+#         missingyrs = [comparison_years.index(missingyrs) for missingyrs in missingyrs]
+#         missingyrs = np.array(missingyrs)
+#         numerical_data = np.array(numerical_data)
+#         numerical_data[missingyrs] = np.nan
+#         numerical_data = numerical_data.tolist()
+#
+#     if title_dict[sector]["title"].find("Metamodeling") > -1:
+#         if key in missing_years.keys():
+#             missingyrs = list(range(startyear, 2016)) + list(
+#                 range(missing_years["edgar"], endyear)
+#             )
+#             missingyrs = [
+#                 comparison_years.index(missingyrs) for missingyrs in missingyrs
+#             ]
+#             missingyrs = np.array(missingyrs)
+#             numerical_data = np.array(numerical_data)
+#             numerical_data[missingyrs] = np.nan
+#             numerical_data = numerical_data.tolist()
+#
+#     return numerical_data, nonzero_emissions, data_present
 
-    if key in missing_years.keys():
-        missingyrs = list(range(missing_years[key], endyear))
-        missingyrs = [comparison_years.index(missingyrs) for missingyrs in missingyrs]
-        missingyrs = np.array(missingyrs)
-        numerical_data = np.array(numerical_data)
-        numerical_data[missingyrs] = np.nan
-        numerical_data = numerical_data.tolist()
 
-    if title_dict[sector]["title"].find("Metamodeling") > -1:
-        if key in missing_years.keys():
-            missingyrs = list(range(startyear, 2016)) + list(
-                range(missing_years["edgar"], endyear)
-            )
-            missingyrs = [
-                comparison_years.index(missingyrs) for missingyrs in missingyrs
-            ]
-            missingyrs = np.array(missingyrs)
-            numerical_data = np.array(numerical_data)
-            numerical_data[missingyrs] = np.nan
-            numerical_data = numerical_data.tolist()
-
-    return numerical_data, nonzero_emissions, data_present
+#
 
 
 def get_x_and_y(numerical_data, comparison_years):

@@ -10,22 +10,44 @@ from climate_trace_tools.compare.subtract_out.util.generate_plots import plot
 from climate_trace_tools.compare.subtract_out.util.logger_setup import logger
 
 
-def custom_groupby_sum(df, group_col, exclude_cols=None, min_count=1):
+# def custom_groupby_sum(df, group_col, exclude_cols=None, min_count=1):
+#     if exclude_cols is None:
+#         exclude_cols = []
+#
+#     def agg_func(x):
+#         if x.name in exclude_cols:
+#             # For excluded columns, sum retaining NaNs
+#             return np.nan if x.isna().any() else x.sum()
+#         else:
+#             # For non-excluded columns, sum ignoring NaNs
+#             return x.sum(min_count=min_count)
+#
+#     # Group by and apply the custom aggregation
+#     result = df.groupby(group_col, as_index=False).agg(agg_func)
+#
+#     return result
+
+
+def custom_agg(df, exclude_cols=None, ff_cols=None, min_count=1):
     if exclude_cols is None:
         exclude_cols = []
+    if ff_cols is None:
+        ff_cols = []
 
     def agg_func(x):
-        if x.name in exclude_cols:
+        if x.name in ff_cols:
+            # For forward-fill columns, use 'any' to preserve boolean values
+            return x.any()
+        elif x.name == "last_true_year":
+            return x.max()
+        elif x.name in exclude_cols:
             # For excluded columns, sum retaining NaNs
             return np.nan if x.isna().any() else x.sum()
         else:
             # For non-excluded columns, sum ignoring NaNs
             return x.sum(min_count=min_count)
 
-    # Group by and apply the custom aggregation
-    result = df.groupby(group_col, as_index=False).agg(agg_func)
-
-    return result
+    return agg_func
 
 
 def combine_data(temp_dict, country):
@@ -37,13 +59,16 @@ def combine_data(temp_dict, country):
         available = False
     else:
         for key, item in temp_dict.items():
-            comparison_years = list(item.filter(regex="\d").columns)
+            # comparison_years = list(item.filter(regex="\d").columns)
+            comparison_years = list(item.filter(regex=r"^\d+$").columns)
+            ff_columns = list(item.filter(regex=r"^\d+_ff$").columns)
             COMP_COLS = [
                 "Data source",
                 "ID",
                 "Sector",
                 "Gas",
                 "Unit",
+                "last_true_year",
                 "carbon_eq",
             ] + comparison_years
 
@@ -63,7 +88,8 @@ def combine_data(temp_dict, country):
             # df = df[COMP_COLS]
 
             hundred_yr = copy.deepcopy(df)
-            hundred_cols = hundred_yr.filter(regex="\d").columns
+            # hundred_cols = hundred_yr.filter(regex="\d").columns
+            hundred_cols = hundred_yr.filter(regex=r"^\d+$").columns
             hundred_yr.loc[hundred_yr["Gas"] == "ch4", hundred_cols] = (
                 hundred_yr.loc[hundred_yr["Gas"] == "ch4", hundred_cols] * 28
             )
@@ -73,7 +99,9 @@ def combine_data(temp_dict, country):
             hundred_yr["carbon_eq"] = "100-year"
 
             twenty_yr = copy.deepcopy(df)
-            twenty_cols = twenty_yr.filter(regex="\d").columns
+            # twenty_cols = twenty_yr.filter(regex="\d").columns
+            twenty_cols = twenty_yr.filter(regex=r"^\d+$").columns
+
             twenty_yr.loc[twenty_yr["Gas"] == "ch4", twenty_cols] = (
                 twenty_yr.loc[twenty_yr["Gas"] == "ch4", twenty_cols] * 84
             )
@@ -86,31 +114,25 @@ def combine_data(temp_dict, country):
 
         if not combo_df.empty:
             # try to figure out if a certain inventory has all NULLs for a certain year
-            check_nans = combo_df.groupby("Data source")[hundred_cols].sum(min_count=1)
+            numeric_cols = combo_df.filter(regex=r"^\d+$").columns
+            ff_cols = combo_df.filter(regex=r"^\d+_ff$").columns
+            check_nans = combo_df.groupby("Data source")[numeric_cols].sum(min_count=1)
             columns_with_nans = check_nans.columns[check_nans.isna().any()].tolist()
-            totals_df = custom_groupby_sum(
-                combo_df,
-                group_col=["Gas", "carbon_eq"],
-                exclude_cols=columns_with_nans,
-                min_count=1,
+
+            agg_func = custom_agg(
+                combo_df, exclude_cols=columns_with_nans, ff_cols=ff_cols
             )
-            # totals_df = combo_df.groupby(["Gas", "carbon_eq"], as_index=False).agg(
-            #     lambda x: nan_sum_with_min_count(x, min_count=0)
-            # )
+            totals_df = combo_df.groupby(["Gas", "carbon_eq"], as_index=False).agg(
+                agg_func
+            )
 
             totals_df["Sector"] = "Subtotal"
             totals_df["ID"] = country
             totals_df["Unit"] = "tonnes"
             totals_df["Data source"] = "gapfilled"
             totals_df = totals_df[COMP_COLS]
+            grand_totals = totals_df.groupby("carbon_eq", as_index=False).agg(agg_func)
 
-            grand_totals = custom_groupby_sum(
-                totals_df,
-                group_col="carbon_eq",
-                exclude_cols=columns_with_nans,
-                min_count=1,
-            )
-            # grand_totals = totals_df.groupby("carbon_eq", as_index=False).sum()
             grand_totals["Gas"] = "co2e"
             grand_totals["Sector"] = "Total"
             grand_totals["ID"] = country
@@ -118,21 +140,17 @@ def combine_data(temp_dict, country):
             grand_totals["Data source"] = "gapfilled"
             grand_totals = grand_totals[COMP_COLS]
 
-            subsector_df = custom_groupby_sum(
-                combo_df,
-                group_col=["Sector", "carbon_eq", "Data source"],
-                exclude_cols=columns_with_nans,
-                min_count=1,
-            )
-            # subsector_df = combo_df.groupby(
-            #     ["Sector", "carbon_eq", "Data source"], as_index=False
-            # ).sum()
+            subsector_df = combo_df.groupby(
+                ["Sector", "carbon_eq", "Data source"], as_index=False
+            ).agg(agg_func)
+
             subsector_df["Gas"] = "co2e"
             subsector_df["ID"] = country
             subsector_df["Unit"] = "tonnes"
             subsector_df = subsector_df[COMP_COLS]
 
             combo_df = pd.concat([combo_df, totals_df, subsector_df, grand_totals])
+            combo_df[ff_cols] = combo_df[ff_cols].ffill(axis=0)
 
     return combo_df, sub_availabilities, missing_data
 
@@ -155,9 +173,27 @@ def compare(comparison_dict, country, allinv, sector, ratio_data):
                     & (allinv["Data source"] == f"{subinv}")
                 ].copy()
                 if not df.empty:
-                    data_cols = df.filter(regex="\d").columns
-                    df.loc[:, data_cols] = df.loc[:, data_cols] * tup[1]
-                    temp_dict[f"{tup[0]}"] = df
+                    # data_cols = df.filter(regex="\d").columns
+                    # Separate year columns and 'is_ff' columns
+                    year_cols = [
+                        col
+                        for col in df.columns
+                        if isinstance(col, (int, str)) and str(col).isdigit()
+                    ]
+                    ff_cols = [
+                        col
+                        for col in df.columns
+                        if isinstance(col, str) and col.endswith("_ff")
+                    ]
+
+                    # Multiply only the year columns
+                    df.loc[:, year_cols] = df.loc[:, year_cols] * tup[1]
+
+                    data_cols = year_cols + ff_cols
+                    temp_dict[f"{tup[0]}"] = df[
+                        df.columns.drop(data_cols).tolist() + data_cols
+                    ]
+                    # temp_dict[f"{tup[0]}"] = df
                 if (
                     df.empty
                 ):  # store empty ef so that we can record missing data in combine_data func
