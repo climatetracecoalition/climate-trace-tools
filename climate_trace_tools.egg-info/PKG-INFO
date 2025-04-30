@@ -1,6 +1,13 @@
-Metadata-Version: 2.1
-Name: climate-trace-tools
+Metadata-Version: 2.4
+Name: climate_trace_tools
 Version: 0.0.1
 Summary: Tools for comparing climate trace data to other data sources
 Author: Christy Lewis
 Author-email: christy@watttime.org
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary

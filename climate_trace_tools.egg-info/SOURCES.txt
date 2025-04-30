@@ -13,13 +13,11 @@ climate_trace_tools/compare/aggregate_up/__init__.py
 climate_trace_tools/compare/aggregate_up/aggregate_up_csv_to_json.py
 climate_trace_tools/compare/aggregate_up/aggregate_up_plotting.py
 climate_trace_tools/compare/aggregate_up/aggregate_up_util.py
-climate_trace_tools/compare/aggregate_up/test.py
 climate_trace_tools/compare/aggregate_up/files/__init__.py
 climate_trace_tools/compare/aggregate_up/files/aggregate-up-csv-crosswalks.xlsx
 climate_trace_tools/compare/subtract_out/__init__.py
 climate_trace_tools/compare/subtract_out/subtract_out_csv_to_json.py
 climate_trace_tools/compare/subtract_out/subtract_out_plotting.py
-climate_trace_tools/compare/subtract_out/test.py
 climate_trace_tools/compare/subtract_out/files/CT_country_titles.csv
 climate_trace_tools/compare/subtract_out/files/__init__.py
 climate_trace_tools/compare/subtract_out/files/gas_title_dict.csv
@@ -28,10 +26,10 @@ climate_trace_tools/compare/subtract_out/util/__init__.py
 climate_trace_tools/compare/subtract_out/util/constants.py
 climate_trace_tools/compare/subtract_out/util/country_lists.py
 climate_trace_tools/compare/subtract_out/util/generate_plots.py
+climate_trace_tools/compare/subtract_out/util/logger_setup.py
 climate_trace_tools/compare/subtract_out/util/plotting_utils.py
 climate_trace_tools/compare/subtract_out/util/prep_data_to_plot.py
 climate_trace_tools/data/__init__.py
-climate_trace_tools/data/export_csvs.py
 climate_trace_tools/data/country/__init__.py
 climate_trace_tools/data/country/cait.zip
 climate_trace_tools/data/country/carbon-monitor.zip
