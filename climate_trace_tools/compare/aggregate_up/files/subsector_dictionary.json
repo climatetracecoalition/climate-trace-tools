@@ -6,17 +6,18 @@
           "Agriculture"
         ],
         "climate-trace": [
-          "enteric-fermentation-cattle-feedlot",
+          "enteric-fermentation-cattle-operation",
           "enteric-fermentation-cattle-pasture",
           "enteric-fermentation-other",
           "manure-left-on-pasture-cattle",
-          "manure-management-cattle-feedlot",
+          "manure-management-cattle-operation",
           "manure-management-other",
           "rice-cultivation",
           "synthetic-fertilizer-application",
           "cropland-fires",
-          "other-agriculture",
-          "other-agricultural-soils"
+          "crop-residues",
+          "manure-applied-to-soils",
+          "other-agricultural-soil-emissions"
         ]
       }
     },
@@ -27,7 +28,8 @@
           "Other Fuel Consumption"
         ],
         "climate-trace": [
-          "residential-and-commercial-onsite-fuel-usage",
+          "residential-onsite-fuel-usage",
+          "non-residential-onsite-fuel-usage",
           "other-onsite-fuel-usage"
         ]
       }
@@ -39,6 +41,7 @@
         ],
         "climate-trace": [
           "electricity-generation",
+          "heat-plants",
           "other-energy-use",
           "oil-and-gas-refining"
         ]
@@ -49,8 +52,9 @@
         ],
         "climate-trace": [
           "coal-mining",
-          "solid-fuel-transformation",
-          "oil-and-gas-production-and-transport",
+          "other-solid-fuels",
+          "oil-and-gas-production",
+          "oil-and-gas-transport",
           "other-fossil-fuel-operations"
         ]
       }
@@ -81,8 +85,11 @@
           "Manufacturing/Construction"
         ],
         "climate-trace": [
-          "petrochemicals",
+          "petrochemical-steam-cracking",
           "pulp-and-paper",
+          "food-beverage-tobacco",
+          "wood-and-wood-products",
+          "textiles-leather-apparel",
           "sand-quarrying",
           "rock-quarrying",
           "bauxite-mining",
@@ -91,9 +98,14 @@
           "other-manufacturing",
           "steel",
           "aluminum",
+          "other-metals",
           "chemicals",
+          "other-chemicals",
           "cement",
-          "fluorinated-gases"
+          "lime",
+          "glass",
+          "fluorinated-gases",
+          "other-mining-quarrying"
         ]
       }
     },
@@ -136,7 +148,8 @@
         ],
         "climate-trace": [
           "solid-waste-disposal",
-          "wastewater-treatment-and-discharge"
+          "domestic-wastewater-treatment-and-discharge",
+          "industrial-wastewater-treatment-and-discharge"
         ]
       }
     }
@@ -194,13 +207,13 @@
         ]
       }
     },
-    "Residential and Commercial Onsite Fuel Usage": {
-      "Residential and Commercial Onsite Fuel Usage": {
+    "Residential Onsite Fuel Usage": {
+      "Residential Onsite Fuel Usage": {
         "carbon-monitor": [
           "Residential"
         ],
         "climate-trace": [
-          "residential-and-commercial-onsite-fuel-usage"
+          "residential-onsite-fuel-usage"
         ]
       }
     },
@@ -221,16 +234,17 @@
         "climate-trace": [
           "synthetic-fertilizer-application",
           "manure-applied-to-soils",
-          "crop-residues\nsoil-organic-carbon",
-          "manure-left-on-pasture-cattle (N2O)"
+          "crop-residues",
+          "manure-left-on-pasture-cattle"
         ],
         "edgar": [
-          "3.C.4 Direct N2O Emissions from managed soils"
+          "3.C.4 Direct N2O Emissions from managed soils",
+          "3.C.5 Indirect N2O Emissions from managed soils"
         ]
       },
       "Enteric Fermentation": {
         "climate-trace": [
-          "enteric-fermentation-cattle-feedlot",
+          "enteric-fermentation-cattle-operation",
           "enteric-fermentation-cattle-pasture",
           "enteric-fermentation-other"
         ],
@@ -240,23 +254,22 @@
       },
       "Manure Management": {
         "climate-trace": [
-          "manure-management-cattle-feedlot",
+          "manure-management-cattle-operation",
           "manure-management-other",
-          "manure-left-on-pasture-cattle (CH4)"
+          "manure-left-on-pasture-cattle"
         ],
         "edgar": [
-          "3.A.2 Manure Management"
+          "3.A.2 Manure Management",
+          "3.C.6 Indirect N2O Emissions from manure management"
         ]
       },
       "Other Agriculture": {
         "climate-trace": [
-          "other-agricultural-soils"
+          "other-agricultural-soil-emissions"
         ],
         "edgar": [
           "3.C.2 Liming",
           "3.C.3 Urea application",
-          "3.C.5 Indirect N2O Emissions from managed soils",
-          "3.C.6 Indirect N2O Emissions from manure management",
           "5.A Indirect N2O emissions from the atmospheric deposition of nitrogen in NOx and NH3"
         ]
       },
@@ -292,6 +305,7 @@
       "Electricity Generation and Other Energy Use": {
         "climate-trace": [
           "electricity-generation",
+          "heat-plants",
           "other-energy-use"
         ],
         "edgar": [
@@ -301,7 +315,7 @@
       "Fossil Fuel Operations": {
         "climate-trace": [
           "coal-mining",
-          "solid-fuel-transformation",
+          "other-solid-fuels",
           "oil-and-gas-production",
           "oil-and-gas-transport",
           "oil-and-gas-refining",
@@ -327,6 +341,19 @@
         ]
       }
     },
+    "Forestry and Land Use Change": {
+      "Forestry and Land Use Change": {
+        "climate-trace": [
+          "forest-land-clearing",
+          "forest-land-degradation",
+          "removals",
+          "water-reservoirs"
+        ],
+        "edgar": [
+          ""
+        ]
+      }
+    },
     "Manufacturing and Industrial Processes": {
       "Cement": {
         "climate-trace": [
@@ -338,7 +365,9 @@
       },
       "Chemicals": {
         "climate-trace": [
-          "chemicals"
+          "petrochemical-steam-cracking",
+          "chemicals",
+          "other-chemicals"
         ],
         "edgar": [
           "2.B Chemical Industry"
@@ -352,10 +381,27 @@
           "2.F Product Uses as Substitutes for Ozone Depleting Substances"
         ]
       },
+      "Glass": {
+        "climate-trace": [
+          "glass"
+        ],
+        "edgar": [
+          "2.A.3 Glass Production"
+        ]
+      },
+      "Lime": {
+        "climate-trace": [
+          "lime"
+        ],
+        "edgar": [
+          "2.A.2 Lime production"
+        ]
+      },
       "Metal Industry": {
         "climate-trace": [
           "steel",
-          "aluminum"
+          "aluminum",
+          "other-metals"
         ],
         "edgar": [
           "2.C Metal Industry"
@@ -363,34 +409,51 @@
       },
       "Other Manufacturing  and Industrial Processes": {
         "climate-trace": [
-          "petrochemicals",
           "pulp-and-paper",
+          "food-beverage-tobacco",
+          "wood-and-wood-products",
+          "textiles-leather-apparel",
+          "other-manufacturing",
           "sand-quarrying",
           "rock-quarrying",
           "bauxite-mining",
           "iron-mining",
           "copper-mining",
-          "other-manufacturing"
+          "other-mining-quarrying"
         ],
         "edgar": [
           "1.A.2 Manufacturing Industries and Construction",
           "2.G Other Product Manufacture and Use",
           "2.D Non-Energy Products from Fuels and Solvent Use",
           "2.E Electronics Industry",
-          "2.A.4 Other Process Uses of Carbonates",
-          "2.A.3 Glass Production",
-          "2.A.2 Lime production"
+          "2.A.4 Other Process Uses of Carbonates"
         ]
       }
     },
     "Transport": {
-      "Aviation": {
+      "Domestic Aviation": {
         "climate-trace": [
-          "domestic-aviation",
-          "international-aviation"
+          "domestic-aviation"
         ],
         "edgar": [
           "1.A.3.a Civil Aviation"
+        ]
+      },
+      "Domestic Shipping": {
+        "climate-trace": [
+          "domestic-shipping"
+        ],
+        "edgar": [
+          "1.A.3.d Water-borne Navigation"
+        ]
+      },
+      "International Aviation and Shipping": {
+        "climate-trace": [
+          "international-aviation",
+          "international-shipping"
+        ],
+        "edgar": [
+          ""
         ]
       },
       "Other Transport": {
@@ -415,15 +478,6 @@
         ],
         "edgar": [
           "1.A.3.b_noRES Road Transportation no resuspension"
-        ]
-      },
-      "Shipping": {
-        "climate-trace": [
-          "domestic-shipping",
-          "international-shipping"
-        ],
-        "edgar": [
-          "1.A.3.d Water-borne Navigation"
         ]
       }
     },
@@ -465,6 +519,14 @@
   },
   "faostat": {
     "Agriculture": {
+      "Crop Residues": {
+        "climate-trace": [
+          "crop-residues"
+        ],
+        "faostat": [
+          "Crop Residues"
+        ]
+      },
       "Cropland Fires": {
         "climate-trace": [
           "cropland-fires"
@@ -483,6 +545,14 @@
           "Enteric Fermentation"
         ]
       },
+      "Manure Applied to Soils": {
+        "climate-trace": [
+          "manure-applied-to-soils"
+        ],
+        "faostat": [
+          "Manure applied to Soils (N2O)"
+        ]
+      },
       "Manure Management": {
         "climate-trace": [
           "manure-left-on-pasture-cattle",
@@ -492,19 +562,19 @@
         "faostat": [
           "Manure Management",
           "Manure left on Pasture (CH4)",
-          "Manure applied to Soils (CH4)"
+          "Manure applied to Soils (CH4)",
+          "Manure left on Pasture (N2O),"
         ]
       },
       "Other Agricultural Soil Emissions": {
         "climate-trace": [
-          "other-agricultural-soil-emissions"
+          "other-agricultural-soil-emissions",
+          "soil-organic-carbon"
         ],
         "faostat": [
-          "Crop Residues",
-          "Drained organic soils (CO2)",
+          " Drained organic soils (CO2)",
           "Drained organic soils (N2O)",
-          "Manure left on Pasture (N2O)",
-          "Manure applied to Soils (N2O)"
+          ""
         ]
       },
       "Rice Cultivation": {
@@ -588,7 +658,7 @@
           "copper-mining",
           "other-manufacturing",
           "coal-mining",
-          "solid-fuel-transformation",
+          "other-solid-fuels",
           "oil-and-gas-refining",
           "other-fossil-fuel-operations"
         ],
@@ -652,8 +722,10 @@
           "rice-cultivation",
           "synthetic-fertilizer-application",
           "cropland-fires",
-          "other-agriculture",
-          "other-agricultural-soils"
+          "crop-residues",
+          "manure-applied-to-soils",
+          "soil-organic-carbon",
+          "other-agricultural-soil-emissions"
         ],
         "pik-tp": [
           "M.AG.ELV"
@@ -677,7 +749,7 @@
       "Coal Mining and Solid Fuel Transformation": {
         "climate-trace": [
           "coal-mining",
-          "solid-fuel-transformation"
+          "other-solid-fuels"
         ],
         "pik-tp": [
           "1.B.1"
@@ -688,7 +760,8 @@
           "electricity-generation",
           "other-energy-use",
           "oil-and-gas-refining",
-          "residential-and-commercial-onsite-fuel-usage",
+          "residential-onsite-fuel-usage",
+          "non-residential-onsite-fuel-usage",
           "other-onsite-fuel-usage",
           "domestic-aviation",
           "domestic-shipping",
@@ -703,8 +776,9 @@
       "Fossil Fuel Operations": {
         "climate-trace": [
           "coal-mining",
-          "solid-fuel-transformation",
-          "oil-and-gas-production-and-transport",
+          "other-solid-fuels",
+          "oil-and-gas-production",
+          "oil-and-gas-transport",
           "other-fossil-fuel-operations"
         ],
         "pik-tp": [
@@ -722,7 +796,8 @@
       },
       "Oil and Gas Production and Transport": {
         "climate-trace": [
-          "oil-and-gas-production-and-transport"
+          "oil-and-gas-production",
+          "oil-and-gas-transport,"
         ],
         "pik-tp": [
           "1.B.2"
@@ -766,7 +841,8 @@
           "solid-waste-disposal",
           "biological-treatment-of-solid-waste-and-biogenic",
           "incineration-and-open-burning-of-waste",
-          "wastewater-treatment-and-discharge"
+          " domestic-wastewater-treatment-and-discharge",
+          "industrial-wastewater-treatment-and-discharge"
         ],
         "pik-tp": [
           "4"
@@ -776,6 +852,34 @@
   },
   "unfccc": {
     "Agriculture": {
+      "Agriculture": {
+        "climate-trace": [
+          "enteric-fermentation-cattle-operation",
+          "enteric--fermentation-cattle-pasture",
+          "manure-management-cattle-operation",
+          "manure-left-on-pasture-cattle",
+          "enteric-fermentation-other",
+          "manure-management-other",
+          "rice-cultivation",
+          "synthetic-fertilizer-application",
+          "other-agricultural-soil-emissions",
+          "cropland-fires",
+          "crop-residues",
+          "manu-applied-to-soils",
+          "soil-organic-carbon"
+        ],
+        "unfccc_annex_1": [
+          ""
+        ]
+      },
+      "Crop Residues": {
+        "climate-trace": [
+          "crop-residues"
+        ],
+        "unfccc_annex_1": [
+          "3.D.1.d  Crop Residues"
+        ]
+      },
       "Cropland Fires": {
         "climate-trace": [
           "cropland-fires"
@@ -786,7 +890,7 @@
       },
       "Enteric Fermentation (Cattle)": {
         "climate-trace": [
-          "enteric-fermentation-cattle-feedlot",
+          "enteric-fermentation-cattle-operation",
           "enteric--fermentation-cattle-pasture"
         ],
         "unfccc_annex_1": [
@@ -803,9 +907,17 @@
           "3.A.4  Other"
         ]
       },
+      "Manure Applied to Soils": {
+        "climate-trace": [
+          "manure-applied-to-soils"
+        ],
+        "unfccc_annex_1": [
+          "3.D.1.b  Organic N Fertilizers,\n3.D.1.c  Urine and Dung Deposited by Grazing Animals"
+        ]
+      },
       "Manure Management (Cattle)": {
         "climate-trace": [
-          "manure-management-cattle-feedlot",
+          "manure-management-cattle-operation",
           "manure-left-on-pasture-cattle"
         ],
         "unfccc_annex_1": [
@@ -827,9 +939,6 @@
           "other-agricultural-soil-emissions"
         ],
         "unfccc_annex_1": [
-          "3.D.1.b  Organic N Fertilizers",
-          "3.D.1.c  Urine and Dung Deposited by Grazing Animals",
-          "3.D.1.d  Crop Residues",
           "3.D.1.e  Mineralization/Immobilization Associated with Loss/Gain of Soil Organic Matter",
           "3.D.1.f  Cultivation of Organic Soils",
           "3.D.1.g  Other",
@@ -838,17 +947,6 @@
           "3.H  Urea Application",
           "3.I  Other Carbon-containing Fertilizers",
           "3.J  Other"
-        ]
-      },
-      "Other Agriculture": {
-        "climate-trace": [
-          "other-agriculture"
-        ],
-        "unfccc_annex_1": [
-          "3.G. Liming",
-          "3.H Urea Application",
-          "3.I Other Carbon-containing Fertilizers",
-          "3.J Other"
         ]
       },
       "Rice Cultivation": {
@@ -869,6 +967,24 @@
       }
     },
     "Buildings": {
+      "Buildings": {
+        "climate-trace": [
+          "residential-onsite-fuel-usage",
+          "non-residential-onsite-fuel-usage",
+          "other-onsite-fuel-usage"
+        ],
+        "unfccc_annex_1": [
+          ""
+        ]
+      },
+      "Non Residential Onsite Fuel Usage": {
+        "climate-trace": [
+          "non-residential-onsite-fuel-usage"
+        ],
+        "unfccc_annex_1": [
+          "1.A.4  Other Sectors "
+        ]
+      },
       "Other Onsite Fuel Usage": {
         "climate-trace": [
           "other-onsite-fuel-usage"
@@ -877,9 +993,9 @@
           "1.A.5  Other (Not specified elsewhere)"
         ]
       },
-      "Residential and Commercial Onsite Fuel Usage": {
+      "Residential Onsite Fuel Usage": {
         "climate-trace": [
-          "residential-and-commercial-onsite-fuel-usage"
+          "residential-onsite-fuel-usage"
         ],
         "unfccc_annex_1": [
           "1.A.4  Other Sectors "
@@ -904,19 +1020,40 @@
           "1.A.1.a.ii  Combined Heat and Power Generation"
         ]
       },
-      "Oil and Gas Production and Transport": {
+      "Energy Industries and Fugitive Emissions": {
         "climate-trace": [
-          "oil-and-gas-production-and-transport"
+          "electricity-generation",
+          "heat-plants",
+          "other-energy-use",
+          "coal-mining",
+          "solid-fuel-transformation",
+          "oil-and-gas-production-and-transport",
+          "oil-and-gas-refining",
+          "other-fossil-fuel-operations"
+        ],
+        "unfccc_annex_1": [
+          ""
+        ]
+      },
+      "Heat Plants": {
+        "climate-trace": [
+          "heat-plants"
+        ],
+        "unfccc_annex_1": [
+          "1.A.1.a.iii  Heat Plants"
+        ]
+      },
+      "Oil and Gas Production": {
+        "climate-trace": [
+          "oil-and-gas-production"
         ],
         "unfccc_annex_1": [
           "1.B.2.a.i  Exploration",
-          "1.B.2.a.iii  Transport",
           "1.B.2.a.ii  Production",
           "1.B.2.c  Venting and Flaring",
           "1.B.2.b.i  Exploration",
           "1.B.2.b.ii  Production",
           "1.B.2.b.iii  Processing",
-          "1.B.2.b.iv  Transmission and Storage",
           "1.A.1.c.ii  Oil and Gas Extraction"
         ]
       },
@@ -929,13 +1066,24 @@
           "1.B.2.a.iv  Refining / Storage"
         ]
       },
+      "Oil and Gas Transport": {
+        "climate-trace": [
+          "oil-and-gas-transport"
+        ],
+        "unfccc_annex_1": [
+          "1.B.2.a.iii  Transport",
+          "1.B.2.b.iv  Transmission and Storage"
+        ]
+      },
       "Other Energy Use": {
         "climate-trace": [
           "other-energy-use"
         ],
         "unfccc_annex_1": [
-          "1.A.1.a.iii  Heat Plants",
-          "1.A.1.a.iv  Other"
+          "\n1.A.1.a.iv  Other",
+          "1.A.1.c.iii  Other Energy Industries",
+          "1.A.1.c.iv  Other",
+          "1.A.5  Other"
         ]
       },
       "Other Fossil Fuel Operations": {
@@ -953,9 +1101,9 @@
           "1.A.1.c.iv  Other"
         ]
       },
-      "Solid Fuel Transformation": {
+      "Other Solid Fuels": {
         "climate-trace": [
-          "solid-fuel-transformation"
+          "other-solid-fuels"
         ],
         "unfccc_annex_1": [
           "1.B.1.b  Solid Fuel Transformation",
@@ -964,6 +1112,17 @@
       }
     },
     "Forestry and Land Use Change": {
+      "Forestry and Land Use Change": {
+        "climate-trace": [
+          "net-forest-land",
+          "net-shrubgrass",
+          "net-wetland",
+          "water-reservoirs"
+        ],
+        "unfccc_annex_1": [
+          ""
+        ]
+      },
       "Net Forest Land": {
         "climate-trace": [
           "net-forest-land"
@@ -972,7 +1131,7 @@
           "4.A  Forest Land"
         ]
       },
-      "Net Shrubgrasss": {
+      "Net Shrubgrass": {
         "climate-trace": [
           "net-shrubgrass"
         ],
@@ -985,9 +1144,9 @@
           "net-wetland"
         ],
         "unfccc_annex_1": [
-          "4.D.1.a Peat Extraction Remaining Peat Extraction",
-          "4.D.1.c Other Wetlands Remaining Other Wetlands",
-          "4.D.2. Land Converted to Wetlands"
+          "4.D.1.a  Peat Extraction Remaining Peat Extraction",
+          "4.D.1.c  Other Wetlands Remaining Other Wetlands",
+          "4.D.2  Land Converted to Wetlands"
         ]
       },
       "Water Reservoirs": {
@@ -1002,31 +1161,53 @@
     "Manufacturing and Industrial Processes": {
       "Aluminum": {
         "climate-trace": [
-          "aluminum"
+          "aluminum",
+          "other-metals"
         ],
         "unfccc_annex_1": [
           "1.A.2.b  Non-Ferrous Metals",
-          "2.C.3  Aluminum Production"
+          "2.C.3  Aluminum Production",
+          " 2.C.2  Ferroalloys Production",
+          "2.C.4  Magnesium Production",
+          "2.C.5  Lead Production",
+          "2.C.6  Zinc Production",
+          "2.C.7  Other",
+          ""
         ]
       },
-      "Cement": {
+      "Cement and other Carbonates": {
         "climate-trace": [
-          "cement"
+          "cement",
+          "lime",
+          "glass"
         ],
         "unfccc_annex_1": [
           "1.A.2.f  Non-metallic Minerals",
-          "2.A.1  Cement Production"
+          "2.A.1  Cement Production,2.A.2  Lime Production\n2.A.3  Glass Production",
+          "2.A.4  Other Process Uses of Carbonates "
         ]
       },
       "Chemicals": {
         "climate-trace": [
-          "chemicals"
+          "chemicals",
+          "other-chemicals"
         ],
         "unfccc_annex_1": [
           "2.B.1  Ammonia Production",
           "2.B.8.a  Methanol",
           "2.B.7  Soda Ash Production",
-          "1.A.2.c  Chemicals"
+          " 2.B.2  Nitric Acid Production",
+          "2.B.3  Adipic Acid Production",
+          " 2.B.4  Caprolactam",
+          "Glyoxal and Glyoxylic Acid Production",
+          "2.B.5  Carbide Production",
+          "2.B.6  Titanium Dioxide Production",
+          "2.B.8.c  Ethylene Dichloride and Vinyl Chloride Monomer",
+          "2.B.8.d  Ethylene Oxide",
+          "2.B.8.e  Acrylonitrile",
+          "2.B.8.f  Carbon Black",
+          "2.B.8.g  Other",
+          "2.B.10  Other 1.A.2.c  Chemicals"
         ]
       },
       "Fluorinated Gases": {
@@ -1034,8 +1215,44 @@
           "fluorinated-gases"
         ],
         "unfccc_annex_1": [
-          "2.B.9 Fluorochemical Production",
+          "2.B.9  Fluorochemical Production",
           "2.F  Product Uses as Substitutes for ODS"
+        ]
+      },
+      "Food and Beverage": {
+        "climate-trace": [
+          "food-beverage-tobacco"
+        ],
+        "unfccc_annex_1": [
+          "1.A.2.e  Food Processing",
+          "Beverages and Tobacco",
+          " 2.H.2  Food and Beverages Industry"
+        ]
+      },
+      "Manufacturing and Industrial Processes": {
+        "climate-trace": [
+          "petrochemical-steam-cracking",
+          "cement",
+          "chemicals",
+          "steel",
+          "aluminum",
+          "pulp-and-paper",
+          "lime",
+          "glass",
+          "food-beverage-tobacco",
+          "wood-and-wood-products",
+          "textiles-leather-apparel",
+          "other-metals",
+          "other-chemicals other-manufacturing",
+          "bauxite-mining",
+          "iron-mining",
+          "copper-mining",
+          "sand-quarrying",
+          "rock-quarrying",
+          "other-mining-quarrying"
+        ],
+        "unfccc_annex_1": [
+          ""
         ]
       },
       "Mining and Quarrying": {
@@ -1044,7 +1261,8 @@
           "iron-mining",
           "copper-mining",
           "sand-quarrying",
-          "rock-quarrying"
+          "rock-quarrying",
+          "other-mining-and-quarrying"
         ],
         "unfccc_annex_1": [
           "1.A.2.g.iii  Mining (Excluding Fuels) and Quarrying"
@@ -1055,46 +1273,20 @@
           "other-manufacturing"
         ],
         "unfccc_annex_1": [
-          "1.A.2.e  Food Processing",
-          "Beverages and Tobacco",
-          "1.A.2.g.i  Manufacturing of Machinery",
+          " 1.A.2.g.i  Manufacturing of Machinery",
           "1.A.2.g.ii  Manufacturing of Transport Equipment",
-          "1.A.2.g.iv  Wood and Wood Products",
           "1.A.2.g.v  Construction",
-          "1.A.2.g.vi  Textile and Leather",
           "1.A.2.g.vii  Off-road Vehicles and Other Machinery",
           "1.A.2.g.viii  Other",
-          "2.A.2  Lime Production",
-          "2.A.3  Glass Production",
-          "2.A.4  Other Process Uses of Carbonates",
-          " 2.B.10  Other",
-          "2.B.2  Nitric Acid Production",
-          "2.B.3  Adipic Acid Production",
-          " 2.B.4  Caprolactam",
-          "Glyoxal and Glyoxylic Acid Production",
-          "2.B.5  Carbide Production",
-          "2.B.6  Titanium Dioxide Production",
-          "2.B.8.b  Ethylene",
-          "2.B.8.c  Ethylene Dichloride and Vinyl Chloride Monomer",
-          "2.B.8.d  Ethylene Oxide",
-          "2.B.8.e  Acrylonitrile",
-          "2.B.8.f  Carbon Black",
-          "2.B.8.g  Other",
-          "2.C.2  Ferroalloys Production",
-          "2.C.4  Magnesium Production",
-          "2.C.5  Lead Production",
-          "2.C.6  Zinc Production",
-          "2.C.7  Other",
-          "2.D  Non-energy Products from Fuels and Solvent Use",
+          "  2.D  Non-energy Products from Fuels and Solvent Use",
           "2.E  Electronics Industry",
           "2.G  Other Product Manufacture and Use",
-          "2.H.2  Food and Beverages Industry",
           "2.H.3  Other"
         ]
       },
       "Petrochemicals": {
         "climate-trace": [
-          "petrochemicals"
+          "petrochemical-steam-cracking"
         ],
         "unfccc_annex_1": [
           "2.B.8.b  Ethylene"
@@ -1106,8 +1298,7 @@
         ],
         "unfccc_annex_1": [
           "1.A.2.d  Pulp",
-          "Paper and Print",
-          "2.H.1  Pulp and Paper"
+          "Paper and Print"
         ]
       },
       "Steel": {
@@ -1117,6 +1308,22 @@
         "unfccc_annex_1": [
           "1.A.2.a  Iron and Steel",
           "2.C.1  Iron and Steel Production"
+        ]
+      },
+      "Textiles Leather and Apparel": {
+        "climate-trace": [
+          "textiles-leather-apparel"
+        ],
+        "unfccc_annex_1": [
+          "1.A.2.g.vi  Textile and Leather"
+        ]
+      },
+      "Wood and Wood Products": {
+        "climate-trace": [
+          "wood-and-wood-products"
+        ],
+        "unfccc_annex_1": [
+          "1.A.2.g.iv  Wood and Wood Products,"
         ]
       }
     },
@@ -1176,6 +1383,20 @@
         "unfccc_annex_1": [
           "1.A.3.b  Road Transportation"
         ]
+      },
+      "Transport": {
+        "climate-trace": [
+          "domestic-aviation",
+          "international-aviation",
+          "road-transportation",
+          "international-shipping",
+          "domestic-shipping",
+          "railways",
+          "other-transport"
+        ],
+        "unfccc_annex_1": [
+          ""
+        ]
       }
     },
     "Waste": {
@@ -1211,9 +1432,21 @@
           "5.A  Solid Waste Disposal"
         ]
       },
+      "Waste": {
+        "climate-trace": [
+          "solid-waste-disposal",
+          "biological-treatment-of-solid-waste-and-biogenic",
+          "incineration-and-open-burning-of-waste",
+          "domestic-wastewater-treatment-and-discharge",
+          "industrial-wastewater-treatment-and-discharge"
+        ],
+        "unfccc_annex_1": [
+          ""
+        ]
+      },
       "Wastewater Treatment and Discharge": {
         "climate-trace": [
-          "wastewater-treatment-and-discharge"
+          "industrial-wastewater-treatment-and-discharge"
         ],
         "unfccc_annex_1": [
           "5.D  Wastewater Treatment and Discharge"
