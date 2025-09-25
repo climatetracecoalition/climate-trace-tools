@@ -4,7 +4,8 @@
       "electricity-generation",
       "other-energy-use",
       "oil-and-gas-refining",
-      "residential-and-commercial-onsite-fuel-usage",
+      "residential-onsite-fuel-usage",
+      "non-residential-onsite-fuel-usage",
       "other-onsite-fuel-usage",
       "domestic-aviation",
       "domestic-shipping",
@@ -14,12 +15,14 @@
       "international-shipping",
       "international-aviation",
       "coal-mining",
-      "solid-fuel-transformation",
-      "oil-and-gas-production-and-transport",
+      "other-solid-fuels",
+      "oil-and-gas-production",
+      "oil-and-gas-transport",
       "other-fossil-fuel-operations",
       "coal-mining",
-      "solid-fuel-transformation",
-      "oil-and-gas-production-and-transport",
+      "other-solid-fuels",
+      "oil-and-gas-production",
+      "oil-and-gas-transport,",
       "other-fossil-fuel-operations"
     ],
     "pik-tp": [
@@ -69,8 +72,10 @@
       "rice-cultivation",
       "synthetic-fertilizer-application",
       "cropland-fires",
-      "other-agriculture",
-      "other-agricultural-soils"
+      "crop-residues",
+      "manure-applied-to-soils",
+      "soil-organic-carbon",
+      "other-agricultural-soil-emissions"
     ],
     "pik-tp": [
       "3.A",
@@ -82,7 +87,8 @@
       "solid-waste-disposal",
       "biological-treatment-of-solid-waste-and-biogenic",
       "incineration-and-open-burning-of-waste",
-      "wastewater-treatment-and-discharge"
+      " domestic-wastewater-treatment-and-discharge",
+      "industrial-wastewater-treatment-and-discharge"
     ],
     "pik-tp": [
       "4"
