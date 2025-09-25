@@ -33,9 +33,9 @@ climate_trace_tools/data/__init__.py
 climate_trace_tools/data/country/__init__.py
 climate_trace_tools/data/country/cait.zip
 climate_trace_tools/data/country/carbon-monitor.zip
+climate_trace_tools/data/country/ceds.zip
 climate_trace_tools/data/country/climate-trace.zip
 climate_trace_tools/data/country/edgar.zip
-climate_trace_tools/data/country/faostat-projected.zip
 climate_trace_tools/data/country/faostat.zip
 climate_trace_tools/data/country/pik-cr.zip
 climate_trace_tools/data/country/pik-tp.zip
