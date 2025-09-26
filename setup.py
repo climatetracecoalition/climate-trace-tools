@@ -10,6 +10,7 @@ setup(
         "numpy",
         "pandas",
         "plotly",
+        "openpyxl",
     ],
     packages=find_packages(),  # This ensures that all packages and sub-packages are included
     include_package_data=True,  # This tells setuptools to include files specified in MANIFEST.in or package_data
