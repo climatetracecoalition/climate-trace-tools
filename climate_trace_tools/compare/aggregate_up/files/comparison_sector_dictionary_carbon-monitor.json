@@ -31,9 +31,9 @@
       "Ground Transport"
     ]
   },
-  "Residential and Commercial Onsite Fuel Usage": {
+  "Residential Onsite Fuel Usage": {
     "climate-trace": [
-      "residential-and-commercial-onsite-fuel-usage"
+      "residential-onsite-fuel-usage"
     ],
     "carbon-monitor": [
       "Residential"
