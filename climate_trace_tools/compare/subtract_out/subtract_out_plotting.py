@@ -358,3 +358,21 @@ class SectorComparison:
                             logger.info(f"Saved ratio data to: {csv_path}")
 
         return ratio_data
+
+
+if __name__ == "__main__":
+    # Create an instance of the class
+    comparison = SectorComparison()
+
+    # Call the plot method with example arguments
+    comparison.plot(
+        countries=["USA", "CAN"],
+        sectors=["power", "transport"],
+        gases=["co2"],
+        co2eqs=["none"],
+        plot_type=["sectors"],
+        start_year=2015,
+        end_year=2023,
+        create_folders=True,
+        plot_live=False,
+    )
