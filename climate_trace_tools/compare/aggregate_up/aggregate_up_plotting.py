@@ -586,7 +586,7 @@ class CountryPlotting:
                             y=masked_data[masked_data.subsector == subsector][
                                 "emissions_quantity"
                             ].values,
-                            marker_color=color_dict_flat[subsector],
+                            # marker_color=color_dict_flat[subsector],
                             showlegend=(inventory == "climate-trace"),
                             text=masked_data["emissions_quantity"],
                             texttemplate="%{value:.4s}",

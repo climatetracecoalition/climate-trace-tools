@@ -587,7 +587,8 @@ def save_plot(
     """
     if create_folders:
         try:
-            os.makedirs(output_folder + "/", exist_ok=True)
+            # os.makedirs(output_folder + "/", exist_ok=True)
+            output_folder.mkdir(parents=True, exist_ok=True)
             logger.debug("Output folder created or already exists.")
         except Exception as e:
             logger.error(f"Error creating output folder: {str(e)}")
