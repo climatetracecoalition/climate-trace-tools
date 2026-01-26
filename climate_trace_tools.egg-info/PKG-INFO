@@ -8,6 +8,7 @@ Requires-Dist: numpy
 Requires-Dist: pandas
 Requires-Dist: plotly
 Requires-Dist: openpyxl
+Requires-Dist: psycopg2
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist
