@@ -2,15 +2,16 @@ import os
 import pandas as pd
 import json
 import numpy as np
+import datetime
+from pathlib import Path
+import importlib.resources as pkg_resources
 from climate_trace_tools.compare.subtract_out.util.constants import convert_numeric
 from climate_trace_tools.compare.data_handler import CsvDataHandler
 from climate_trace_tools.compare.subtract_out.util.prep_data_to_plot import create_plots
-import importlib.resources as pkg_resources
 from climate_trace_tools.compare.subtract_out import files
-import datetime
 from climate_trace_tools.compare.subtract_out.util.logger_setup import logger
 
-path = os.getcwd()
+path = Path(__file__).parent.resolve()
 
 
 class SectorComparison:
@@ -81,7 +82,7 @@ class SectorComparison:
         start_year,
         end_year,
         name,
-        create_folders=False,
+        create_folders=True,
         plot_live=True,
     ):
         ############################
@@ -153,15 +154,14 @@ class SectorComparison:
 
                     if self.dh_type == "db":
                         release = self.release
-                        base_folder = f"/processed_data_{release}/"
+                        base_folder = f"processed_data_{release}"
                     else:
-                        base_folder = "/processed_data/"
+                        base_folder = "processed_data"
 
                     if create_folders:
                         try:
-                            os.makedirs(
-                                path + base_folder + gas + "/" + co2eq + "/" + plot_type
-                            )
+                            ratio_dfs_path = path / base_folder / "ratio_dfs"
+                            ratio_dfs_path.mkdir(parents=True, exist_ok=True)
                             print("Output folder created.")
                         except OSError:
                             print("Output folder already exists.")
@@ -183,22 +183,14 @@ class SectorComparison:
 
                         # create plots for all listed countries, sector by sector
                         raw_data = create_plots(
-                            self.allinv,
-                            countries,
-                            sector,
-                            gas,
-                            co2eq,
-                            plot_type,
-                            ratio_data,
-                            output_folder=path
-                            + base_folder
-                            + gas
-                            + "/"
-                            + co2eq
-                            + "/"
-                            + plot_type
-                            + "/"
-                            + sector,
+                            allinv=self.allinv,
+                            countries=countries,
+                            sector=sector,
+                            gas=gas,
+                            co2eq=co2eq,
+                            plot_type=plot_type,
+                            ratio_data=ratio_data,
+                            output_folder=ratio_dfs_path / sector,
                             comparison_dicts=comparison_dicts,
                             title_dicts=title_dicts,
                             create_folders=create_folders,
@@ -209,11 +201,9 @@ class SectorComparison:
                             # Create folders only if data is returned
                             if create_folders:
                                 # Create directory for ratio_dfs before saving CSV
-                                ratio_dfs_path = os.path.join(
-                                    path + base_folder, "ratio_dfs", sector
-                                )
-                                os.makedirs(ratio_dfs_path, exist_ok=True)
-
+                                ratio_dfs_path = path / base_folder / "ratio_dfs"
+                                ratio_dfs_path.mkdir(parents=True, exist_ok=True)
+                            
                             ratio_data_column_order = [
                                 "Data source",
                                 "ID",
@@ -288,9 +278,7 @@ class SectorComparison:
                             timestamp = datetime.datetime.now().strftime("%Y%m%d")
 
                             # Save CSV files
-                            csv_path = os.path.join(
-                                ratio_dfs_path, f"{sector}_raw-data_{name}.csv"
-                            )
+                            csv_path = ratio_dfs_path / sector / f"{sector}_raw-data_{name}.csv"
                             country_totals.to_csv(csv_path, index=False)
                             logger.info(f"Saved raw data to: {csv_path}")
 
@@ -351,9 +339,7 @@ class SectorComparison:
                                 }
                             )
 
-                            csv_path = os.path.join(
-                                ratio_dfs_path, f"{sector}_ratio-data_{name}.csv"
-                            )
+                            csv_path = path / base_folder / "ratio_dfs" / sector / f"{sector}_ratio-data_{name}.csv"
                             ratio_data.to_csv(csv_path, index=False)
                             logger.info(f"Saved ratio data to: {csv_path}")
 
