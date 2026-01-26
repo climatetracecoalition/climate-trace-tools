@@ -72,7 +72,7 @@ class SectorComparison:
             axis=1,
         )
 
-    def calc_ratios(
+    def plot(
         self,
         countries,
         sectors,
