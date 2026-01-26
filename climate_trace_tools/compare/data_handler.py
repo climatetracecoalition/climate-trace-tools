@@ -82,7 +82,8 @@ def parse_and_format_query_data(
     if times_to_years:
         df["start_time"] = pd.to_datetime(df.start_time)
         df["year"] = df.start_time.dt.year
-        df.rename(columns={"start_time": "year"})
+        # df.rename(columns={"start_time": "year"}) doesn't this create two columns named 'year'?
+        df = df.drop(columns="start_time")
 
     df = df.groupby(
         [
@@ -160,10 +161,8 @@ class CsvDataHandler:
     def load_by_sector_country(self, inventory, iso3_country):
 
         df = self.read_csv_from_zip(country, inventory)
-        # with pkg_resources.open_text(country, f"{inventory}.zip") as file:
-        #     df = pd.read_csv(file)
-        df["start_time"] = pd.to_datetime(df.start_time)
-        df["end_time"] = pd.to_datetime(df.end_time)
+        df["start_time"] = pd.to_datetime(df.start_time, errors="coerce")
+        df["end_time"] = pd.to_datetime(df.end_time, errors="coerce")
 
         if iso3_country:
             df = df[df.iso3_country == iso3_country]
