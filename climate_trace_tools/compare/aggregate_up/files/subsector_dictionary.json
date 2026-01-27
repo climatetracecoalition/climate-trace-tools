@@ -569,7 +569,7 @@
       "Other Agricultural Soil Emissions": {
         "climate-trace": [
           "other-agricultural-soil-emissions",
-          "soil-organic-carbon"
+          "net-soil-organic-carbon"
         ],
         "faostat": [
           " Drained organic soils (CO2)",
@@ -724,7 +724,7 @@
           "cropland-fires",
           "crop-residues",
           "manure-applied-to-soils",
-          "soil-organic-carbon",
+          "net-soil-organic-carbon",
           "other-agricultural-soil-emissions"
         ],
         "pik-tp": [
@@ -866,7 +866,7 @@
           "cropland-fires",
           "crop-residues",
           "manu-applied-to-soils",
-          "soil-organic-carbon"
+          "net-soil-organic-carbon"
         ],
         "unfccc_annex_1": [
           ""
