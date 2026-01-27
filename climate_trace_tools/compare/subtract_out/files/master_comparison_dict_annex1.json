@@ -238,6 +238,14 @@
     }
   },
   "international-aviation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "international-aviation",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -270,6 +278,14 @@
     }
   },
   "road-transportation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "road-transportation",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -330,6 +346,14 @@
     }
   },
   "international-shipping": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "international-shipping",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -352,6 +376,14 @@
     }
   },
   "domestic-shipping": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "domestic-shipping",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -407,7 +439,33 @@
       ]
     }
   },
+  "railways": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "railways",
+          1
+        ]
+      ]
+    },
+    "ceds": {
+      "ceds": [
+        [
+          "1A3c_Rail",
+          1
+        ]
+      ]
+    }
+  },
   "other-transport": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-transport",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -426,6 +484,14 @@
     }
   },
   "residential-onsite-fuel-usage": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "residential-onsite-fuel-usage",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -478,6 +544,14 @@
     }
   },
   "non-residential-onsite-fuel-usage": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "non-residential-onsite-fuel-usage",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -533,7 +607,51 @@
       ]
     }
   },
+  "other-onsite-fuel-usage": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-onsite-fuel-usage",
+          1
+        ]
+      ]
+    },
+    "ceds": {
+      "ceds": [
+        [
+          "1A4c_Agriculture-forestry-fishing",
+          1
+        ]
+      ],
+      "unfccc_annex_1": [
+        [
+          "1.A.4.a.ii        Off-road Vehicles and Other Machinery",
+          1
+        ],
+        [
+          "1.A.4.a.iii Other",
+          1
+        ],
+        [
+          "1.A.4.b.ii Off-road Vehicles and Other Machinery",
+          1
+        ],
+        [
+          "1.A.4.b.iii Other",
+          1
+        ]
+      ]
+    }
+  },
   "coal-mining": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "coal-mining",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -612,6 +730,14 @@
     }
   },
   "other-solid-fuels": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "solid-fuel-transformation",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -640,6 +766,14 @@
     }
   },
   "oil-and-gas-production": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "oil-and-gas-production",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -810,6 +944,14 @@
     }
   },
   "oil-and-gas-transport": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "oil-and-gas-transport",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -996,6 +1138,14 @@
     }
   },
   "oil-and-gas-refining": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "oil-and-gas-refining",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1071,17 +1221,15 @@
       ]
     }
   },
-  "petrochemicals-steam-cracking": {
-    "unfccc_annex_1": {
-      "unfccc_annex_1": [
+  "other-fossil-fuel-operations": {
+    "climate-trace": {
+      "climate-trace": [
         [
-          "2.B.8.b  Ethylene",
+          "other-fossil-fuel-operations",
           1
         ]
       ]
-    }
-  },
-  "other-fossil-fuel-operations": {
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1123,7 +1271,33 @@
       ]
     }
   },
+  "petrochemicals-steam-cracking": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "petrochemical-steam-cracking",
+          1
+        ]
+      ]
+    },
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "2.B.8.b  Ethylene",
+          1
+        ]
+      ]
+    }
+  },
   "cement": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "cement",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1180,6 +1354,14 @@
     }
   },
   "chemicals": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "chemicals",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1308,6 +1490,14 @@
     }
   },
   "iron-and-steel": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "iron-and-steel",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1352,6 +1542,14 @@
     }
   },
   "aluminum": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "aluminum",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1464,6 +1662,14 @@
     }
   },
   "pulp-and-paper": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "pulp-and-paper",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1554,6 +1760,14 @@
     }
   },
   "other-manufacturing": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-manufacturing",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1620,6 +1834,14 @@
     }
   },
   "bauxite-mining": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "bauxite-mining",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1646,6 +1868,14 @@
     }
   },
   "iron-mining": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "iron-mining",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1664,6 +1894,14 @@
     }
   },
   "copper-mining": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "copper-mining",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1682,6 +1920,14 @@
     }
   },
   "rock-quarrying": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "rock-quarrying",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1700,24 +1946,14 @@
     }
   },
   "sand-quarrying": {
-    "unfccc_annex_1": {
-      "unfccc_annex_1": [
+    "climate-trace": {
+      "climate-trace": [
         [
-          "1.A.2.g.iii  Mining (Excluding Fuels) and Quarrying",
+          "sand-quarrying",
           1
         ]
       ]
     },
-    "ceds": {
-      "ceds": [
-        [
-          "1A2g_Ind-Comb-mining-quarying",
-          1
-        ]
-      ]
-    }
-  },
-  "other-mining-and-quarrying": {
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1736,6 +1972,14 @@
     }
   },
   "enteric-fermentation-cattle-operation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "enteric-fermentation-cattle-operation",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1794,6 +2038,14 @@
     }
   },
   "enteric-fermentation-cattle-pasture": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "enteric-fermentation-cattle-pasture",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1822,6 +2074,14 @@
     }
   },
   "enteric-fermentation-other": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "enteric-fermentation-other",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1857,7 +2117,73 @@
       ]
     }
   },
+  "manure-left-on-pasture-cattle": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "manure-left-on-pasture-cattle",
+          1
+        ]
+      ]
+    },
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "3.D.1.c Urine and Dung Deposited by Grazing Animals (N2O)",
+          1
+        ],
+        [
+          "3.B.1  Cattle",
+          1
+        ]
+      ]
+    },
+    "ceds": {
+      "ceds": [
+        [
+          "3B_Manure-management",
+          1
+        ]
+      ],
+      "climate-trace": [
+        [
+          "manure-management-cattle-feedlot",
+          -1
+        ],
+        [
+          "manure-management-other",
+          -1
+        ]
+      ]
+    },
+    "edgar": {
+      "edgar": [
+        [
+          "3.A.2 Manure Management",
+          1
+        ]
+      ],
+      "climate-trace": [
+        [
+          "manure-management-cattle-operation",
+          -1
+        ],
+        [
+          "manure-management-other",
+          -1
+        ]
+      ]
+    }
+  },
   "manure-management-cattle-operation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "manure-management-cattle-operation",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1904,6 +2230,14 @@
     }
   },
   "manure-management-other": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "manure-management-other",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -1940,6 +2274,14 @@
     }
   },
   "rice-cultivation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "rice-cultivation",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2020,6 +2362,14 @@
     }
   },
   "synthetic-fertilizer-application": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "synthetic-fertilizer-application",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2091,99 +2441,15 @@
       ]
     }
   },
-  "cropland-fires": {
-    "unfccc_annex_1": {
-      "unfccc_annex_1": [
-        [
-          "3.F  Field Burning of Agricultural Residues",
-          1
-        ]
-      ]
-    },
-    "faostat": {
-      "faostat": [
-        [
-          "Burning - Crop residues",
-          1
-        ]
-      ]
-    }
-  },
-  "manure-left-on-pasture-cattle": {
-    "unfccc_annex_1": {
-      "unfccc_annex_1": [
-        [
-          "3.D.1.c Urine and Dung Deposited by Grazing Animals (N2O)",
-          1
-        ],
-        [
-          "3.B.1  Cattle",
-          1
-        ]
-      ]
-    },
-    "ceds": {
-      "ceds": [
-        [
-          "3B_Manure-management",
-          1
-        ]
-      ],
-      "climate-trace": [
-        [
-          "manure-management-cattle-feedlot",
-          -1
-        ],
-        [
-          "manure-management-other",
-          -1
-        ]
-      ]
-    },
-    "edgar": {
-      "edgar": [
-        [
-          "3.A.2 Manure Management",
-          1
-        ]
-      ],
-      "climate-trace": [
-        [
-          "manure-management-cattle-operation",
-          -1
-        ],
-        [
-          "manure-management-other",
-          -1
-        ]
-      ]
-    }
-  },
-  "manure-applied-to-soils": {
-    "unfccc_annex_1": {
-      "unfccc_annex_1": [
-        [
-          "\n3.D.1.c Urine and Dung Deposited by Grazing Animals (N2O)",
-          1
-        ],
-        [
-          "3.D.1.b.i Animal Manure Applied to Soils",
-          1
-        ]
-      ]
-    }
-  },
-  "crop-residues": {
-    "unfccc_annex_1": {
-      "unfccc_annex_1": [
-        [
-          "3.D.1.d Crop Residues",
-          1
-        ]
-      ]
-    }
-  },
   "other-agricultural-soil-emissions": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "other-agricultural-soil-emissions",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2217,7 +2483,81 @@
       ]
     }
   },
+  "cropland-fires": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "cropland-fires",
+          1
+        ]
+      ]
+    },
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "3.F  Field Burning of Agricultural Residues",
+          1
+        ]
+      ]
+    },
+    "faostat": {
+      "faostat": [
+        [
+          "Burning - Crop residues",
+          1
+        ]
+      ]
+    }
+  },
+  "crop-residues": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "crop-residues",
+          1
+        ]
+      ]
+    },
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "3.D.1.d Crop Residues",
+          1
+        ]
+      ]
+    }
+  },
+  "manure-applied-to-soils": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "manure-applied-to-soils",
+          1
+        ]
+      ]
+    },
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
+        [
+          "\n3.D.1.c Urine and Dung Deposited by Grazing Animals (N2O)",
+          1
+        ],
+        [
+          "3.D.1.b.i Animal Manure Applied to Soils",
+          1
+        ]
+      ]
+    }
+  },
   "solid-waste-disposal": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "solid-waste-disposal",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2244,6 +2584,14 @@
     }
   },
   "biological-treatment-of-solid-waste-and-biogenic": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "biological-treatment-of-solid-waste-and-biogenic",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2254,6 +2602,14 @@
     }
   },
   "incineration-and-open-burning-of-waste": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "incineration-and-open-burning-of-waste",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2272,6 +2628,14 @@
     }
   },
   "domestic-wastewater-treatment-and-discharge": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "domestic-wastewater-treatment-and-discharge",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2308,6 +2672,14 @@
     }
   },
   "industrial-wastewater-treatment-and-discharge": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "industrial-wastewater-treatment-and-discharge",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2344,6 +2716,14 @@
     }
   },
   "fluorinated-gases": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "fluorinated-gases",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2361,7 +2741,53 @@
       ]
     }
   },
+  "forest-land-fires": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "forest-land-fires",
+          1
+        ]
+      ]
+    },
+    "faostat": {
+      "faostat": [
+        [
+          "Forest fires",
+          1
+        ]
+      ]
+    }
+  },
+  "forest-land-clearing": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "forest-land-clearing",
+          1
+        ]
+      ]
+    }
+  },
+  "forest-land-degradation": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "forest-land-degradation",
+          1
+        ]
+      ]
+    }
+  },
   "net-forest-land": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "net-forest-land",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2388,6 +2814,14 @@
     }
   },
   "net-shrubgrass": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "net-shrubgrass",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2398,6 +2832,14 @@
     }
   },
   "net-wetland": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "net-wetland",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2415,7 +2857,45 @@
       ]
     }
   },
+  "shrubgrass-fires": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "shrubgrass-fires",
+          1
+        ]
+      ]
+    }
+  },
+  "wetland-fires": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "wetland-fires",
+          1
+        ]
+      ]
+    }
+  },
+  "removals": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "removals",
+          1
+        ]
+      ]
+    }
+  },
   "water-reservoirs": {
+    "climate-trace": {
+      "climate-trace": [
+        [
+          "water-reservoirs",
+          1
+        ]
+      ]
+    },
     "unfccc_annex_1": {
       "unfccc_annex_1": [
         [
@@ -2425,39 +2905,19 @@
       ]
     }
   },
-  "railways": {
-    "ceds": {
-      "ceds": [
+  "other-mining-and-quarrying": {
+    "unfccc_annex_1": {
+      "unfccc_annex_1": [
         [
-          "1A3c_Rail",
+          "1.A.2.g.iii  Mining (Excluding Fuels) and Quarrying",
           1
         ]
       ]
-    }
-  },
-  "other-onsite-fuel-usage": {
+    },
     "ceds": {
       "ceds": [
         [
-          "1A4c_Agriculture-forestry-fishing",
-          1
-        ]
-      ],
-      "unfccc_annex_1": [
-        [
-          "1.A.4.a.ii        Off-road Vehicles and Other Machinery",
-          1
-        ],
-        [
-          "1.A.4.a.iii Other",
-          1
-        ],
-        [
-          "1.A.4.b.ii Off-road Vehicles and Other Machinery",
-          1
-        ],
-        [
-          "1.A.4.b.iii Other",
+          "1A2g_Ind-Comb-mining-quarying",
           1
         ]
       ]
@@ -2799,16 +3259,6 @@
         [
           "manure-management-other",
           -1
-        ]
-      ]
-    }
-  },
-  "forest-land-fires": {
-    "faostat": {
-      "faostat": [
-        [
-          "Forest fires",
-          1
         ]
       ]
     }
