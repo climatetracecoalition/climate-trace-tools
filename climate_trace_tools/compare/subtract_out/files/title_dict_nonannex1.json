@@ -2372,8 +2372,8 @@
       }
     }
   },
-  "soil-organic-carbon": {
-    "title": "Soil Organic Carbon",
+  "net-soil-organic-carbon": {
+    "title": "Net Soil Organic Carbon",
     "legend": {
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
