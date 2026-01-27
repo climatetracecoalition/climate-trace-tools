@@ -2,6 +2,17 @@
   "electricity-generation": {
     "title": "Electricity Generation",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "electricity-generation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -93,9 +104,47 @@
       }
     }
   },
+  "other-energy-use": {
+    "title": "Other Energy Use",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "other-energy-use",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A5_Other-unspecified",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
   "domestic-aviation": {
     "title": "Domestic Aviation",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "domestic-aviation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -131,9 +180,47 @@
       }
     }
   },
+  "international-aviation": {
+    "title": "International Aviation",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "international-aviation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "carbon-monitor": {
+        "carbon-monitor": {
+          "desc": "Carbon Monitor",
+          "comps": [
+            [
+              "International Aviation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
   "road-transportation": {
     "title": "Road Transportation",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "road-transportation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -169,9 +256,132 @@
       }
     }
   },
+  "international-shipping": {
+    "title": "International Shipping",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "international-shipping",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "domestic-shipping": {
+    "title": "Domestic Shipping",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "domestic-shipping",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A3dii_Domestic-navigation",
+              "     + "
+            ],
+            [
+              "1A3di_Oil_Tanker_Loading",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.3.d Water-borne Navigation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "railways": {
+    "title": "Railways",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "railways",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A3c_Rail",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-transport": {
+    "title": "Other Transport",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "other-transport",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A3eii_Other-transp",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
   "residential-onsite-fuel-usage": {
     "title": "Residential Onsite Fuel Usage",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "residential-onsite-fuel-usage",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -223,6 +433,17 @@
   "non-residential-onsite-fuel-usage": {
     "title": "Non Residential Onsite Fuel Usage",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "non-residential-onsite-fuel-usage",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -274,6 +495,17 @@
   "other-onsite-fuel-usage": {
     "title": "Other Onsite Fuel Usage",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "other-onsite-fuel-usage",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -326,6 +558,17 @@
   "coal-mining": {
     "title": "Coal Mining",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "coal-mining",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -382,6 +625,17 @@
   "other-solid-fuels": {
     "title": "Other Solid Fuels",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "solid-fuel-transformation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -418,6 +672,17 @@
   "oil-and-gas-production": {
     "title": "Oil And Gas Production",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "oil-and-gas-production",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -510,6 +775,17 @@
   "oil-and-gas-transport": {
     "title": "Oil And Gas Transport",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "oil-and-gas-transport",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -607,9 +883,76 @@
       }
     }
   },
+  "oil-and-gas-refining": {
+    "title": "Oil And Gas Refining",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "oil-and-gas-refining",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A1bc_Other-transformation",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.c  Manufacture of Solid Fuels and Other Energy Industries",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.1.bc Petroleum Refining - Manufacture of Solid Fuels and Other Energy Industries",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.1.c  Manufacture of Solid Fuels and Other Energy Industries",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
   "other-fossil-fuel-operations": {
     "title": "Other Fossil Fuel Operations",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "other-fossil-fuel-operations",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -623,9 +966,47 @@
       }
     }
   },
+  "petrochemicals": {
+    "title": "Petrochemicals",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "petrochemicals",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_non_annex_1": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "2.B  Chemical Industry",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
   "cement": {
     "title": "Cement",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "cement",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -696,6 +1077,17 @@
   "chemicals": {
     "title": "Chemicals",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "chemicals",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -769,25 +1161,20 @@
       }
     }
   },
-  "petrochemicals": {
-    "title": "Petrochemicals",
+  "steel": {
+    "title": "Steel",
     "legend": {
-      "unfccc_non_annex_1": {
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
           "comps": [
             [
-              "2.B  Chemical Industry",
+              "steel",
               "     + "
             ]
           ]
         }
-      }
-    }
-  },
-  "steel": {
-    "title": "Steel",
-    "legend": {
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -815,6 +1202,17 @@
   "aluminum": {
     "title": "Aluminum",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "aluminum",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -867,9 +1265,253 @@
       }
     }
   },
+  "pulp-and-paper": {
+    "title": "Pulp And Paper",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "pulp-and-paper",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A2d_Ind-Comb-Pulp-paper",
+              "     + "
+            ],
+            [
+              "2H_Pulp-and-paper-food-beverage-wood",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.2  Manufacturing Industries and Construction",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.A.2.a  Iron and Steel",
+              "     - "
+            ],
+            [
+              "1.A.2.b  Non-Ferrous Metals",
+              "     - "
+            ],
+            [
+              "1.A.2.c  Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.e  Food Processing, Beverages and Tobacco",
+              "     - "
+            ],
+            [
+              "1.A.2.f  Non-metallic Minerals",
+              "     - "
+            ],
+            [
+              "1.A.2.g  Other",
+              "     - "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "other-manufacturing": {
+    "title": "Other Manufacturing",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "other-manufacturing",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "bauxite-mining": {
+    "title": "Bauxite Mining",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "bauxite-mining",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A2g_Ind-Comb-mining-quarying",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "1.A.2 Manufacturing Industries and Construction",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "iron-mining": {
+    "title": "Iron Mining",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "iron-mining",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A2g_Ind-Comb-mining-quarying",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "copper-mining": {
+    "title": "Copper Mining",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "copper-mining",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A2g_Ind-Comb-mining-quarying",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "rock-quarrying": {
+    "title": "Rock Quarrying",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "rock-quarrying",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A2g_Ind-Comb-mining-quarying",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "sand-quarrying": {
+    "title": "Sand Quarrying",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "sand-quarrying",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A2g_Ind-Comb-mining-quarying",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
   "enteric-fermentation-cattle-feedlot": {
     "title": "Enteric Fermentation Cattle Feedlot",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-operation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -886,6 +1528,17 @@
   "enteric-fermentation-cattle-pasture": {
     "title": "Enteric Fermentation Cattle Pasture",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -926,6 +1579,17 @@
   "enteric-fermentation-other": {
     "title": "Enteric Fermentation Other",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-other",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -963,16 +1627,64 @@
       }
     }
   },
-  "manure-management": {
-    "title": "Manure Management",
+  "manure-left-on-pasture-cattle": {
+    "title": "Manure Left On Pasture Cattle",
     "legend": {
-      "unfccc_non_annex_1": {
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
           "comps": [
             [
-              "4.B  Manure Management",
+              "manure-left-on-pasture-cattle",
               "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "3B_Manure-management",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-management-cattle-feedlot",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.2 Manure Management",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-management-cattle-operation",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
             ]
           ]
         }
@@ -982,6 +1694,17 @@
   "manure-management-cattle-feedlot": {
     "title": "Manure Management Cattle Feedlot",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-management-cattle-operation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -998,6 +1721,17 @@
   "manure-management-other": {
     "title": "Manure Management Other",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-management-other",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1038,6 +1772,17 @@
   "rice-cultivation": {
     "title": "Rice Cultivation",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "rice-cultivation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1087,6 +1832,17 @@
   "synthetic-fertilizer-application": {
     "title": "Synthetic Fertilizer Application",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "synthetic-fertilizer-application",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1125,6 +1881,17 @@
   "other-agricultural-soil-emissions": {
     "title": "Other Agricultural Soil Emissions",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "other-agricultural-soil-emissions",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1141,6 +1908,17 @@
   "cropland-fires": {
     "title": "Cropland Fires",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "cropland-fires",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1157,6 +1935,17 @@
   "crop-residues": {
     "title": "Crop Residues",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "crop-residues",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1173,22 +1962,17 @@
   "manure-applied-to-soils": {
     "title": "Manure Applied To Soils",
     "legend": {
-      "unfccc_non_annex_1": {
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
           "comps": [
             [
-              "4.D  Agricultural Soils",
+              "manure-applied-to-soils",
               "     + "
             ]
           ]
         }
-      }
-    }
-  },
-  "soil-organic-carbon": {
-    "title": "Soil Organic Carbon",
-    "legend": {
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1205,6 +1989,17 @@
   "solid-waste-disposal": {
     "title": "Solid Waste Disposal",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "solid-waste-disposal",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1229,9 +2024,36 @@
       }
     }
   },
+  "biological-treatment-of-solid-waste-and-biogenic": {
+    "title": "Biological Treatment Of Solid Waste And Biogenic",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "biological-treatment-of-solid-waste-and-biogenic",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
   "incineration-and-open-burning-of-waste": {
     "title": "Incineration And Open Burning Of Waste",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "incineration-and-open-burning-of-waste",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1248,6 +2070,17 @@
   "domestic-wastewater-treatment-and-discharge": {
     "title": "Domestic Wastewater Treatment And Discharge",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "domestic-wastewater-treatment-and-discharge",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1288,6 +2121,17 @@
   "industrial-wastewater-treatment-and-discharge": {
     "title": "Industrial Wastewater Treatment And Discharge",
     "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "industrial-wastewater-treatment-and-discharge",
+              "     + "
+            ]
+          ]
+        }
+      },
       "unfccc_non_annex_1": {
         "unfccc_non_annex_1": {
           "desc": "UNFCCC",
@@ -1325,6 +2169,225 @@
       }
     }
   },
+  "fluorinated-gases": {
+    "title": "Fluorinated Gases",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "fluorinated-gases",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "forest-land-fires": {
+    "title": "Forest Land Fires",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "forest-land-fires",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "faostat": {
+        "faostat": {
+          "desc": "FAOSTAT",
+          "comps": [
+            [
+              "Forest fires",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "forest-land-clearing": {
+    "title": "Forest Land Clearing",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "forest-land-clearing",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "forest-land-degradation": {
+    "title": "Forest Land Degradation",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "forest-land-degradation",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "net-forest-land": {
+    "title": "Net Forest Land",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "net-forest-land",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "net-shrubgrass": {
+    "title": "Net Shrubgrass",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "net-shrubgrass",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "net-wetland": {
+    "title": "Net Wetland",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "net-wetland",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "shrubgrass-fires": {
+    "title": "Shrubgrass Fires",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "shrubgrass-fires",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "wetland-fires": {
+    "title": "Wetland Fires",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "wetland-fires",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "removals": {
+    "title": "Removals",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "removals",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "water-reservoirs": {
+    "title": "Water Reservoirs",
+    "legend": {
+      "climate-trace": {
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "water-reservoirs",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "manure-management": {
+    "title": "Manure Management",
+    "legend": {
+      "unfccc_non_annex_1": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "4.B  Manure Management",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "soil-organic-carbon": {
+    "title": "Soil Organic Carbon",
+    "legend": {
+      "unfccc_non_annex_1": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "4.D  Agricultural Soils",
+              "     + "
+            ]
+          ]
+        }
+      }
+    }
+  },
   "heat-plants": {
     "title": "Heat Plants",
     "legend": {
@@ -1335,130 +2398,6 @@
             [
               "1A1a_Heat-production",
               "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "other-energy-use": {
-    "title": "Other Energy Use",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A5_Other-unspecified",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "railways": {
-    "title": "Railways",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A3c_Rail",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "domestic-shipping": {
-    "title": "Domestic Shipping",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A3dii_Domestic-navigation",
-              "     + "
-            ],
-            [
-              "1A3di_Oil_Tanker_Loading",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "1.A.3.d Water-borne Navigation",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "other-transport": {
-    "title": "Other Transport",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A3eii_Other-transp",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "oil-and-gas-refining": {
-    "title": "Oil And Gas Refining",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A1bc_Other-transformation",
-              "     + "
-            ]
-          ]
-        },
-        "unfccc_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "1.A.1.c  Manufacture of Solid Fuels and Other Energy Industries",
-              "     - "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "1.A.1.bc Petroleum Refining - Manufacture of Solid Fuels and Other Energy Industries",
-              "     + "
-            ]
-          ]
-        },
-        "unfccc_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "1.A.1.c  Manufacture of Solid Fuels and Other Energy Industries",
-              "     - "
             ]
           ]
         }
@@ -1615,157 +2554,6 @@
       }
     }
   },
-  "pulp-and-paper": {
-    "title": "Pulp And Paper",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A2d_Ind-Comb-Pulp-paper",
-              "     + "
-            ],
-            [
-              "2H_Pulp-and-paper-food-beverage-wood",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "1.A.2  Manufacturing Industries and Construction",
-              "     + "
-            ]
-          ]
-        },
-        "unfccc_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "1.A.2.a  Iron and Steel",
-              "     - "
-            ],
-            [
-              "1.A.2.b  Non-Ferrous Metals",
-              "     - "
-            ],
-            [
-              "1.A.2.c  Chemicals",
-              "     - "
-            ],
-            [
-              "1.A.2.e  Food Processing, Beverages and Tobacco",
-              "     - "
-            ],
-            [
-              "1.A.2.f  Non-metallic Minerals",
-              "     - "
-            ],
-            [
-              "1.A.2.g  Other",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "bauxite-mining": {
-    "title": "Bauxite Mining",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A2g_Ind-Comb-mining-quarying",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "1.A.2 Manufacturing Industries and Construction",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "iron-mining": {
-    "title": "Iron Mining",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A2g_Ind-Comb-mining-quarying",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "copper-mining": {
-    "title": "Copper Mining",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A2g_Ind-Comb-mining-quarying",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "rock-quarrying": {
-    "title": "Rock Quarrying",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A2g_Ind-Comb-mining-quarying",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "sand-quarrying": {
-    "title": "Sand Quarrying",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A2g_Ind-Comb-mining-quarying",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
   "other-mining-and-quarrying": {
     "title": "Other Mining And Quarrying",
     "legend": {
@@ -1900,75 +2688,6 @@
       }
     }
   },
-  "manure-left-on-pasture-cattle": {
-    "title": "Manure Left On Pasture Cattle",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "3B_Manure-management",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "manure-management-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "3.A.2 Manure Management",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "manure-management-cattle-operation",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "international-aviation": {
-    "title": "International Aviation",
-    "legend": {
-      "carbon-monitor": {
-        "carbon-monitor": {
-          "desc": "Carbon Monitor",
-          "comps": [
-            [
-              "International Aviation",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
   "oil-and-gas-production-and-transport": {
     "title": "Oil And Gas Production And Transport",
     "legend": {
@@ -2008,22 +2727,6 @@
             [
               "1.B.1  Solid Fuels",
               "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "forest-land-fires": {
-    "title": "Forest Land Fires",
-    "legend": {
-      "faostat": {
-        "faostat": {
-          "desc": "FAOSTAT",
-          "comps": [
-            [
-              "Forest fires",
-              "     + "
             ]
           ]
         }
