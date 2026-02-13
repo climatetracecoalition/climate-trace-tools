@@ -28,10 +28,26 @@ The asset_finder folder contains a tool for finding Climate TRACE point assets w
 
 The ownership folder contains a tool for looking up asset ownership information and retrieving associated emissions data via the Climate TRACE API. More information can be found [here](climate_trace_tools/ownership/README.md).
 
-## Installation 
+## Installation
 
+To install the package locally in development mode:
 
-## Credits 
+```bash
+pip install -e .
+```
+
+This will generate `build/`, `dist/`, and `*.egg-info/` directories. These are Python packaging artifacts and are excluded from version control via `.gitignore`.
+
+To build a distributable package:
+
+```bash
+python setup.py sdist bdist_wheel
+```
+
+- `build/` — intermediate build files created by setuptools
+- `dist/` — the final distributable package files (`.tar.gz`, `.whl`)
+
+## Credits
 
 Christy Lewis \
 Mikey Abela \
