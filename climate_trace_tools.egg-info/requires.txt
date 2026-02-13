@@ -1,9 +1,0 @@
-numpy
-pandas
-plotly
-openpyxl
-psycopg2
-shapely
-geopy
-google-cloud-bigquery
-requests
