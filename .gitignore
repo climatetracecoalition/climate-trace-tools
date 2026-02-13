@@ -7,3 +7,4 @@ __pycache__/climate_trace_tools/data/country/climate-trace.csv
 __pycache__/
 *.pyc
 .DS_Store
+dist/
