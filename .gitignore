@@ -1,12 +1,21 @@
-export_csvs.py
-*.html
-"*.png"
-"*.json"
-test.py
+# Python artifacts
 __pycache__/
 *.pyc
-.DS_Store
-dist/
-build/
 *.egg-info/
+build/
+dist/
+
+# Generated outputs
+*.log
+*.html
+*.png
+climate_trace_tools/compare/subtract_out/processed_data*/
+
+# IDE / OS
+.DS_Store
 .idea/
+
+# Misc
+*.json
+export_csvs.py
+test.py
