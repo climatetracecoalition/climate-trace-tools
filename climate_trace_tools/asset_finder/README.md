@@ -37,14 +37,7 @@ Returns a DataFrame with:
 
 ## Authentication
 
-This tool queries Climate TRACE data via Google BigQuery. You must be authenticated with a Google Cloud account that has access to the `trace-data-383422` project before using it.
-
-1. Install the Google Cloud CLI: https://cloud.google.com/sdk/docs/install
-2. Authenticate with your Google account:
-   ```bash
-   gcloud auth application-default login
-   ```
-3. Ensure your account has been granted access to the `trace-data-383422` BigQuery project. Contact the Climate TRACE team if you need access.
+This tool queries Climate TRACE data via Google BigQuery. For full details on access requirements, permissions, and getting started, see [BigQuery Data.md](./BigQuery%20Data.md).
 
 ## Requirements
 
