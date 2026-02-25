@@ -39,6 +39,15 @@ Returns a DataFrame with:
 
 This tool queries Climate TRACE data via Google BigQuery. For full details on access requirements, permissions, and getting started, see [BigQuery Data.md](./BigQuery%20Data.md).
 
+To authenticate locally, install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) and run:
+
+```bash
+gcloud auth application-default login
+gcloud auth application-default set-quota-project YOUR_PROJECT_ID
+```
+
+Replace `YOUR_PROJECT_ID` with your own Google Cloud project ID.
+
 ## Requirements
 
 - Google Cloud authentication (see above)
