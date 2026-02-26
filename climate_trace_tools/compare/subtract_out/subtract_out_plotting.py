@@ -168,7 +168,7 @@ class SectorComparison:
 
                     for sector in sectors:
                         if gas != "all":
-                            years_cols = self.allinv.filter(regex="\d").columns
+                            years_cols = self.allinv.filter(regex=r"\d").columns
                             gas_present = self.allinv.loc[
                                 (self.allinv["Data source"] == "climate-trace")
                                 & (self.allinv["Sector"] == sector)

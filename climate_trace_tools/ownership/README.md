@@ -27,7 +27,31 @@ from climate_trace_tools import get_assets_owned_by_entity
 df = get_assets_owned_by_entity('BlackRock Inc', 'climate_trace_tools/data/ownership/ownership.zip')
 ```
 
-> Note: `get_assets_owned_by_entity` does not prorate emissions by ownership shareholding percentage.
+> **Note:** `get_assets_owned_by_entity` does not prorate emissions by ownership shareholding percentage. If an entity owns 5% of an asset, that asset's full emissions are still counted.
+
+## Tips for New Users
+
+### Finding the right owner name
+
+Owner and entity names must match **exactly** — including casing and spacing. To find the correct name, load the ownership data and browse the entities directly:
+
+```python
+from climate_trace_tools import load_ownership_data
+
+asset_to_owner_df, all_entities_df, all_entity_connections_df = load_ownership_data(
+    'climate_trace_tools/data/ownership/ownership.zip'
+)
+
+# Search for an entity by partial name
+all_entities_df[all_entities_df['Full Name'].str.contains('BlackRock', case=False, na=False)][['Entity ID', 'Full Name']]
+
+# Browse immediate asset owners
+asset_to_owner_df[asset_to_owner_df['immediate_source_owner'].str.contains('Hwa Ya', case=False, na=False)]
+```
+
+### Performance
+
+`find_owners_emissions` makes one API call per asset with a short delay between each request. For entities with many assets, this can take several minutes. `get_assets_owned_by_entity` also traverses the full ownership graph before making API calls, so it is slower still for large ownership networks.
 
 ## Understanding the Ownership Network
 
@@ -90,7 +114,7 @@ Loads all three ownership DataFrames from the zip file.
 
 ---
 
-### `build_ownership_graph(all_entities_df, all_entity_connections_df, asset_to_owner_df)`
+### `build_ownership_graph(asset_to_owner_df, all_entities_df, all_entity_connections_df)`
 
 Builds a directed `networkx.DiGraph` from the three ownership DataFrames. Nodes are either entities (owners) or assets; edges represent ownership relationships.
 

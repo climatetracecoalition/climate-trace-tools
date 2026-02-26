@@ -94,7 +94,7 @@ def plot(
         )
         return
 
-    comparison_years = list(plotting_dict["climate-trace"].filter(regex="\d").columns)
+    comparison_years = list(plotting_dict["climate-trace"].filter(regex=r"\d").columns)
 
     for key, item in plotting_dict.items():
         if not process_inventory(
