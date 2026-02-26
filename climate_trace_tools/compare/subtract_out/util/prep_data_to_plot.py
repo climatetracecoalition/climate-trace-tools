@@ -9,7 +9,6 @@ import copy as copy
 from climate_trace_tools.compare.subtract_out.util.generate_plots import plot
 from climate_trace_tools.compare.subtract_out.util.logger_setup import logger
 
-
 # def custom_groupby_sum(df, group_col, exclude_cols=None, min_count=1):
 #     if exclude_cols is None:
 #         exclude_cols = []
