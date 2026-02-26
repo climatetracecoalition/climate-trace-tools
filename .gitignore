@@ -1,9 +1,21 @@
-export_csvs.py
-*.html
-"*.png"
-"*.json"
-test.py
-__pycache__/climate_trace_tools/data/country/climate-trace.csv
+# Python artifacts
 __pycache__/
 *.pyc
+*.egg-info/
+build/
+dist/
+
+# Generated outputs
+*.log
+*.html
+*.png
+climate_trace_tools/compare/subtract_out/processed_data*/
+
+# IDE / OS
 .DS_Store
+.idea/
+
+# Misc
+*.json
+export_csvs.py
+test.py

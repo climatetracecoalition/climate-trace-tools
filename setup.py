@@ -12,6 +12,13 @@ setup(
         "plotly",
         "openpyxl",
         "psycopg2",
+        "shapely",
+        "geopy",
+        "google-cloud-bigquery",
+        "db-dtypes",
+        "requests",
+        "networkx",
+        "tqdm",
     ],
     packages=find_packages(),  # This ensures that all packages and sub-packages are included
     include_package_data=True,  # This tells setuptools to include files specified in MANIFEST.in or package_data
@@ -19,6 +26,7 @@ setup(
         "climate_trace_tools": [
             "data/country/*.zip",
             "data/source/*.zip",
+            "data/ownership/*.zip",
             "data/supplementary/*.csv",
             "compare/subtract_out/files/*.csv",
             "compare/subtract_out/files/*.xlsx",
