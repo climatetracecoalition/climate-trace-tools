@@ -15,6 +15,7 @@ setup(
         "shapely",
         "geopy",
         "google-cloud-bigquery",
+        "db-dtypes",
         "requests",
         "networkx",
         "tqdm",

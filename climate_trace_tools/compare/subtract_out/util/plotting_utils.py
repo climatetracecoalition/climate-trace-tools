@@ -265,7 +265,7 @@ def is_data_present(item, key):
         ):
             data_present = False
         else:
-            data_years = item.filter(regex="\d").columns
+            data_years = item.filter(regex=r"\d").columns
             if item.loc[item["Data source"] == key, data_years].sum().sum() == 0:
                 nonzero_emissions = False
 
@@ -282,7 +282,7 @@ def is_gas_present(key, item):
         if item.empty:
             gas_presence[formula]["data_present"] = False
         else:
-            data_years = item.filter(regex="\d").columns
+            data_years = item.filter(regex=r"\d").columns
             formula_present = item.loc[item["Gas"] == formula, data_years]
             if all(
                 [

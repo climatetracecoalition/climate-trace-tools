@@ -48,7 +48,30 @@ gcloud auth application-default set-quota-project YOUR_PROJECT_ID
 
 Replace `YOUR_PROJECT_ID` with your own Google Cloud project ID.
 
+## Tips for New Users
+
+### Sectors and country codes
+
+The `sectors` parameter uses Climate TRACE sector names (e.g. `'electricity-generation'`, `'road-transportation'`). The `country` parameter uses ISO3 codes (e.g. `'USA'`, `'GBR'`, `'BRA'`). You can use `InputHelper` from the compare module to browse available sector names:
+
+```python
+from climate_trace_tools import InputHelper
+ih = InputHelper()
+ih.sectors_available_to_plot_subtract_out(annex1=True)
+```
+
+### Authentication must be set up before use
+
+`find_assets` queries BigQuery and will fail immediately if Google Cloud credentials are not configured. Run the following before using this function:
+
+```bash
+gcloud auth application-default login
+gcloud auth application-default set-quota-project YOUR_PROJECT_ID
+```
+
+If you see a quota or permissions error, confirm that your project has the BigQuery API enabled and that you have been granted access to the Climate TRACE dataset. See [BigQuery Data.md](./BigQuery%20Data.md) for full details.
+
 ## Requirements
 
 - Google Cloud authentication (see above)
-- Python packages: `pandas`, `shapely`, `geopy`, `google-cloud-bigquery`
+- Python packages: `pandas`, `shapely`, `geopy`, `google-cloud-bigquery`, `db-dtypes`

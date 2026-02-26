@@ -44,7 +44,7 @@ def load_ownership_data(ownership_zip):
     return asset_to_owner_df, all_entities_df, all_entity_connections_df
 
 
-def build_ownership_graph(all_entities_df, all_entity_connections_df, asset_to_owner_df):
+def build_ownership_graph(asset_to_owner_df, all_entities_df, all_entity_connections_df):
     """
     Build a directed ownership graph from the three ownership DataFrames.
 
@@ -183,7 +183,7 @@ def get_assets_owned_by_entity(entity_name, ownership_zip, gas='co2e_100yr', yea
         source_sector, source_subsector, and emissions data for the specified year and gas.
     """
     asset_to_owner_df, all_entities_df, all_entity_connections_df = load_ownership_data(ownership_zip)
-    G = build_ownership_graph(all_entities_df, all_entity_connections_df, asset_to_owner_df)
+    G = build_ownership_graph(asset_to_owner_df, all_entities_df, all_entity_connections_df)
 
     entities_dic = all_entities_df.set_index('Full Name')['Entity ID'].to_dict()
     entity_id = entities_dic.get(entity_name)
@@ -221,18 +221,3 @@ def get_assets_owned_by_entity(entity_name, ownership_zip, gas='co2e_100yr', yea
     df = df.drop_duplicates(subset=['source_id'])
 
     return df
-
-
-if __name__ == '__main__':
-    DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data', 'ownership')
-    OWNERSHIP_ZIP = os.path.join(DATA_DIR, 'ownership.zip')
-
-    # Simple immediate ownership lookup
-    OWNER_NAME = 'Hwa Ya Power Corp'
-    owner_sources = find_owner_sources(OWNER_NAME, OWNERSHIP_ZIP)
-    owners_emissions = find_owners_emissions(owner_sources)
-    print(owners_emissions)
-
-    # Full direct and indirect ownership lookup
-    owner_df = get_assets_owned_by_entity('BlackRock Inc', OWNERSHIP_ZIP)
-    print(owner_df)
