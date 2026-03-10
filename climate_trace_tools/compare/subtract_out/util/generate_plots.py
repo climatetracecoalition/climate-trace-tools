@@ -382,6 +382,8 @@ def add_legend_title(
     legend_title_params = get_legend_title_params(
         title_dict, comparison_years, sector, key, data_present, nonzero_emissions
     )
+    if legend_title_params is None:
+        return
     fig.add_trace(go.Scatter(**legend_title_params))
 
 

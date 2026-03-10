@@ -19,3 +19,4 @@ climate_trace_tools/compare/subtract_out/processed_data*/
 *.json
 export_csvs.py
 test.py
+validate/

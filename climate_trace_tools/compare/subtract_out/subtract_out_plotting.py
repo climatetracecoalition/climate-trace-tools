@@ -1,4 +1,6 @@
 import os
+import warnings
+warnings.filterwarnings("ignore", message="Downcasting object dtype arrays", category=FutureWarning)
 import pandas as pd
 import json
 import numpy as np

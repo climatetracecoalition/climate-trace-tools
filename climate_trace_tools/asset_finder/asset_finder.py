@@ -16,7 +16,7 @@ def run_bigquery(sql_query):
 def find_assets(
     location,
     buffer_zone=5,
-    year=2024,
+    year=2025,
     gas="co2e_100yr",
     sectors="all",
     country=None,
@@ -28,7 +28,7 @@ def find_assets(
         location: coordinates in a lat-lon string: '37.77, -122.42' or
                   polygon shape of region: 'POLYGON((-122.42 37.77, -122.41 37.78, -122.40 37.77, -122.42 37.77))'
         buffer_zone: numeric value in kilometers representing approx radius/buffer of interest from provided location
-        year: year of interest of emission data
+        year: year of interest of emission data (default: 2025)
         gas: gas of interest
         sectors: sectors of interest in list. example: ['electricity-generation']
         country: specific country of interest in iso3_country format
@@ -252,10 +252,10 @@ def find_assets(
             FROM `trace-data-383422.climate_trace.emissions_sources` es
             LEFT JOIN `trace-data-383422.climate_trace.emissions_sources_location` esl
                 ON es.source_id = esl.source_id
-            WHERE 
+            WHERE
                 es.gas = '{gas}'
                 AND es.iso3_country = '{country}'
-                AND EXTRACT(YEAR FROM es.start_time) = {year}
+                AND es.start_time >= '{year}-01-01' AND es.start_time < '{year + 1}-01-01'
                 AND es.subsector IN {sectors_str}
             GROUP BY
                 es.source_id,
@@ -313,10 +313,10 @@ def find_assets(
             FROM `trace-data-383422.climate_trace.emissions_sources` es
             LEFT JOIN `trace-data-383422.climate_trace.emissions_sources_location` esl
                 ON es.source_id = esl.source_id
-            WHERE 
+            WHERE
                 es.gas = '{gas}'
                 AND es.iso3_country = '{country}'
-                AND EXTRACT(YEAR FROM es.start_time) = {year}
+                AND es.start_time >= '{year}-01-01' AND es.start_time < '{year + 1}-01-01'
                 AND es.subsector IN {sectors_str}
             GROUP BY
                 es.source_id,
