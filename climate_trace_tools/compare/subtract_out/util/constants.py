@@ -9,7 +9,9 @@ def load_title_conversion():
         files,
         "CT_country_titles.csv",
     ) as csv_path:
-        return pd.read_csv(csv_path).map(lambda x: x.strip(" ") if isinstance(x, str) else x)
+        return pd.read_csv(csv_path).map(
+            lambda x: x.strip(" ") if isinstance(x, str) else x
+        )
 
 
 TITLE_CONVERSION = load_title_conversion()
@@ -17,7 +19,9 @@ TITLE_CONVERSION = load_title_conversion()
 
 def load_gas_titles():
     with pkg_resources.open_text(files, "gas_title_dict.csv") as csv_path:
-        return pd.read_csv(csv_path).map(lambda x: x.strip(" ") if isinstance(x, str) else x)
+        return pd.read_csv(csv_path).map(
+            lambda x: x.strip(" ") if isinstance(x, str) else x
+        )
 
 
 GAS_TITLES = load_gas_titles()

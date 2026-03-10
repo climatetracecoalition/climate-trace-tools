@@ -80,7 +80,7 @@ def generate_master_dicts():
     for tab_name in tabs:
         # Read the XLSX file for the current tab
         df = pd.read_excel(xlsx_file_path, sheet_name=tab_name)
-        df = df.dropna(subset=['Climate TRACE Sector', 'Inventory', 'Sector', 'Value'])
+        df = df.dropna(subset=["Climate TRACE Sector", "Inventory", "Sector", "Value"])
 
         for index, row in df.iterrows():
             annex_1 = row["Annex 1?"]
@@ -158,7 +158,7 @@ def generate_title_dicts():
     for tab_name in tabs:
         # Read the XLSX file for the current tab
         df = pd.read_excel(xlsx_file_path, sheet_name=tab_name)
-        df = df.dropna(subset=['Climate TRACE Sector', 'Inventory', 'Sector', 'Value'])
+        df = df.dropna(subset=["Climate TRACE Sector", "Inventory", "Sector", "Value"])
 
         for index, row in df.iterrows():
             annex_1 = row["Annex 1?"]

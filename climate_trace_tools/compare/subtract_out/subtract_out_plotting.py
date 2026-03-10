@@ -203,7 +203,7 @@ class SectorComparison:
                                 # Create directory for ratio_dfs before saving CSV
                                 ratio_dfs_path = path / base_folder / "ratio_dfs"
                                 ratio_dfs_path.mkdir(parents=True, exist_ok=True)
-                            
+
                             ratio_data_column_order = [
                                 "Data source",
                                 "ID",
@@ -278,7 +278,11 @@ class SectorComparison:
                             timestamp = datetime.datetime.now().strftime("%Y%m%d")
 
                             # Save CSV files
-                            csv_path = ratio_dfs_path / sector / f"{sector}_raw-data_{name}.csv"
+                            csv_path = (
+                                ratio_dfs_path
+                                / sector
+                                / f"{sector}_raw-data_{name}.csv"
+                            )
                             country_totals.to_csv(csv_path, index=False)
                             logger.info(f"Saved raw data to: {csv_path}")
 
@@ -339,7 +343,13 @@ class SectorComparison:
                                 }
                             )
 
-                            csv_path = path / base_folder / "ratio_dfs" / sector / f"{sector}_ratio-data_{name}.csv"
+                            csv_path = (
+                                path
+                                / base_folder
+                                / "ratio_dfs"
+                                / sector
+                                / f"{sector}_ratio-data_{name}.csv"
+                            )
                             ratio_data.to_csv(csv_path, index=False)
                             logger.info(f"Saved ratio data to: {csv_path}")
 
