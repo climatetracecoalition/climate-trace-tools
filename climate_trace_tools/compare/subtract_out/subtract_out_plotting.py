@@ -151,9 +151,9 @@ class SectorComparison:
                     else:
                         base_folder = "processed_data"
 
+                    ratio_dfs_path = path / base_folder / "ratio_dfs"
                     if create_folders:
                         try:
-                            ratio_dfs_path = path / base_folder / "ratio_dfs"
                             ratio_dfs_path.mkdir(parents=True, exist_ok=True)
                             print("Output folder created.")
                         except OSError:
