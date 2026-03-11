@@ -61,7 +61,7 @@ class SectorComparison:
         for year in year_columns:
             year_int = int(year)
             ff_data[f"{year}_ff"] = self.allinv["last_true_year"].apply(
-                lambda x: pd.notna(x) and int(x) < min(year_int, 2023)
+                lambda x: pd.notna(x) and int(x) < year_int
             )
 
         # Combine original data with filled data and forward-fill information
@@ -116,16 +116,7 @@ class SectorComparison:
             "Unit",
             "last_true_year",
             "carbon_eq",
-            2015,
-            2016,
-            2017,
-            2018,
-            2019,
-            2020,
-            2021,
-            2022,
-            2023,
-        ]
+        ] + COMP_YEARS
         ratio_data = pd.DataFrame(columns=ratiocols)
 
         comparison_dicts = {}
@@ -215,47 +206,19 @@ class SectorComparison:
                                 "carbon_eq",
                                 "data_available",
                                 "last_true_year",
-                                2015,
-                                2016,
-                                2017,
-                                2018,
-                                2019,
-                                2020,
-                                2021,
-                                2022,
-                                2023,
-                            ]
+                            ] + COMP_YEARS
 
                             raw_data = raw_data[ratio_data_column_order]
                             ratio_data = raw_data.copy()
                             # create ratios dataset
-                            years = [
-                                2015,
-                                2016,
-                                2017,
-                                2018,
-                                2019,
-                                2020,
-                                2021,
-                                2022,
-                                2023,
-                            ]
+                            years = COMP_YEARS
                             totcols = [
                                 "Data source",
                                 "ID",
                                 "Gas",
                                 "data_available",
                                 "last_true_year",
-                                2015,
-                                2016,
-                                2017,
-                                2018,
-                                2019,
-                                2020,
-                                2021,
-                                2022,
-                                2023,
-                            ]
+                            ] + COMP_YEARS
                             grpcols = [
                                 "Data source",
                                 "ID",
