@@ -30,22 +30,18 @@ The ownership folder contains a tool for looking up asset ownership information 
 
 ## Installation
 
-To install the package locally in development mode:
+Run the following in your terminal.
+
+This repository uses [Git LFS](https://git-lfs.github.com/) for large data files. If you don't have Git LFS installed, follow the instructions at https://git-lfs.github.com/ before proceeding.
 
 ```bash
-pip install -e .
+git lfs install
+pip install git+https://github.com/climatetracecoalition/climate-trace-tools.git
 ```
 
-This will generate `build/`, `dist/`, and `*.egg-info/` directories. These are Python packaging artifacts and are excluded from version control via `.gitignore`.
+## License
 
-To build a distributable package:
-
-```bash
-python setup.py sdist bdist_wheel
-```
-
-- `build/` — intermediate build files created by setuptools
-- `dist/` — the final distributable package files (`.tar.gz`, `.whl`)
+This repository is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE) license, consistent with Climate TRACE's open data license.
 
 ## Credits
 

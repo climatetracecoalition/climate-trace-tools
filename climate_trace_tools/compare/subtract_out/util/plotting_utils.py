@@ -228,7 +228,11 @@ def get_legend_title_params(
     startyear = comparison_years[0]
     endyear = comparison_years[-1]
 
-    basic_title = f'<br><br><span style="font-size: 16px;">{title_dict[sector]["legend"][key][key]["desc"]}</span>'
+    legend = title_dict.get(sector, {}).get("legend", {})
+    if key not in legend:
+        logger.warning(f"No title_dict legend entry for inventory '{key}' in sector '{sector}', skipping legend title.")
+        return None
+    basic_title = f'<br><br><span style="font-size: 16px;">{legend[key][key]["desc"]}</span>'
     if data_present and nonzero_emissions:
         legend_name = basic_title
     elif not data_present:
@@ -491,7 +495,8 @@ def get_numerical_addition(
         data_present = False
     elif data.loc[comparison_years, column].sum() == 0:
         nonzero_emissions = False
-    numerical_data = data.loc[comparison_years, column].replace(0, np.nan).to_list()
+    series = data.loc[comparison_years, column]
+    numerical_data = series.where(series != 0).to_list()
 
     if title_dict[sector]["title"].find("Metamodeling") > -1:
         if key in missing_years.keys():

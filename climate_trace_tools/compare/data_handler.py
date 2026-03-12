@@ -3,7 +3,6 @@ import json
 
 import numpy as np
 import pandas as pd
-import psycopg2 as psycopg2
 import importlib.resources as pkg_resources
 from climate_trace_tools.data import supplementary
 from climate_trace_tools.data import country

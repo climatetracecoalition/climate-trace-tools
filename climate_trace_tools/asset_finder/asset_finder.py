@@ -16,7 +16,7 @@ def run_bigquery(sql_query):
 def find_assets(
     location,
     buffer_zone=5,
-    year=2024,
+    year=2025,
     gas="co2e_100yr",
     sectors="all",
     country=None,
@@ -28,7 +28,7 @@ def find_assets(
         location: coordinates in a lat-lon string: '37.77, -122.42' or
                   polygon shape of region: 'POLYGON((-122.42 37.77, -122.41 37.78, -122.40 37.77, -122.42 37.77))'
         buffer_zone: numeric value in kilometers representing approx radius/buffer of interest from provided location
-        year: year of interest of emission data
+        year: year of interest of emission data (default: 2025)
         gas: gas of interest
         sectors: sectors of interest in list. example: ['electricity-generation']
         country: specific country of interest in iso3_country format
@@ -252,10 +252,10 @@ def find_assets(
             FROM `trace-data-383422.climate_trace.emissions_sources` es
             LEFT JOIN `trace-data-383422.climate_trace.emissions_sources_location` esl
                 ON es.source_id = esl.source_id
-            WHERE 
+            WHERE
                 es.gas = '{gas}'
                 AND es.iso3_country = '{country}'
-                AND EXTRACT(YEAR FROM es.start_time) = {year}
+                AND es.start_time >= '{year}-01-01' AND es.start_time < '{year + 1}-01-01'
                 AND es.subsector IN {sectors_str}
             GROUP BY
                 es.source_id,
@@ -313,10 +313,10 @@ def find_assets(
             FROM `trace-data-383422.climate_trace.emissions_sources` es
             LEFT JOIN `trace-data-383422.climate_trace.emissions_sources_location` esl
                 ON es.source_id = esl.source_id
-            WHERE 
+            WHERE
                 es.gas = '{gas}'
                 AND es.iso3_country = '{country}'
-                AND EXTRACT(YEAR FROM es.start_time) = {year}
+                AND es.start_time >= '{year}-01-01' AND es.start_time < '{year + 1}-01-01'
                 AND es.subsector IN {sectors_str}
             GROUP BY
                 es.source_id,
@@ -351,80 +351,54 @@ def find_assets(
             asset_sectors = new_assets["subsector"].unique()
             asset_sectors_str = "(" + ", ".join(f"'{s}'" for s in asset_sectors) + ")"
 
-            gadm_df = pd.DataFrame()
+            gadm_0_expr = "ARRAY_TO_STRING(ARRAY_SLICE(SPLIT(ge.gadm_id, '.'), 0, 0), '.')"
+            gadm_1_expr = "CONCAT(ARRAY_TO_STRING(ARRAY_SLICE(SPLIT(ge.gadm_id, '.'), 0, 1), '.'), '_1')"
+            gadm_2_expr = "ARRAY_TO_STRING(ARRAY_SLICE(SPLIT(ge.gadm_id, '.'), 0, 2), '.')"
+            query_gadm = f"""
+            SELECT
+                {gadm_0_expr} AS gadm_0,
+                {gadm_1_expr} AS gadm_1,
+                {gadm_2_expr} AS gadm_2,
+                geom_0.name AS gadm_0_name,
+                geom_1.name AS gadm_1_name,
+                geom_2.name AS gadm_2_name,
+                ge.subsector,
+                ge.source_emissions,
+                ge.source_activity
+            FROM `trace-data-383422.climate_trace.gadm_emissions` ge
+            LEFT JOIN `trace-data-383422.climate_trace.geometries` geom_0
+                ON {gadm_0_expr} = REPLACE(geom_0.geometry_ref, 'gadm_', '')
+            LEFT JOIN `trace-data-383422.climate_trace.geometries` geom_1
+                ON {gadm_1_expr} = REPLACE(geom_1.geometry_ref, 'gadm_', '')
+            LEFT JOIN `trace-data-383422.climate_trace.geometries` geom_2
+                ON {gadm_2_expr} = REPLACE(geom_2.geometry_ref, 'gadm_', '')
+            WHERE
+                ge.gas = '{gas}'
+                AND ge.iso3_country = '{country}'
+                AND ge.start_time >= '{year}-01-01' AND ge.start_time < '{year + 1}-01-01'
+                AND ge.subsector IN {asset_sectors_str}
+            """
+            gadm_combined_df = run_bigquery(query_gadm)
 
-            for gadm_col_prefix in ["gadm_0", "gadm_1", "gadm_2"]:
-                print(
-                    "Querying %s for emissions within the same gadm + sector"
-                    % gadm_col_prefix
-                )
-                gadm_ids = list(new_assets[gadm_col_prefix].unique())
-                gadm_ids_str = "(" + ", ".join(f"'{s}'" for s in gadm_ids) + ")"
-                gadm_num = int(gadm_col_prefix.replace("gadm_", ""))
-                gadm_emissions = gadm_col_prefix + "_emissions_quantity"
-                gadm_name = gadm_col_prefix + "_name"
-                gadm_activity = gadm_col_prefix + "_activity"
-                base_expr = (
-                    "ARRAY_TO_STRING(ARRAY_SLICE(SPLIT(ge.gadm_id, '.'), 0, "
-                    + str(gadm_num)
-                    + "), '.')"
-                )
-                if gadm_col_prefix == "gadm_1":
-                    gadm_id_sql = f"CONCAT({base_expr}, '_1')"
-                else:
-                    gadm_id_sql = base_expr
-                query_gadm = f"""
-                SELECT
-                    {gadm_id_sql} AS {gadm_col_prefix},
-                    geom.name AS gadm_name,
-                    EXTRACT(YEAR FROM ge.start_time) AS year,
-                    ge.gas,
-                    ge.subsector,
-                    SUM(ge.source_emissions) AS gadm_emissions_quantity,
-                    SUM(ge.source_activity) AS gadm_activity
-                FROM `trace-data-383422.climate_trace.gadm_emissions` ge
-                LEFT JOIN `trace-data-383422.climate_trace.geometries` geom
-                    ON {gadm_id_sql} = REPLACE(geom.geometry_ref, 'gadm_', '')
-                WHERE
-                    ge.gas = '{gas}'
-                    AND {gadm_id_sql} IN {gadm_ids_str}
-                    AND EXTRACT(YEAR FROM ge.start_time) = {year}
-                    AND ge.subsector IN {asset_sectors_str}
-                    AND ge.iso3_country = '{country}'
-                GROUP BY
-                    {gadm_col_prefix},
-                    geom.name,
-                    EXTRACT(YEAR FROM ge.start_time),
-                    ge.gas,
-                    ge.subsector;
-                """
-                gadm_df = run_bigquery(query_gadm)
-                if not gadm_df.empty:
-                    gadm_df = gadm_df[
-                        [
-                            gadm_col_prefix,
-                            "gadm_name",
-                            "gadm_activity",
-                            "gadm_emissions_quantity",
-                            "subsector",
-                        ]
-                    ]
-                    gadm_df = gadm_df.rename(
-                        columns={
-                            "gadm_name": gadm_name,
-                            "gadm_activity": gadm_activity,
-                            "gadm_emissions_quantity": gadm_emissions,
+            if not gadm_combined_df.empty:
+                for gadm_col_prefix in ["gadm_0", "gadm_1", "gadm_2"]:
+                    gadm_name = gadm_col_prefix + "_name"
+                    gadm_emissions = gadm_col_prefix + "_emissions_quantity"
+                    gadm_activity = gadm_col_prefix + "_activity"
+                    gadm_agg = gadm_combined_df.groupby(
+                        [gadm_col_prefix, "subsector"], dropna=False
+                    ).agg(
+                        **{
+                            gadm_name: (gadm_name, "first"),
+                            gadm_emissions: ("source_emissions", "sum"),
+                            gadm_activity: ("source_activity", "sum"),
                         }
-                    )
-
-                    new_assets = new_assets.merge(
-                        gadm_df, how="left", on=[gadm_col_prefix, "subsector"]
-                    )
-                else:
-                    print(
-                        f"No GADM data found for {asset_sectors} in {gadm_col_prefix}, skipping merge."
-                    )
-                    for col in [gadm_name, gadm_activity, gadm_emissions]:
+                    ).reset_index()
+                    new_assets = new_assets.merge(gadm_agg, how="left", on=[gadm_col_prefix, "subsector"])
+            else:
+                print(f"No GADM data found for {asset_sectors}, skipping merge.")
+                for gadm_col_prefix in ["gadm_0", "gadm_1", "gadm_2"]:
+                    for col in [gadm_col_prefix + "_name", gadm_col_prefix + "_activity", gadm_col_prefix + "_emissions_quantity"]:
                         new_assets[col] = pd.NA
             asset_df = pd.concat([asset_df, new_assets], ignore_index=True)
 

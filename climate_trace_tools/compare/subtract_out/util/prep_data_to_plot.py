@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore", message="Downcasting object dtype arrays", category=FutureWarning)
+
 from climate_trace_tools.compare.subtract_out.util.constants import get_country_title
 from climate_trace_tools.compare.subtract_out.util.country_lists import (
     countries_annex1,
