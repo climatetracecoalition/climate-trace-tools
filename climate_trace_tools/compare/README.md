@@ -79,7 +79,7 @@ fig, output_data = CountryPlotting('BRA').single_inventory_all_sectors_across_ye
 fig, output_data = CountryPlotting('FRA').single_inventory_single_sector_across_years(
     years=[2015, 2016, 2017, 2018, 2019, 2020, 2021],
     sector='Energy Industries and Fugitive Emissions',
-    UNFCCC=True
+    EDGAR=True
 )
 ```
 
