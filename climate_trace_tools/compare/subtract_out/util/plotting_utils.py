@@ -336,7 +336,7 @@ def get_ind(title_dict, sector, key, data, column, subsector):
                     )
                 )
             ]
-        )[0]
+        )[0][0]
     )
     return ind
 
