@@ -399,7 +399,7 @@ class CountryPlotting:
                 if grouped_data.empty:
                     continue
 
-                totals[inventory] += grouped_data.emissions_quantity.values
+                totals[inventory] += grouped_data.emissions_quantity.sum()
                 x_labels.append(x_label)
                 fig.add_trace(
                     go.Bar(
@@ -1035,6 +1035,7 @@ class CountryPlotting:
             "#50d7e2",
         ]
 
+        df = pd.DataFrame()
         for inventory in comp_dict:
             all_sector = comp_dict[inventory]
             data = all_sector.loc[all_sector["parent_sector"] == sector].copy()
@@ -1050,6 +1051,7 @@ class CountryPlotting:
                 subsector_data = (
                     data[mask].groupby("year")["emissions_quantity"].sum().reset_index()
                 )
+                df = pd.concat([df, data[mask]])
                 fig.add_trace(
                     go.Bar(
                         name=subsector,
@@ -1082,4 +1084,4 @@ class CountryPlotting:
 
         fig.show()
 
-        return fig
+        return fig, df
