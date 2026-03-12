@@ -12,7 +12,7 @@ Original methodology and implementation by Anna Mowat, with thanks to Amy Kouch 
 from climate_trace_tools import find_owner_sources, find_owners_emissions
 
 # Step 1: Find source IDs for an owner (immediate ownership only)
-source_ids = find_owner_sources('Hwa Ya Power Corp', 'climate_trace_tools/data/ownership/ownership.zip')
+source_ids = find_owner_sources('Hwa Ya Power Corp')
 
 # Step 2: Get emissions for those sources
 df = find_owners_emissions(source_ids, gas='co2e_100yr', year=2024)
@@ -24,7 +24,7 @@ df = find_owners_emissions(source_ids, gas='co2e_100yr', year=2024)
 from climate_trace_tools import get_assets_owned_by_entity
 
 # Returns all assets the entity owns directly or indirectly, with emissions data
-df = get_assets_owned_by_entity('BlackRock Inc', 'climate_trace_tools/data/ownership/ownership.zip')
+df = get_assets_owned_by_entity('BlackRock Inc')
 ```
 
 > **Note:** `get_assets_owned_by_entity` does not prorate emissions by ownership shareholding percentage. If an entity owns 5% of an asset, that asset's full emissions are still counted.
@@ -38,9 +38,7 @@ Owner and entity names must match **exactly** — including casing and spacing. 
 ```python
 from climate_trace_tools import load_ownership_data
 
-asset_to_owner_df, all_entities_df, all_entity_connections_df = load_ownership_data(
-    'climate_trace_tools/data/ownership/ownership.zip'
-)
+asset_to_owner_df, all_entities_df, all_entity_connections_df = load_ownership_data()
 
 # Search for an entity by partial name
 all_entities_df[all_entities_df['Full Name'].str.contains('BlackRock', case=False, na=False)][['Entity ID', 'Full Name']]
@@ -67,13 +65,13 @@ In this tool, each entity and asset is a node, and each ownership relationship i
 
 ## Functions
 
-### `find_owner_sources(owner_name, ownership_file)`
+### `find_owner_sources(owner_name, ownership_file=None)`
 
 Looks up Climate TRACE source IDs associated with a given asset owner (immediate ownership only).
 
 **Parameters:**
 - **owner_name**: Name of the asset owner to look up
-- **ownership_file**: Path to `ownership.zip` (bundled in `climate_trace_tools/data/ownership/`) or a CSV path
+- **ownership_file**: Path to `ownership.zip` or a CSV path (default: bundled `ownership.zip`)
 
 **Returns:** A list of unique source IDs associated with the owner.
 
@@ -92,13 +90,13 @@ Fetches emissions for a list of source IDs using the Climate TRACE API.
 
 ---
 
-### `get_assets_owned_by_entity(entity_name, ownership_zip, gas, year)`
+### `get_assets_owned_by_entity(entity_name, ownership_zip=None, gas, year)`
 
 Traverses the full ownership network to find all assets an entity has direct and indirect ownership in, then fetches their emissions. Emissions are not prorated by ownership shareholding percentage.
 
 **Parameters:**
 - **entity_name**: Full name of the entity (e.g., `'BlackRock Inc'`)
-- **ownership_zip**: Path to `ownership.zip`
+- **ownership_zip**: Path to `ownership.zip` (default: bundled `ownership.zip`)
 - **gas**: Gas of interest (default: `'co2e_100yr'`)
 - **year**: Year of emissions data (default: 2024)
 
@@ -106,9 +104,9 @@ Traverses the full ownership network to find all assets an entity has direct and
 
 ---
 
-### `load_ownership_data(ownership_zip)`
+### `load_ownership_data(ownership_zip=None)`
 
-Loads all three ownership DataFrames from the zip file.
+Loads all three ownership DataFrames from the zip file. Defaults to the bundled `ownership.zip`.
 
 **Returns:** Tuple of `(asset_to_owner_df, all_entities_df, all_entity_connections_df)`.
 

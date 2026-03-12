@@ -5,9 +5,12 @@ import requests
 import networkx as nx
 from tqdm import tqdm
 import time
+from pathlib import Path
 
 # Climate TRACE API base URL
 API_BASE_URL = "https://api.climatetrace.org/v6"
+
+DEFAULT_OWNERSHIP_ZIP = Path(__file__).parent.parent / "data" / "ownership" / "ownership.zip"
 
 
 def _load_csv_from_zip(zf, pattern_include, pattern_exclude=None):
@@ -25,7 +28,7 @@ def _load_csv_from_zip(zf, pattern_include, pattern_exclude=None):
         return pd.read_csv(f)
 
 
-def load_ownership_data(ownership_zip):
+def load_ownership_data(ownership_zip=None):
     """
     Load all three ownership DataFrames from the ownership zip file.
 
@@ -35,6 +38,8 @@ def load_ownership_data(ownership_zip):
     Returns:
         tuple: (asset_to_owner_df, all_entities_df, all_entity_connections_df)
     """
+    if ownership_zip is None:
+        ownership_zip = DEFAULT_OWNERSHIP_ZIP
     with zipfile.ZipFile(ownership_zip, "r") as zf:
         asset_to_owner_df = _load_csv_from_zip(zf, "entity_asset_relationships")
         all_entities_df = _load_csv_from_zip(zf, "all_entities_", "relationships")
@@ -116,7 +121,7 @@ def get_asset_details(source_id):
     return None
 
 
-def find_owner_sources(owner_name, ownership_file):
+def find_owner_sources(owner_name, ownership_file=None):
     """
     Find Climate TRACE source IDs associated with a given asset owner (immediate ownership only).
 
@@ -127,7 +132,9 @@ def find_owner_sources(owner_name, ownership_file):
     Returns:
         list of unique source IDs associated with the owner
     """
-    if ownership_file.endswith(".zip"):
+    if ownership_file is None:
+        ownership_file = DEFAULT_OWNERSHIP_ZIP
+    if str(ownership_file).endswith(".zip"):
         with zipfile.ZipFile(ownership_file, "r") as zf:
             ownership_df = _load_csv_from_zip(zf, "entity_asset_relationships")
     else:
@@ -185,7 +192,7 @@ def find_owners_emissions(sources, gas="co2e_100yr", year=2024):
     return pd.DataFrame(results)
 
 
-def get_assets_owned_by_entity(entity_name, ownership_zip, gas="co2e_100yr", year=2024):
+def get_assets_owned_by_entity(entity_name, ownership_zip=None, gas="co2e_100yr", year=2024):
     """
     Find all assets an entity has direct and indirect ownership in, with emissions data.
 
