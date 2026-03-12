@@ -13,7 +13,7 @@ from climate_trace_tools.compare.subtract_out.util.prep_data_to_plot import crea
 from climate_trace_tools.compare.subtract_out import files
 from climate_trace_tools.compare.subtract_out.util.logger_setup import logger
 
-path = Path(__file__).parent.resolve()
+path = Path.cwd()
 
 
 class SectorComparison:
@@ -243,13 +243,14 @@ class SectorComparison:
                             timestamp = datetime.datetime.now().strftime("%Y%m%d")
 
                             # Save CSV files
-                            csv_path = (
-                                ratio_dfs_path
-                                / sector
-                                / f"{sector}_raw-data_{name}.csv"
-                            )
-                            country_totals.to_csv(csv_path, index=False)
-                            logger.info(f"Saved raw data to: {csv_path}")
+                            if create_folders:
+                                csv_path = (
+                                    ratio_dfs_path
+                                    / sector
+                                    / f"{sector}_raw-data_{name}.csv"
+                                )
+                                country_totals.to_csv(csv_path, index=False)
+                                logger.info(f"Saved raw data to: {csv_path}")
 
                             for yr in years:
                                 ratio_data[f"inv_to_ct_ratio_{yr}"] = ""
@@ -308,14 +309,15 @@ class SectorComparison:
                                 }
                             )
 
-                            csv_path = (
-                                path
-                                / base_folder
-                                / "ratio_dfs"
-                                / sector
-                                / f"{sector}_ratio-data_{name}.csv"
-                            )
-                            ratio_data.to_csv(csv_path, index=False)
-                            logger.info(f"Saved ratio data to: {csv_path}")
+                            if create_folders:
+                                csv_path = (
+                                    path
+                                    / base_folder
+                                    / "ratio_dfs"
+                                    / sector
+                                    / f"{sector}_ratio-data_{name}.csv"
+                                )
+                                ratio_data.to_csv(csv_path, index=False)
+                                logger.info(f"Saved ratio data to: {csv_path}")
 
         return ratio_data
