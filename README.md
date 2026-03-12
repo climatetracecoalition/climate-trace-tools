@@ -30,12 +30,13 @@ The ownership folder contains a tool for looking up asset ownership information 
 
 ## Installation
 
-This repository uses [Git LFS](https://git-lfs.github.com/) for large data files. Make sure Git LFS is installed before cloning.
+Run the following in your terminal.
+
+This repository uses [Git LFS](https://git-lfs.github.com/) for large data files. If you don't have Git LFS installed, follow the instructions at https://git-lfs.github.com/ before proceeding.
 
 ```bash
 git lfs install
 pip install git+https://github.com/climatetracecoalition/climate-trace-tools.git
-git lfs pull
 ```
 
 ## License

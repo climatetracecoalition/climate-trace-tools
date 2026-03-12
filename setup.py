@@ -2,16 +2,16 @@ from setuptools import setup, find_packages
 
 setup(
     name="climate_trace_tools",
-    version="0.0.1",
-    description="Tools for comparing climate trace data to other data sources",
+    version="1.0.0",
+    description="Tools for working with Climate TRACE emissions data, including inventory comparison, asset finding, and ownership analysis",
     author="Christy Lewis",
     author_email="christy@watttime.org",
+    license="CC-BY-4.0",
     install_requires=[
         "numpy",
         "pandas",
         "plotly",
         "openpyxl",
-        "psycopg2",
         "shapely",
         "geopy",
         "google-cloud-bigquery",
@@ -30,7 +30,9 @@ setup(
             "data/supplementary/*.csv",
             "compare/subtract_out/files/*.csv",
             "compare/subtract_out/files/*.xlsx",
+            "compare/subtract_out/files/*.json",
             "compare/aggregate_up/files/*.xlsx",
+            "compare/aggregate_up/files/*.json",
         ]
     },
 )
