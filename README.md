@@ -28,6 +28,10 @@ The asset_finder folder contains a tool for finding Climate TRACE point assets w
 
 The ownership folder contains a tool for looking up asset ownership information and retrieving associated emissions data via the Climate TRACE API. More information can be found [here](climate_trace_tools/ownership/README.md).
 
+### API
+
+The api folder contains a lightweight Python client for the [Climate TRACE API](https://api.climatetrace.org/v7/docs/index.html) (v7). Each function wraps a single API endpoint (emissions, sources, administrative areas, cities, owners, and reference definitions) and returns the parsed JSON. More information can be found [here](climate_trace_tools/api/README.md), and a runnable walkthrough is in [climate_trace_tools/api/examples/climate_trace_api_guide.ipynb](climate_trace_tools/api/examples/climate_trace_api_guide.ipynb).
+
 ## Installation
 
 Run the following in your terminal.
