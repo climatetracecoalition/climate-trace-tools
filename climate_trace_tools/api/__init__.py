@@ -37,6 +37,10 @@ from .client import (
     get_sector,
     list_subsectors,
     get_subsector,
+    # pandas DataFrame helpers
+    get_aggregate_emissions_df,
+    get_sources_df,
+    rank_countries_df,
 )
 
 __all__ = [
@@ -62,4 +66,7 @@ __all__ = [
     "get_sector",
     "list_subsectors",
     "get_subsector",
+    "get_aggregate_emissions_df",
+    "get_sources_df",
+    "rank_countries_df",
 ]

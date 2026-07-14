@@ -8,9 +8,9 @@ OpenAPI spec: bundled in this repo as ``api-1.json``.
 
 Example
 -------
->>> from climate_trace_tools.api import get_aggregate_emissions, search_admins
->>> denmark = search_admins(name="Denmark", level=0)[0]
->>> get_aggregate_emissions(gadm_id=denmark["id"], year=2023, gas="co2")
+>>> from climate_trace_tools.api import get_aggregate_emissions
+>>> # A country's gadm_id is simply its ISO3 code.
+>>> get_aggregate_emissions(gadm_id="DNK", year=2023, gas="co2")
 """
 
 import requests
@@ -98,7 +98,9 @@ def get_aggregate_emissions(
     sectors, subsectors : str or list of str, optional
         Sector/subsector filters. See :func:`list_sectors` / :func:`list_subsectors`.
     gadm_id : str, optional
-        Administrative area id (from :func:`search_admins`).
+        Administrative area id. For a country this is simply its ISO3 code
+        (e.g. "DNK" for Denmark); for subnational areas (states, districts,
+        ...) find the id with :func:`search_admins`.
     city_id : str, optional
         City / urban area id (from :func:`search_cities`).
     country_group : str, optional
@@ -146,12 +148,15 @@ def get_sources(
 
     Endpoint: ``GET /v7/sources``
 
-    Accepts the same filters as :func:`get_aggregate_emissions`, plus
-    ``limit`` and ``offset`` for pagination.
+    Accepts the same filters as :func:`get_aggregate_emissions` (``year``,
+    ``gas``, ``sectors``, ``subsectors``, ``gadm_id``, ``city_id``,
+    ``country_group``, ``continent``, ``owner_ids``), plus ``limit`` (max
+    results per call) and ``offset`` (number of results to skip) for
+    pagination.
 
     Returns
     -------
-    dict
+    list
         Sources matching the filters, ranked by emissions.
     """
     params = {
@@ -409,7 +414,15 @@ def get_country_group(group, **kwargs):
 
 
 def list_gases(**kwargs):
-    """List all supported gases. Endpoint: ``GET /v7/definitions/gases``"""
+    """List all gas codes accepted by the ``gas`` filter.
+
+    Endpoint: ``GET /v7/definitions/gases``
+
+    Note: the list is long, but most analyses should use ``"co2"``,
+    ``"ch4"``, ``"n2o"``, or the CO2-equivalent aggregates
+    ``"co2e_100yr"`` / ``"co2e_20yr"``. Many of the other codes have
+    little or no data in Climate TRACE and return zero emissions.
+    """
     return _get("/definitions/gases", kwargs or None)
 
 
@@ -431,3 +444,58 @@ def list_subsectors(**kwargs):
 def get_subsector(subsector, **kwargs):
     """Details for one subsector. Endpoint: ``GET /v7/definitions/subsectors/{subsector}``"""
     return _get(f"/definitions/subsectors/{subsector}", kwargs or None)
+
+
+# ---------------------------------------------------------------------------
+# Pandas DataFrame helpers
+# ---------------------------------------------------------------------------
+
+
+def get_aggregate_emissions_df(**filters):
+    """Aggregate emissions as a tidy :class:`pandas.DataFrame`.
+
+    Accepts the same arguments as :func:`get_aggregate_emissions` and
+    flattens the annual summaries into one row per total / sector /
+    subsector, with columns ``level``, ``sector``, ``subsector``, ``gas``,
+    ``emissions_quantity`` and ``percentage``.
+    """
+    import pandas as pd
+
+    data = get_aggregate_emissions(**filters)
+    rows = []
+    for group in ("totals", "sectors", "subsectors"):
+        for item in (data.get(group) or {}).get("summaries") or []:
+            rows.append(
+                {
+                    "level": group.rstrip("s"),  # total / sector / subsector
+                    "sector": item.get("sector"),
+                    "subsector": item.get("subsector"),
+                    "gas": item.get("gas"),
+                    "emissions_quantity": item.get("emissionsQuantity"),
+                    "percentage": item.get("percentage"),
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def get_sources_df(**filters):
+    """Individual emissions sources as a :class:`pandas.DataFrame`.
+
+    Accepts the same arguments as :func:`get_sources`; one row per source,
+    with nested fields (e.g. the centroid coordinates) flattened into
+    dotted columns.
+    """
+    import pandas as pd
+
+    return pd.json_normalize(get_sources(**filters))
+
+
+def rank_countries_df(**filters):
+    """Country emissions rankings as a :class:`pandas.DataFrame`.
+
+    Accepts the same arguments as :func:`rank_countries`; one row per
+    country, ordered by rank.
+    """
+    import pandas as pd
+
+    return pd.DataFrame(rank_countries(**filters).get("rankings") or [])
