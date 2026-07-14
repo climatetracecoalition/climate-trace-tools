@@ -58,7 +58,7 @@ Every function also accepts arbitrary extra `**kwargs`, which are passed through
 | --- | --- | --- |
 | `get_aggregate_emissions(year, gas, sectors, subsectors, gadm_id, city_id, country_group, continent, owner_ids)` | `GET /v7/sources/emissions` | Aggregate emissions totals for a filtered slice of the data. |
 | `get_sources(year, gas, sectors, subsectors, gadm_id, city_id, country_group, continent, owner_ids, limit, offset)` | `GET /v7/sources` | Individual emissions sources (assets) ranked by emissions. |
-| `get_source(source_id, start, end, time_granularity, gas)` | `GET /v7/sources/{id}` | One source by id, with an emissions time series. |
+| `get_source(source_id, start, end, time_granularity, gas)` | `GET /v7/sources/{id}` | One source by id, with an emissions time series over `start`/`end`, aggregated per `time_granularity` (`"month"` or `"year"`). |
 | `rank_countries(gas, start, end, sectors, subsectors, country_group, continent)` | `GET /v7/rankings/countries` | Rank countries by emissions over a time range. |
 
 ### Administrative areas

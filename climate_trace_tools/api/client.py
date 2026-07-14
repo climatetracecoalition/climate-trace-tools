@@ -189,7 +189,7 @@ def get_source(source_id, start=None, end=None, time_granularity=None, gas=None,
         Time range bounds (minimum "2021-01-01"). Supports year ("2025"),
         month ("2025-01") or day ("2025-01-31") granularity.
     time_granularity : str, optional
-        Unit for aggregating emissions over the range (e.g. "year", "month").
+        Unit for aggregating emissions over the range: "month" or "year".
     gas : str, optional
         Gas code. See :func:`list_gases`.
 
