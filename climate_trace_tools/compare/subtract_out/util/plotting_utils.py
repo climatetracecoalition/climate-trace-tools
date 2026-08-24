@@ -3,7 +3,7 @@ from climate_trace_tools.compare.subtract_out.util.constants import (
     get_gas_title,
     get_country_title,
 )
-from climate_trace_tools.compare.subtract_out.util.country_lists import (
+from climate_trace_tools.compare.country_lists import (
     countries_annex1,
     countries_nonannex1,
 )
