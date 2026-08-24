@@ -20,6 +20,18 @@
     "cait": [
       "Electricity/Heat",
       "Fugitive Emissions"
+    ],
+    "ceds": [
+      "1A1a_Electricity-autoproducer",
+      "1A1a_Electricity-public",
+      "1A1a_Heat-production",
+      "1A1bc_Other-transformation",
+      "1A5_Other-unspecified",
+      "1B1_Fugitive-solid-fuels",
+      "1B2_Fugitive-petr",
+      "1B2b_Fugitive-NG-prod",
+      "1B2d_Fugitive-other-energy",
+      "1B2b_Fugitive-NG-distr"
     ]
   },
   "Transport": {
@@ -42,6 +54,16 @@
     "cait": [
       "Transportation",
       "Bunker Fuels"
+    ],
+    "ceds": [
+      "1A3aii_Domestic-aviation",
+      "1A3ai_International-aviation",
+      "1A3dii_Domestic-navigation",
+      "1A3di_International-shipping",
+      "1A3di_Oil_Tanker_Loading",
+      "1A3b_Road",
+      "1A3c_Rail",
+      "1A3eii_Other-transp"
     ]
   },
   "Buildings": {
@@ -57,6 +79,11 @@
     "cait": [
       "Building",
       "Other Fuel Consumption"
+    ],
+    "ceds": [
+      "1A4b_Residential",
+      "1A4a_Commercial-institutional",
+      "1A4c_Agriculture-forestry-fishing"
     ]
   },
   "Manufacturing and Industrial Processes": {
@@ -65,7 +92,7 @@
       "petrochemical-steam-cracking",
       "chemicals",
       "other-chemicals",
-      "steel",
+      "iron-and-steel",
       "aluminum",
       "other-metals",
       "fluorinated-gases",
@@ -99,6 +126,35 @@
     "cait": [
       "Industrial Processes",
       "Manufacturing/Construction"
+    ],
+    "ceds": [
+      "2A1_Cement-production",
+      "1A2a_Ind-Comb-Iron-steel",
+      "2C1_Iron-steel-alloy-prod",
+      "1A2b_Ind-Comb-Non-ferrous-metals",
+      "2C3_Aluminum-production",
+      "2C4_Non-Ferrous-other-metals",
+      "1A2c_Ind-Comb-Chemicals",
+      "2B_Chemical-industry",
+      "2B2_Chemicals-Nitric-acid",
+      "2B3_Chemicals-Adipic-acid",
+      "1A2d_Ind-Comb-Pulp-paper",
+      "1A2g_Ind-Comb-mining-quarying",
+      "1A2e_Ind-Comb-Food-tobacco",
+      "1A2g_Ind-Comb-textile-leather",
+      "1A2g_Ind-Comb-wood-products",
+      "2A2_Lime-production",
+      "2Ax_Other-minerals",
+      "1A2f_Ind-Comb-Non-metalic-minerals",
+      "1A2g_Ind-Comb-Construction",
+      "1A2g_Ind-Comb-machinery",
+      "1A2g_Ind-Comb-other",
+      "1A2g_Ind-Comb-transpequip",
+      "2D_Chemical-products-manufacture-processing",
+      "2D_Degreasing-Cleaning",
+      "2D_Other-product-use",
+      "2D_Paint-application",
+      "2H_Pulp-and-paper-food-beverage-wood"
     ]
   },
   "Agriculture": {
@@ -131,7 +187,7 @@
       "Agriculture"
     ],
     "faostat": [
-      " Drained organic soils (CO2)",
+      "Drained organic soils (CO2)",
       "Drained organic soils (N2O)",
       "",
       "Crop Residues",
@@ -144,6 +200,14 @@
       "Manure applied to Soils (CH4)",
       "Manure left on Pasture (N2O),",
       "Synthetic Fertilizers"
+    ],
+    "ceds": [
+      "3E_Enteric-fermentation",
+      "3B_Manure-management",
+      "3D_Rice-Cultivation",
+      "3D_Soil-emissions",
+      "3I_Agriculture-other",
+      "7BC_Indirect-N2O-non-agricultural-N"
     ]
   },
   "Waste": {
@@ -162,6 +226,12 @@
     ],
     "cait": [
       "Waste"
+    ],
+    "ceds": [
+      "5A_Solid-waste-disposal",
+      "5E_Other-waste-handling",
+      "5C_Waste-combustion",
+      "5D_Wastewater-handling"
     ]
   },
   "Forestry and Land Use Change": {

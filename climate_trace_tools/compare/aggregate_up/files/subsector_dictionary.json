@@ -96,7 +96,7 @@
           "iron-mining",
           "copper-mining",
           "other-manufacturing",
-          "steel",
+          "iron-and-steel",
           "aluminum",
           "other-metals",
           "chemicals",
@@ -193,7 +193,7 @@
         "climate-trace": [
           "cement",
           "chemicals",
-          "steel",
+          "iron-and-steel",
           "aluminum",
           "fluorinated-gases",
           "petrochemicals",
@@ -224,6 +224,373 @@
         ],
         "climate-trace": [
           "road-transportation"
+        ]
+      }
+    }
+  },
+  "ceds": {
+    "Agriculture": {
+      "Direct Nitrogen Emissions from Agricultural Soils ": {
+        "ceds": [
+          "3D_Soil-emissions"
+        ],
+        "climate-trace": [
+          "synthetic-fertilizer-application",
+          "manure-applied-to-soils",
+          "crop-residues",
+          "net-soil-organic-carbon"
+        ]
+      },
+      "Enteric Fermentation": {
+        "ceds": [
+          "3E_Enteric-fermentation"
+        ],
+        "climate-trace": [
+          "enteric-fermentation-cattle-operation",
+          "enteric-fermentation-cattle-pasture",
+          "enteric-fermentation-other"
+        ]
+      },
+      "Manure Management": {
+        "ceds": [
+          "3B_Manure-management"
+        ],
+        "climate-trace": [
+          "manure-management-cattle-operation",
+          "manure-management-other",
+          "manure-left-on-pasture-cattle"
+        ]
+      },
+      "Other Agriculture": {
+        "ceds": [
+          "3I_Agriculture-other",
+          "7BC_Indirect-N2O-non-agricultural-N"
+        ],
+        "climate-trace": [
+          "other-agricultural-soil-emissions"
+        ]
+      },
+      "Rice Cultivation": {
+        "ceds": [
+          "3D_Rice-Cultivation"
+        ],
+        "climate-trace": [
+          "rice-cultivation"
+        ]
+      }
+    },
+    "Buildings": {
+      "Non-Residential Onsite Fuel Usage": {
+        "ceds": [
+          "1A4a_Commercial-institutional"
+        ],
+        "climate-trace": [
+          "non-residential-onsite-fuel-usage"
+        ]
+      },
+      "Other Onsite Fuel Usage": {
+        "ceds": [
+          "1A4c_Agriculture-forestry-fishing"
+        ],
+        "climate-trace": [
+          "other-onsite-fuel-usage"
+        ]
+      },
+      "Residential Onsite Fuel Usage": {
+        "ceds": [
+          "1A4b_Residential"
+        ],
+        "climate-trace": [
+          "residential-onsite-fuel-usage"
+        ]
+      }
+    },
+    "Energy Industries and Fugitive Emissions": {
+      "Electricity Generation": {
+        "ceds": [
+          "1A1a_Electricity-autoproducer",
+          "1A1a_Electricity-public"
+        ],
+        "climate-trace": [
+          "electricity-generation"
+        ]
+      },
+      "Heat Plants": {
+        "ceds": [
+          "1A1a_Heat-production"
+        ],
+        "climate-trace": [
+          "heat-plants"
+        ]
+      },
+      "Oil and Gas Production and Transport": {
+        "ceds": [
+          "1B2_Fugitive-petr",
+          "1B2b_Fugitive-NG-prod"
+        ],
+        "climate-trace": [
+          "oil-and-gas-production",
+          "oil-and-gas-transport"
+        ]
+      },
+      "Other Energy Use": {
+        "ceds": [
+          "1A1bc_Other-transformation",
+          "1A5_Other-unspecified"
+        ],
+        "climate-trace": [
+          "oil-and-gas-refining",
+          "other-energy-use"
+        ]
+      },
+      "Other Fossil Fuel Operations": {
+        "ceds": [
+          "1B2d_Fugitive-other-energy",
+          "1B2b_Fugitive-NG-distr"
+        ],
+        "climate-trace": [
+          "other-fossil-fuel-operations"
+        ]
+      },
+      "Solid Fuels": {
+        "ceds": [
+          "1B1_Fugitive-solid-fuels"
+        ],
+        "climate-trace": [
+          "coal-mining",
+          "other-solid-fuels"
+        ]
+      }
+    },
+    "Forestry and Land Use Change": {
+      "Biomass Burning": {
+        "ceds": [
+          ""
+        ],
+        "climate-trace": [
+          "forest-land-fires",
+          "shrubgrass-fires",
+          "wetland-fires",
+          "cropland-fires",
+          ""
+        ]
+      },
+      "Emissions and Removals Excluding Biomass Burning": {
+        "ceds": [
+          ""
+        ],
+        "climate-trace": [
+          "forest-land-clearing",
+          "forest-land-degradation",
+          "removals",
+          "water-reservoirs"
+        ]
+      }
+    },
+    "Manufacturing and Industrial Processes": {
+      "Cement": {
+        "ceds": [
+          "2A1_Cement-production"
+        ],
+        "climate-trace": [
+          "cement"
+        ]
+      },
+      "Chemicals": {
+        "ceds": [
+          "1A2c_Ind-Comb-Chemicals",
+          "2B_Chemical-industry",
+          "2B2_Chemicals-Nitric-acid",
+          "2B3_Chemicals-Adipic-acid"
+        ],
+        "climate-trace": [
+          "chemicals",
+          "petrochemical-steam-cracking",
+          "other-chemicals"
+        ]
+      },
+      "Food Beverage and Tobacco": {
+        "ceds": [
+          "1A2e_Ind-Comb-Food-tobacco"
+        ],
+        "climate-trace": [
+          "food-beverage-tobacco"
+        ]
+      },
+      "Glass": {
+        "ceds": [
+          "2Ax_Other-minerals"
+        ],
+        "climate-trace": [
+          "glass"
+        ]
+      },
+      "Lime": {
+        "ceds": [
+          "2A2_Lime-production"
+        ],
+        "climate-trace": [
+          "lime"
+        ]
+      },
+      "Metal Industry": {
+        "ceds": [
+          "1A2b_Ind-Comb-Non-ferrous-metals",
+          "2C3_Aluminum-production",
+          "2C4_Non-Ferrous-other-metals"
+        ],
+        "climate-trace": [
+          "aluminum",
+          "other-metals"
+        ]
+      },
+      "Mining and Quarrying": {
+        "ceds": [
+          "1A2g_Ind-Comb-mining-quarying"
+        ],
+        "climate-trace": [
+          "sand-quarrying",
+          "rock-quarrying",
+          "bauxite-mining",
+          "iron-mining",
+          "copper-mining",
+          "other-mining-quarrying"
+        ]
+      },
+      "Other Manufacturing": {
+        "ceds": [
+          "1A2f_Ind-Comb-Non-metalic-minerals",
+          "1A2g_Ind-Comb-Construction",
+          "1A2g_Ind-Comb-machinery",
+          "1A2g_Ind-Comb-other",
+          "1A2g_Ind-Comb-transpequip",
+          "2D_Chemical-products-manufacture-processing",
+          "2D_Degreasing-Cleaning",
+          "2D_Other-product-use",
+          "2D_Paint-application",
+          "2H_Pulp-and-paper-food-beverage-wood"
+        ],
+        "climate-trace": [
+          "other-manufacturing",
+          "fluorinated-gases"
+        ]
+      },
+      "Pulp and Paper": {
+        "ceds": [
+          "1A2d_Ind-Comb-Pulp-paper"
+        ],
+        "climate-trace": [
+          "pulp-and-paper"
+        ]
+      },
+      "Textiles Leather and Apparel": {
+        "ceds": [
+          "1A2g_Ind-Comb-textile-leather"
+        ],
+        "climate-trace": [
+          "textiles-leather-apparel"
+        ]
+      },
+      "Wood and Wood Products": {
+        "ceds": [
+          "1A2g_Ind-Comb-wood-products"
+        ],
+        "climate-trace": [
+          "wood-and-wood-products"
+        ]
+      }
+    },
+    "Transport": {
+      "Domestic Aviation": {
+        "ceds": [
+          "1A3aii_Domestic-aviation"
+        ],
+        "climate-trace": [
+          "domestic-aviation"
+        ]
+      },
+      "Domestic Shipping": {
+        "ceds": [
+          "1A3dii_Domestic-navigation"
+        ],
+        "climate-trace": [
+          "domestic-shipping"
+        ]
+      },
+      "International Aviation": {
+        "ceds": [
+          "1A3ai_International-aviation"
+        ],
+        "climate-trace": [
+          "international-aviation"
+        ]
+      },
+      "International Shipping": {
+        "ceds": [
+          "1A3di_International-shipping",
+          "1A3di_Oil_Tanker_Loading"
+        ],
+        "climate-trace": [
+          "international-shipping"
+        ]
+      },
+      "Other Transport": {
+        "ceds": [
+          "1A3eii_Other-transp"
+        ],
+        "climate-trace": [
+          "other-transport"
+        ]
+      },
+      "Railways": {
+        "ceds": [
+          "1A3c_Rail"
+        ],
+        "climate-trace": [
+          "railways"
+        ]
+      },
+      "Road Transportation": {
+        "ceds": [
+          "1A3b_Road"
+        ],
+        "climate-trace": [
+          "road-transportation"
+        ]
+      }
+    },
+    "Waste": {
+      "Incineration and Open Burning of Waste": {
+        "ceds": [
+          "5C_Waste-combustion"
+        ],
+        "climate-trace": [
+          "incineration-and-open-burning-of-waste"
+        ]
+      },
+      "Other Waste": {
+        "ceds": [
+          "5E_Other-waste-handling"
+        ],
+        "climate-trace": [
+          "biological-treatment-of-solid-waste-and-biogenic"
+        ]
+      },
+      "Solid Waste Disposal": {
+        "ceds": [
+          "5A_Solid-waste-disposal"
+        ],
+        "climate-trace": [
+          "solid-waste-disposal"
+        ]
+      },
+      "Wastewater Treatment and Discharge": {
+        "ceds": [
+          "5D_Wastewater-handling"
+        ],
+        "climate-trace": [
+          "industrial-wastewater-treatment-and-discharge",
+          "domestic-wastewater-treatment-and-discharge"
         ]
       }
     }
@@ -399,7 +766,7 @@
       },
       "Metal Industry": {
         "climate-trace": [
-          "steel",
+          "iron-and-steel",
           "aluminum",
           "other-metals"
         ],
@@ -572,7 +939,7 @@
           "net-soil-organic-carbon"
         ],
         "faostat": [
-          " Drained organic soils (CO2)",
+          "Drained organic soils (CO2)",
           "Drained organic soils (N2O)",
           ""
         ]
@@ -647,7 +1014,7 @@
           "railways",
           "other-transport",
           "chemicals",
-          "steel",
+          "iron-and-steel",
           "aluminum",
           "petrochemicals",
           "pulp-and-paper",
@@ -817,7 +1184,7 @@
         "climate-trace": [
           "cement",
           "chemicals",
-          "steel",
+          "iron-and-steel",
           "aluminum",
           "fluorinated-gases",
           "petrochemicals",
@@ -865,7 +1232,7 @@
           "other-agricultural-soil-emissions",
           "cropland-fires",
           "crop-residues",
-          "manu-applied-to-soils",
+          "manure-applied-to-soils",
           "net-soil-organic-carbon"
         ],
         "unfccc_annex_1": [
@@ -1234,7 +1601,7 @@
           "petrochemical-steam-cracking",
           "cement",
           "chemicals",
-          "steel",
+          "iron-and-steel",
           "aluminum",
           "pulp-and-paper",
           "lime",
@@ -1303,7 +1670,7 @@
       },
       "Steel": {
         "climate-trace": [
-          "steel"
+          "iron-and-steel"
         ],
         "unfccc_annex_1": [
           "1.A.2.a  Iron and Steel",
