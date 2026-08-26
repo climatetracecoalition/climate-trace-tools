@@ -15,6 +15,7 @@ tabs = [
     "faostat-aggregate-up",
     "carbon-monitor-aggregate-up",
     "gcp-aggregate-up",
+    "ceds-aggregate-up",
 ]
 
 inventory_titles = {
@@ -25,6 +26,7 @@ inventory_titles = {
     "faostat-aggregate-up": "faostat",
     "carbon-monitor-aggregate-up": "carbon-monitor",
     "gcp-aggregate-up": "gcp",
+    "ceds-aggregate-up": "ceds",
 }
 
 

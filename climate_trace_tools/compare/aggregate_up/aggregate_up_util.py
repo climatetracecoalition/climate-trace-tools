@@ -165,6 +165,8 @@ def inventory_color_map():
         "unfccc_non_annex_1": "darkgray",
         "pik-tp": "goldenrod",
         "cait": "darkmagenta",
+        "ceds": "orange",
+        "faostat": "seagreen",
     }
 
     return color_dict
@@ -200,6 +202,8 @@ def get_tick_label_dict():
         "pik-tp": "PIK-TP",
         "gcp": "GCP",
         "carbon-monitor": "Carbon Monitor",
+        "ceds": "CEDS",
+        "faostat": "FAOSTAT",
     }
     return tick_label_dict
 
