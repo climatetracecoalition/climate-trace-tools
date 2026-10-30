@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import re
 
 # Specify the path to the XLSX file with the comparison dictionaries.
 # and then put it in the spreadsheets directory within this directory
@@ -9,6 +10,7 @@ xlsx_file_path = "files/aggregate-up-csv-crosswalks.xlsx"
 # Define the list of tabs in your XLSX (assuming each tab corresponds to a separate sheet)
 tabs = [
     "unfccc-aggregate-up",
+    "unfccc-crt-aggregate-up",
     "edgar-aggregate-up",
     "cait-aggregate-up",
     "pik-tp-aggregate-up",
@@ -20,6 +22,7 @@ tabs = [
 
 inventory_titles = {
     "unfccc-aggregate-up": "unfccc",
+    "unfccc-crt-aggregate-up": "unfccc_crt",
     "edgar-aggregate-up": "edgar",
     "cait-aggregate-up": "cait",
     "pik-tp-aggregate-up": "pik-tp",
@@ -30,7 +33,18 @@ inventory_titles = {
 }
 
 
-def get_sector_list(raw_list):
+# UNFCCC tabs hold separate annex 1 / non annex 1 columns; values are the reporting_entity prefix
+unfccc_tabs = {
+    "unfccc-aggregate-up": "unfccc",
+    "unfccc-crt-aggregate-up": "unfccc_crt",
+}
+
+
+def get_sector_list(raw_list, tab_name=None):
+    # CRT sector names can contain ", " themselves (e.g. "1.A.2.d. Pulp, paper and print"), so only
+    # split where the next item starts with a sector code
+    if tab_name == "unfccc-crt-aggregate-up":
+        return re.split(r",\s*(?=\d+\.)", raw_list)
     return raw_list.split(", ")
 
 
@@ -55,30 +69,38 @@ def generate_sector_comparison_dict():
             if comp_sector not in sector_map:
                 sector_map[comp_sector] = {}
             filtered_df = df[df["Comparison Sector"] == comp_sector]
-            if tab_name == "unfccc-aggregate-up":
-                filtered_df = filtered_df[filtered_df["Comparison Subsector"].isna()]
+            if tab_name in unfccc_tabs:
+                # UNFCCC sectors are hierarchical, so only use the sector total row (subsector left
+                # blank or repeating the sector name) to avoid double counting its subsectors
+                filtered_df = filtered_df[
+                    filtered_df["Comparison Subsector"].isna()
+                    | (filtered_df["Comparison Subsector"] == filtered_df["Comparison Sector"])
+                ]
 
             ct_sectors = []
             inv_sectors = []
-            if tab_name == "unfccc-aggregate-up":
+            if tab_name in unfccc_tabs:
                 inv_2_sectors = []
 
             for index, row in filtered_df.iterrows():
-                if pd.notna(row[2]):
+                # Climate TRACE sector lists come from the other inventory tabs; the UNFCCC tabs are
+                # read first, so letting their total rows set them would override every inventory's
+                if pd.notna(row[2]) and tab_name not in unfccc_tabs:
                     ct_sectors = ct_sectors + get_sector_list(row[2])
                 if pd.notna(row[3]):
-                    inv_sectors = inv_sectors + get_sector_list(row[3])
-                if tab_name == "unfccc-aggregate-up":
+                    inv_sectors = inv_sectors + get_sector_list(row[3], tab_name)
+                if tab_name in unfccc_tabs:
                     if pd.notna(row[4]):
-                        inv_2_sectors = inv_2_sectors + get_sector_list(row[4])
+                        inv_2_sectors = inv_2_sectors + get_sector_list(row[4], tab_name)
 
             if "climate-trace" not in sector_map[comp_sector] and len(ct_sectors) > 0:
                 sector_map[comp_sector]["climate-trace"] = ct_sectors
-            if tab_name == "unfccc-aggregate-up":
+            if tab_name in unfccc_tabs:
+                prefix = unfccc_tabs[tab_name]
                 if len(inv_sectors) > 0:
-                    sector_map[comp_sector]["unfccc_annex_1"] = inv_sectors
+                    sector_map[comp_sector][f"{prefix}_annex_1"] = inv_sectors
                 if len(inv_2_sectors) > 0:
-                    sector_map[comp_sector]["unfccc_non_annex_1"] = inv_2_sectors
+                    sector_map[comp_sector][f"{prefix}_non_annex_1"] = inv_2_sectors
             else:
                 if len(inv_sectors) > 0:
                     sector_map[comp_sector][inventory_titles[tab_name]] = inv_sectors
@@ -160,12 +182,14 @@ def generate_subsector_comparison_dict(tab_name):
                 if row[3] != row[3]:
                     inv_sectors = [""]
                 else:
-                    inv_sectors = get_sector_list(row[3])
+                    inv_sectors = get_sector_list(row[3], tab_name)
             if subsector not in subsector_map[comp_sector]:
                 subsector_map[comp_sector][subsector] = {}
             subsector_map[comp_sector][subsector]["climate-trace"] = ct_sectors
-            if tab_name == "unfccc-aggregate-up":
-                subsector_map[comp_sector][subsector]["unfccc_annex_1"] = inv_sectors
+            if tab_name in unfccc_tabs:
+                subsector_map[comp_sector][subsector][
+                    f"{unfccc_tabs[tab_name]}_annex_1"
+                ] = inv_sectors
             else:
                 subsector_map[comp_sector][subsector][
                     inventory_titles[tab_name]
