@@ -15,9 +15,10 @@ fonts = {"family": "Foros, medium"}
 class CountryPlotting:
     def __init__(self, iso3_country, data_handler=CsvDataHandler()):
         """
-        Pulls data for all three inventories, climate-trace, unfccc_non_annex_1, and unfccc_annex_1
-        for the chosen country. Within functions the appropriate unfccc inventory is selected based
-        on chosen country.
+        Pulls data for all inventories, including both versions of UNFCCC data (the original
+        unfccc_annex_1 / unfccc_non_annex_1 submissions and the newer CRT submissions,
+        unfccc_crt_annex_1 / unfccc_crt_non_annex_1), for the chosen country. Within functions the
+        appropriate annex 1 or non annex 1 inventory is selected based on chosen country.
         """
 
         if iso3_country:
@@ -34,6 +35,12 @@ class CountryPlotting:
         self.unfccc_annex_1 = data_handler.load_by_sector_country(
             "unfccc_annex_1", iso3_country
         )
+        self.unfccc_crt_non_annex_1 = data_handler.load_by_sector_country(
+            "unfccc_crt_non_annex_1", iso3_country
+        )
+        self.unfccc_crt_annex_1 = data_handler.load_by_sector_country(
+            "unfccc_crt_annex_1", iso3_country
+        )
         self.edgar = data_handler.load_by_sector_country("edgar", iso3_country)
         self.ceds = data_handler.load_by_sector_country("ceds", iso3_country)
         self.faostat = data_handler.load_by_sector_country("faostat", iso3_country)
@@ -44,6 +51,8 @@ class CountryPlotting:
         )
         self.non_annex_iso3 = self.unfccc_non_annex_1["iso3_country"].unique()
         self.annex_iso3 = self.unfccc_annex_1["iso3_country"].unique()
+        self.crt_non_annex_iso3 = self.unfccc_crt_non_annex_1["iso3_country"].unique()
+        self.crt_annex_iso3 = self.unfccc_crt_annex_1["iso3_country"].unique()
 
         self.gas_gwps = get_ghg_gwps_list()
         self.tick_label_dict = get_tick_label_dict()
@@ -85,6 +94,7 @@ class CountryPlotting:
         CarbonMonitor=False,
         CEDS=False,
         FAOSTAT=False,
+        UNFCCC_CRT=False,
     ):
         if ClimateTRACE:
             return self.climate_trace["start_time"].max()
@@ -93,6 +103,11 @@ class CountryPlotting:
                 return self.unfccc_annex_1["start_time"].max()
             else:
                 return self.unfccc_non_annex_1["start_time"].max()
+        elif UNFCCC_CRT:
+            if self.country in self.crt_annex_iso3:
+                return self.unfccc_crt_annex_1["start_time"].max()
+            else:
+                return self.unfccc_crt_non_annex_1["start_time"].max()
         elif EDGAR:
             return self.edgar["start_time"].max()
         elif CEDS:
@@ -119,11 +134,12 @@ class CountryPlotting:
         plotting_dict,
         CEDS=False,
         FAOSTAT=False,
+        UNFCCC_CRT=False,
     ):
         """
         Returns dictionary that includes requested inventories with parent sector mappings + requested data years
 
-        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK','GCP', 'CarbonMonitor', 'CEDS', 'FAOSTAT' should be booleans
+        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK','GCP', 'CarbonMonitor', 'CEDS', 'FAOSTAT', 'UNFCCC_CRT' should be booleans
         indicating whether to include that inventory's data. Note: PIK, GCP, and CarbonMonitor can only be compared to
         Climate TRACE, so only one of these inputs can be True in addition to Climate TRACE. ClimateTRACE, UNFCCC,
         EDGAR, CAIT, CEDS, and FAOSTAT can all we plotted on the same graph, thus all 6 can be marked as TRUE.
@@ -152,6 +168,25 @@ class CountryPlotting:
                     all_sector_unfccc["parent_sector"] != "Forestry and Land Use Change"
                 ]
             comp_dict[unfccc_name] = all_sector_unfccc
+
+        if UNFCCC_CRT:
+            # determine if country input is annex 1 or non annex 1
+            if self.crt_annex_iso3.size > 0:
+                unfccc_crt_name = "unfccc_crt_annex_1"
+                unfccc_crt_df = calculate_gwp(self.unfccc_crt_annex_1)
+            else:
+                unfccc_crt_name = "unfccc_crt_non_annex_1"
+                unfccc_crt_df = calculate_gwp(self.unfccc_crt_non_annex_1)
+            # map the parent sector onto the data imported from csvs for later aggregation
+            all_sector_unfccc_crt = parent_sector_map(
+                self.country, unfccc_crt_name, unfccc_crt_df, plotting_dict
+            )
+            if not lulucf:
+                all_sector_unfccc_crt = all_sector_unfccc_crt.loc[
+                    all_sector_unfccc_crt["parent_sector"]
+                    != "Forestry and Land Use Change"
+                ]
+            comp_dict[unfccc_crt_name] = all_sector_unfccc_crt
 
         if EDGAR:
             edgar_mask = self.edgar["gas"].isin(
@@ -249,6 +284,7 @@ class CountryPlotting:
         CAIT=False,
         CEDS=False,
         FAOSTAT=False,
+        UNFCCC_CRT=False,
         color_dict=inventory_color_map(),
         lulucf=False,
     ):
@@ -260,7 +296,7 @@ class CountryPlotting:
         'unfccc_year' should be a numeric value indicating which unfccc reporting year to compare to. Many non-annex 1
         countries will not have inventories more recent than 2015.
 
-        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'CEDS', 'FAOSTAT' should be booleans indicating whether to
+        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'CEDS', 'FAOSTAT', 'UNFCCC_CRT' should be booleans indicating whether to
         include that inventory's data. Note: PIK can only be compared to Climate TRACE, so only
         one of these inputs can be True in addition to Climate TRACE. ClimateTRACE, UNFCCC, EDGAR, CAIT, CEDS, and
         FAOSTAT can all we plotted on the same graph, thus all 6 can be marked as TRUE.
@@ -273,7 +309,7 @@ class CountryPlotting:
         'color_dict' and 'plotting_dict' currently default to functions in plotting_dictionary,
         but in future one can use a custom dictionary if desired by adding to plotting_dictionary file.
         """
-        if not (UNFCCC | EDGAR | CAIT | PIK | CEDS | FAOSTAT):
+        if not (UNFCCC | UNFCCC_CRT | EDGAR | CAIT | PIK | CEDS | FAOSTAT):
             raise ValueError("An inventory must be selected for comparison")
 
         # select correct plotting dict based on inventories chosen for comparison
@@ -296,6 +332,7 @@ class CountryPlotting:
             plotting_dict,
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
+            UNFCCC_CRT=UNFCCC_CRT,
         )
 
         fig = go.Figure().update_layout(font=fonts)
@@ -304,7 +341,7 @@ class CountryPlotting:
 
         for inventory in comp_dict:
             data = comp_dict[inventory]  # isolate data for specific inventory in loop
-            if (inventory == "unfccc_non_annex_1") & (unfccc_year is not False):
+            if (inventory in ["unfccc_non_annex_1", "unfccc_crt_non_annex_1"]) & (unfccc_year is not False):
                 mask = (
                     (data["year"] == unfccc_year)
                     & (data["gas"] == "co2e_100yr")
@@ -368,6 +405,7 @@ class CountryPlotting:
         CarbonMonitor=False,
         CEDS=False,
         FAOSTAT=False,
+        UNFCCC_CRT=False,
         color_dict=sector_color_map(),
         lulucf=False,
     ):
@@ -377,7 +415,7 @@ class CountryPlotting:
 
         'year' should be a numberic value.
 
-        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP, 'CarbonMonitor', 'CEDS', and 'FAOSTAT' should be
+        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP, 'CarbonMonitor', 'CEDS', and 'FAOSTAT', 'UNFCCC_CRT' should be
         booleans indicating whether to include that inventory's data. Note: PIK, GCP, and Carbon Monitor can only be
         compared to Climate TRACE, so only one of these inputs can be True in addition to Climate TRACE. ClimateTRACE,
         UNFCCC, EDGAR, CAIT, CEDS, and FAOSTAT can all we plotted on the same graph, thus all 6 can be marked as TRUE.
@@ -388,7 +426,7 @@ class CountryPlotting:
         'color_dict' and 'plotting_dict' currently default to functions in plotting_dictionary,
         but in future one can use a custom dictionary if desired by adding to plotting_dictionary file.
         """
-        if not (UNFCCC | EDGAR | CAIT | PIK | GCP | CarbonMonitor | CEDS | FAOSTAT):
+        if not (UNFCCC | UNFCCC_CRT | EDGAR | CAIT | PIK | GCP | CarbonMonitor | CEDS | FAOSTAT):
             raise ValueError("An inventory must be selected for comparison")
 
         # select correct plotting dict based on inventories chosen for comparison
@@ -413,6 +451,7 @@ class CountryPlotting:
             plotting_dict,
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
+            UNFCCC_CRT=UNFCCC_CRT,
         )
 
         fig = go.Figure().update_layout(font=fonts)
@@ -430,7 +469,7 @@ class CountryPlotting:
                 continue
             for inventory in comp_dict:
                 data = comp_dict[inventory]
-                if (inventory == "unfccc_non_annex_1") & (unfccc_year is not False):
+                if (inventory in ["unfccc_non_annex_1", "unfccc_crt_non_annex_1"]) & (unfccc_year is not False):
                     mask = (
                         (data["parent_sector"] == sector)
                         & (data["year"] == unfccc_year)
@@ -530,6 +569,7 @@ class CountryPlotting:
         CarbonMonitor=False,
         CEDS=False,
         FAOSTAT=False,
+        UNFCCC_CRT=False,
         color_dict=subsector_color_map(),
     ):
         """
@@ -537,7 +577,7 @@ class CountryPlotting:
 
         'year' should be a numberic value.
 
-        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP, 'CarbonMonitor', 'CEDS', and 'FAOSTAT' should be
+        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP, 'CarbonMonitor', 'CEDS', and 'FAOSTAT', 'UNFCCC_CRT' should be
         booleans indicating whether to include that inventory's data. Note, only one inventory  may be selected for
         comparison to Climate TRACE.
 
@@ -560,9 +600,9 @@ class CountryPlotting:
         but in future one can use a custom dictionary if desired by adding to aggregate_up_util.
         """
 
-        if not (UNFCCC | EDGAR | CAIT | PIK | GCP | CarbonMonitor | CEDS | FAOSTAT):
+        if not (UNFCCC | UNFCCC_CRT | EDGAR | CAIT | PIK | GCP | CarbonMonitor | CEDS | FAOSTAT):
             raise ValueError("Either UNFCCC or EDGAR must be used for comparison")
-        if sum([EDGAR, UNFCCC, CAIT, PIK, GCP, CarbonMonitor, CEDS, FAOSTAT]) > 1:
+        if sum([EDGAR, UNFCCC, UNFCCC_CRT, CAIT, PIK, GCP, CarbonMonitor, CEDS, FAOSTAT]) > 1:
             raise ValueError("Must specify only one of UNFCCC or EDGAR")
 
         # select correct plotting dict based on inventories chosen for comparison
@@ -589,11 +629,14 @@ class CountryPlotting:
             lulucf=(sector == "Forestry and Land Use Change"),
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
+            UNFCCC_CRT=UNFCCC_CRT,
         )
         fig = go.Figure().update_layout(font=fonts)
 
         if UNFCCC:
             subsector_dict = subsector_plotting_dict["unfccc"]
+        elif UNFCCC_CRT:
+            subsector_dict = subsector_plotting_dict["unfccc_crt"]
         elif EDGAR:
             subsector_dict = subsector_plotting_dict["edgar"]
         elif CAIT:
@@ -626,7 +669,7 @@ class CountryPlotting:
             for inventory in comp_dict:
                 data = comp_dict[inventory]
                 subsector_data = subsector_map(False, inventory, data, subsector_dict)
-                if (inventory == "unfccc_non_annex_1") & (unfccc_year is not False):
+                if (inventory in ["unfccc_non_annex_1", "unfccc_crt_non_annex_1"]) & (unfccc_year is not False):
                     mask = (subsector_data["year"] == unfccc_year) & (
                         subsector_data["gas"] == f"{gas}"
                     )
@@ -678,7 +721,7 @@ class CountryPlotting:
                         sector, inventory, data, subsector_dict
                     )
 
-                    if (inventory == "unfccc_non_annex_1") & (unfccc_year is not False):
+                    if (inventory in ["unfccc_non_annex_1", "unfccc_crt_non_annex_1"]) & (unfccc_year is not False):
                         mask = (
                             (subsector_data["subsector"] == subsector)
                             & (subsector_data["year"] == unfccc_year)
@@ -746,6 +789,7 @@ class CountryPlotting:
         CarbonMonitor=False,
         CEDS=False,
         FAOSTAT=False,
+        UNFCCC_CRT=False,
         color_dict=gas_color_map(),
     ):
         """
@@ -754,7 +798,7 @@ class CountryPlotting:
 
         'year' should be a numberic value.
 
-        ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP, 'CarbonMonitor', 'CEDS', and 'FAOSTAT' should be
+        ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP, 'CarbonMonitor', 'CEDS', and 'FAOSTAT', 'UNFCCC_CRT' should be
         booleans indicating whether to include that inventory's data. Note, only one inventory  may be selected for
         comparison to Climate TRACE.
 
@@ -778,10 +822,10 @@ class CountryPlotting:
         'color_dict' and 'plotting_dict' currently default to functions in plotting_dictionary,
         but in future one can use a custom dictionary if desired by adding to plotting_dictionary file.
         """
-        if not (UNFCCC | EDGAR | CEDS | FAOSTAT):
-            raise ValueError("Either UNFCCC, EDGAR, CEDS, or FAOSTAT must be used for comparison")
-        if sum([UNFCCC, EDGAR, CEDS, FAOSTAT]) > 1:
-            raise ValueError("Must specify only one of UNFCCC, EDGAR, CEDS, or FAOSTAT")
+        if not (UNFCCC | UNFCCC_CRT | EDGAR | CEDS | FAOSTAT):
+            raise ValueError("Either UNFCCC, UNFCCC_CRT, EDGAR, CEDS, or FAOSTAT must be used for comparison")
+        if sum([UNFCCC, UNFCCC_CRT, EDGAR, CEDS, FAOSTAT]) > 1:
+            raise ValueError("Must specify only one of UNFCCC, UNFCCC_CRT, EDGAR, CEDS, or FAOSTAT")
 
         if PIK:
             plotting_dict = self.comparison_sector_dictionary_pik
@@ -796,6 +840,8 @@ class CountryPlotting:
 
         if UNFCCC:
             subsector_dict = subsector_plotting_dict["unfccc"]
+        elif UNFCCC_CRT:
+            subsector_dict = subsector_plotting_dict["unfccc_crt"]
         elif EDGAR:
             subsector_dict = subsector_plotting_dict["edgar"]
         elif CAIT:
@@ -823,6 +869,7 @@ class CountryPlotting:
             lulucf=True,
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
+            UNFCCC_CRT=UNFCCC_CRT,
         )
         fig = go.Figure().update_layout(font=fonts)
 
@@ -843,7 +890,7 @@ class CountryPlotting:
                 data = comp_dict[inventory]
                 subsector_data = subsector_map(sector, inventory, data, subsector_dict)
 
-                if (inventory == "unfccc_non_annex_1") & (unfccc_year is not False):
+                if (inventory in ["unfccc_non_annex_1", "unfccc_crt_non_annex_1"]) & (unfccc_year is not False):
                     mask = (
                         (subsector_data[f"{filter_column}"] == filter_sector)
                         & (subsector_data["year"] == unfccc_year)
@@ -960,13 +1007,14 @@ class CountryPlotting:
         CarbonMonitor=False,
         CEDS=False,
         FAOSTAT=False,
+        UNFCCC_CRT=False,
         color_dict=sector_color_map(),
         lulucf=False,
     ):
         """
         Returns barchart for chosen inventory data comparing emissions for ALL sectors across chosen range of years.
 
-        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP', 'CarbonMonitor', 'CEDS', or 'FAOSTAT' are booleans to
+        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP', 'CarbonMonitor', 'CEDS', or 'FAOSTAT', 'UNFCCC_CRT' are booleans to
         select which inventory you want to plot. Annex or non-annex is automatically determined in function based on
         chosen country, user does not need to specify.
 
@@ -997,6 +1045,7 @@ class CountryPlotting:
             plotting_dict,
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
+            UNFCCC_CRT=UNFCCC_CRT,
         )
 
         source = list(comp_dict.keys())[0]
@@ -1066,12 +1115,13 @@ class CountryPlotting:
         CarbonMonitor=False,
         CEDS=False,
         FAOSTAT=False,
+        UNFCCC_CRT=False,
         lulucf=False,
     ):
         """
         Returns barchart for chosen inventory data comparing emissions for ONE sector across chosen range of years.
 
-        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP', 'CarbonMonitor', 'CEDS', or 'FAOSTAT' are booleans to
+        'ClimateTRACE', 'UNFCCC', 'EDGAR', 'CAIT', 'PIK', 'GCP', 'CarbonMonitor', 'CEDS', or 'FAOSTAT', 'UNFCCC_CRT' are booleans to
         select which inventory you want to plot. Annex or non-annex is automatically determined in function based on
         chosen country, user does not need to specify.
 
@@ -1108,6 +1158,7 @@ class CountryPlotting:
             plotting_dict,
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
+            UNFCCC_CRT=UNFCCC_CRT,
         )
 
         source = list(comp_dict.keys())[0]

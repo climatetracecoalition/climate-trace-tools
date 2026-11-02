@@ -163,6 +163,8 @@ def inventory_color_map():
         "edgar": "#110c45",  # dark blue
         "unfccc_annex_1": "darkgray",
         "unfccc_non_annex_1": "darkgray",
+        "unfccc_crt_annex_1": "darkgray",
+        "unfccc_crt_non_annex_1": "darkgray",
         "pik-tp": "goldenrod",
         "cait": "darkmagenta",
         "ceds": "orange",
@@ -197,6 +199,8 @@ def get_tick_label_dict():
         "climate-trace": "Climate TRACE",
         "unfccc_annex_1": "UNFCCC Annex 1",
         "unfccc_non_annex_1": "UNFCCC Non-Annex 1",
+        "unfccc_crt_annex_1": "UNFCCC CRT Annex 1",
+        "unfccc_crt_non_annex_1": "UNFCCC CRT Non-Annex 1",
         "edgar": "Edgar",
         "cait": "CAIT",
         "pik-tp": "PIK-TP",
