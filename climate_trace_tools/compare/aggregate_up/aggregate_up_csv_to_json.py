@@ -45,6 +45,10 @@ def get_sector_list(raw_list, tab_name=None):
     # split where the next item starts with a sector code
     if tab_name == "unfccc-crt-aggregate-up":
         return re.split(r",\s*(?=\d+\.)", raw_list)
+    # the original UNFCCC tab has the same issue (e.g. "1.A.2.d  Pulp, Paper and Print"), but also a
+    # few names without a sector code, so split before those too
+    if tab_name == "unfccc-aggregate-up":
+        return re.split(r",\s*(?=\d+\.|International |Marine\b|Aviation\b)", raw_list)
     return raw_list.split(", ")
 
 
@@ -170,6 +174,10 @@ def generate_subsector_comparison_dict(tab_name):
             (df["Comparison Sector"] == comp_sector)
             & (pd.notna(df["Comparison Subsector"]))
         ]
+        if tab_name in unfccc_tabs:
+            # the UNFCCC sector total row (subsector repeating the sector name) only belongs in the
+            # sector comparison dict; as a subsector it would be stacked on top of its own subsectors
+            sector_df = sector_df[sector_df["Comparison Subsector"] != comp_sector]
         for index, row in sector_df.iterrows():
             subsector = row[1]
             if row[2] != row[2]:
