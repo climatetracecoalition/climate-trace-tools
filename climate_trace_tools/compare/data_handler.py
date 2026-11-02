@@ -19,10 +19,34 @@ def get_ghg_gwps_list():
     return df
 
 
-def calculate_gwp(datasourcedf):
+# AR6 methane GWPs differ for fossil and biogenic sources. Climate TRACE's own co2e uses the fossil values
+# for energy, buildings, transport and manufacturing and the biogenic values for agriculture, waste, land
+# use and fires, so other inventories' methane is converted the same way for a like-for-like comparison.
+CH4_GWPS = {
+    "fossil": {"gwp_20yr": 82.5, "gwp_100yr": 29.8},
+    "biogenic": {"gwp_20yr": 79.7, "gwp_100yr": 27.0},
+}
+BIOGENIC_CH4_SECTOR_KEYWORDS = ("Agriculture", "Waste", "Forestry", "Land Use", "Fires")
+
+
+def ch4_gwps_for_sector(sector):
+    """
+    Returns the fossil or biogenic CH4 GWPs for a comparison sector name, or None if the sector is unknown.
+    """
+    if not isinstance(sector, str):
+        return None
+    if any(keyword in sector for keyword in BIOGENIC_CH4_SECTOR_KEYWORDS):
+        return CH4_GWPS["biogenic"]
+    return CH4_GWPS["fossil"]
+
+
+def calculate_gwp(datasourcedf, sector_lookup=None):
     """
     Function calculates 100 and 20 yr GWPs for any dataset matching CT format,
     where the GWPs are missing from gases, and returns updated data frame.
+
+    'sector_lookup' optionally maps original_inventory_sector to its comparison sector, so CH4 gets the
+    fossil or biogenic GWP that matches Climate TRACE; sectors not in it use the ghgs.csv CH4 GWP.
     """
     cols = [
         "iso3_country",
@@ -55,6 +79,15 @@ def calculate_gwp(datasourcedf):
         gas_info = gas_df[gas_df["lower_designation"] == gas]
         gwp_20yr = gas_info["gwp_20yr"].values[0]
         gwp_100yr = gas_info["gwp_100yr"].values[0]
+        if gas == "ch4" and sector_lookup:
+            default_20yr, default_100yr = gwp_20yr, gwp_100yr
+            ch4_gwps = (
+                df_pivot["original_inventory_sector"]
+                .map(sector_lookup)
+                .map(ch4_gwps_for_sector)
+            )
+            gwp_20yr = ch4_gwps.map(lambda g: g["gwp_20yr"] if g else default_20yr)
+            gwp_100yr = ch4_gwps.map(lambda g: g["gwp_100yr"] if g else default_100yr)
         df_pivot["co2e_20yr"] += gwp_20yr * df_pivot[gas]
         df_pivot["co2e_100yr"] += gwp_100yr * df_pivot[gas]
 

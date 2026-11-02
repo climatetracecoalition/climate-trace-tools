@@ -4,6 +4,7 @@ from climate_trace_tools.compare.data_handler import (
     CsvDataHandler,
     get_ghg_gwps_list,
     calculate_gwp,
+    ch4_gwps_for_sector,
 )
 import pandas as pd
 import importlib.resources as pkg_resources
@@ -83,6 +84,34 @@ class CountryPlotting:
         with pkg_resources.open_text(files, "subsector_dictionary.json") as f:
             self.subsector_dictionary = json.loads(f.read())
 
+        self.sector_lookup = self.build_sector_lookup()
+
+    def build_sector_lookup(self):
+        """
+        Maps every non-Climate TRACE original_inventory_sector in the comparison dictionaries to its comparison
+        sector, so calculate_gwp can apply fossil or biogenic CH4 GWPs. No name maps to both a fossil and a
+        biogenic sector across the dictionaries, so one lookup serves every inventory.
+        """
+        sector_lookup = {}
+        for sector_dict in [
+            self.comparison_sector_dictionary,
+            self.comparison_sector_dictionary_fires,
+            self.comparison_sector_dictionary_carbon_monitor,
+            self.comparison_sector_dictionary_gcp,
+            self.comparison_sector_dictionary_pik,
+        ]:
+            for sector, inventories in sector_dict.items():
+                for inventory, names in inventories.items():
+                    if inventory != "climate-trace":
+                        sector_lookup.update({name: sector for name in names})
+        for inventory_dict in self.subsector_dictionary.values():
+            for sector, subsectors in inventory_dict.items():
+                for inventories in subsectors.values():
+                    for inventory, names in inventories.items():
+                        if inventory != "climate-trace":
+                            sector_lookup.update({name: sector for name in names if name})
+        return sector_lookup
+
     def get_latest_year_for_inventory(
         self,
         ClimateTRACE=False,
@@ -155,10 +184,10 @@ class CountryPlotting:
             # determine if country input is annex 1 or non annex 1
             if self.annex_iso3.size > 0:
                 unfccc_name = "unfccc_annex_1"
-                unfccc_df = calculate_gwp(self.unfccc_annex_1)
+                unfccc_df = calculate_gwp(self.unfccc_annex_1, self.sector_lookup)
             else:
                 unfccc_name = "unfccc_non_annex_1"
-                unfccc_df = calculate_gwp(self.unfccc_non_annex_1)
+                unfccc_df = calculate_gwp(self.unfccc_non_annex_1, self.sector_lookup)
             # map the parent sector onto the data imported from csvs for later aggregation
             all_sector_unfccc = parent_sector_map(
                 self.country, unfccc_name, unfccc_df, plotting_dict
@@ -173,10 +202,10 @@ class CountryPlotting:
             # determine if country input is annex 1 or non annex 1
             if self.crt_annex_iso3.size > 0:
                 unfccc_crt_name = "unfccc_crt_annex_1"
-                unfccc_crt_df = calculate_gwp(self.unfccc_crt_annex_1)
+                unfccc_crt_df = calculate_gwp(self.unfccc_crt_annex_1, self.sector_lookup)
             else:
                 unfccc_crt_name = "unfccc_crt_non_annex_1"
-                unfccc_crt_df = calculate_gwp(self.unfccc_crt_non_annex_1)
+                unfccc_crt_df = calculate_gwp(self.unfccc_crt_non_annex_1, self.sector_lookup)
             # map the parent sector onto the data imported from csvs for later aggregation
             all_sector_unfccc_crt = parent_sector_map(
                 self.country, unfccc_crt_name, unfccc_crt_df, plotting_dict
@@ -193,7 +222,7 @@ class CountryPlotting:
                 list(self.gas_gwps["lower_designation"])
             )
             edgar_masked = self.edgar[edgar_mask]
-            edgar_df = calculate_gwp(edgar_masked)
+            edgar_df = calculate_gwp(edgar_masked, self.sector_lookup)
             all_sector_edgar = parent_sector_map(
                 self.country, "edgar", edgar_df, plotting_dict
             )
@@ -203,7 +232,7 @@ class CountryPlotting:
         if CEDS:
             ceds_mask = self.ceds["gas"].isin(list(self.gas_gwps["lower_designation"]))
             ceds_masked = self.ceds[ceds_mask]
-            ceds_df = calculate_gwp(ceds_masked)
+            ceds_df = calculate_gwp(ceds_masked, self.sector_lookup)
             all_sector_ceds = parent_sector_map(
                 self.country, "ceds", ceds_df, plotting_dict
             )
@@ -215,7 +244,7 @@ class CountryPlotting:
                 list(self.gas_gwps["lower_designation"])
             )
             faostat_masked = self.faostat[faostat_mask]
-            faostat_df = calculate_gwp(faostat_masked)
+            faostat_df = calculate_gwp(faostat_masked, self.sector_lookup)
             all_sector_faostat = parent_sector_map(
                 self.country, "faostat", faostat_df, plotting_dict
             )
@@ -243,7 +272,7 @@ class CountryPlotting:
             comp_dict["climate-trace"] = all_sector_ct
 
         if CAIT:
-            cait_df = calculate_gwp(self.cait)
+            cait_df = calculate_gwp(self.cait, self.sector_lookup)
             all_sector_cait = parent_sector_map(
                 self.country, "cait", cait_df, plotting_dict
             )
@@ -255,7 +284,7 @@ class CountryPlotting:
             comp_dict["cait"] = all_sector_cait
 
         if PIK:
-            pik_df = calculate_gwp(self.pik_tp)
+            pik_df = calculate_gwp(self.pik_tp, self.sector_lookup)
             all_sector_pik = parent_sector_map(
                 self.country, "pik-tp", pik_df, plotting_dict
             )
@@ -266,7 +295,7 @@ class CountryPlotting:
             comp_dict["pik-tp"] = all_sector_pik
 
         if CarbonMonitor:
-            cm_df = calculate_gwp(self.carbon_monitor)
+            cm_df = calculate_gwp(self.carbon_monitor, self.sector_lookup)
             all_sector_cm = parent_sector_map(
                 self.country, "carbon-monitor", cm_df, plotting_dict
             )
@@ -885,6 +914,13 @@ class CountryPlotting:
             filter_column = "parent_sector"
             title = sector
 
+        # comparison sector shown, so CH4 gets the same fossil or biogenic GWP Climate TRACE uses for it
+        chart_sector = sector or next(
+            (s for s, subsectors in subsector_dict.items() if subsector in subsectors),
+            None,
+        )
+        chart_ch4_gwps = ch4_gwps_for_sector(chart_sector)
+
         for gas in gases:
             for inventory in comp_dict:
                 data = comp_dict[inventory]
@@ -916,6 +952,8 @@ class CountryPlotting:
                 )
                 gas_info = self.gas_gwps[self.gas_gwps["lower_designation"] == gas]
                 gwp_100yr = gas_info["gwp_100yr"].values[0]
+                if gas == "ch4" and chart_ch4_gwps:
+                    gwp_100yr = chart_ch4_gwps["gwp_100yr"]
                 total = gwp_100yr * grouped_data["emissions_quantity"]
                 fig.add_trace(
                     go.Bar(
