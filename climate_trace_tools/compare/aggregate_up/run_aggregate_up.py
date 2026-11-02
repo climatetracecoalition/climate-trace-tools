@@ -5,7 +5,7 @@ import pandas as pd
 import datetime
 
 
-# TO GET GLOBAL COMPARISON TO EDGAR, BY COUNTRY
+# TO GET GLOBAL COMPARISON TO THE CHOSEN INVENTORY (SEE `inventory` BELOW), BY COUNTRY
 # countries_all covers every ISO3 in the countries reference table, not just UNFCCC Parties,
 # so territories/dependencies (e.g. Greenland, Puerto Rico) are included in the global total too.
 # Filter out any blank/falsy entries: CsvDataHandler.load_by_sector_country only filters when
@@ -16,33 +16,24 @@ all_countries = [c for c in countries_all if c]
 frames = []
 start_year = 2015
 end_year = 2026
-inventory = 'edgar'
+# 'edgar', 'ceds', or 'unfccc_crt'
+inventory = 'unfccc_crt'
 
-# first country
-first_country = all_countries[0]
-
-first_country_instance = CountryPlotting(first_country)
-for yr in range(start_year, end_year):
-    if inventory == 'edgar':
-        _, first_country_output = first_country_instance.single_year_comparison_totals(year=yr, unfccc_year=yr, UNFCCC=False, EDGAR=True, CEDS=False, lulucf=False)
-    elif inventory == 'ceds':
-        _, first_country_output = first_country_instance.single_year_comparison_totals(year=yr, unfccc_year=yr, UNFCCC=False, EDGAR=False, CEDS=True, lulucf=False)
-    first_country_df = pd.concat(first_country_output, names=["source"]).reset_index(level=0).reset_index(drop=True)
-    # add column for country
-    first_country_df['iso3_country'] = first_country
-    frames.append(first_country_df)
-
-all_countries.remove(all_countries[0])
+inventory_flags = {
+    'edgar': dict(EDGAR=True),
+    'ceds': dict(CEDS=True),
+    'unfccc_crt': dict(UNFCCC_CRT=True),
+}
+if inventory not in inventory_flags:
+    raise ValueError(f"unknown inventory: {inventory}")
+flags = inventory_flags[inventory]
 
 # all countries and years
 for a_country in all_countries:
     print("running country:", a_country)
     a_country_instance = CountryPlotting(a_country)
     for a_year in range(start_year, end_year):
-        if inventory == 'edgar':
-            _, output_data = a_country_instance.single_year_comparison_totals(year=a_year, unfccc_year=a_year, UNFCCC=False, EDGAR=True, CEDS=False, lulucf=False)
-        elif inventory == 'ceds':
-             _, output_data = a_country_instance.single_year_comparison_totals(year=a_year, unfccc_year=a_year, UNFCCC=False, EDGAR=False, CEDS=True, lulucf=False)
+        _, output_data = a_country_instance.single_year_comparison_totals(year=a_year, unfccc_year=a_year, lulucf=False, **flags)
         a_df = pd.concat(output_data, names=["source"]).reset_index(level=0).reset_index(drop=True)
         a_df['iso3_country'] = a_country
         frames.append(a_df)
