@@ -1,5 +1,22 @@
 import json
 
+# UNFCCC data comes as separate annex 1 / non annex 1 datasets; for a global (all countries) comparison they
+# are combined under these names, whose crosswalk entries are the union of the annex 1 and non annex 1 ones
+COMBINED_DATASOURCES = {
+    "unfccc": ["unfccc_annex_1", "unfccc_non_annex_1"],
+    "unfccc_crt": ["unfccc_crt_annex_1", "unfccc_crt_non_annex_1"],
+}
+
+
+def datasource_names(crosswalk_entry, datasource):
+    """
+    Returns the inventory sector names a crosswalk entry lists for a datasource, including combined ones.
+    """
+    names = []
+    for key in COMBINED_DATASOURCES.get(datasource, [datasource]):
+        names += crosswalk_entry.get(key) or []
+    return names
+
 
 def parent_sector_map(country, datasource, datasourcedf, sector_dict):
     """
@@ -10,7 +27,7 @@ def parent_sector_map(country, datasource, datasourcedf, sector_dict):
     sector_map = {}
 
     for x in sector_dict.keys():
-        key_sectors = sector_dict.get(x, {}).get(datasource)
+        key_sectors = datasource_names(sector_dict.get(x, {}), datasource)
         if key_sectors:
             for i in key_sectors:
                 sector_map.update({i: x})
@@ -35,13 +52,13 @@ def subsector_map(parent_sector, datasource, datasourcedf, plotting_dict):
     if parent_sector:
         sector_dict = plotting_dict.get(parent_sector)
         for x in sector_dict.keys():
-            key_subsectors = sector_dict.get(x, {}).get(datasource)
+            key_subsectors = datasource_names(sector_dict.get(x, {}), datasource)
             for i in key_subsectors:
                 subsector_map.update({i: x})
     else:
         for sector, sector_dict in plotting_dict.items():
             for x in sector_dict.keys():
-                key_subsectors = sector_dict.get(x, {}).get(datasource)
+                key_subsectors = datasource_names(sector_dict.get(x, {}), datasource)
                 for i in key_subsectors:
                     subsector_map.update({i: x})
 
@@ -163,6 +180,10 @@ def inventory_color_map():
         "edgar": "#110c45",  # dark blue
         "unfccc_annex_1": "darkgray",
         "unfccc_non_annex_1": "darkgray",
+        "unfccc_crt_annex_1": "darkgray",
+        "unfccc_crt_non_annex_1": "darkgray",
+        "unfccc": "darkgray",
+        "unfccc_crt": "darkgray",
         "pik-tp": "goldenrod",
         "cait": "darkmagenta",
         "ceds": "orange",
@@ -197,6 +218,10 @@ def get_tick_label_dict():
         "climate-trace": "Climate TRACE",
         "unfccc_annex_1": "UNFCCC Annex 1",
         "unfccc_non_annex_1": "UNFCCC Non-Annex 1",
+        "unfccc_crt_annex_1": "UNFCCC CRT Annex 1",
+        "unfccc_crt_non_annex_1": "UNFCCC CRT Non-Annex 1",
+        "unfccc": "UNFCCC (Annex 1 + Non-Annex 1)",
+        "unfccc_crt": "UNFCCC CRT (Annex 1 + Non-Annex 1)",
         "edgar": "Edgar",
         "cait": "CAIT",
         "pik-tp": "PIK-TP",
