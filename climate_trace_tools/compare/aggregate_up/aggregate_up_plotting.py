@@ -168,6 +168,7 @@ class CountryPlotting:
         CEDS=False,
         FAOSTAT=False,
         UNFCCC_CRT=False,
+        match_coverage=False,
     ):
         """
         Returns dictionary that includes requested inventories with parent sector mappings + requested data years
@@ -180,6 +181,10 @@ class CountryPlotting:
         Note as of April 2024, GCP data has not been converted or uploaded so cannot be used.
 
         'lulucf' is an optional argument, defaults to False, set to 'True' if land use data desired.
+
+        'match_coverage' is an optional argument, defaults to False. Set to True (with Climate TRACE and exactly
+        one other inventory) to only keep the country-years that inventory reports, so countries missing from it
+        (e.g. without a UNFCCC submission that year) don't show up as differences.
 
         """
         comp_dict = {}
@@ -319,6 +324,26 @@ class CountryPlotting:
             )
             comp_dict["carbon-monitor"] = all_sector_cm
 
+        if match_coverage:
+            others = [inventory for inventory in comp_dict if inventory != "climate-trace"]
+            if "climate-trace" not in comp_dict or len(others) != 1:
+                raise ValueError(
+                    "match_coverage requires Climate TRACE and exactly one other inventory"
+                )
+            other = comp_dict[others[0]]
+            # country-years with reported (non-zero) emissions in a mapped sector; missing values are
+            # filled with 0 upstream, so zeros can't be told apart from years that weren't reported
+            reported = other[
+                (other["gas"] == "co2e_100yr")
+                & other["parent_sector"].notna()
+                & (other["emissions_quantity"] != 0)
+            ]
+            covered = reported[["iso3_country", "year"]].drop_duplicates()
+            for inventory in comp_dict:
+                comp_dict[inventory] = comp_dict[inventory].merge(
+                    covered, on=["iso3_country", "year"]
+                )
+
         return comp_dict
 
     def single_year_comparison_totals(
@@ -334,6 +359,7 @@ class CountryPlotting:
         UNFCCC_CRT=False,
         color_dict=inventory_color_map(),
         lulucf=False,
+        match_coverage=False,
     ):
         """
         Returns barchart for selected inventories ANNUAL TOTALS vs Climate TRACE data for a single chosen year.
@@ -380,6 +406,7 @@ class CountryPlotting:
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
             UNFCCC_CRT=UNFCCC_CRT,
+            match_coverage=match_coverage,
         )
 
         fig = go.Figure().update_layout(font=fonts)
@@ -455,6 +482,7 @@ class CountryPlotting:
         UNFCCC_CRT=False,
         color_dict=sector_color_map(),
         lulucf=False,
+        match_coverage=False,
     ):
         """
         Returns barchart for selected inventory vs Climate TRACE data for a single chosen year with breakdown
@@ -499,6 +527,7 @@ class CountryPlotting:
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
             UNFCCC_CRT=UNFCCC_CRT,
+            match_coverage=match_coverage,
         )
 
         fig = go.Figure().update_layout(font=fonts)
@@ -618,6 +647,7 @@ class CountryPlotting:
         FAOSTAT=False,
         UNFCCC_CRT=False,
         color_dict=subsector_color_map(),
+        match_coverage=False,
     ):
         """
         Returns barchart for UNFCCC (annex 1 only), EDGAR, CEDS, or FAOSTAT vs Climate TRACE data for a single chosen year and sector with breakdown by subsectors.
@@ -677,6 +707,7 @@ class CountryPlotting:
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
             UNFCCC_CRT=UNFCCC_CRT,
+            match_coverage=match_coverage,
         )
         fig = go.Figure().update_layout(font=fonts)
 
@@ -838,6 +869,7 @@ class CountryPlotting:
         FAOSTAT=False,
         UNFCCC_CRT=False,
         color_dict=gas_color_map(),
+        match_coverage=False,
     ):
         """
         Returns barchart for selected invenotry vs Climate TRACE data for a single chosen year and subsector with breakdown
@@ -917,6 +949,7 @@ class CountryPlotting:
             CEDS=CEDS,
             FAOSTAT=FAOSTAT,
             UNFCCC_CRT=UNFCCC_CRT,
+            match_coverage=match_coverage,
         )
         fig = go.Figure().update_layout(font=fonts)
 
