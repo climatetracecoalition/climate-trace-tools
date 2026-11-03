@@ -128,11 +128,15 @@ class CountryPlotting:
         if ClimateTRACE:
             return self.climate_trace["start_time"].max()
         elif UNFCCC:
+            if not self.country:
+                return max(self.unfccc_annex_1["start_time"].max(), self.unfccc_non_annex_1["start_time"].max())
             if self.country in self.annex_iso3:
                 return self.unfccc_annex_1["start_time"].max()
             else:
                 return self.unfccc_non_annex_1["start_time"].max()
         elif UNFCCC_CRT:
+            if not self.country:
+                return max(self.unfccc_crt_annex_1["start_time"].max(), self.unfccc_crt_non_annex_1["start_time"].max())
             if self.country in self.crt_annex_iso3:
                 return self.unfccc_crt_annex_1["start_time"].max()
             else:
@@ -181,8 +185,15 @@ class CountryPlotting:
         comp_dict = {}
 
         if UNFCCC:
+            if not self.country:
+                # global comparison: there's no single country to classify, so combine annex 1 and non annex 1
+                unfccc_name = "unfccc"
+                unfccc_df = calculate_gwp(
+                    pd.concat([self.unfccc_annex_1, self.unfccc_non_annex_1]),
+                    self.sector_lookup,
+                )
             # determine if country input is annex 1 or non annex 1
-            if self.annex_iso3.size > 0:
+            elif self.annex_iso3.size > 0:
                 unfccc_name = "unfccc_annex_1"
                 unfccc_df = calculate_gwp(self.unfccc_annex_1, self.sector_lookup)
             else:
@@ -199,8 +210,15 @@ class CountryPlotting:
             comp_dict[unfccc_name] = all_sector_unfccc
 
         if UNFCCC_CRT:
+            if not self.country:
+                # global comparison: there's no single country to classify, so combine annex 1 and non annex 1
+                unfccc_crt_name = "unfccc_crt"
+                unfccc_crt_df = calculate_gwp(
+                    pd.concat([self.unfccc_crt_annex_1, self.unfccc_crt_non_annex_1]),
+                    self.sector_lookup,
+                )
             # determine if country input is annex 1 or non annex 1
-            if self.crt_annex_iso3.size > 0:
+            elif self.crt_annex_iso3.size > 0:
                 unfccc_crt_name = "unfccc_crt_annex_1"
                 unfccc_crt_df = calculate_gwp(self.unfccc_crt_annex_1, self.sector_lookup)
             else:
