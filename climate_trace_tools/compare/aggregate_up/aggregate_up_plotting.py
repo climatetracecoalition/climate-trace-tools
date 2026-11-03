@@ -112,6 +112,38 @@ class CountryPlotting:
                             sector_lookup.update({name: sector for name in names if name})
         return sector_lookup
 
+    def country_count_subtitle(self, comp_dict, years, sector=False):
+        """
+        For global charts, returns a subtitle with the number of countries each inventory includes (countries with
+        non-zero co2e_100yr in a compared sector, or in 'sector' if given), as a range when 'years' spans several
+        years. Returns an empty string for single-country charts.
+        """
+        if self.country:
+            return ""
+        years = list(years) if hasattr(years, "__iter__") else [years]
+        parts = []
+        for inventory, data in comp_dict.items():
+            reported = data[
+                (data["gas"] == "co2e_100yr")
+                & data["parent_sector"].notna()
+                & (data["emissions_quantity"] != 0)
+                & data["year"].isin(years)
+            ]
+            if sector:
+                reported = reported[reported["parent_sector"] == sector]
+            counts = (
+                reported.groupby("year")["iso3_country"]
+                .nunique()
+                .reindex(years, fill_value=0)
+            )
+            n = (
+                f"{counts.min()}"
+                if counts.min() == counts.max()
+                else f"{counts.min()}–{counts.max()}"
+            )
+            parts.append(f"{self.tick_label_dict.get(inventory, inventory)} {n}")
+        return "<br><sup>Countries included: " + ", ".join(parts) + "</sup>"
+
     def get_latest_year_for_inventory(
         self,
         ClimateTRACE=False,
@@ -450,7 +482,7 @@ class CountryPlotting:
         if self.country:
             title = f"{self.country} Inventory Comparison"
         else:
-            title = "Global Inventory comparison"
+            title = "Global Inventory comparison" + self.country_count_subtitle(comp_dict, year)
 
         fig.update_layout(
             title_text=title, font=dict(size=18), legend=dict(font=dict(size=17))
@@ -612,7 +644,7 @@ class CountryPlotting:
         if self.country:
             title = f"{self.country} Inventory Comparison"
         else:
-            title = "Global Inventory Comparison"
+            title = "Global Inventory Comparison" + self.country_count_subtitle(comp_dict, year)
 
         fig.update_layout(
             title_text=title,
@@ -736,7 +768,7 @@ class CountryPlotting:
             if self.country:
                 title = f"{self.country}, Inventory Comparison, All Subsectors"
             else:
-                title = f"Global Inventory Comparison, All subsectors"
+                title = f"Global Inventory Comparison, All subsectors" + self.country_count_subtitle(comp_dict, year)
 
             color_dict_flat = {}
             for key, item in color_dict.items():
@@ -790,7 +822,7 @@ class CountryPlotting:
             if self.country:
                 title = f"{self.country}, {sector} Inventory Comparison"
             else:
-                title = f"Global Inventory Comparison, {sector}"
+                title = f"Global Inventory Comparison, {sector}" + self.country_count_subtitle(comp_dict, year, sector)
             subsectors = subsector_dict.get(sector).keys()
             for subsector in subsectors:
                 for inventory in comp_dict:
@@ -1021,7 +1053,7 @@ class CountryPlotting:
         if self.country:
             title = f"{self.country}, {title} Inventory Comparison by Gas"
         else:
-            title = f"{title} Inventory Comparison by Gas, Global"
+            title = f"{title} Inventory Comparison by Gas, Global" + self.country_count_subtitle(comp_dict, year, sector)
         fig.update_layout(
             title_text=title,
             barmode="stack",
@@ -1172,7 +1204,7 @@ class CountryPlotting:
         if self.country:
             title = f"{source} {self.country}, GHG Emissions by Year and Sector"
         else:
-            title = "GHG Emissions by Year and Sector"
+            title = "GHG Emissions by Year and Sector" + self.country_count_subtitle(comp_dict, years)
 
         fig.update_layout(
             title_text=title,
@@ -1300,7 +1332,7 @@ class CountryPlotting:
         if self.country:
             title = f"{source} {sector} in {self.country}"
         else:
-            title = f"{source} {sector}, Global"
+            title = f"{source} {sector}, Global" + self.country_count_subtitle(comp_dict, years, sector)
         fig.update_layout(
             title_text=title,
             barmode="stack",
