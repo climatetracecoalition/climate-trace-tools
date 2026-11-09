@@ -21,6 +21,7 @@ xlsx_file_path = "files/subtract-out-csv-crosswalks.xlsx"
 tabs = [
     "climate-trace-subtract-out",
     "unfccc-subtract-out",
+    "unfccc-crt_subtract-out",
     "ceds-subtract-out",
     "carbon-monitor-subtract-out",
     "edgar-subtract-out",
@@ -33,6 +34,8 @@ inventory_titles = {
     "climate-trace": "ClimateTRACE",
     "unfccc_annex_1": "UNFCCC",
     "unfccc_non_annex_1": "UNFCCC",
+    "unfccc_crt_annex_1": "UNFCCC CRT",
+    "unfccc_crt_non_annex_1": "UNFCCC CRT",
     "edgar": "EDGAR",
     "cait": "CAIT",
     "pik-tp": "PIK",
@@ -43,6 +46,7 @@ inventory_titles = {
 
 inventory_codes = {
     "unfccc-subtract-out": "unfccc",
+    "unfccc-crt_subtract-out": "unfccc_crt",
     "carbon-monitor-subtract-out": "carbon-monitor",
     "edgar-subtract-out": "edgar",
     "cait-subtract-out": "cait",
@@ -66,8 +70,10 @@ def get_inventory_name(tab_name, annex_1):
     names = inventory_codes
     if annex_1:
         names["unfccc-subtract-out"] = "unfccc_annex_1"
+        names["unfccc-crt_subtract-out"] = "unfccc_crt_annex_1"
     else:
         names["unfccc-subtract-out"] = "unfccc_non_annex_1"
+        names["unfccc-crt_subtract-out"] = "unfccc_crt_non_annex_1"
 
     return names[tab_name]
 
