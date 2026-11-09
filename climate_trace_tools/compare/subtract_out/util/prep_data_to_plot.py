@@ -75,6 +75,10 @@ def combine_data(temp_dict, country):
             ] + comparison_years
 
             df = item[item.ID == f"{country}"].reset_index(drop=True)
+            # rows with no values in any compared year (e.g. blank/NULL in the source data) are as unusable as
+            # no rows at all, so treat them the same: flag the component as missing and leave it out
+            if not df.empty and df[comparison_years].isna().all().all():
+                df = df.iloc[0:0]
             available = True
             if df.empty:
                 available = False
