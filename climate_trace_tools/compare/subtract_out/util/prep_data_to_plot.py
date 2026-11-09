@@ -42,6 +42,10 @@ def custom_agg(df, exclude_cols=None, ff_cols=None, min_count=1):
             return x.any()
         elif x.name == "last_true_year":
             return x.max()
+        elif x.name == "years_filled":
+            # a combined value is filled for a year if any of its components was
+            years = {y for value in x.dropna() for y in str(value).split(", ") if y}
+            return ", ".join(sorted(years))
         elif x.name in exclude_cols:
             # For excluded columns, sum retaining NaNs
             return np.nan if x.isna().any() else x.sum()
@@ -71,6 +75,7 @@ def combine_data(temp_dict, country):
                 "Gas",
                 "Unit",
                 "last_true_year",
+                "years_filled",
                 "carbon_eq",
             ] + comparison_years
 
