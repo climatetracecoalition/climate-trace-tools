@@ -64,7 +64,7 @@
 - `unfccc_annex_1_category_subset_fraction` : Float indicating the estimated fraction of the UNFCCC code that this sector covers.
 - `unfccc_annex_1_category_estimation_method` : Text describing the method used to estimate the fraction.
 - `reporting_entity` : The name of the entity who is reporting these emissions (e.g. unfccc_annex_1, faostat, edgar, etc.)
-- `climate_trace_sector` : For sectors that Climate TRACE collects *asset* information for, this column is used to tag which Climate TRACE sector the asset falls into. For example, a CAFO collected from an external source would be tagged to *enteric-fermentation-cattle-feedlot, manure-management-cattle-feedlot.*
+- `climate_trace_sector` : For sectors that Climate TRACE collects *asset* information for, this column is used to tag which Climate TRACE sector the asset falls into. For example, a CAFO collected from an external source would be tagged to *enteric-fermentation-cattle-operation, manure-management-cattle-operation.*
 
 ### Supplementary Tables
 
