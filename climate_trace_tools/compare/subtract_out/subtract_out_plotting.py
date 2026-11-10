@@ -57,6 +57,13 @@ class SectorComparison:
         # Forward fill the data
         filled_data = self.allinv[year_columns].ffill(axis=1)
 
+        # Record every year that was filled in, both gaps between reported years and years after the last
+        # reported year (the _ff columns below only cover the latter), so outputs can list them
+        was_filled = self.allinv[year_columns].isna() & filled_data.notna()
+        self.filled_years = was_filled.apply(
+            lambda row: [int(year) for year in year_columns if row[year]], axis=1
+        )
+
         # Create boolean mask for forward-filled values
         for year in year_columns:
             year_int = int(year)
@@ -99,8 +106,15 @@ class SectorComparison:
         COMP_YEARS = list(range(start_year, end_year + 1))
         FF_COLS = [f"{year}_ff" for year in COMP_YEARS]
 
+        # years within the comparison period whose values were forward filled, as a comma-separated string
+        self.allinv["years_filled"] = self.filled_years.reindex(self.allinv.index).map(
+            lambda years: ", ".join(str(y) for y in years if y in COMP_YEARS)
+            if isinstance(years, list)
+            else ""
+        )
+
         COL_ORDER = (
-            ["Data source", "ID", "Sector", "Gas", "Unit", "last_true_year"]
+            ["Data source", "ID", "Sector", "Gas", "Unit", "last_true_year", "years_filled"]
             + COMP_YEARS
             + FF_COLS
         )
@@ -115,6 +129,7 @@ class SectorComparison:
             "Gas",
             "Unit",
             "last_true_year",
+            "years_filled",
             "carbon_eq",
         ] + COMP_YEARS
         ratio_data = pd.DataFrame(columns=ratiocols)
@@ -206,6 +221,7 @@ class SectorComparison:
                                 "carbon_eq",
                                 "data_available",
                                 "last_true_year",
+                                "years_filled",
                             ] + COMP_YEARS
 
                             raw_data = raw_data[ratio_data_column_order]
@@ -218,6 +234,7 @@ class SectorComparison:
                                 "Gas",
                                 "data_available",
                                 "last_true_year",
+                                "years_filled",
                             ] + COMP_YEARS
                             grpcols = [
                                 "Data source",
@@ -225,6 +242,7 @@ class SectorComparison:
                                 "Gas",
                                 "data_available",
                                 "last_true_year",
+                                "years_filled",
                             ]
                             country_totals = (
                                 ratio_data[totcols]

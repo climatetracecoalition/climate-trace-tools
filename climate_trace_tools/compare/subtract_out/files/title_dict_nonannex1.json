@@ -24,6 +24,21 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.1.a.i. Electricity generation",
+              "     + "
+            ],
+            [
+              "1.A.1.a.ii. Combined heat and power generation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -118,6 +133,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.5. Other (Not specified elsewhere)",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -151,6 +177,17 @@
           "comps": [
             [
               "Aviation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.3.a. Domestic aviation",
               "     + "
             ]
           ]
@@ -194,6 +231,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.D.1.a. International aviation (aviation bunkers)",
+              "     + "
+            ]
+          ]
+        }
+      },
       "carbon-monitor": {
         "carbon-monitor": {
           "desc": "Carbon Monitor",
@@ -227,6 +275,17 @@
           "comps": [
             [
               "1.A.3.b  Road Transportation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.3.b. Road transportation",
               "     + "
             ]
           ]
@@ -269,6 +328,17 @@
             ]
           ]
         }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.D.1.b. International navigation (marine bunkers)",
+              "     + "
+            ]
+          ]
+        }
       }
     }
   },
@@ -281,6 +351,17 @@
           "comps": [
             [
               "domestic-shipping",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.3.d. Domestic navigation",
               "     + "
             ]
           ]
@@ -355,6 +436,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.3.e. Other transportation",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -388,6 +480,17 @@
           "comps": [
             [
               "1.A.4  Other Sectors",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.4.b.i. Stationary combustion",
               "     + "
             ]
           ]
@@ -450,6 +553,29 @@
           "comps": [
             [
               "1.A.4  Other Sectors",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.4.a.i. Stationary combustion",
+              "     + "
+            ],
+            [
+              "1.A.4.a.ii. Off-road vehicles and other machinery",
+              "     + "
+            ],
+            [
+              "1.A.4.b.ii. Off-road vehicles and other machinery",
+              "     + "
+            ],
+            [
+              "1.A.4.c. Agriculture/forestry/fishing",
               "     + "
             ]
           ]
@@ -535,19 +661,19 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.A.4.a.ii        Off-road Vehicles and Other Machinery",
+              "1.A.4.a.ii  Off-road Vehicles and Other Machinery",
               "     + "
             ],
             [
-              "1.A.4.a.iii Other",
+              "1.A.4.a.iii  Other",
               "     + "
             ],
             [
-              "1.A.4.b.ii Off-road Vehicles and Other Machinery",
+              "1.A.4.b.ii  Off-road Vehicles and Other Machinery",
               "     + "
             ],
             [
-              "1.A.4.b.iii Other",
+              "1.A.4.b.iii  Other",
               "     + "
             ]
           ]
@@ -575,6 +701,17 @@
           "comps": [
             [
               "1.B.1  Solid Fuels",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.B.1.a. Coal mining and handling",
               "     + "
             ]
           ]
@@ -630,7 +767,7 @@
           "desc": "ClimateTRACE",
           "comps": [
             [
-              "solid-fuel-transformation",
+              "other-solid-fuels",
               "     + "
             ]
           ]
@@ -642,6 +779,21 @@
           "comps": [
             [
               "1.B.1  Solid Fuels",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.B.1.b. Fuel transformation",
+              "     + "
+            ],
+            [
+              "1.B.1.c. Other",
               "     + "
             ]
           ]
@@ -694,6 +846,41 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.B.2.a.i. Exploration",
+              "     + "
+            ],
+            [
+              "1.B.2.a.ii. Production and upgrading",
+              "     + "
+            ],
+            [
+              "1.B.2.c. Venting and flaring",
+              "     + "
+            ],
+            [
+              "1.B.2.b.i. Exploration",
+              "     + "
+            ],
+            [
+              "1.B.2.b.ii. Production and gathering",
+              "     + "
+            ],
+            [
+              "1.B.2.b.iii. Processing",
+              "     + "
+            ],
+            [
+              "1.A.1.c.ii. Oil and gas extraction",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -724,11 +911,11 @@
               "     - "
             ],
             [
-              "1.B.2.a.iii Transport",
+              "1.B.2.a.iii  Transport",
               "     - "
             ],
             [
-              "1.B.2.b.iv Transmission and Storage",
+              "1.B.2.b.iv  Transmission and Storage",
               "     - "
             ]
           ]
@@ -748,7 +935,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "1.B.2.a.v  Distribution of Oil Products ",
+              "1.B.2.a.v  Distribution of Oil Products",
               "     - "
             ],
             [
@@ -766,6 +953,37 @@
             [
               "1.B.2.d  Other",
               "     - "
+            ]
+          ]
+        }
+      },
+      "cait": {
+        "cait": {
+          "desc": "CAIT",
+          "comps": [
+            [
+              "Fugitive Emissions",
+              "     + "
+            ]
+          ]
+        },
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1  Solid Fuels",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "pik-tp": {
+        "pik-tp": {
+          "desc": "PIK",
+          "comps": [
+            [
+              "1.B",
+              "     + "
             ]
           ]
         }
@@ -792,6 +1010,21 @@
           "comps": [
             [
               "1.B.2  Oil and Natural Gas",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.B.2.a.iii. Transport",
+              "     + "
+            ],
+            [
+              "1.B.2.b.iv. Transmission and storage",
               "     + "
             ]
           ]
@@ -831,23 +1064,23 @@
               "     - "
             ],
             [
-              "1.B.2.a.ii Production,",
+              "1.B.2.a.ii  Production",
               "     - "
             ],
             [
-              "1.B.2.c Venting and Flaring",
+              "1.B.2.c  Venting and Flaring",
               "     - "
             ],
             [
-              "1.B.2.b.i Exploration",
+              "1.B.2.b.i  Exploration",
               "     - "
             ],
             [
-              "1.B.2.b.ii Production",
+              "1.B.2.b.ii  Production",
               "     - "
             ],
             [
-              "1.B.2.b.iii Processing",
+              "1.B.2.b.iii  Processing",
               "     - "
             ]
           ]
@@ -880,6 +1113,17 @@
             ]
           ]
         }
+      },
+      "pik-tp": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "1.B.1  Solid Fuels",
+              "     - "
+            ]
+          ]
+        }
       }
     }
   },
@@ -897,6 +1141,21 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.1.b. Petroleum refining",
+              "     + "
+            ],
+            [
+              "1.B.2.a.iv. Refining/storage",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -907,11 +1166,11 @@
             ]
           ]
         },
-        "unfccc_annex_1": {
-          "desc": "UNFCCC",
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
           "comps": [
             [
-              "1.A.1.c  Manufacture of Solid Fuels and Other Energy Industries",
+              "1.A.1.c. Manufacture of solid fuels and other energy industries",
               "     - "
             ]
           ]
@@ -927,11 +1186,11 @@
             ]
           ]
         },
-        "unfccc_annex_1": {
-          "desc": "UNFCCC",
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
           "comps": [
             [
-              "1.A.1.c  Manufacture of Solid Fuels and Other Energy Industries",
+              "1.A.1.c. Manufacture of solid fuels and other energy industries",
               "     - "
             ]
           ]
@@ -939,42 +1198,15 @@
       }
     }
   },
-  "other-fossil-fuel-operations": {
-    "title": "Other Fossil Fuel Operations",
+  "petrochemical-steam-cracking": {
+    "title": "Petrochemical Steam Cracking",
     "legend": {
       "climate-trace": {
         "climate-trace": {
           "desc": "ClimateTRACE",
           "comps": [
             [
-              "other-fossil-fuel-operations",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "unfccc_non_annex_1": {
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "1.B.2  Oil and Natural Gas",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "petrochemicals": {
-    "title": "Petrochemicals",
-    "legend": {
-      "climate-trace": {
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "petrochemicals",
+              "petrochemical-steam-cracking",
               "     + "
             ]
           ]
@@ -987,6 +1219,77 @@
             [
               "2.B  Chemical Industry",
               "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "2.B.8.b. Ethylene",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "2B_Chemical-industry",
+              "     + "
+            ],
+            [
+              "1A2c_Ind-Comb-Chemicals",
+              "     + "
+            ],
+            [
+              "2B2_Chemicals-Nitric-acid",
+              "     - "
+            ],
+            [
+              "2B3_Chemicals-Adipic-acid",
+              "     - "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "other-chemicals",
+              "     - "
+            ],
+            [
+              "chemicals",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "2.B Chemical Industry",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "chemicals",
+              "     - "
+            ],
+            [
+              "other-chemicals",
+              "     - "
             ]
           ]
         }
@@ -1012,7 +1315,22 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "2.A.1  Cement Production",
+              "2.A.1  Cement production",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.f. Non-metallic minerals",
+              "     + "
+            ],
+            [
+              "2.A.1. Cement production",
               "     + "
             ]
           ]
@@ -1058,7 +1376,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "2.A.2  Lime Production",
+              "2.A.2  Lime production",
               "     - "
             ],
             [
@@ -1099,6 +1417,29 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "2.B.1. Ammonia production",
+              "     + "
+            ],
+            [
+              "2.B.8.a. Methanol",
+              "     + "
+            ],
+            [
+              "2.B.7. Soda ash production",
+              "     + "
+            ],
+            [
+              "1.A.2.c. Chemicals",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -1129,7 +1470,7 @@
               "     - "
             ],
             [
-              "petrochemicals",
+              "petrochemical-steam-cracking",
               "     - "
             ]
           ]
@@ -1153,7 +1494,7 @@
               "     - "
             ],
             [
-              "petrochemicals-steam-cracking",
+              "petrochemical-steam-cracking",
               "     - "
             ]
           ]
@@ -1161,15 +1502,15 @@
       }
     }
   },
-  "steel": {
-    "title": "Steel",
+  "iron-and-steel": {
+    "title": "Iron And Steel",
     "legend": {
       "climate-trace": {
         "climate-trace": {
           "desc": "ClimateTRACE",
           "comps": [
             [
-              "steel",
+              "iron-and-steel",
               "     + "
             ]
           ]
@@ -1182,6 +1523,60 @@
             [
               "2.C  Metal Production",
               "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.a. Iron and steel",
+              "     + "
+            ],
+            [
+              "2.C.1. Iron and steel production",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "1A2a_Ind-Comb-Iron-steel",
+              "     + "
+            ],
+            [
+              "2C1_Iron-steel-alloy-prod",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "2.C Metal Industry",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "other-metals",
+              "     - "
+            ],
+            [
+              "aluminum",
+              "     - "
             ]
           ]
         }
@@ -1219,6 +1614,21 @@
           "comps": [
             [
               "2.C  Metal Production",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.b. Non-ferrous metals",
+              "     + "
+            ],
+            [
+              "2.C.3. Aluminium production",
               "     + "
             ]
           ]
@@ -1279,6 +1689,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.d. Pulp, paper and print",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -1312,7 +1733,7 @@
               "     - "
             ],
             [
-              "1.A.2.b  Non-Ferrous Metals",
+              "1.A.2.b  Non-ferrous Metals",
               "     - "
             ],
             [
@@ -1349,6 +1770,73 @@
             ]
           ]
         }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2. Manufacturing industries and construction",
+              "     + "
+            ],
+            [
+              "1.A.2.f. Non-metallic minerals",
+              "     - "
+            ],
+            [
+              "1.A.2.c. Chemicals",
+              "     - "
+            ],
+            [
+              "1.A.2.a. Iron and steel",
+              "     - "
+            ],
+            [
+              "1.A.2.b. Non-ferrous metals",
+              "     - "
+            ],
+            [
+              "1.A.2.d. Pulp, paper and print",
+              "     - "
+            ],
+            [
+              "2. Total industrial processes",
+              "     + "
+            ],
+            [
+              "2.A.1. Cement production",
+              "     - "
+            ],
+            [
+              "2.B.1. Ammonia production",
+              "     - "
+            ],
+            [
+              "2.B.8.a. Methanol",
+              "     - "
+            ],
+            [
+              "2.B.7. Soda ash production",
+              "     - "
+            ],
+            [
+              "2.C.1. Iron and steel production",
+              "     - "
+            ],
+            [
+              "2.C.3. Aluminium production",
+              "     - "
+            ],
+            [
+              "2.H.1. Pulp and paper",
+              "     - "
+            ],
+            [
+              "2.B.8.b. Ethylene",
+              "     - "
+            ]
+          ]
+        }
       }
     }
   },
@@ -1361,6 +1849,17 @@
           "comps": [
             [
               "bauxite-mining",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.g.iii. Mining (excluding fuels) and quarrying",
               "     + "
             ]
           ]
@@ -1404,6 +1903,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.g.iii. Mining (excluding fuels) and quarrying",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -1426,6 +1936,17 @@
           "comps": [
             [
               "copper-mining",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.g.iii. Mining (excluding fuels) and quarrying",
               "     + "
             ]
           ]
@@ -1458,6 +1979,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.g.iii. Mining (excluding fuels) and quarrying",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -1485,6 +2017,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.g.iii. Mining (excluding fuels) and quarrying",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -1498,8 +2041,8 @@
       }
     }
   },
-  "enteric-fermentation-cattle-feedlot": {
-    "title": "Enteric Fermentation Cattle Feedlot",
+  "enteric-fermentation-cattle-operation": {
+    "title": "Enteric Fermentation Cattle Operation",
     "legend": {
       "climate-trace": {
         "climate-trace": {
@@ -1519,6 +2062,77 @@
             [
               "4.A  Enteric Fermentation",
               "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.A.1. Cattle",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "3E_Enteric-fermentation",
+              "     + "
+            ],
+            [
+              "3E_Enteric-fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-cattle-operation",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.1 Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "enteric-fermentation-cattle-pasture",
+              "     - "
+            ],
+            [
+              "enteric-fermentation-other",
+              "     - "
             ]
           ]
         }
@@ -1545,6 +2159,17 @@
           "comps": [
             [
               "4.A  Enteric Fermentation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.A.1. Cattle",
               "     + "
             ]
           ]
@@ -1601,6 +2226,25 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.A.2. Sheep",
+              "     + "
+            ],
+            [
+              "3.A.3. Swine",
+              "     + "
+            ],
+            [
+              "3.A.4. Other livestock",
+              "     + "
+            ]
+          ]
+        }
+      },
       "edgar": {
         "edgar": {
           "desc": "EDGAR",
@@ -1641,6 +2285,32 @@
           ]
         }
       },
+      "unfccc_non_annex_1": {
+        "unfccc_non_annex_1": {
+          "desc": "UNFCCC",
+          "comps": [
+            [
+              "4.B  Manure Management",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.D.1.c. Urine and dung deposited by grazing animals",
+              "     + "
+            ],
+            [
+              "3.B.1. Cattle",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -1655,7 +2325,7 @@
           "desc": "ClimateTRACE",
           "comps": [
             [
-              "manure-management-cattle-feedlot",
+              "manure-management-cattle-operation",
               "     - "
             ],
             [
@@ -1691,8 +2361,8 @@
       }
     }
   },
-  "manure-management-cattle-feedlot": {
-    "title": "Manure Management Cattle Feedlot",
+  "manure-management-cattle-operation": {
+    "title": "Manure Management Cattle Operation",
     "legend": {
       "climate-trace": {
         "climate-trace": {
@@ -1712,6 +2382,65 @@
             [
               "4.B  Manure Management",
               "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.B.1. Cattle",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "ceds": {
+        "ceds": {
+          "desc": "CEDS",
+          "comps": [
+            [
+              "3B_Manure-management",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
+            ]
+          ]
+        }
+      },
+      "edgar": {
+        "edgar": {
+          "desc": "EDGAR",
+          "comps": [
+            [
+              "3.A.2 Manure Management",
+              "     + "
+            ]
+          ]
+        },
+        "climate-trace": {
+          "desc": "ClimateTRACE",
+          "comps": [
+            [
+              "manure-left-on-pasture-cattle",
+              "     - "
+            ],
+            [
+              "manure-management-other",
+              "     - "
             ]
           ]
         }
@@ -1738,6 +2467,25 @@
           "comps": [
             [
               "4.B  Manure Management",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.B.2. Sheep",
+              "     + "
+            ],
+            [
+              "3.B.3. Swine",
+              "     + "
+            ],
+            [
+              "3.B.4. Other livestock",
               "     + "
             ]
           ]
@@ -1789,6 +2537,17 @@
           "comps": [
             [
               "4.C  Rice Cultivation",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.C. Rice cultivation",
               "     + "
             ]
           ]
@@ -1854,6 +2613,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.D.1.a. Inorganic N fertilizers",
+              "     + "
+            ]
+          ]
+        }
+      },
       "edgar": {
         "edgar": {
           "desc": "EDGAR",
@@ -1902,6 +2672,41 @@
             ]
           ]
         }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.D.1.g. Other",
+              "     + "
+            ],
+            [
+              "3.D.2. Indirect N2O Emissions from managed soils",
+              "     + "
+            ],
+            [
+              "3.D.1.f. Cultivation of organic soils (i.e. histosols)",
+              "     + "
+            ],
+            [
+              "3.G. Liming",
+              "     + "
+            ],
+            [
+              "3.H. Urea application",
+              "     + "
+            ],
+            [
+              "3.I. Other carbon-containing fertilizers",
+              "     + "
+            ],
+            [
+              "3.J. Other",
+              "     + "
+            ]
+          ]
+        }
       }
     }
   },
@@ -1925,6 +2730,17 @@
           "comps": [
             [
               "4.D  Agricultural Soils",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.F. Field burning of agricultural residues",
               "     + "
             ]
           ]
@@ -1956,6 +2772,17 @@
             ]
           ]
         }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.D.1.d. Crop residues",
+              "     + "
+            ]
+          ]
+        }
       }
     }
   },
@@ -1979,6 +2806,21 @@
           "comps": [
             [
               "4.D  Agricultural Soils",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "3.D.1.c. Urine and dung deposited by grazing animals",
+              "     + "
+            ],
+            [
+              "3.D.1.b.i. Animal manure applied to soils",
               "     + "
             ]
           ]
@@ -2011,6 +2853,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "5.A. Solid waste disposal",
+              "     + "
+            ]
+          ]
+        }
+      },
       "edgar": {
         "edgar": {
           "desc": "EDGAR",
@@ -2037,6 +2890,17 @@
             ]
           ]
         }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "5.B. Biological treatment of solid waste",
+              "     + "
+            ]
+          ]
+        }
       }
     }
   },
@@ -2059,7 +2923,18 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "6.C. Waste Incineration",
+              "6.C  Waste Incineration",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "5.C. Incineration and open burning of waste",
               "     + "
             ]
           ]
@@ -2087,6 +2962,17 @@
           "comps": [
             [
               "6.B  Wastewater Handling",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "5.D.1. Domestic wastewater",
               "     + "
             ]
           ]
@@ -2143,6 +3029,17 @@
           ]
         }
       },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "5.D.2. Industrial wastewater",
+              "     + "
+            ]
+          ]
+        }
+      },
       "edgar": {
         "edgar": {
           "desc": "EDGAR",
@@ -2178,6 +3075,25 @@
           "comps": [
             [
               "fluorinated-gases",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "2.F. Product uses as substitutes for ODS",
+              "     + "
+            ],
+            [
+              "2.B.9. Fluorochemical production",
+              "     + "
+            ],
+            [
+              "2.E. Electronics industry",
               "     + "
             ]
           ]
@@ -2257,6 +3173,17 @@
             ]
           ]
         }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "4.A. Forest land",
+              "     + "
+            ]
+          ]
+        }
       }
     }
   },
@@ -2273,6 +3200,17 @@
             ]
           ]
         }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "4.C. Grassland",
+              "     + "
+            ]
+          ]
+        }
       }
     }
   },
@@ -2285,6 +3223,25 @@
           "comps": [
             [
               "net-wetland",
+              "     + "
+            ]
+          ]
+        }
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "4.D.1.a. Peat extraction remaining peat extraction",
+              "     + "
+            ],
+            [
+              "4.D.1.c. Other wetlands remaining other wetlands",
+              "     + "
+            ],
+            [
+              "4.D.2. Land converted to wetlands",
               "     + "
             ]
           ]
@@ -2353,18 +3310,13 @@
             ]
           ]
         }
-      }
-    }
-  },
-  "manure-management": {
-    "title": "Manure Management",
-    "legend": {
-      "unfccc_non_annex_1": {
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
+      },
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
           "comps": [
             [
-              "4.B  Manure Management",
+              "4.D.1.b. Flooded land remaining flooded land",
               "     + "
             ]
           ]
@@ -2391,6 +3343,17 @@
   "heat-plants": {
     "title": "Heat Plants",
     "legend": {
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.1.a.iii. Heat plants",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
@@ -2404,65 +3367,27 @@
       }
     }
   },
-  "petrochemicals-steam-cracking": {
-    "title": "Petrochemicals Steam Cracking",
+  "other-mining-quarrying": {
+    "title": "Other Mining Quarrying",
     "legend": {
+      "unfccc_crt_non_annex_1": {
+        "unfccc_crt_non_annex_1": {
+          "desc": "UNFCCC CRT",
+          "comps": [
+            [
+              "1.A.2.g.iii. Mining (excluding fuels) and quarrying",
+              "     + "
+            ]
+          ]
+        }
+      },
       "ceds": {
         "ceds": {
           "desc": "CEDS",
           "comps": [
             [
-              "2B_Chemical-industry",
+              "1A2g_Ind-Comb-mining-quarying",
               "     + "
-            ],
-            [
-              "1A2c_Ind-Comb-Chemicals",
-              "     + "
-            ],
-            [
-              "2B2_Chemicals-Nitric-acid",
-              "     - "
-            ],
-            [
-              "2B3_Chemicals-Adipic-acid",
-              "     - "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "other-chemicals",
-              "     - "
-            ],
-            [
-              "chemicals",
-              "     - "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "2.B Chemical Industry",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "chemicals",
-              "     - "
-            ],
-            [
-              "other-chemicals",
-              "     - "
             ]
           ]
         }
@@ -2486,7 +3411,7 @@
           "desc": "UNFCCC",
           "comps": [
             [
-              "2.A.4 Other Process Uses of Carbonates",
+              "2.A.4  Other Process Uses of Carbonates",
               "     - "
             ]
           ]
@@ -2504,229 +3429,6 @@
             [
               "2A2_Lime-production",
               "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "iron-and-steel": {
-    "title": "Iron And Steel",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A2a_Ind-Comb-Iron-steel",
-              "     + "
-            ],
-            [
-              "2C1_Iron-steel-alloy-prod",
-              "     + "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "2.C Metal Industry",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "other-metals",
-              "     - "
-            ],
-            [
-              "aluminum",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "other-mining-and-quarrying": {
-    "title": "Other Mining And Quarrying",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "1A2g_Ind-Comb-mining-quarying",
-              "     + "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "enteric-fermentation-cattle-operation": {
-    "title": "Enteric Fermentation Cattle Operation",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "3E_Enteric-fermentation",
-              "     + "
-            ],
-            [
-              "3E_Enteric-fermentation",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-cattle-feedlot",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "3.A.1 Enteric Fermentation",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "enteric-fermentation-cattle-pasture",
-              "     - "
-            ],
-            [
-              "enteric-fermentation-other",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "manure-management-cattle-operation": {
-    "title": "Manure Management Cattle Operation",
-    "legend": {
-      "ceds": {
-        "ceds": {
-          "desc": "CEDS",
-          "comps": [
-            [
-              "3B_Manure-management",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
-            ]
-          ]
-        }
-      },
-      "edgar": {
-        "edgar": {
-          "desc": "EDGAR",
-          "comps": [
-            [
-              "3.A.2 Manure Management",
-              "     + "
-            ]
-          ]
-        },
-        "climate-trace": {
-          "desc": "ClimateTRACE",
-          "comps": [
-            [
-              "manure-left-on-pasture-cattle",
-              "     - "
-            ],
-            [
-              "manure-management-other",
-              "     - "
-            ]
-          ]
-        }
-      }
-    }
-  },
-  "oil-and-gas-production-and-transport": {
-    "title": "Oil And Gas Production And Transport",
-    "legend": {
-      "cait": {
-        "cait": {
-          "desc": "CAIT",
-          "comps": [
-            [
-              "Fugitive Emissions",
-              "     + "
-            ]
-          ]
-        },
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "1.B.1  Solid Fuels",
-              "     - "
-            ]
-          ]
-        }
-      },
-      "pik-tp": {
-        "pik-tp": {
-          "desc": "PIK",
-          "comps": [
-            [
-              "1.B",
-              "     + "
-            ]
-          ]
-        },
-        "unfccc_non_annex_1": {
-          "desc": "UNFCCC",
-          "comps": [
-            [
-              "1.B.1  Solid Fuels",
-              "     - "
             ]
           ]
         }

@@ -66,7 +66,8 @@ def generate_sector_comparison_dict():
         # Read the XLSX file for the current tab
         df = pd.read_excel(xlsx_file_path, sheet_name=tab_name)
 
-        comp_sectors = df["Comparison Sector"].unique().tolist()
+        # skip rows without a comparison sector (blank rows or notes in the sheet)
+        comp_sectors = df["Comparison Sector"].dropna().unique().tolist()
 
         for comp_sector in comp_sectors:
 
@@ -165,7 +166,8 @@ def generate_subsector_comparison_dict(tab_name):
     # Read the XLSX file for the current tab
     df = pd.read_excel(xlsx_file_path, sheet_name=tab_name)
 
-    comp_sectors = df["Comparison Sector"].unique().tolist()
+    # skip rows without a comparison sector (blank rows or notes in the sheet)
+    comp_sectors = df["Comparison Sector"].dropna().unique().tolist()
 
     for comp_sector in comp_sectors:
         if comp_sector not in subsector_map:
@@ -184,13 +186,11 @@ def generate_subsector_comparison_dict(tab_name):
                 ct_sectors = [""]
             else:
                 ct_sectors = get_sector_list(row[2])
-            if tab_name == "pik-tp-aggregate-up":
-                inv_sectors = [str(row[3])]
+            if row[3] != row[3]:
+                inv_sectors = [""]
             else:
-                if row[3] != row[3]:
-                    inv_sectors = [""]
-                else:
-                    inv_sectors = get_sector_list(row[3], tab_name)
+                # str() because some PIK codes (e.g. 1) are read from the sheet as numbers
+                inv_sectors = get_sector_list(str(row[3]), tab_name)
             if subsector not in subsector_map[comp_sector]:
                 subsector_map[comp_sector][subsector] = {}
             subsector_map[comp_sector][subsector]["climate-trace"] = ct_sectors

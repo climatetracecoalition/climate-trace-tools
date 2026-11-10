@@ -42,6 +42,10 @@ def custom_agg(df, exclude_cols=None, ff_cols=None, min_count=1):
             return x.any()
         elif x.name == "last_true_year":
             return x.max()
+        elif x.name == "years_filled":
+            # a combined value is filled for a year if any of its components was
+            years = {y for value in x.dropna() for y in str(value).split(", ") if y}
+            return ", ".join(sorted(years))
         elif x.name in exclude_cols:
             # For excluded columns, sum retaining NaNs
             return np.nan if x.isna().any() else x.sum()
@@ -71,10 +75,15 @@ def combine_data(temp_dict, country):
                 "Gas",
                 "Unit",
                 "last_true_year",
+                "years_filled",
                 "carbon_eq",
             ] + comparison_years
 
             df = item[item.ID == f"{country}"].reset_index(drop=True)
+            # rows with no values in any compared year (e.g. blank/NULL in the source data) are as unusable as
+            # no rows at all, so treat them the same: flag the component as missing and leave it out
+            if not df.empty and df[comparison_years].isna().all().all():
+                df = df.iloc[0:0]
             available = True
             if df.empty:
                 available = False

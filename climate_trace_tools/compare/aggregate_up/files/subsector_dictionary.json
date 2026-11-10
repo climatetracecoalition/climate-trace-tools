@@ -54,15 +54,14 @@
           "coal-mining",
           "other-solid-fuels",
           "oil-and-gas-production",
-          "oil-and-gas-transport",
-          "other-fossil-fuel-operations"
+          "oil-and-gas-transport"
         ]
       }
     },
     "Forestry and Land Use Change": {
       "Net Forest Land": {
         "cait": [
-          "Land-use Change and Forestry"
+          "Land-Use Change and Forestry"
         ],
         "climate-trace": [
           "net-forest-land"
@@ -196,7 +195,7 @@
           "iron-and-steel",
           "aluminum",
           "fluorinated-gases",
-          "petrochemicals",
+          "petrochemical-steam-cracking",
           "pulp-and-paper",
           "sand-quarrying",
           "rock-quarrying",
@@ -343,15 +342,6 @@
           "other-energy-use"
         ]
       },
-      "Other Fossil Fuel Operations": {
-        "ceds": [
-          "1B2d_Fugitive-other-energy",
-          "1B2b_Fugitive-NG-distr"
-        ],
-        "climate-trace": [
-          "other-fossil-fuel-operations"
-        ]
-      },
       "Solid Fuels": {
         "ceds": [
           "1B1_Fugitive-solid-fuels"
@@ -371,8 +361,7 @@
           "forest-land-fires",
           "shrubgrass-fires",
           "wetland-fires",
-          "cropland-fires",
-          ""
+          "cropland-fires"
         ]
       },
       "Emissions and Removals Excluding Biomass Burning": {
@@ -685,8 +674,7 @@
           "other-solid-fuels",
           "oil-and-gas-production",
           "oil-and-gas-transport",
-          "oil-and-gas-refining",
-          "other-fossil-fuel-operations"
+          "oil-and-gas-refining"
         ],
         "edgar": [
           "1.B.1 Solid Fuels",
@@ -904,7 +892,7 @@
       },
       "Enteric Fermentation": {
         "climate-trace": [
-          "enteric-fermentation-cattle-feedlot",
+          "enteric-fermentation-cattle-operation",
           "enteric-fermentation-cattle-pasture",
           "enteric-fermentation-other"
         ],
@@ -923,7 +911,7 @@
       "Manure Management": {
         "climate-trace": [
           "manure-left-on-pasture-cattle",
-          "manure-management-cattle-feedlot",
+          "manure-management-cattle-operation",
           "manure-management-other"
         ],
         "faostat": [
@@ -1006,7 +994,8 @@
         "climate-trace": [
           "electricity-generation",
           "other-energy-use",
-          "residential-and-commercial-onsite-fuel-usage",
+          "residential-onsite-fuel-usage",
+          "non-residential-onsite-fuel-usage",
           "other-onsite-fuel-usage",
           "domestic-aviation",
           "domestic-shipping",
@@ -1016,7 +1005,7 @@
           "chemicals",
           "iron-and-steel",
           "aluminum",
-          "petrochemicals",
+          "petrochemical-steam-cracking",
           "pulp-and-paper",
           "sand-quarrying",
           "rock-quarrying",
@@ -1026,8 +1015,7 @@
           "other-manufacturing",
           "coal-mining",
           "other-solid-fuels",
-          "oil-and-gas-refining",
-          "other-fossil-fuel-operations"
+          "oil-and-gas-refining"
         ],
         "gcp": [
           "Coal",
@@ -1062,7 +1050,8 @@
     "Fossil Fuel Operations": {
       "Oil and Gas Production and Transport": {
         "climate-trace": [
-          "oil-and-gas-production-and-transport"
+          "oil-and-gas-production",
+          "oil-and-gas-transport"
         ],
         "gcp": [
           "Gas flaring"
@@ -1100,11 +1089,11 @@
       },
       "Livestock": {
         "climate-trace": [
-          "enteric-fermentation-cattle-feedlot",
+          "enteric-fermentation-cattle-operation",
           "enteric-fermentation-cattle-pasture",
           "enteric-fermentation-other",
           "manure-left-on-pasture-cattle",
-          "manure-management-cattle-feedlot",
+          "manure-management-cattle-operation",
           "manure-management-other"
         ],
         "pik-tp": [
@@ -1145,8 +1134,7 @@
           "coal-mining",
           "other-solid-fuels",
           "oil-and-gas-production",
-          "oil-and-gas-transport",
-          "other-fossil-fuel-operations"
+          "oil-and-gas-transport"
         ],
         "pik-tp": [
           "1.B"
@@ -1158,24 +1146,16 @@
           "international-aviation"
         ],
         "pik-tp": [
-          "nan"
+          ""
         ]
       },
       "Oil and Gas Production and Transport": {
         "climate-trace": [
           "oil-and-gas-production",
-          "oil-and-gas-transport,"
+          "oil-and-gas-transport"
         ],
         "pik-tp": [
           "1.B.2"
-        ]
-      },
-      "Other Fossil Fuel Operations": {
-        "climate-trace": [
-          "other-fossil-fuel-operations"
-        ],
-        "pik-tp": [
-          "1.B.3, 1.C"
         ]
       }
     },
@@ -1187,7 +1167,7 @@
           "iron-and-steel",
           "aluminum",
           "fluorinated-gases",
-          "petrochemicals",
+          "petrochemical-steam-cracking",
           "pulp-and-paper",
           "sand-quarrying",
           "rock-quarrying",
@@ -1197,7 +1177,14 @@
           "other-manufacturing"
         ],
         "pik-tp": [
-          "2.A, 2.B, 2.C, 2.D, 2.E, 2.F, 2.G, 2.H"
+          "2.A",
+          "2.B",
+          "2.C",
+          "2.D",
+          "2.E",
+          "2.F",
+          "2.G",
+          "2.H"
         ]
       }
     },
@@ -1208,7 +1195,7 @@
           "solid-waste-disposal",
           "biological-treatment-of-solid-waste-and-biogenic",
           "incineration-and-open-burning-of-waste",
-          " domestic-wastewater-treatment-and-discharge",
+          "domestic-wastewater-treatment-and-discharge",
           "industrial-wastewater-treatment-and-discharge"
         ],
         "pik-tp": [

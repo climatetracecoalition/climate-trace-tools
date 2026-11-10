@@ -26,8 +26,7 @@
       "other-solid-fuels",
       "oil-and-gas-production",
       "oil-and-gas-transport",
-      "oil-and-gas-refining",
-      "other-fossil-fuel-operations"
+      "oil-and-gas-refining"
     ],
     "edgar": [
       "1.A.1.a Main Activity Electricity and Heat Production",
@@ -47,9 +46,7 @@
       "1A5_Other-unspecified",
       "1B1_Fugitive-solid-fuels",
       "1B2_Fugitive-petr",
-      "1B2b_Fugitive-NG-prod",
-      "1B2d_Fugitive-other-energy",
-      "1B2b_Fugitive-NG-distr"
+      "1B2b_Fugitive-NG-prod"
     ]
   },
   "Transport": {
@@ -346,7 +343,7 @@
       "water-reservoirs"
     ],
     "cait": [
-      "Land-use Change and Forestry"
+      "Land-Use Change and Forestry"
     ],
     "faostat": [
       "Net Forest conversion",

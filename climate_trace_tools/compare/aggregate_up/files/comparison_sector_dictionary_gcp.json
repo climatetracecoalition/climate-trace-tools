@@ -11,7 +11,8 @@
     "climate-trace": [
       "electricity-generation",
       "other-energy-use",
-      "residential-and-commercial-onsite-fuel-usage",
+      "residential-onsite-fuel-usage",
+      "non-residential-onsite-fuel-usage",
       "other-onsite-fuel-usage",
       "domestic-aviation",
       "domestic-shipping",
@@ -21,7 +22,7 @@
       "chemicals",
       "iron-and-steel",
       "aluminum",
-      "petrochemicals",
+      "petrochemical-steam-cracking",
       "pulp-and-paper",
       "sand-quarrying",
       "rock-quarrying",
@@ -31,8 +32,7 @@
       "other-manufacturing",
       "coal-mining",
       "other-solid-fuels",
-      "oil-and-gas-refining",
-      "other-fossil-fuel-operations"
+      "oil-and-gas-refining"
     ],
     "gcp": [
       "Coal",
@@ -42,7 +42,8 @@
   },
   "Fossil Fuel Operations": {
     "climate-trace": [
-      "oil-and-gas-production-and-transport"
+      "oil-and-gas-production",
+      "oil-and-gas-transport"
     ],
     "gcp": [
       "Gas flaring"
